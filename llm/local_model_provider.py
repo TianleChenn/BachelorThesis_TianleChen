@@ -7,6 +7,7 @@ from dataclasses import dataclass
 from typing import Any
 
 from privacy.athlete_id import ATHLETE_ID_PATTERN
+from llm.env import load_local_env
 from llm.model_clients import call_local_codegen_model
 
 
@@ -39,6 +40,7 @@ class LocalModelProvider:
     def __init__(self):
         if self._initialized:
             return
+        load_local_env()
         self.provider = os.getenv("LLM_LOCAL_PROVIDER", "transformers").strip().lower()
         if self.provider == "openai_compatible":
             self.model_id = os.getenv("LLM_LOCAL_MODEL", "").strip() or "Ministral-3-8B-Local"

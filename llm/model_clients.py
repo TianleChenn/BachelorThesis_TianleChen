@@ -42,7 +42,7 @@ class CloudCodegenEvaluationModel:
 _CLOUD_CODEGEN_EVALUATION_MODELS = (
     CloudCodegenEvaluationModel(
         "gpt4_1", "GPT-4.1", "openai",
-        ("EVAL_OPENAI_MODEL", "OPENAI_STRONG_MODEL"), "gpt-4.1",
+        ("EVAL_OPENAI_MODEL", "LLM_STRONG_MODEL", "OPENAI_STRONG_MODEL"), "gpt-4.1",
         "OPENAI_API_KEY", None, None,
     ),
     CloudCodegenEvaluationModel(
