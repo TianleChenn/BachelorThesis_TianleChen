@@ -13765,5 +13765,154 @@
     "timestamp": "2026-08-26T21:44:22.022887+00:00",
     "rules_version": "athlete-privacy-rubric-v8-continuous-no-level",
     "schema_version": "continuous-4d-no-level-json-v2"
+  },
+  "df5a5addbd12fead7f23c3eed549a2f45a65cfa7f58385c26f986c553a02f972": {
+    "assessment": {
+      "privacy_risk_score": 0.19,
+      "subject_scope": 0.13,
+      "data_sensitivity": 0.22,
+      "disclosure_level": 0.18,
+      "analysis_type": "variance_analysis",
+      "blocked_request": false,
+      "sensitive_categories": [
+        "muscular_strength",
+        "lower-body_dynamics",
+        "muscle-power_genetics",
+        "blood_micronutrients",
+        "basic_cognitive_function",
+        "mental_health",
+        "social_support",
+        "training_conditions"
+      ],
+      "explanation": "The request targets broad groups of female athletes and compares elite status using aggregate variance analysis, with no individual-level or raw data exposure. Sensitivity is moderate due to inclusion of all domains, but disclosure is limited to derived statistical results.",
+      "confidence": 0.97,
+      "requested_model": "gpt-4.1",
+      "actual_model": "gpt-4.1-2025-04-14",
+      "provider": "openai_privacy_assessor",
+      "success": true,
+      "fallback_used": false,
+      "error": null,
+      "cache_used": false
+    },
+    "timestamp": "2026-08-27T19:42:36.563121+00:00",
+    "rules_version": "athlete-privacy-rubric-v8-continuous-no-level",
+    "schema_version": "continuous-4d-no-level-json-v2"
+  },
+  "f6c10cfa6de656018754dbe8bae82900b62a66fceea5f3768ac82abb0c346a67": {
+    "assessment": {
+      "privacy_risk_score": 0.31,
+      "subject_scope": 0.22,
+      "data_sensitivity": 0.46,
+      "disclosure_level": 0.41,
+      "analysis_type": "descriptive_statistics",
+      "blocked_request": false,
+      "sensitive_categories": [],
+      "explanation": "Moderate contextual risk.",
+      "confidence": 0.9,
+      "requested_model": "gpt-4.1",
+      "actual_model": "gpt-4.1",
+      "provider": "mock",
+      "success": true,
+      "fallback_used": false,
+      "error": null,
+      "cache_used": false
+    },
+    "timestamp": "2026-08-27T19:57:44.508574+00:00",
+    "rules_version": "athlete-privacy-rubric-v8-continuous-no-level",
+    "schema_version": "continuous-4d-no-level-json-v2"
+  },
+  "856678f086d3e3660c93dcab5783728f9554c7f3910a9808e529eb6d8215126b": {
+    "assessment": {
+      "privacy_risk_score": 0.97,
+      "subject_scope": 0.04,
+      "data_sensitivity": 0.12,
+      "disclosure_level": 0.98,
+      "analysis_type": "general_explanation",
+      "blocked_request": true,
+      "sensitive_categories": [],
+      "explanation": "Mocked semantic assessment for deterministic tests.",
+      "confidence": 1.0,
+      "requested_model": "gpt-4.1",
+      "actual_model": "mock-gpt-4.1",
+      "provider": "mock",
+      "success": true,
+      "fallback_used": false,
+      "error": null,
+      "cache_used": false
+    },
+    "timestamp": "2026-08-27T20:35:48.828736+00:00",
+    "rules_version": "athlete-privacy-rubric-v8-continuous-no-level",
+    "schema_version": "continuous-4d-no-level-json-v2"
+  },
+  "dcb1e4c7a49e322321bb46a824495b06b6fe2dd96d039185f16bca1549cb2933": {
+    "assessment": {
+      "privacy_risk_score": 0.8,
+      "subject_scope": 0.96,
+      "data_sensitivity": 0.5,
+      "disclosure_level": 0.58,
+      "analysis_type": "individual_profile",
+      "blocked_request": false,
+      "sensitive_categories": [],
+      "explanation": "Mocked semantic assessment for deterministic tests.",
+      "confidence": 1.0,
+      "requested_model": "gpt-4.1",
+      "actual_model": "mock-gpt-4.1",
+      "provider": "mock",
+      "success": true,
+      "fallback_used": false,
+      "error": null,
+      "cache_used": false
+    },
+    "timestamp": "2026-08-27T20:35:48.839243+00:00",
+    "rules_version": "athlete-privacy-rubric-v8-continuous-no-level",
+    "schema_version": "continuous-4d-no-level-json-v2"
+  },
+  "dfcda19814ecb6e54efda723be93fb4cb7e373439afc67b3046a99d5a169c5bc": {
+    "assessment": {
+      "privacy_risk_score": 0.25,
+      "subject_scope": 0.15,
+      "data_sensitivity": 0.5,
+      "disclosure_level": 0.25,
+      "analysis_type": "descriptive_statistics",
+      "blocked_request": false,
+      "sensitive_categories": [
+        "RAW_DATA"
+      ],
+      "explanation": "Mocked semantic assessment for deterministic tests.",
+      "confidence": 1.0,
+      "requested_model": "gpt-4.1",
+      "actual_model": "mock-gpt-4.1",
+      "provider": "mock",
+      "success": true,
+      "fallback_used": false,
+      "error": null,
+      "cache_used": false
+    },
+    "timestamp": "2026-08-27T20:35:48.852244+00:00",
+    "rules_version": "athlete-privacy-rubric-v8-continuous-no-level",
+    "schema_version": "continuous-4d-no-level-json-v2"
+  },
+  "44f83615ea4cd5a858b590e75b959446e28b0ef5777b480ca6e75a01a46a0501": {
+    "assessment": {
+      "privacy_risk_score": 0.0,
+      "subject_scope": 0.04,
+      "data_sensitivity": 0.12,
+      "disclosure_level": 0.08,
+      "analysis_type": "general_explanation",
+      "blocked_request": false,
+      "sensitive_categories": [],
+      "explanation": "Mocked semantic assessment for deterministic tests.",
+      "confidence": 1.0,
+      "requested_model": "gpt-4.1",
+      "actual_model": "mock-gpt-4.1",
+      "provider": "mock",
+      "success": true,
+      "fallback_used": false,
+      "error": null,
+      "cache_used": false
+    },
+    "timestamp": "2026-08-27T20:35:48.862750+00:00",
+    "rules_version": "athlete-privacy-rubric-v8-continuous-no-level",
+    "schema_version": "continuous-4d-no-level-json-v2"
   }
 }

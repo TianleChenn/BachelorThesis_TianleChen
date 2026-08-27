@@ -25,6 +25,7 @@ class ModelCallResult:
     total_tokens: int | None = None
     latency_seconds: float | None = None
     finish_reason: str | None = None
+    content_state: str | None = None
 
 
 @dataclass(frozen=True)
@@ -131,6 +132,61 @@ def _is_provider_unavailable(exc: Exception) -> bool:
     return any(cls.__name__ in unavailable_names for cls in type(exc).__mro__)
 
 
+def _field(value, name: str):
+    return value.get(name) if isinstance(value, dict) else getattr(value, name, None)
+
+
+def _visible_text_content(raw_content) -> str | None:
+    """Extract only documented visible text, never reasoning/thought content."""
+    if raw_content is None or isinstance(raw_content, str):
+        return raw_content
+    parts = raw_content if isinstance(raw_content, (list, tuple)) else (raw_content,)
+    visible_parts: list[str] = []
+    for part in parts:
+        part_type = str(_field(part, "type") or "").strip().casefold()
+        if part_type in {"reasoning", "reasoning_content", "thinking", "thought"}:
+            continue
+        if part_type not in {"", "text", "output_text"}:
+            continue
+        text = _field(part, "text")
+        if isinstance(text, str):
+            visible_parts.append(text)
+    return "".join(visible_parts) if visible_parts else None
+
+
+def _content_state(raw_content) -> str:
+    if raw_content is None:
+        return "None"
+    if isinstance(raw_content, str):
+        if raw_content == "":
+            return "empty string"
+        if not raw_content.strip():
+            return "whitespace-only string"
+        return "non-empty string"
+    visible = _visible_text_content(raw_content)
+    return "text content parts" if visible and visible.strip() else "content parts without visible text"
+
+
+def _empty_content_error(
+    *,
+    requested_model: str,
+    actual_model: str,
+    endpoint: str,
+    finish_reason: str | None,
+    input_tokens: int | None,
+    output_tokens: int | None,
+    total_tokens: int | None,
+    content_state: str,
+) -> str:
+    return (
+        "Provider returned no visible response content: "
+        f"requested_model={requested_model}; actual_model={actual_model}; "
+        f"endpoint={endpoint}; finish_reason={finish_reason}; "
+        f"input_tokens={input_tokens}; output_tokens={output_tokens}; "
+        f"total_tokens={total_tokens}; content_state={content_state}."
+    )
+
+
 def _call(messages, model, provider, api_key, base_url, temperature, max_tokens, *,
           enable_response_format=True):
     endpoint = "responses" if is_reasoning_model(model) and not base_url else "chat.completions"
@@ -143,7 +199,8 @@ def _call(messages, model, provider, api_key, base_url, temperature, max_tokens,
         finish_reason = None
         if endpoint == "responses":
             response = client.responses.create(model=model, input=_responses_input(messages))
-            content = response.output_text
+            raw_content = response.output_text
+            content = _visible_text_content(raw_content)
             incomplete = getattr(response, "incomplete_details", None)
             finish_reason = getattr(incomplete, "reason", None) or getattr(response, "status", None)
         else:
@@ -160,15 +217,27 @@ def _call(messages, model, provider, api_key, base_url, temperature, max_tokens,
                 kwargs["response_format"] = {"type": "json_object"}
             response = client.chat.completions.create(**kwargs)
             choice = response.choices[0]
-            content = choice.message.content
+            raw_content = getattr(choice.message, "content", None)
+            content = _visible_text_content(raw_content)
             finish_reason = getattr(choice, "finish_reason", None)
         actual = getattr(response, "model", None) or model
         input_tokens, output_tokens, total_tokens = _usage_values(response)
+        content_state = _content_state(raw_content)
+        has_visible_content = bool(content and content.strip())
+        error = None if has_visible_content else _empty_content_error(
+            requested_model=model,
+            actual_model=actual,
+            endpoint=endpoint,
+            finish_reason=finish_reason,
+            input_tokens=input_tokens,
+            output_tokens=output_tokens,
+            total_tokens=total_tokens,
+            content_state=content_state,
+        )
         return ModelCallResult(
-            content, model, actual, provider, bool(content), False, False,
-            None if content else "Provider returned no response content.",
+            content, model, actual, provider, has_visible_content, False, False, error,
             endpoint, input_tokens, output_tokens, total_tokens,
-            time.perf_counter() - started, finish_reason,
+            time.perf_counter() - started, finish_reason, content_state,
         )
     except Exception as exc:
         return ModelCallResult(
@@ -176,6 +245,15 @@ def _call(messages, model, provider, api_key, base_url, temperature, max_tokens,
             _sanitized_error(exc, model, endpoint), endpoint,
             latency_seconds=time.perf_counter() - started,
         )
+
+
+GEMINI_TOKEN_EXHAUSTION_RETRY_MAX_TOKENS = 16384
+_TOKEN_EXHAUSTION_FINISH_REASONS = {"LENGTH", "MAX_TOKENS", "MAXIMUM_TOKENS"}
+
+
+def _finish_reason_indicates_token_exhaustion(finish_reason: object) -> bool:
+    normalized = re.sub(r"[\s-]+", "_", str(finish_reason or "").strip()).upper()
+    return normalized in _TOKEN_EXHAUSTION_FINISH_REASONS
 
 
 def get_cloud_codegen_evaluation_models() -> tuple[CloudCodegenEvaluationModel, ...]:
@@ -243,14 +321,34 @@ def call_cloud_privacy_evaluation_model(
 def call_gemini_cloud_model(messages, temperature=None, max_tokens=4096):
     """Call Gemini code generation with provider-default sampling settings."""
     load_local_env()
+    model = os.getenv("LLM_GEMINI_MODEL", "gemini-3.5-flash").strip()
+    provider = os.getenv("LLM_GEMINI_PROVIDER", "openai_compatible").strip()
+    api_key = os.getenv("LLM_GEMINI_API_KEY")
+    base_url = os.getenv(
+        "LLM_GEMINI_BASE_URL",
+        "https://generativelanguage.googleapis.com/v1beta/openai/",
+    ).strip()
+    result = _call(
+        messages, model, provider, api_key, base_url, None, max_tokens,
+    )
+    retry_allowed = (
+        not result.success
+        and result.actual_model is not None
+        and not (result.content and result.content.strip())
+        and _finish_reason_indicates_token_exhaustion(result.finish_reason)
+        and isinstance(max_tokens, int)
+        and max_tokens < GEMINI_TOKEN_EXHAUSTION_RETRY_MAX_TOKENS
+    )
+    if not retry_allowed:
+        return result
     return _call(
         messages,
-        os.getenv("LLM_GEMINI_MODEL", "gemini-3.5-flash").strip(),
-        os.getenv("LLM_GEMINI_PROVIDER", "openai_compatible").strip(),
-        os.getenv("LLM_GEMINI_API_KEY"),
-        os.getenv("LLM_GEMINI_BASE_URL", "https://generativelanguage.googleapis.com/v1beta/openai/").strip(),
+        model,
+        provider,
+        api_key,
+        base_url,
         None,
-        max_tokens,
+        GEMINI_TOKEN_EXHAUSTION_RETRY_MAX_TOKENS,
     )
 
 

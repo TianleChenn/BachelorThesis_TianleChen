@@ -89,7 +89,8 @@ def test_local_edge_bypasses_classifier():
 
 
 def test_nonlocal_local_endpoint_is_rejected():
-    with patch.dict(os.environ, {"LLM_LOCAL_BASE_URL":"https://api.mistral.ai/v1"}, clear=False):
+    with patch("llm.model_clients.load_local_env", return_value=None), \
+         patch.dict(os.environ, {"LLM_LOCAL_BASE_URL":"https://api.mistral.ai/v1"}, clear=False):
         try: get_local_codegen_runtime()
         except RuntimeError as exc: assert "localhost" in str(exc)
         else: raise AssertionError("Remote Local endpoint was accepted")
@@ -98,7 +99,9 @@ def test_nonlocal_local_endpoint_is_rejected():
 def test_gemini_cloud_config_uses_gemini_environment():
     env = {"LLM_GEMINI_PROVIDER":"openai_compatible", "LLM_GEMINI_MODEL":"gemini-test",
            "LLM_GEMINI_BASE_URL":"https://example.invalid/v1", "LLM_GEMINI_API_KEY":"secret"}
-    with patch.dict(os.environ, env, clear=False), patch("llm.model_clients._call", return_value=_result("ok")) as call:
+    with patch("llm.model_clients.load_local_env", return_value=None), \
+         patch.dict(os.environ, env, clear=False), \
+         patch("llm.model_clients._call", return_value=_result("ok")) as call:
         call_gemini_cloud_model([{"role":"user", "content":"request"}])
     assert call.call_args.args[1:5] == ("gemini-test", "openai_compatible", "secret", "https://example.invalid/v1")
     assert call.call_args.args[5] is None

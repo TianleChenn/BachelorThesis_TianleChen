@@ -33,6 +33,7 @@ class CodeGenerationResult:
     local_generator_available:bool|None=None;first_generation_non_empty:bool=False
     first_validation_passed:bool=False;repair_validation_passed:bool=False
     first_validation_error:str|None=None;repair_validation_error:str|None=None
+    cloud_provider_failure:str|None=None;local_fallback_failure:str|None=None
     candidate_assignment_count:int=0
     prompt_version:str=CODE_GENERATION_PROMPT_VERSION
 def to_dict(obj):return asdict(obj) if hasattr(obj,"__dataclass_fields__") else dict(obj)
@@ -71,7 +72,7 @@ def _response_preview(value,private=False):
     if private:return "[REDACTED PRIVATE MODEL RESPONSE]"
     return redact_athlete_ids(str(value or ""))[:500]
 def _generate(channel,prompt,context,request_id,requested_analysis,selected_model,figure2_size=None,
-              validation_prompt=None):
+              validation_prompt=None,provider_retry_limit=1):
     requested_filters=dict(context.get("requested_filters") or {})
     base_messages=build_code_generation_messages(prompt)
     metadata={"local_generator_available":None,"first_generation_non_empty":False,
@@ -79,7 +80,7 @@ def _generate(channel,prompt,context,request_id,requested_analysis,selected_mode
       "first_validation_error":None,"repair_validation_error":None,"candidate_assignment_count":0,
       "provider_retry_used":False}
     previous_code="";previous_raw="";error=None;call=None;raw="";validation_stage="format_validation"
-    attempts=2;provider_retry_remaining=1
+    attempts=2;provider_retry_remaining=provider_retry_limit
     for attempt in range(attempts):
         messages=list(base_messages)
         if attempt:
@@ -171,18 +172,32 @@ def generate_code(prompt,model_decision,privacy_decision,use_openai=True,request
     if not use_openai and channel!="local":return _failure("Configured LLM generation is disabled.",request_id,timestamp,source="dynamic_restricted_python")
     requested_filters=dict(requested_filters or {})
     context["requested_filters"]=requested_filters
+    requested_channel=channel;used_channel=channel;generator_fallback_used=False
     generation=_generate(channel,generation_prompt,context,request_id,requested_analysis,selected,
                          validation_prompt=prompt)
     generated,call,error,retry=generation[:4];generation_meta=generation[5] if len(generation)>5 else {}
+    if (not generated and requested_channel=="cloud" and getattr(call,"unavailable",False)):
+        cloud_provider_failure=error
+        cloud_provider_retry_used=bool(generation_meta.get("provider_retry_used"))
+        used_channel="local";generator_fallback_used=True
+        generation=_generate("local",generation_prompt,context,request_id,requested_analysis,
+                             "local_ministral",validation_prompt=prompt,provider_retry_limit=0)
+        generated,call,error,retry=generation[:4]
+        local_meta=generation[5] if len(generation)>5 else {}
+        local_meta["provider_retry_used"]=cloud_provider_retry_used
+        local_meta["cloud_provider_failure"]=cloud_provider_failure
+        local_meta["local_fallback_failure"]=None if generated else error
+        generation_meta=local_meta
     if not generated:
         failure_stage=generation[4]
         failure=_failure(error,request_id,timestamp,call,retry,privacy_applied,"dynamic_restricted_python",failure_stage,requested_analysis)
-        generator_channel=f"{channel}_restricted_code_generator"
-        failure.requested_generator_channel=generator_channel
-        failure.used_generator_channel=generator_channel
-        failure.generator_target=("local_restricted_generator" if channel=="local"
+        failure.requested_generator_channel=f"{requested_channel}_restricted_code_generator"
+        failure.used_generator_channel=f"{used_channel}_restricted_code_generator"
+        failure.generator_fallback_used=generator_fallback_used
+        failure.generator_target=("local_restricted_generator" if used_channel=="local"
             else "cloud_restricted_generator")
-        failure.cloud_used=channel=="cloud"
+        failure.cloud_used=requested_channel=="cloud"
+        failure.local_edge_endpoint_enforced=used_channel=="local"
         if route=="local_edge":
             failure.local_edge_endpoint_enforced=True
             failure.generator_target="local_restricted_generator"
@@ -192,11 +207,11 @@ def generate_code(prompt,model_decision,privacy_decision,use_openai=True,request
     filters=args.get("filters") if isinstance(args.get("filters"),dict) else {};normalized=bool(generation[4])
     return CodeGenerationResult(code,"fresh_llm_restricted_python",method,filters.get("sport"),"Fresh restricted Python generated and AST validated.",
       cloud_prompt_source="two_layer_ldp_perturbed_prompt" if privacy_applied else "original_prompt" if original_cloud else "none",
-      privacy_applied_to_cloud_prompt=privacy_applied,requested_generator_channel=f"{channel}_restricted_code_generator",
-      used_generator_channel=f"{channel}_restricted_code_generator",requested_model=call.requested_model,
+      privacy_applied_to_cloud_prompt=privacy_applied,requested_generator_channel=f"{requested_channel}_restricted_code_generator",
+      used_generator_channel=f"{used_channel}_restricted_code_generator",generator_fallback_used=generator_fallback_used,requested_model=call.requested_model,
       actual_model=call.actual_model,provider=call.provider,model_call_success=True,model_unavailable=False,cloud_semantic_sketch_received=cloud_sketch,
-      local_plan_validated=True,original_prompt_sent_to_cloud=original_cloud,local_edge_endpoint_enforced=channel=="local",structure_validation_attempted=True,
+      local_plan_validated=True,original_prompt_sent_to_cloud=original_cloud,local_edge_endpoint_enforced=used_channel=="local",structure_validation_attempted=True,
       generation_retry_used=retry,generation_timestamp=timestamp,generation_request_id=request_id,requested_analysis=requested_analysis,
       normalization_applied=normalized,structure_validation_passed=True,request_match_passed=True,
-      generator_target="local_restricted_generator" if channel=="local" else "cloud_restricted_generator",
-      cloud_used=channel=="cloud",**generation_meta)
+      generator_target="local_restricted_generator" if used_channel=="local" else "cloud_restricted_generator",
+      cloud_used=requested_channel=="cloud",**generation_meta)

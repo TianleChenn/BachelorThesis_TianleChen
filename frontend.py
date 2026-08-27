@@ -1,3 +1,7 @@
+from llm.env import load_local_env
+
+load_local_env()
+
 import streamlit as st
 import pandas as pd
 import altair as alt

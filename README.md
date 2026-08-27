@@ -177,9 +177,9 @@ python -m pip install -r requirements.txt
 Copy-Item .env.example .env
 ```
 
-Fill in your own API credentials in `.env`, configuring only the providers you use. `.env.example` contains the complete non-secret configuration template, while `.env` contains local credentials and is intentionally excluded from Git. The application can load non-secret defaults from `.env.example`, but cloud LLM calls require user-provided credentials in `.env` or the operating-system environment.
+Fill in your own API credentials in `.env`, configuring only the providers you use. When the project-root `.env` is available, it is the sole local configuration source and its values are authoritative, including over same-name values retained in the process environment. `.env.example` is not read in that case.
 
-Configuration priority is: operating-system environment, `.env`, `.env.example`, then hard-coded Python defaults. The main settings in `.env.example` are:
+`.env.example` is a public fallback and template only. It is used when `.env` is missing or unreadable, supplies only nonblank fallback values, and does not replace variables already supplied by the operating system. Blank API-key entries remain unconfigured. Never commit `.env`, real secrets, or real API keys; all credential fields in `.env.example` must stay blank except for the non-secret `LLM_LOCAL_API_KEY=none` sentinel. The main settings in `.env.example` are:
 
 | Variable | Purpose |
 |---|---|
@@ -190,7 +190,7 @@ Configuration priority is: operating-system environment, `.env`, `.env.example`,
 | `LLM_LOCAL_BASE_URL` | Local OpenAI-compatible endpoint, default `http://127.0.0.1:8080/v1` |
 | `LLM_LOCAL_MODEL` | Local Model alias, default `Ministral-3-8B-Local` |
 
-The PowerShell model manager also supports `LLAMA_SERVER_PATH` as an optional process environment variable when `llama-server` is not on `PATH`. Never commit `.env` or real API keys.
+The PowerShell model manager also supports `LLAMA_SERVER_PATH` as an optional process environment variable when `llama-server` is not on `PATH`.
 
 ### Local Model
 
@@ -204,17 +204,24 @@ The local runtime requires llama.cpp `llama-server` and the Ministral-3-8B GGUF 
 
 ### Start Application
 
-The recommended command starts or reuses the managed Local Model and then launches Streamlit:
+The recommended command delegates to `main.py`, which starts or reuses the managed Local Model and then launches Streamlit:
 
 ```powershell
 .\scripts\start_project.ps1
 ```
 
-Manual startup is optional:
+Direct Python startup is equivalent:
 
 ```powershell
-.\scripts\ensure_local_model.ps1
-python -m streamlit run frontend.py
+python main.py
+```
+
+Pressing Ctrl+C stops only the managed Streamlit child and Local Ministral process, prints `Shutdown complete.`, and returns control to PowerShell.
+
+To make minimal live GPT-4.1 and Gemini runtime checks without displaying credentials, run:
+
+```powershell
+python scripts/check_cloud_runtime.py
 ```
 
 ## 7. Reproducing the Thesis Evaluation

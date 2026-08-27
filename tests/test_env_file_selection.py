@@ -6,7 +6,7 @@ from pathlib import Path
 import llm.env as env_module
 import llm.model_clients as model_clients
 from llm.local_model_provider import LocalModelProvider
-from scripts import check_environment_config
+from scripts import check_api_env, check_environment_config
 
 
 CONFIG_VARIABLES = tuple(
@@ -26,24 +26,30 @@ def _clear_config(monkeypatch) -> None:
         monkeypatch.delenv(variable, raising=False)
 
 
-def test_dot_env_overrides_dot_env_example(tmp_path, monkeypatch):
+def test_dot_env_is_preferred_and_dot_env_example_is_not_read(tmp_path, monkeypatch):
     _use_project_root(monkeypatch, tmp_path)
     monkeypatch.delenv("TEST_VALUE", raising=False)
     (tmp_path / ".env").write_text("TEST_VALUE=from_env\n", encoding="utf-8")
     (tmp_path / ".env.example").write_text(
         "TEST_VALUE=from_example\n", encoding="utf-8"
     )
+    reads = []
+    original_read_text = Path.read_text
 
-    env_module.load_local_env()
+    def tracked_read_text(path, *args, **kwargs):
+        reads.append(path)
+        return original_read_text(path, *args, **kwargs)
 
+    monkeypatch.setattr(Path, "read_text", tracked_read_text)
+
+    selected_path = env_module.load_local_env()
+
+    assert selected_path == tmp_path / ".env"
     assert os.environ["TEST_VALUE"] == "from_env"
-    assert env_module.get_env_file_paths() == (
-        tmp_path / ".env",
-        tmp_path / ".env.example",
-    )
+    assert reads == [tmp_path / ".env"]
 
 
-def test_example_fills_configuration_missing_from_dot_env(tmp_path, monkeypatch):
+def test_dot_env_example_does_not_fill_missing_dot_env_values(tmp_path, monkeypatch):
     _use_project_root(monkeypatch, tmp_path)
     monkeypatch.delenv("TEST_SECRET", raising=False)
     monkeypatch.delenv("TEST_MODEL", raising=False)
@@ -55,10 +61,10 @@ def test_example_fills_configuration_missing_from_dot_env(tmp_path, monkeypatch)
     env_module.load_local_env()
 
     assert os.environ["TEST_SECRET"] == "my_secret"
-    assert os.environ["TEST_MODEL"] == "model-name"
+    assert "TEST_MODEL" not in os.environ
 
 
-def test_existing_process_environment_has_highest_priority(tmp_path, monkeypatch):
+def test_dot_env_overrides_stale_process_environment(tmp_path, monkeypatch):
     _use_project_root(monkeypatch, tmp_path)
     (tmp_path / ".env").write_text("TEST_VALUE=from_env\n", encoding="utf-8")
     (tmp_path / ".env.example").write_text(
@@ -68,22 +74,67 @@ def test_existing_process_environment_has_highest_priority(tmp_path, monkeypatch
 
     env_module.load_local_env()
 
-    assert os.environ["TEST_VALUE"] == "from_system"
+    assert os.environ["TEST_VALUE"] == "from_env"
 
 
 def test_only_example_exists_and_blank_api_key_is_not_configured(tmp_path, monkeypatch):
     _use_project_root(monkeypatch, tmp_path)
     monkeypatch.delenv("TEST_MODEL", raising=False)
-    monkeypatch.delenv("TEST_API_KEY", raising=False)
+    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
+    monkeypatch.delenv("LLM_GEMINI_API_KEY", raising=False)
+    monkeypatch.delenv("LLM_CLAUDE_API_KEY", raising=False)
     (tmp_path / ".env.example").write_text(
-        "TEST_MODEL=model-name\nTEST_API_KEY=\n", encoding="utf-8-sig"
+        (
+            "TEST_MODEL=model-name\n"
+            "OPENAI_API_KEY=\n"
+            "LLM_GEMINI_API_KEY=\"\"\n"
+            "LLM_CLAUDE_API_KEY='   '\n"
+        ),
+        encoding="utf-8-sig",
+    )
+
+    selected_path = env_module.load_local_env()
+
+    assert selected_path == tmp_path / ".env.example"
+    assert env_module.get_env_file_path() == tmp_path / ".env.example"
+    assert os.environ["TEST_MODEL"] == "model-name"
+    assert "OPENAI_API_KEY" not in os.environ
+    assert "LLM_GEMINI_API_KEY" not in os.environ
+    assert "LLM_CLAUDE_API_KEY" not in os.environ
+
+
+def test_example_fallback_preserves_process_environment(tmp_path, monkeypatch):
+    _use_project_root(monkeypatch, tmp_path)
+    monkeypatch.setenv("TEST_VALUE", "from_system")
+    (tmp_path / ".env.example").write_text(
+        "TEST_VALUE=from_example\n", encoding="utf-8"
     )
 
     env_module.load_local_env()
 
-    assert env_module.get_env_file_path() == tmp_path / ".env.example"
-    assert os.environ["TEST_MODEL"] == "model-name"
-    assert not check_environment_config.is_configured("TEST_API_KEY")
+    assert os.environ["TEST_VALUE"] == "from_system"
+
+
+def test_unreadable_dot_env_uses_example_fallback(tmp_path, monkeypatch):
+    _use_project_root(monkeypatch, tmp_path)
+    monkeypatch.delenv("TEST_VALUE", raising=False)
+    (tmp_path / ".env").write_text("TEST_VALUE=from_env\n", encoding="utf-8")
+    (tmp_path / ".env.example").write_text(
+        "TEST_VALUE=from_example\n", encoding="utf-8"
+    )
+    original_load_env_file = env_module._load_env_file
+
+    def fail_primary(path, **kwargs):
+        if path == tmp_path / ".env":
+            raise PermissionError("test simulates an unreadable .env")
+        return original_load_env_file(path, **kwargs)
+
+    monkeypatch.setattr(env_module, "_load_env_file", fail_primary)
+
+    selected_path = env_module.load_local_env()
+
+    assert selected_path == tmp_path / ".env.example"
+    assert os.environ["TEST_VALUE"] == "from_example"
 
 
 def test_real_dot_env_is_git_ignored():
@@ -130,6 +181,30 @@ def test_check_script_never_prints_secret_values(tmp_path, monkeypatch, capsys):
 
     assert "Environment structure: PASS" in output
     assert "Cloud credentials: PASS" in output
+    assert all(secret not in output for secret in secret_markers.values())
+
+
+def test_check_api_env_prints_status_but_never_secret_values(
+    tmp_path, monkeypatch, capsys
+):
+    _use_project_root(monkeypatch, tmp_path)
+    _clear_config(monkeypatch)
+    secret_markers = {
+        "OPENAI_API_KEY": "TEST_OPENAI_SECRET_DO_NOT_PRINT",
+        "LLM_GEMINI_API_KEY": "TEST_GEMINI_SECRET_DO_NOT_PRINT",
+        "LLM_CLAUDE_API_KEY": "TEST_CLAUDE_SECRET_DO_NOT_PRINT",
+        "LLM_LOCAL_API_KEY": "TEST_LOCAL_SECRET_DO_NOT_PRINT",
+    }
+    (tmp_path / ".env").write_text(
+        "\n".join(f"{name}={value}" for name, value in secret_markers.items()),
+        encoding="utf-8",
+    )
+
+    assert check_api_env.main() == 0
+    output = capsys.readouterr().out
+
+    assert "Environment file:\n  .env" in output
+    assert output.count("LOADED") == len(secret_markers)
     assert all(secret not in output for secret in secret_markers.values())
 
 
@@ -184,6 +259,7 @@ def test_local_model_provider_uses_central_example_fallback(tmp_path, monkeypatc
 def test_active_cloud_clients_use_central_example_fallback(tmp_path, monkeypatch):
     _use_project_root(monkeypatch, tmp_path)
     _clear_config(monkeypatch)
+    assert not (tmp_path / ".env").exists()
     (tmp_path / ".env.example").write_text(
         "\n".join(
             (

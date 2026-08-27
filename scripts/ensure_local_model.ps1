@@ -23,6 +23,18 @@ function Test-LocalModelReady {
     catch { return $false }
 }
 
+function Get-LocalModelPortOwner {
+    $listener = Get-NetTCPConnection -LocalAddress "127.0.0.1" -LocalPort 8080 `
+        -State Listen -ErrorAction SilentlyContinue | Select-Object -First 1
+    if ($null -eq $listener) { return $null }
+    return Get-Process -Id $listener.OwningProcess -ErrorAction SilentlyContinue
+}
+
+function Save-ManagedLocalModelPid([System.Diagnostics.Process]$Process) {
+    New-Item -ItemType Directory -Path $ArtifactsDir -Force | Out-Null
+    Set-Content -LiteralPath $PidFile -Value $Process.Id -Encoding ascii
+}
+
 function Get-ManagedLocalModelProcess {
     if (-not (Test-Path -LiteralPath $PidFile)) { return $null }
     $pidText = (Get-Content -Raw -LiteralPath $PidFile).Trim()
@@ -58,6 +70,17 @@ function Wait-ForLocalModel([System.Diagnostics.Process]$Process) {
 
 try {
     if (Test-LocalModelReady) {
+        $readyProcess = Get-LocalModelPortOwner
+        if ($null -eq $readyProcess) {
+            Write-Error "Port 8080 is ready, but its listening process could not be identified."
+            exit 1
+        }
+        if ($readyProcess.ProcessName -notmatch '^llama-server$') {
+            Write-Error "Port 8080 is owned by a non-llama-server process; refusing to adopt it."
+            exit 1
+        }
+        Save-ManagedLocalModelPid $readyProcess
+        Write-Host "Recorded ready llama-server process $($readyProcess.Id)."
         Write-Host "Local Ministral: READY"
         Write-Host "Endpoint: $BaseUrl"
         exit 0
@@ -92,7 +115,7 @@ try {
         $managedProcess = Start-Process -FilePath $llamaServerPath -ArgumentList $arguments `
             -RedirectStandardOutput $StdoutLog -RedirectStandardError $StderrLog `
             -WindowStyle Hidden -PassThru
-        Set-Content -LiteralPath $PidFile -Value $managedProcess.Id -Encoding ascii
+        Save-ManagedLocalModelPid $managedProcess
     }
     else {
         Write-Host "Reusing managed llama-server process $($managedProcess.Id)."
@@ -107,4 +130,3 @@ catch {
     Write-Error "Local Ministral startup failed: $($_.Exception.Message)"
     exit 1
 }
-

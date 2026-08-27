@@ -1,5 +1,7 @@
 from unittest.mock import patch
 
+import pytest
+
 from llm.analysis_request_contracts import build_request_contract, render_request_contract
 from llm.code_generator import generate_code
 from llm.model_clients import ModelCallResult
@@ -12,6 +14,7 @@ FIGURE1_REQUEST = (
     "correlation threshold 0.15, and 1000 comparison-group variance samples."
 )
 FIGURE1_CODE = render_request_contract(build_request_contract("figure1"))
+INVALID_FIGURE1_CODE = FIGURE1_CODE.replace("analysis.figure1(", "analysis.figure2(")
 CLOUD_DECISION = {"selected_model": "cloud_gemini", "selected_tier": "cloud"}
 CLOUD_PRIVACY = {"route": "cloud", "blocked": False}
 
@@ -37,26 +40,184 @@ def _call(
     )
 
 
-def test_cloud_unavailable_is_not_labeled_as_local():
-    unavailable = _call(None, success=False, unavailable=True, error="APIConnectionError: sanitized")
-    with patch("llm.code_generator.call_gemini_cloud_model", return_value=unavailable) as cloud, \
+def _generate_cloud():
+    return generate_code(
+        FIGURE1_REQUEST,
+        CLOUD_DECISION,
+        CLOUD_PRIVACY,
+        requested_analysis="figure1",
+    )
+
+
+def test_gemini_success_on_first_attempt_never_calls_local():
+    success = _call(FIGURE1_CODE, success=True, unavailable=False)
+    with patch("llm.code_generator.call_gemini_cloud_model", return_value=success) as cloud, \
          patch("llm.code_generator.call_local_codegen_model") as local:
+        result = _generate_cloud()
+
+    cloud.assert_called_once()
+    local.assert_not_called()
+    assert result.code == FIGURE1_CODE
+    assert result.requested_generator_channel == "cloud_restricted_code_generator"
+    assert result.used_generator_channel == "cloud_restricted_code_generator"
+    assert result.generator_fallback_used is False
+    assert result.provider_retry_used is False
+
+
+def test_gemini_503_then_success_retries_without_local_fallback():
+    responses = [
+        _call(None, success=False, unavailable=True, error="HTTP 503: sanitized"),
+        _call(FIGURE1_CODE, success=True, unavailable=False),
+    ]
+    with patch("llm.code_generator.call_gemini_cloud_model", side_effect=responses) as cloud, \
+         patch("llm.code_generator.call_local_codegen_model") as local:
+        result = _generate_cloud()
+
+    assert cloud.call_count == 2
+    assert cloud.call_args_list[0].args[0] == cloud.call_args_list[1].args[0]
+    local.assert_not_called()
+    assert result.code == FIGURE1_CODE
+    assert result.provider_retry_used is True
+    assert result.generator_fallback_used is False
+    assert result.used_generator_channel == "cloud_restricted_code_generator"
+
+
+def test_two_gemini_503s_fallback_once_to_successful_local_generator():
+    cloud_unavailable = _call(
+        None, success=False, unavailable=True, error="HTTP 503: high demand"
+    )
+    local_success = _call(
+        FIGURE1_CODE,
+        success=True,
+        unavailable=False,
+        requested_model="Ministral-3-8B-Local",
+    )
+    with patch(
+        "llm.code_generator.call_gemini_cloud_model", return_value=cloud_unavailable
+    ) as cloud, patch(
+        "llm.code_generator.call_local_codegen_model", return_value=local_success
+    ) as local:
+        result = _generate_cloud()
+
+    assert cloud.call_count == 2
+    local.assert_called_once()
+    assert result.code == FIGURE1_CODE
+    assert result.requested_generator_channel == "cloud_restricted_code_generator"
+    assert result.used_generator_channel == "local_restricted_code_generator"
+    assert result.generator_fallback_used is True
+    assert result.generator_target == "local_restricted_generator"
+    assert result.cloud_used is True
+    assert result.provider_retry_used is True
+    assert result.requested_model == "Ministral-3-8B-Local"
+    assert result.cloud_provider_failure == "HTTP 503: high demand"
+    assert result.local_fallback_failure is None
+
+
+def test_two_gemini_503s_and_unavailable_local_return_distinct_failures():
+    cloud_unavailable = _call(
+        None, success=False, unavailable=True, error="HTTP 503: high demand"
+    )
+    local_unavailable = _call(
+        None,
+        success=False,
+        unavailable=True,
+        error="APIConnectionError: local endpoint unavailable",
+        requested_model="Ministral-3-8B-Local",
+    )
+    with patch(
+        "llm.code_generator.call_gemini_cloud_model", return_value=cloud_unavailable
+    ) as cloud, patch(
+        "llm.code_generator.call_local_codegen_model", return_value=local_unavailable
+    ) as local:
+        result = _generate_cloud()
+
+    assert cloud.call_count == 2
+    local.assert_called_once()
+    assert result.code is None
+    assert result.failure_stage == "local_model_unavailable"
+    assert result.requested_generator_channel == "cloud_restricted_code_generator"
+    assert result.used_generator_channel == "local_restricted_code_generator"
+    assert result.generator_fallback_used is True
+    assert result.generator_target == "local_restricted_generator"
+    assert result.cloud_used is True
+    assert result.provider_retry_used is True
+    assert result.cloud_provider_failure == "HTTP 503: high demand"
+    assert result.local_fallback_failure == "APIConnectionError: local endpoint unavailable"
+
+
+@pytest.mark.parametrize("status", [400, 401, 403, 404])
+def test_nonavailability_http_failures_never_call_local(status):
+    rejected = _call(
+        None,
+        success=False,
+        unavailable=False,
+        error=f"HTTP {status}: sanitized",
+    )
+    with patch("llm.code_generator.call_gemini_cloud_model", return_value=rejected) as cloud, \
+         patch("llm.code_generator.call_local_codegen_model") as local:
+        result = _generate_cloud()
+
+    cloud.assert_called_once()
+    local.assert_not_called()
+    assert result.code is None
+    assert result.failure_stage == "code_generation"
+    assert result.provider_retry_used is False
+    assert result.generator_fallback_used is False
+
+
+def test_cloud_validation_failure_uses_repair_and_never_switches_to_local():
+    responses = [
+        _call(INVALID_FIGURE1_CODE, success=True, unavailable=False),
+        _call(FIGURE1_CODE, success=True, unavailable=False),
+    ]
+    with patch("llm.code_generator.call_gemini_cloud_model", side_effect=responses) as cloud, \
+         patch("llm.code_generator.call_local_codegen_model") as local:
+        result = _generate_cloud()
+
+    assert cloud.call_count == 2
+    local.assert_not_called()
+    assert result.code == FIGURE1_CODE
+    assert result.generation_retry_used is True
+    assert result.provider_retry_used is False
+    assert result.generator_fallback_used is False
+    assert result.used_generator_channel == "cloud_restricted_code_generator"
+
+
+def test_collaboration_fallback_reuses_only_the_privacy_approved_cloud_prompt():
+    cloud_unavailable = _call(
+        None, success=False, unavailable=True, error="HTTP 503: high demand"
+    )
+    local_success = _call(
+        FIGURE1_CODE,
+        success=True,
+        unavailable=False,
+        requested_model="Ministral-3-8B-Local",
+    )
+    privacy = {
+        "route": "collaboration",
+        "blocked": False,
+        "cloud_prompt": "PRIVACY_APPROVED_GENERATION_PROMPT",
+    }
+    with patch(
+        "llm.code_generator.call_gemini_cloud_model", return_value=cloud_unavailable
+    ) as cloud, patch(
+        "llm.code_generator.call_local_codegen_model", return_value=local_success
+    ) as local:
         result = generate_code(
             FIGURE1_REQUEST,
             CLOUD_DECISION,
-            CLOUD_PRIVACY,
+            privacy,
             requested_analysis="figure1",
         )
 
-    assert result.code is None
-    assert result.failure_stage == "cloud_model_unavailable"
-    assert result.failure_stage != "local_model_unavailable"
-    assert result.provider_retry_used is True
-    assert cloud.call_count == 2
-    local.assert_not_called()
+    assert result.code == FIGURE1_CODE
+    assert result.privacy_applied_to_cloud_prompt is True
+    assert cloud.call_args_list[0].args[0] == local.call_args.args[0]
+    assert "PRIVACY_APPROVED_GENERATION_PROMPT" in repr(local.call_args.args[0])
+    assert FIGURE1_REQUEST not in repr(local.call_args.args[0])
 
 
-def test_local_unavailable_keeps_local_failure_stage():
+def test_direct_local_unavailable_keeps_existing_local_retry_behavior():
     unavailable = _call(
         None,
         success=False,
@@ -78,68 +239,6 @@ def test_local_unavailable_keeps_local_failure_stage():
     assert result.provider_retry_used is True
     assert local.call_count == 2
     cloud.assert_not_called()
-
-
-def test_transient_cloud_failure_retries_gemini_without_local_fallback():
-    responses = [
-        _call(None, success=False, unavailable=True, error="HTTP 503: sanitized"),
-        _call(FIGURE1_CODE, success=True, unavailable=False),
-    ]
-    with patch("llm.code_generator.call_gemini_cloud_model", side_effect=responses) as cloud, \
-         patch("llm.code_generator.call_local_codegen_model") as local:
-        result = generate_code(
-            FIGURE1_REQUEST,
-            CLOUD_DECISION,
-            CLOUD_PRIVACY,
-            requested_analysis="figure1",
-        )
-
-    assert cloud.call_count == 2
-    assert cloud.call_args_list[0].args[0] == cloud.call_args_list[1].args[0]
-    local.assert_not_called()
-    assert result.code == FIGURE1_CODE
-    assert result.failure_stage is None
-    assert result.provider_retry_used is True
-    assert result.generation_retry_used is False
-    assert result.generator_fallback_used is False
-
-
-def test_permanent_cloud_failure_retries_once_and_never_calls_local():
-    unavailable = _call(None, success=False, unavailable=True, error="HTTP 503: sanitized")
-    with patch("llm.code_generator.call_gemini_cloud_model", return_value=unavailable) as cloud, \
-         patch("llm.code_generator.call_local_codegen_model") as local:
-        result = generate_code(
-            FIGURE1_REQUEST,
-            CLOUD_DECISION,
-            CLOUD_PRIVACY,
-            requested_analysis="figure1",
-        )
-
-    assert cloud.call_count == 2
-    local.assert_not_called()
-    assert result.code is None
-    assert result.failure_stage == "cloud_model_unavailable"
-    assert result.provider_retry_used is True
-    assert result.generation_retry_used is False
-    assert result.generator_fallback_used is False
-
-
-def test_non_transient_cloud_failure_is_not_transport_retried():
-    bad_request = _call(None, success=False, unavailable=False, error="HTTP 400: sanitized")
-    with patch("llm.code_generator.call_gemini_cloud_model", return_value=bad_request) as cloud, \
-         patch("llm.code_generator.call_local_codegen_model") as local:
-        result = generate_code(
-            FIGURE1_REQUEST,
-            CLOUD_DECISION,
-            CLOUD_PRIVACY,
-            requested_analysis="figure1",
-        )
-
-    cloud.assert_called_once()
-    local.assert_not_called()
-    assert result.code is None
-    assert result.failure_stage == "code_generation"
-    assert result.provider_retry_used is False
 
 
 def test_failure_messages_keep_cloud_and_local_providers_distinct():

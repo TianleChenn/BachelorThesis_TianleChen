@@ -15,7 +15,7 @@ from llm.env import load_local_env
 
 
 def _loaded(variable: str) -> str:
-    return "LOADED" if bool(os.getenv(variable)) else "NOT SET"
+    return "LOADED" if os.getenv(variable, "").strip() else "NOT SET"
 
 
 def main() -> int:
@@ -25,7 +25,7 @@ def main() -> int:
     print("API CONFIGURATION CHECK")
     print("=" * 60)
     print("\nEnvironment file:")
-    print(f"  {env_path if env_path is not None else 'Not found'}")
+    print(f"  {env_path.name if env_path is not None else 'Not found'}")
 
     print("\nOpenAI / GPT-4.1")
     print(f"  Model: {os.getenv('LLM_STRONG_MODEL', 'gpt-4.1')}")
