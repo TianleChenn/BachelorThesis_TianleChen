@@ -7,6 +7,6 @@ def test_continuous_expertise_presentation_and_internal_grouping():
     assert '"Elite Athletes"' not in frontend
     assert '"Semi-Elite Athletes"' not in frontend
     assert "Expertise Distribution" in frontend
-    assert "Higher-Expertise Group for Logistic Regression" in frontend
+    assert "Higher-Expertise Group for Logistic Regression" not in frontend
     analysis=Path("sports/analysis.py").read_text(encoding="utf-8")
     assert 'df["elite_status"]' in analysis

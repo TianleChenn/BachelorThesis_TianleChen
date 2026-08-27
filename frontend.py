@@ -898,10 +898,6 @@ def page_data_generation_processing():
         distribution_rows=pd.DataFrame([{"Expertise Score Range":label,"Number of Athletes":count} for label,count in distribution.items()])
         st.bar_chart(distribution_rows,x="Expertise Score Range",y="Number of Athletes")
         st.dataframe(distribution_rows,use_container_width=True,hide_index=True)
-    metric_cols=st.columns(3)
-    expertise_metrics=[("Mean Expertise Score",expertise.get("mean")),("Median Expertise Score",expertise.get("median")),("Standard Deviation",expertise.get("std")),("Minimum Expertise Score",expertise.get("min")),("Maximum Expertise Score",expertise.get("max")),("Higher-Expertise Group for Logistic Regression",expertise.get("higher_expertise_count"))]
-    for index,(label,value) in enumerate(expertise_metrics):
-        metric_cols[index%3].metric(label,"Not available" if value is None else f"{value:.2f}" if isinstance(value,float) else value)
     st.info(get_expertise_group_explanation())
     st.dataframe(pd.DataFrame([{"Analysis Use":"Descriptive analysis","Expertise Representation":"Continuous score from 2 to 16"},{"Analysis Use":"Multiple linear regression","Expertise Representation":"Continuous Expertise Score"},{"Analysis Use":"Logistic regression","Expertise Representation":"Higher-expertise group >= 13 vs Comparison Group <= 12"},{"Analysis Use":"Individual profile analysis","Expertise Representation":"Continuous standardized domain scores"}]),use_container_width=True,hide_index=True)
     st.markdown("## B. Generation Pipeline")
