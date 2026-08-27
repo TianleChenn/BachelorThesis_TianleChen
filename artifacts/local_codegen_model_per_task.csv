@@ -1,0 +1,16 @@
+﻿prompt_version,Task,Model,model_key,Correct,Total,Accuracy
+pool_typed_schema_v3,Table 1,Ministral-3-8B,ministral,5,8,0.625
+pool_typed_schema_v3,Table 2,Ministral-3-8B,ministral,7,8,0.875
+pool_typed_schema_v3,Figure 1,Ministral-3-8B,ministral,7,8,0.875
+pool_typed_schema_v3,Correlation,Ministral-3-8B,ministral,0,8,0.0
+pool_typed_schema_v3,Variance Analysis,Ministral-3-8B,ministral,3,8,0.375
+pool_typed_schema_v3,Table 1,Qwen2.5-Coder-7B-Instruct,qwen,0,8,0.0
+pool_typed_schema_v3,Table 2,Qwen2.5-Coder-7B-Instruct,qwen,7,8,0.875
+pool_typed_schema_v3,Figure 1,Qwen2.5-Coder-7B-Instruct,qwen,0,8,0.0
+pool_typed_schema_v3,Correlation,Qwen2.5-Coder-7B-Instruct,qwen,0,8,0.0
+pool_typed_schema_v3,Variance Analysis,Qwen2.5-Coder-7B-Instruct,qwen,0,8,0.0
+pool_typed_schema_v3,Table 1,Llama-3.1-8B-Instruct,llama,0,8,0.0
+pool_typed_schema_v3,Table 2,Llama-3.1-8B-Instruct,llama,1,8,0.125
+pool_typed_schema_v3,Figure 1,Llama-3.1-8B-Instruct,llama,0,8,0.0
+pool_typed_schema_v3,Correlation,Llama-3.1-8B-Instruct,llama,0,8,0.0
+pool_typed_schema_v3,Variance Analysis,Llama-3.1-8B-Instruct,llama,0,8,0.0

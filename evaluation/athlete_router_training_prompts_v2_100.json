@@ -1,0 +1,808 @@
+{
+  "dataset_name": "athlete_router_training_prompts_v2_100",
+  "purpose": "project_specific_strong_weak_preference_training",
+  "independent_evaluation_excluded": "evaluation/frontend_realistic_benchmark_60.json#llm_router_eligible=true",
+  "near_duplicate_similarity_limit": 0.82,
+  "samples": [
+    {
+      "id": "router_v2_001",
+      "prompt": "Report the mean standardized social-support score for female athletes, together with the cohort size.",
+      "analysis_type": "descriptive_statistics",
+      "difficulty": "simple",
+      "prompt_family": "single_cohort_mean",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_002",
+      "prompt": "Summarize the mean, standard deviation, and range of training-conditions scores for all athletes.",
+      "analysis_type": "descriptive_statistics",
+      "difficulty": "simple",
+      "prompt_family": "single_domain_variability",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_003",
+      "prompt": "For athletes under 20, report aggregate descriptive statistics for basic cognitive function.",
+      "analysis_type": "descriptive_statistics",
+      "difficulty": "simple",
+      "prompt_family": "filtered_domain_summary",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_004",
+      "prompt": "Give the median and interquartile range of muscular-strength scores among volleyball athletes.",
+      "analysis_type": "descriptive_statistics",
+      "difficulty": "simple",
+      "prompt_family": "sport_cohort_summary",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_005",
+      "prompt": "Summarize average mental-health and social-support standardized scores for senior national-team athletes.",
+      "analysis_type": "descriptive_statistics",
+      "difficulty": "simple",
+      "prompt_family": "two_measure_summary",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_006",
+      "prompt": "Describe the aggregate distribution of lower-body-dynamics scores without exposing individual records.",
+      "analysis_type": "descriptive_statistics",
+      "difficulty": "simple",
+      "prompt_family": "distribution_summary",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_007",
+      "prompt": "For male athletes, report the mean and variance of blood-micronutrient standardized scores.",
+      "analysis_type": "descriptive_statistics",
+      "difficulty": "simple",
+      "prompt_family": "sex_filtered_summary",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_008",
+      "prompt": "Return a concise aggregate summary of training conditions for elite athletes.",
+      "analysis_type": "descriptive_statistics",
+      "difficulty": "simple",
+      "prompt_family": "elite_cohort_summary",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_009",
+      "prompt": "How many semi-elite athletes are in the selected cohort, and what is their average muscular-strength score?",
+      "analysis_type": "descriptive_statistics",
+      "difficulty": "simple",
+      "prompt_family": "count_and_mean",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_010",
+      "prompt": "Report means and standard deviations for mental health and basic cognitive function in the full cohort.",
+      "analysis_type": "descriptive_statistics",
+      "difficulty": "simple",
+      "prompt_family": "domain_pair_summary",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_011",
+      "prompt": "Calculate the Pearson correlation between muscular strength and lower-body dynamics for all athletes.",
+      "analysis_type": "correlation_analysis",
+      "difficulty": "simple",
+      "prompt_family": "single_pair_correlation",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_012",
+      "prompt": "For female athletes, estimate the correlation between social support and mental health.",
+      "analysis_type": "correlation_analysis",
+      "difficulty": "simple",
+      "prompt_family": "filtered_pair_correlation",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_013",
+      "prompt": "Measure the association between training conditions and muscular strength among ice-hockey athletes.",
+      "analysis_type": "correlation_analysis",
+      "difficulty": "simple",
+      "prompt_family": "sport_pair_association",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_014",
+      "prompt": "Produce a small correlation matrix for mental health, social support, and training conditions.",
+      "analysis_type": "correlation_analysis",
+      "difficulty": "simple",
+      "prompt_family": "three_domain_matrix",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_015",
+      "prompt": "Report both Pearson and Spearman correlations between lower-body dynamics and muscular strength.",
+      "analysis_type": "correlation_analysis",
+      "difficulty": "simple",
+      "prompt_family": "method_comparison",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_016",
+      "prompt": "Among athletes aged 20 or above, calculate the correlation between basic cognitive function and social support.",
+      "analysis_type": "correlation_analysis",
+      "difficulty": "simple",
+      "prompt_family": "age_filtered_pair",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_017",
+      "prompt": "Calculate the correlation between blood micronutrients and training conditions, then explain its sign in one sentence.",
+      "analysis_type": "correlation_analysis",
+      "difficulty": "simple",
+      "prompt_family": "interpret_one_correlation",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_018",
+      "prompt": "For elite athletes only, report the Pearson correlation between muscular strength and mental health.",
+      "analysis_type": "correlation_analysis",
+      "difficulty": "simple",
+      "prompt_family": "elite_pair_correlation",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_019",
+      "prompt": "Run the predefined variance analysis for basic cognitive function across expertise groups.",
+      "analysis_type": "variance_analysis",
+      "difficulty": "simple",
+      "prompt_family": "one_domain_variance",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_020",
+      "prompt": "Compare aggregate variance in lower-body dynamics between male and female athletes.",
+      "analysis_type": "variance_analysis",
+      "difficulty": "simple",
+      "prompt_family": "sex_variance_comparison",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_021",
+      "prompt": "Assess whether muscular-strength dispersion differs between volleyball and table-tennis athletes.",
+      "analysis_type": "variance_analysis",
+      "difficulty": "simple",
+      "prompt_family": "sport_dispersion",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_022",
+      "prompt": "Compare training-conditions variability for athletes under 20 versus those aged 20 and above.",
+      "analysis_type": "variance_analysis",
+      "difficulty": "simple",
+      "prompt_family": "age_group_variability",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_023",
+      "prompt": "Report the variance comparison for social-support scores by elite status.",
+      "analysis_type": "variance_analysis",
+      "difficulty": "simple",
+      "prompt_family": "elite_status_variance",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_024",
+      "prompt": "Estimate mental-health score variance for junior national-team athletes.",
+      "analysis_type": "variance_analysis",
+      "difficulty": "simple",
+      "prompt_family": "single_filtered_variance",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_025",
+      "prompt": "Compare average training-conditions scores between athletes under 20 and athletes aged 20 or above.",
+      "analysis_type": "cohort_comparison",
+      "difficulty": "simple",
+      "prompt_family": "two_group_mean",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_026",
+      "prompt": "Compare mean social-support scores for male and female athletes and report the difference.",
+      "analysis_type": "cohort_comparison",
+      "difficulty": "simple",
+      "prompt_family": "sex_mean_difference",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_027",
+      "prompt": "Contrast average muscular strength between elite and semi-elite athletes.",
+      "analysis_type": "cohort_comparison",
+      "difficulty": "simple",
+      "prompt_family": "expertise_group_difference",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_028",
+      "prompt": "Compare mean lower-body dynamics for volleyball and ice-hockey cohorts.",
+      "analysis_type": "cohort_comparison",
+      "difficulty": "simple",
+      "prompt_family": "sport_group_difference",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_029",
+      "prompt": "Report the aggregate mental-health difference between junior and senior national-team athletes.",
+      "analysis_type": "cohort_comparison",
+      "difficulty": "simple",
+      "prompt_family": "team_level_summary",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_030",
+      "prompt": "Compare muscular strength and training conditions between elite and non-elite groups.",
+      "analysis_type": "cohort_comparison",
+      "difficulty": "simple",
+      "prompt_family": "two_domain_group_comparison",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_031",
+      "prompt": "Explain what a positive regression coefficient means in an athlete expertise analysis.",
+      "analysis_type": "statistical_interpretation",
+      "difficulty": "simple",
+      "prompt_family": "coefficient_sign",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_032",
+      "prompt": "Explain how to interpret a confidence interval that includes zero for a standardized-domain coefficient.",
+      "analysis_type": "statistical_interpretation",
+      "difficulty": "simple",
+      "prompt_family": "confidence_interval",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_033",
+      "prompt": "Interpret a correlation of 0.35 between social support and mental health without making a causal claim.",
+      "analysis_type": "statistical_interpretation",
+      "difficulty": "simple",
+      "prompt_family": "correlation_magnitude",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_034",
+      "prompt": "In plain language, explain an odds ratio above one in the higher-expertise logistic model.",
+      "analysis_type": "statistical_interpretation",
+      "difficulty": "simple",
+      "prompt_family": "odds_ratio",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_035",
+      "prompt": "Explain what greater between-group variance means for training-conditions scores.",
+      "analysis_type": "statistical_interpretation",
+      "difficulty": "simple",
+      "prompt_family": "variance_result",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_036",
+      "prompt": "Fit a simple linear model of expertise value using muscular strength and report the coefficient.",
+      "analysis_type": "multiple_linear_regression",
+      "difficulty": "simple",
+      "prompt_family": "one_predictor_linear",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_037",
+      "prompt": "Model expertise value from lower-body dynamics and training conditions with no demographic controls.",
+      "analysis_type": "multiple_linear_regression",
+      "difficulty": "simple",
+      "prompt_family": "two_predictor_linear",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_038",
+      "prompt": "Run a binary higher-expertise logistic regression using social support as the predictor.",
+      "analysis_type": "logistic_regression",
+      "difficulty": "simple",
+      "prompt_family": "one_predictor_logistic",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_039",
+      "prompt": "Estimate a logistic model for elite status from muscular strength and lower-body dynamics.",
+      "analysis_type": "logistic_regression",
+      "difficulty": "simple",
+      "prompt_family": "two_predictor_logistic",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_040",
+      "prompt": "Generate the unadjusted Table 1 logistic model using all eight standardized domains.",
+      "analysis_type": "table1_analysis",
+      "difficulty": "simple",
+      "prompt_family": "single_table1_model",
+      "expected_complexity_reason": "One direct aggregate task with limited filtering or interpretation."
+    },
+    {
+      "id": "router_v2_041",
+      "prompt": "Report mean and standard deviation for four public domains, stratified by sex, with cohort sizes for each stratum.",
+      "analysis_type": "descriptive_statistics",
+      "difficulty": "medium",
+      "prompt_family": "stratified_summary",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_042",
+      "prompt": "Summarize muscular strength, social support, and training conditions for junior and senior national-team cohorts.",
+      "analysis_type": "descriptive_statistics",
+      "difficulty": "medium",
+      "prompt_family": "multi_cohort_summary",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_043",
+      "prompt": "Compare correlations among mental health, social support, and training conditions separately for male and female athletes.",
+      "analysis_type": "correlation_analysis",
+      "difficulty": "medium",
+      "prompt_family": "sex_stratified_matrix",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_044",
+      "prompt": "For athletes aged 20 and above, create the eight-domain correlation matrix and identify the three largest absolute correlations.",
+      "analysis_type": "correlation_analysis",
+      "difficulty": "medium",
+      "prompt_family": "filtered_full_matrix",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_045",
+      "prompt": "Calculate four-domain correlation matrices for volleyball and ice-hockey athletes and note their largest difference.",
+      "analysis_type": "correlation_analysis",
+      "difficulty": "medium",
+      "prompt_family": "sport_matrix_comparison",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_046",
+      "prompt": "Examine associations among muscular strength, lower-body dynamics, and training conditions for elite athletes and interpret the pattern.",
+      "analysis_type": "correlation_analysis",
+      "difficulty": "medium",
+      "prompt_family": "partial_interpretation",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_047",
+      "prompt": "Compare expertise-group variance across muscular strength, mental health, and social support, reporting each result.",
+      "analysis_type": "variance_analysis",
+      "difficulty": "medium",
+      "prompt_family": "multi_domain_variance",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_048",
+      "prompt": "For female athletes, run variance comparisons across elite status for all eight standardized domains.",
+      "analysis_type": "variance_analysis",
+      "difficulty": "medium",
+      "prompt_family": "filtered_variance_panel",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_049",
+      "prompt": "Assess training-conditions variance by national-team level and accompany it with group means and sample sizes.",
+      "analysis_type": "variance_analysis",
+      "difficulty": "medium",
+      "prompt_family": "variance_with_summary",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_050",
+      "prompt": "For athletes aged 20 and above, regress expertise value on all eight domains while controlling for sex.",
+      "analysis_type": "multiple_linear_regression",
+      "difficulty": "medium",
+      "prompt_family": "one_control_linear",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_051",
+      "prompt": "Model expertise value using muscular strength, basic cognitive function, mental health, and training conditions; report coefficients and confidence intervals.",
+      "analysis_type": "multiple_linear_regression",
+      "difficulty": "medium",
+      "prompt_family": "selected_predictors_linear",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_052",
+      "prompt": "Fit the same four-domain expertise regression separately for male and female athletes and compare coefficient signs.",
+      "analysis_type": "multiple_linear_regression",
+      "difficulty": "medium",
+      "prompt_family": "sex_specific_linear",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_053",
+      "prompt": "For volleyball athletes, estimate the eight-domain expertise model and summarize model fit plus the strongest predictor.",
+      "analysis_type": "multiple_linear_regression",
+      "difficulty": "medium",
+      "prompt_family": "sport_filtered_linear",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_054",
+      "prompt": "Regress expertise value on social support and mental health with age as a control, then interpret both domain coefficients.",
+      "analysis_type": "multiple_linear_regression",
+      "difficulty": "medium",
+      "prompt_family": "controlled_interpretation",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_055",
+      "prompt": "Run the higher-expertise logistic model with all eight domains and sex as the only control.",
+      "analysis_type": "logistic_regression",
+      "difficulty": "medium",
+      "prompt_family": "one_control_logistic",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_056",
+      "prompt": "For athletes under 20, predict elite status from muscular strength, lower-body dynamics, and training conditions.",
+      "analysis_type": "logistic_regression",
+      "difficulty": "medium",
+      "prompt_family": "filtered_logistic",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_057",
+      "prompt": "Estimate the binary expertise model from four selected domains and report odds ratios with confidence intervals.",
+      "analysis_type": "logistic_regression",
+      "difficulty": "medium",
+      "prompt_family": "confidence_interval_logistic",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_058",
+      "prompt": "For ice-hockey athletes, fit a logistic model of higher expertise using all standardized domains.",
+      "analysis_type": "logistic_regression",
+      "difficulty": "medium",
+      "prompt_family": "sport_logistic",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_059",
+      "prompt": "Model elite status from mental health, social support, and training conditions while controlling for age and sex.",
+      "analysis_type": "logistic_regression",
+      "difficulty": "medium",
+      "prompt_family": "two_control_logistic",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_060",
+      "prompt": "Compare male and female athletes across muscular strength, mental health, social support, and training conditions.",
+      "analysis_type": "cohort_comparison",
+      "difficulty": "medium",
+      "prompt_family": "multi_domain_sex_comparison",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_061",
+      "prompt": "Compare three expertise groups on lower-body dynamics and basic cognitive function, including group sizes and mean differences.",
+      "analysis_type": "cohort_comparison",
+      "difficulty": "medium",
+      "prompt_family": "three_expertise_groups",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_062",
+      "prompt": "Within each sex, compare average training conditions for under-20 and 20-plus athletes.",
+      "analysis_type": "cohort_comparison",
+      "difficulty": "medium",
+      "prompt_family": "age_by_sex_comparison",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_063",
+      "prompt": "Contrast volleyball and table-tennis athletes across four standardized domains and highlight the largest gap.",
+      "analysis_type": "cohort_comparison",
+      "difficulty": "medium",
+      "prompt_family": "sport_pair_multivariate",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_064",
+      "prompt": "Reproduce the sex-adjusted Table 1 model for athletes aged 20 and above and report odds ratios.",
+      "analysis_type": "table1_analysis",
+      "difficulty": "medium",
+      "prompt_family": "table1_subset",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_065",
+      "prompt": "Generate unadjusted and age-adjusted Table 1 models, then compare the domain estimates.",
+      "analysis_type": "table1_analysis",
+      "difficulty": "medium",
+      "prompt_family": "table1_two_models",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_066",
+      "prompt": "Run the Table 1 specification for female athletes using all eight public domains.",
+      "analysis_type": "table1_analysis",
+      "difficulty": "medium",
+      "prompt_family": "table1_filtered",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_067",
+      "prompt": "Reproduce the Table 2 linear model for senior national-team athletes with sex as a control.",
+      "analysis_type": "table2_analysis",
+      "difficulty": "medium",
+      "prompt_family": "table2_subset",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_068",
+      "prompt": "Fit unadjusted and sex-adjusted Table 2 models and summarize changes in coefficients.",
+      "analysis_type": "table2_analysis",
+      "difficulty": "medium",
+      "prompt_family": "table2_two_models",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_069",
+      "prompt": "Run a Table 2-style model using four named domains for elite athletes and report model fit.",
+      "analysis_type": "table2_analysis",
+      "difficulty": "medium",
+      "prompt_family": "table2_selected_domains",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_070",
+      "prompt": "Interpret three standardized regression coefficients, distinguishing statistical direction from practical importance.",
+      "analysis_type": "statistical_interpretation",
+      "difficulty": "medium",
+      "prompt_family": "several_coefficients",
+      "expected_complexity_reason": "Multiple conditions, outputs, domains, or a controlled model are required."
+    },
+    {
+      "id": "router_v2_071",
+      "prompt": "Analyze correlations among all eight domains, rank the strongest positive and negative relationships, and discuss multiplicity limitations.",
+      "analysis_type": "correlation_analysis",
+      "difficulty": "hard",
+      "prompt_family": "full_network_reasoning",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    },
+    {
+      "id": "router_v2_072",
+      "prompt": "Build separate eight-domain association summaries for elite and semi-elite athletes, then identify relationships that materially differ.",
+      "analysis_type": "correlation_analysis",
+      "difficulty": "hard",
+      "prompt_family": "cohort_network_comparison",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    },
+    {
+      "id": "router_v2_073",
+      "prompt": "Compare variance across expertise groups for all domains, flag unstable estimates, and explain how unequal group sizes affect interpretation.",
+      "analysis_type": "variance_analysis",
+      "difficulty": "hard",
+      "prompt_family": "variance_sensitivity",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    },
+    {
+      "id": "router_v2_074",
+      "prompt": "Fit the full-cohort eight-domain expertise model and the 20-plus model, then identify coefficients that change sign or magnitude.",
+      "analysis_type": "multiple_linear_regression",
+      "difficulty": "hard",
+      "prompt_family": "full_vs_filtered_linear",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    },
+    {
+      "id": "router_v2_075",
+      "prompt": "Fit nested expertise regressions with domains first, then sex, then age; compare fit and coefficient stability across specifications.",
+      "analysis_type": "multiple_linear_regression",
+      "difficulty": "hard",
+      "prompt_family": "nested_linear_models",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    },
+    {
+      "id": "router_v2_076",
+      "prompt": "Estimate the eight-domain expertise regression, report diagnostics for collinearity and residual behavior, and qualify unreliable effects.",
+      "analysis_type": "multiple_linear_regression",
+      "difficulty": "hard",
+      "prompt_family": "diagnostic_linear",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    },
+    {
+      "id": "router_v2_077",
+      "prompt": "Compare sex-stratified expertise regressions and assess which apparent coefficient differences warrant an interaction follow-up.",
+      "analysis_type": "multiple_linear_regression",
+      "difficulty": "hard",
+      "prompt_family": "interaction_reasoning",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    },
+    {
+      "id": "router_v2_078",
+      "prompt": "Fit comparable domain models for junior, senior, and non-national-team athletes and synthesize differences without causal claims.",
+      "analysis_type": "multiple_linear_regression",
+      "difficulty": "hard",
+      "prompt_family": "multi_cohort_linear",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    },
+    {
+      "id": "router_v2_079",
+      "prompt": "Fit higher-expertise logistic models with no controls, sex, age, and both controls; compare odds-ratio stability.",
+      "analysis_type": "logistic_regression",
+      "difficulty": "hard",
+      "prompt_family": "nested_logistic_models",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    },
+    {
+      "id": "router_v2_080",
+      "prompt": "Estimate the full logistic preference model, report discrimination and calibration diagnostics, and explain limitations from cohort size.",
+      "analysis_type": "logistic_regression",
+      "difficulty": "hard",
+      "prompt_family": "calibration_diagnostics",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    },
+    {
+      "id": "router_v2_081",
+      "prompt": "Compare eight-domain elite-status models for under-20 and 20-plus athletes, including uncertainty and sparse-outcome cautions.",
+      "analysis_type": "logistic_regression",
+      "difficulty": "hard",
+      "prompt_family": "filtered_model_comparison",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    },
+    {
+      "id": "router_v2_082",
+      "prompt": "Fit three logistic specifications using physical, psychosocial, and combined domain sets and compare their aggregate performance.",
+      "analysis_type": "logistic_regression",
+      "difficulty": "hard",
+      "prompt_family": "predictor_set_sensitivity",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    },
+    {
+      "id": "router_v2_083",
+      "prompt": "Estimate a controlled higher-expertise model and explain how correlated predictors complicate interpretation of individual odds ratios.",
+      "analysis_type": "logistic_regression",
+      "difficulty": "hard",
+      "prompt_family": "robust_interpretation",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    },
+    {
+      "id": "router_v2_084",
+      "prompt": "Compare elite versus semi-elite athletes across all domains within age strata and summarize consistent versus subgroup-specific gaps.",
+      "analysis_type": "cohort_comparison",
+      "difficulty": "hard",
+      "prompt_family": "multi_factor_cohort",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    },
+    {
+      "id": "router_v2_085",
+      "prompt": "Compare volleyball, ice hockey, and table tennis across physical and psychosocial domains, including uncertainty and sample-size caveats.",
+      "analysis_type": "cohort_comparison",
+      "difficulty": "hard",
+      "prompt_family": "three_sport_synthesis",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    },
+    {
+      "id": "router_v2_086",
+      "prompt": "Generate the four Table 1 logistic models using all eight domains: no controls, sex, age, and both sex and age; compare effect changes.",
+      "analysis_type": "table1_analysis",
+      "difficulty": "hard",
+      "prompt_family": "four_table1_models",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    },
+    {
+      "id": "router_v2_087",
+      "prompt": "Reproduce all Table 1 specifications for the 20-plus cohort and contrast them with full-cohort estimates.",
+      "analysis_type": "table1_analysis",
+      "difficulty": "hard",
+      "prompt_family": "table1_age_sensitivity",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    },
+    {
+      "id": "router_v2_088",
+      "prompt": "Run the complete Table 1 model sequence separately by sex and discuss unstable or divergent domain effects.",
+      "analysis_type": "table1_analysis",
+      "difficulty": "hard",
+      "prompt_family": "table1_sex_stratified",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    },
+    {
+      "id": "router_v2_089",
+      "prompt": "Compare Table 1 models using physical domains, psychosocial domains, and all domains, with the same demographic controls.",
+      "analysis_type": "table1_analysis",
+      "difficulty": "hard",
+      "prompt_family": "table1_domain_blocks",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    },
+    {
+      "id": "router_v2_090",
+      "prompt": "Reproduce the fully adjusted Table 1 model, then assess coefficient uncertainty, collinearity, and limits on causal interpretation.",
+      "analysis_type": "table1_analysis",
+      "difficulty": "hard",
+      "prompt_family": "table1_limitations",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    },
+    {
+      "id": "router_v2_091",
+      "prompt": "Fit the fully adjusted Table 1 setup for two sport cohorts and compare effect direction while noting small-cell limitations.",
+      "analysis_type": "table1_analysis",
+      "difficulty": "hard",
+      "prompt_family": "table1_sport_comparison",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    },
+    {
+      "id": "router_v2_092",
+      "prompt": "Generate four Table 2 linear models with no controls, sex, age, and both controls; compare domain coefficient stability.",
+      "analysis_type": "table2_analysis",
+      "difficulty": "hard",
+      "prompt_family": "four_table2_models",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    },
+    {
+      "id": "router_v2_093",
+      "prompt": "Fit the eight-domain Table 2 model in the full cohort and age-defined subgroups, then synthesize material changes.",
+      "analysis_type": "table2_analysis",
+      "difficulty": "hard",
+      "prompt_family": "table2_age_comparison",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    },
+    {
+      "id": "router_v2_094",
+      "prompt": "Run the fully adjusted Table 2 analysis and report residual, leverage, and multicollinearity diagnostics.",
+      "analysis_type": "table2_analysis",
+      "difficulty": "hard",
+      "prompt_family": "table2_diagnostics",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    },
+    {
+      "id": "router_v2_095",
+      "prompt": "Compare physical-only, psychosocial-only, and combined Table 2 models using consistent age and sex controls.",
+      "analysis_type": "table2_analysis",
+      "difficulty": "hard",
+      "prompt_family": "table2_domain_blocks",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    },
+    {
+      "id": "router_v2_096",
+      "prompt": "Estimate comparable Table 2 models for volleyball, ice hockey, and table tennis and explain cross-cohort uncertainty.",
+      "analysis_type": "table2_analysis",
+      "difficulty": "hard",
+      "prompt_family": "table2_sport_models",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    },
+    {
+      "id": "router_v2_097",
+      "prompt": "Run fully adjusted Table 2 models separately for male and female athletes and compare the most influential domains.",
+      "analysis_type": "table2_analysis",
+      "difficulty": "hard",
+      "prompt_family": "table2_sex_models",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    },
+    {
+      "id": "router_v2_098",
+      "prompt": "Evaluate several prespecified Table 2 models, compare adjusted fit, and recommend the most defensible specification without data-driven fishing.",
+      "analysis_type": "table2_analysis",
+      "difficulty": "hard",
+      "prompt_family": "table2_model_selection",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    },
+    {
+      "id": "router_v2_099",
+      "prompt": "Explain how to interpret a domain that is positive unadjusted but negative after age and sex controls, including plausible noncausal reasons.",
+      "analysis_type": "statistical_interpretation",
+      "difficulty": "hard",
+      "prompt_family": "conflicting_models",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    },
+    {
+      "id": "router_v2_100",
+      "prompt": "Given mixed correlation, logistic, and linear-regression findings, write a cautious synthesis separating association, prediction, and causation.",
+      "analysis_type": "statistical_interpretation",
+      "difficulty": "hard",
+      "prompt_family": "limitations_synthesis",
+      "expected_complexity_reason": "Several related models, diagnostics, subgroup comparisons, or nuanced interpretation are required."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "status": "trained",
+  "router_type": "project_specific_cloud_local_router",
+  "inspiration": "RouteLLM preference-based routing adapted to Cloud/Local code generation",
+  "cloud_model": "gemini-3.5-flash",
+  "local_model": "Ministral-3-8B-Local",
+  "training_samples": 50,
+  "cloud_samples": 24,
+  "local_samples": 26,
+  "threshold": 0.603939393939394,
+  "cv_accuracy": 0.88,
+  "cv_balanced_accuracy": 0.8782051282051282,
+  "cloud_precision": 0.9090909090909091,
+  "cloud_recall": 0.8333333333333334,
+  "local_recall": 0.9230769230769231,
+  "cloud_usage_rate": 0.44,
+  "confusion_matrix_cv": [
+    [
+      24,
+      2
+    ],
+    [
+      4,
+      20
+    ]
+  ],
+  "prompt_version": "pool_typed_schema_v3",
+  "label_policy": "local if local fully correct; else cloud if cloud fully correct; else invalid",
+  "training_dataset": "artifacts/athlete_cloud_local_preferences_valid.json",
+  "training_dataset_sha256": "d435d892ab93fb3801460beb5f8943435368f17480aa7eda02059943d42e98c9",
+  "threshold_source": "stratified 5-fold out-of-fold probabilities",
+  "random_state": 2026,
+  "created_at": "2026-08-19T22:55:30.545736+00:00",
+  "model_sha256": "e14de09d9c063b57b6b488631e969522cb2b685ce2f42a25523a581da1dadea5"
+}

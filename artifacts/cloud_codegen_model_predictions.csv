@@ -1,0 +1,1103 @@
+﻿sample_id,prompt_version,requested_analysis,prompt,privacy_route,analysis_filters,model_key,model_display_name,provider,requested_model,actual_model,raw_response,generated_code,candidate_assignment_count,generated_method,generated_arguments,expected_method,structure_validation_passed,request_match_passed,local_execution_passed,result_validation_passed,fully_correct,failure_stage,validation_error,request_mismatches,input_tokens,output_tokens,total_tokens,latency_seconds,api_call_success
+frontend_real_001,pool_typed_schema_v3,table1,"Generate the four logistic regression models corresponding to Table 1 for all athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.",cloud,{},gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""sex"", ""age""]], filters={})","result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""sex"", ""age""]], filters={})",1,table1,"{""controls"": [[], [""sex""], [""age""], [""sex"", ""age""]], ""filters"": {}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status""}",table1,True,True,True,True,True,,,[],2055,74,2129,1.6462280999985524,True
+frontend_real_002,pool_typed_schema_v3,table1,"Generate the four logistic regression models corresponding to Table 1 for elite athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.",collaboration,"{""expertise_group"": ""elite""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""sex"", ""age""]], filters={""elite_status"": ""elite""})","result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""sex"", ""age""]], filters={""elite_status"": ""elite""})",1,table1,"{""controls"": [[], [""sex""], [""age""], [""sex"", ""age""]], ""filters"": {""elite_status"": ""elite""}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status""}",table1,True,False,False,False,False,request_validation,Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.,"[""Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.""]",2055,79,2134,1.2908703000284731,True
+frontend_real_003,pool_typed_schema_v3,table1,"Generate the four logistic regression models corresponding to Table 1 for 3x3 basketball athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.",collaboration,"{""sport"": ""3x3 basketball""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.table1(predictors=[""muscular_strength"",""lower_body_dynamics"",""muscle_power_genetics"",""blood_micronutrients"",""basic_cognitive_function"",""mental_health"",""social_support"",""training_conditions""], target=""elite_status"", controls=[[],[""sex""],[""age""],[""sex"",""age""]], filters={""sport"": ""3x3 basketball""})","result = analysis.table1(predictors=[""muscular_strength"",""lower_body_dynamics"",""muscle_power_genetics"",""blood_micronutrients"",""basic_cognitive_function"",""mental_health"",""social_support"",""training_conditions""], target=""elite_status"", controls=[[],[""sex""],[""age""],[""sex"",""age""]], filters={""sport"": ""3x3 basketball""})",1,table1,"{""controls"": [[], [""sex""], [""age""], [""sex"", ""age""]], ""filters"": {""sport"": ""3x3 basketball""}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status""}",table1,True,True,True,True,True,,,[],2059,73,2132,1.2553550999728031,True
+frontend_real_004,pool_typed_schema_v3,table1,"Generate the four logistic regression models corresponding to Table 1 for ice hockey athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.",collaboration,"{""sport"": ""ice hockey""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""sex"", ""age""]], filters={""sport"": ""ice hockey""})","result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""sex"", ""age""]], filters={""sport"": ""ice hockey""})",1,table1,"{""controls"": [[], [""sex""], [""age""], [""sex"", ""age""]], ""filters"": {""sport"": ""ice hockey""}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status""}",table1,True,True,False,False,False,local_execution,KeyError: 'Muscular strength',[],2056,79,2135,1.0960853000287898,True
+frontend_real_005,pool_typed_schema_v3,table1,"Generate the four logistic regression models corresponding to Table 1 for volleyball athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.",collaboration,"{""sport"": ""volleyball""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.table1(predictors=['muscular_strength', 'lower_body_dynamics', 'muscle_power_genetics', 'blood_micronutrients', 'basic_cognitive_function', 'mental_health', 'social_support', 'training_conditions'], target='elite_status', controls=[[], ['sex'], ['age'], ['sex', 'age']], filters={'sport': 'volleyball'})","result = analysis.table1(predictors=['muscular_strength', 'lower_body_dynamics', 'muscle_power_genetics', 'blood_micronutrients', 'basic_cognitive_function', 'mental_health', 'social_support', 'training_conditions'], target='elite_status', controls=[[], ['sex'], ['age'], ['sex', 'age']], filters={'sport': 'volleyball'})",1,table1,"{""controls"": [[], [""sex""], [""age""], [""sex"", ""age""]], ""filters"": {""sport"": ""volleyball""}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status""}",table1,True,True,True,True,True,,,[],2055,78,2133,1.0532608999637887,True
+frontend_real_006,pool_typed_schema_v3,table1,"Generate the four logistic regression models corresponding to Table 1 for female athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.",collaboration,"{""sex"": ""female""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""sex"", ""age""]], filters={""sex"": ""female""})","result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""sex"", ""age""]], filters={""sex"": ""female""})",1,table1,"{""controls"": [[], [""sex""], [""age""], [""sex"", ""age""]], ""filters"": {""sex"": ""female""}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status""}",table1,True,True,True,True,True,,,[],2055,78,2133,4.005295499984641,True
+frontend_real_007,pool_typed_schema_v3,table1,"Generate the four logistic regression models corresponding to Table 1 for junior national team athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.",collaboration,"{""national_team"": ""Junior""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""sex"", ""age""]], filters={""national_team"": ""Junior""})","result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""sex"", ""age""]], filters={""national_team"": ""Junior""})",1,table1,"{""controls"": [[], [""sex""], [""age""], [""sex"", ""age""]], ""filters"": {""national_team"": ""Junior""}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status""}",table1,True,True,False,False,False,local_execution,KeyError: 'Muscular strength',[],2057,79,2136,1.1432095000054687,True
+frontend_real_008,pool_typed_schema_v3,table1,"Generate the four logistic regression models corresponding to Table 1 for athletes aged 20 and above using all eight public domains, with models using no controls, sex, age, and both sex and age.",collaboration,"{""age_group"": ""20_and_above""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""age"", ""sex""]], filters={""age_group"": ""20_and_above""})","result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""age"", ""sex""]], filters={""age_group"": ""20_and_above""})",1,table1,"{""controls"": [[], [""sex""], [""age""], [""age"", ""sex""]], ""filters"": {""age_group"": ""20_and_above""}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status""}",table1,True,False,False,False,False,request_validation,Expected all four predefined Table 1 control specifications.,"[""Expected all four predefined Table 1 control specifications.""]",2059,82,2141,0.9751968999626115,True
+frontend_real_009,pool_typed_schema_v3,table2,"Generate the four multiple linear regression models corresponding to Table 2 for all athletes, with expertise_value as the continuous target.",cloud,{},gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={}, group=""all"")","result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={}, group=""all"")",1,table2,"{""filters"": {}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",table2,True,True,True,True,True,,,[],2043,56,2099,1.092043599986937,True
+frontend_real_010,pool_typed_schema_v3,table2,"Generate the four multiple linear regression models corresponding to Table 2 for elite athletes, with expertise_value as the continuous target.",collaboration,"{""expertise_group"": ""elite""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""elite_status"": ""elite""}, group=""all"")","result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""elite_status"": ""elite""}, group=""all"")",1,table2,"{""filters"": {""elite_status"": ""elite""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",table2,True,False,False,False,False,request_validation,Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.,"[""Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.""]",2043,62,2105,1.4913416000199504,True
+frontend_real_011,pool_typed_schema_v3,table2,"Generate the four multiple linear regression models corresponding to Table 2 for 3x3 basketball athletes, with expertise_value as the continuous target.",collaboration,"{""sport"": ""3x3 basketball""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sport"": ""3x3 basketball""}, group=""all"")","result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sport"": ""3x3 basketball""}, group=""all"")",1,table2,"{""filters"": {""sport"": ""3x3 basketball""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",table2,True,True,True,True,True,,,[],2047,64,2111,1.0010155999916606,True
+frontend_real_012,pool_typed_schema_v3,table2,"Generate the four multiple linear regression models corresponding to Table 2 for ice hockey athletes, with expertise_value as the continuous target.",collaboration,"{""sport"": ""ice hockey""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sport"": ""ice hockey""}, group=""all"")","result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sport"": ""ice hockey""}, group=""all"")",1,table2,"{""filters"": {""sport"": ""ice hockey""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",table2,True,True,True,True,True,,,[],2044,62,2106,1.3953609999734908,True
+frontend_real_013,pool_typed_schema_v3,table2,"Generate the four multiple linear regression models corresponding to Table 2 for volleyball athletes, with expertise_value as the continuous target.",collaboration,"{""sport"": ""volleyball""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sport"": ""volleyball""}, group=""all"")","result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sport"": ""volleyball""}, group=""all"")",1,table2,"{""filters"": {""sport"": ""volleyball""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",table2,True,True,True,True,True,,,[],2043,62,2105,0.9551994999637827,True
+frontend_real_014,pool_typed_schema_v3,table2,"Generate the four multiple linear regression models corresponding to Table 2 for female athletes, with expertise_value as the continuous target.",collaboration,"{""sex"": ""female""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sex"": ""female""}, group=""all"")","result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sex"": ""female""}, group=""all"")",1,table2,"{""filters"": {""sex"": ""female""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",table2,True,True,True,True,True,,,[],2043,61,2104,1.2723363999975845,True
+frontend_real_015,pool_typed_schema_v3,table2,"Generate the four multiple linear regression models corresponding to Table 2 for junior national team athletes, with expertise_value as the continuous target.",collaboration,"{""national_team"": ""Junior""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.table2(predictors=['muscular_strength', 'lower_body_dynamics', 'muscle_power_genetics', 'blood_micronutrients', 'basic_cognitive_function', 'mental_health', 'social_support', 'training_conditions'], filters={'national_team': 'Junior'}, group='all')","result = analysis.table2(predictors=['muscular_strength', 'lower_body_dynamics', 'muscle_power_genetics', 'blood_micronutrients', 'basic_cognitive_function', 'mental_health', 'social_support', 'training_conditions'], filters={'national_team': 'Junior'}, group='all')",1,table2,"{""filters"": {""national_team"": ""Junior""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",table2,True,True,True,True,True,,,[],2045,62,2107,1.000787600001786,True
+frontend_real_016,pool_typed_schema_v3,table2,"Generate the four multiple linear regression models corresponding to Table 2 for athletes aged 20 and above, with expertise_value as the continuous target.",collaboration,"{""age_group"": ""20_and_above""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""age_group"": ""20_and_above""}, group=""all"")","result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""age_group"": ""20_and_above""}, group=""all"")",1,table2,"{""filters"": {""age_group"": ""20_and_above""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",table2,True,True,True,True,True,,,[],2047,65,2112,0.8938386999652721,True
+frontend_real_017,pool_typed_schema_v3,figure1,"Generate Figure 1 for all athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",cloud,{},gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.figure1(variables=['muscular_strength', 'lower_body_dynamics', 'muscle_power_genetics', 'blood_micronutrients', 'basic_cognitive_function', 'mental_health', 'social_support', 'training_conditions'], target='expertise_value', group_field='elite_status', correlation_threshold=0.15, variance_iterations=1000, filters={})","result = analysis.figure1(variables=['muscular_strength', 'lower_body_dynamics', 'muscle_power_genetics', 'blood_micronutrients', 'basic_cognitive_function', 'mental_health', 'social_support', 'training_conditions'], target='expertise_value', group_field='elite_status', correlation_threshold=0.15, variance_iterations=1000, filters={})",1,figure1,"{""correlation_threshold"": 0.15, ""filters"": {}, ""group_field"": ""elite_status"", ""target"": ""expertise_value"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""variance_iterations"": 1000}",figure1,True,True,True,True,True,,,[],2061,77,2138,1.9060145000112243,True
+frontend_real_018,pool_typed_schema_v3,figure1,"Generate Figure 1 for elite athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",collaboration,"{""expertise_group"": ""elite""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.figure1(variables=['muscular_strength', 'lower_body_dynamics', 'muscle_power_genetics', 'blood_micronutrients', 'basic_cognitive_function', 'mental_health', 'social_support', 'training_conditions'], target='expertise_value', group_field='elite_status', correlation_threshold=0.15, variance_iterations=1000, filters={'elite_status': 'elite'})","result = analysis.figure1(variables=['muscular_strength', 'lower_body_dynamics', 'muscle_power_genetics', 'blood_micronutrients', 'basic_cognitive_function', 'mental_health', 'social_support', 'training_conditions'], target='expertise_value', group_field='elite_status', correlation_threshold=0.15, variance_iterations=1000, filters={'elite_status': 'elite'})",1,figure1,"{""correlation_threshold"": 0.15, ""filters"": {""elite_status"": ""elite""}, ""group_field"": ""elite_status"", ""target"": ""expertise_value"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""variance_iterations"": 1000}",figure1,True,False,False,False,False,request_validation,Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.,"[""Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.""]",2061,82,2143,1.8920914999907836,True
+frontend_real_019,pool_typed_schema_v3,figure1,"Generate Figure 1 for 3x3 basketball athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",collaboration,"{""sport"": ""3x3 basketball""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.figure1(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""expertise_value"", group_field=""elite_status"", correlation_threshold=0.15, variance_iterations=1000, filters={""sport"": ""3x3 basketball""})","result = analysis.figure1(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""expertise_value"", group_field=""elite_status"", correlation_threshold=0.15, variance_iterations=1000, filters={""sport"": ""3x3 basketball""})",1,figure1,"{""correlation_threshold"": 0.15, ""filters"": {""sport"": ""3x3 basketball""}, ""group_field"": ""elite_status"", ""target"": ""expertise_value"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""variance_iterations"": 1000}",figure1,True,True,True,True,True,,,[],2065,84,2149,1.1122686000308022,True
+frontend_real_020,pool_typed_schema_v3,figure1,"Generate Figure 1 for ice hockey athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",collaboration,"{""sport"": ""ice hockey""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.figure1(variables=['muscular_strength', 'lower_body_dynamics', 'muscle_power_genetics', 'blood_micronutrients', 'basic_cognitive_function', 'mental_health', 'social_support', 'training_conditions'], target='expertise_value', group_field='elite_status', correlation_threshold=0.15, variance_iterations=1000, filters={'sport': 'ice hockey'})","result = analysis.figure1(variables=['muscular_strength', 'lower_body_dynamics', 'muscle_power_genetics', 'blood_micronutrients', 'basic_cognitive_function', 'mental_health', 'social_support', 'training_conditions'], target='expertise_value', group_field='elite_status', correlation_threshold=0.15, variance_iterations=1000, filters={'sport': 'ice hockey'})",1,figure1,"{""correlation_threshold"": 0.15, ""filters"": {""sport"": ""ice hockey""}, ""group_field"": ""elite_status"", ""target"": ""expertise_value"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""variance_iterations"": 1000}",figure1,True,True,True,True,True,,,[],2062,82,2144,1.2553766000200994,True
+frontend_real_021,pool_typed_schema_v3,figure1,"Generate Figure 1 for volleyball athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",collaboration,"{""sport"": ""volleyball""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.figure1(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""expertise_value"", group_field=""elite_status"", correlation_threshold=0.15, variance_iterations=1000, filters={""sport"": ""volleyball""})","result = analysis.figure1(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""expertise_value"", group_field=""elite_status"", correlation_threshold=0.15, variance_iterations=1000, filters={""sport"": ""volleyball""})",1,figure1,"{""correlation_threshold"": 0.15, ""filters"": {""sport"": ""volleyball""}, ""group_field"": ""elite_status"", ""target"": ""expertise_value"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""variance_iterations"": 1000}",figure1,True,True,True,True,True,,,[],2061,82,2143,1.4762027999968268,True
+frontend_real_022,pool_typed_schema_v3,figure1,"Generate Figure 1 for female athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",collaboration,"{""sex"": ""female""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.figure1(variables=['muscular_strength', 'lower_body_dynamics', 'muscle_power_genetics', 'blood_micronutrients', 'basic_cognitive_function', 'mental_health', 'social_support', 'training_conditions'], target='expertise_value', group_field='elite_status', correlation_threshold=0.15, variance_iterations=1000, filters={'sex': 'female'})","result = analysis.figure1(variables=['muscular_strength', 'lower_body_dynamics', 'muscle_power_genetics', 'blood_micronutrients', 'basic_cognitive_function', 'mental_health', 'social_support', 'training_conditions'], target='expertise_value', group_field='elite_status', correlation_threshold=0.15, variance_iterations=1000, filters={'sex': 'female'})",1,figure1,"{""correlation_threshold"": 0.15, ""filters"": {""sex"": ""female""}, ""group_field"": ""elite_status"", ""target"": ""expertise_value"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""variance_iterations"": 1000}",figure1,True,True,True,True,True,,,[],2061,81,2142,1.1126323000062257,True
+frontend_real_023,pool_typed_schema_v3,figure1,"Generate Figure 1 for junior national team athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",collaboration,"{""national_team"": ""Junior""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.figure1(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""expertise_value"", group_field=""elite_status"", correlation_threshold=0.15, variance_iterations=1000, filters={""national_team"": ""Junior""})","result = analysis.figure1(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""expertise_value"", group_field=""elite_status"", correlation_threshold=0.15, variance_iterations=1000, filters={""national_team"": ""Junior""})",1,figure1,"{""correlation_threshold"": 0.15, ""filters"": {""national_team"": ""Junior""}, ""group_field"": ""elite_status"", ""target"": ""expertise_value"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""variance_iterations"": 1000}",figure1,True,True,True,True,True,,,[],2063,82,2145,1.2722248999634758,True
+frontend_real_024,pool_typed_schema_v3,figure1,"Generate Figure 1 for athletes aged 20 and above using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",collaboration,"{""age_group"": ""20_and_above""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.figure1(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""expertise_value"", group_field=""elite_status"", correlation_threshold=0.15, variance_iterations=1000, filters={""age_group"": ""20_and_above""})","result = analysis.figure1(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""expertise_value"", group_field=""elite_status"", correlation_threshold=0.15, variance_iterations=1000, filters={""age_group"": ""20_and_above""})",1,figure1,"{""correlation_threshold"": 0.15, ""filters"": {""age_group"": ""20_and_above""}, ""group_field"": ""elite_status"", ""target"": ""expertise_value"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""variance_iterations"": 1000}",figure1,True,True,True,True,True,,,[],2065,85,2150,1.1996509000309743,True
+frontend_real_025,pool_typed_schema_v3,correlation,Calculate pairwise Pearson correlations among all eight public domains for all athletes.,cloud,{},gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={}, method=""pearson"", visualization=False)","result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={}, method=""pearson"", visualization=False)",1,correlation,"{""filters"": {}, ""method"": ""pearson"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": false}",correlation,True,False,False,False,False,request_validation,Expected visualization=True but generated False.,"[""Expected visualization=True but generated False.""]",2033,59,2092,1.2419965000008233,True
+frontend_real_026,pool_typed_schema_v3,correlation,Calculate pairwise Pearson correlations among all eight public domains for elite athletes.,collaboration,"{""expertise_group"": ""elite""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""elite_status"": ""elite""}, method=""pearson"", visualization=False)","result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""elite_status"": ""elite""}, method=""pearson"", visualization=False)",1,correlation,"{""filters"": {""elite_status"": ""elite""}, ""method"": ""pearson"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": false}",correlation,True,False,False,False,False,request_validation,Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}. Expected visualization=True but generated False.,"[""Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}."", ""Expected visualization=True but generated False.""]",2033,65,2098,0.9755416999687441,True
+frontend_real_027,pool_typed_schema_v3,correlation,Calculate pairwise Pearson correlations among all eight public domains for 3x3 basketball athletes.,collaboration,"{""sport"": ""3x3 basketball""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sport"": ""3x3 basketball""}, method=""pearson"", visualization=False)","result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sport"": ""3x3 basketball""}, method=""pearson"", visualization=False)",1,correlation,"{""filters"": {""sport"": ""3x3 basketball""}, ""method"": ""pearson"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": false}",correlation,True,False,False,False,False,request_validation,Expected visualization=True but generated False.,"[""Expected visualization=True but generated False.""]",2037,67,2104,0.9652104999986477,True
+frontend_real_028,pool_typed_schema_v3,correlation,Calculate pairwise Pearson correlations among all eight public domains for ice hockey athletes.,collaboration,"{""sport"": ""ice hockey""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sport"": ""ice hockey""}, method=""pearson"", visualization=False)","result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sport"": ""ice hockey""}, method=""pearson"", visualization=False)",1,correlation,"{""filters"": {""sport"": ""ice hockey""}, ""method"": ""pearson"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": false}",correlation,True,False,False,False,False,request_validation,Expected visualization=True but generated False.,"[""Expected visualization=True but generated False.""]",2034,65,2099,1.152672900003381,True
+frontend_real_029,pool_typed_schema_v3,correlation,Calculate pairwise Pearson correlations among all eight public domains for volleyball athletes.,collaboration,"{""sport"": ""volleyball""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.correlation(variables=['muscular_strength', 'lower_body_dynamics', 'muscle_power_genetics', 'blood_micronutrients', 'basic_cognitive_function', 'mental_health', 'social_support', 'training_conditions'], filters={'sport': 'volleyball'}, method='pearson', visualization=False)","result = analysis.correlation(variables=['muscular_strength', 'lower_body_dynamics', 'muscle_power_genetics', 'blood_micronutrients', 'basic_cognitive_function', 'mental_health', 'social_support', 'training_conditions'], filters={'sport': 'volleyball'}, method='pearson', visualization=False)",1,correlation,"{""filters"": {""sport"": ""volleyball""}, ""method"": ""pearson"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": false}",correlation,True,False,False,False,False,request_validation,Expected visualization=True but generated False.,"[""Expected visualization=True but generated False.""]",2033,65,2098,0.9692754999850877,True
+frontend_real_030,pool_typed_schema_v3,correlation,Calculate pairwise Pearson correlations among all eight public domains for female athletes.,collaboration,"{""sex"": ""female""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sex"": ""female""}, method=""pearson"", visualization=False)","result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sex"": ""female""}, method=""pearson"", visualization=False)",1,correlation,"{""filters"": {""sex"": ""female""}, ""method"": ""pearson"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": false}",correlation,True,False,False,False,False,request_validation,Expected visualization=True but generated False.,"[""Expected visualization=True but generated False.""]",2033,64,2097,1.2665122000034899,True
+frontend_real_031,pool_typed_schema_v3,correlation,Calculate pairwise Pearson correlations among all eight public domains for junior national team athletes.,collaboration,"{""national_team"": ""Junior""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""national_team"": ""Junior""}, method=""pearson"", visualization=False)","result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""national_team"": ""Junior""}, method=""pearson"", visualization=False)",1,correlation,"{""filters"": {""national_team"": ""Junior""}, ""method"": ""pearson"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": false}",correlation,True,False,False,False,False,request_validation,Expected visualization=True but generated False.,"[""Expected visualization=True but generated False.""]",2035,65,2100,1.166734499973245,True
+frontend_real_032,pool_typed_schema_v3,correlation,Calculate pairwise Pearson correlations among all eight public domains for athletes aged 20 and above.,collaboration,"{""age_group"": ""20_and_above""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""age_group"": ""20_and_above""}, method=""pearson"", visualization=False)","result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""age_group"": ""20_and_above""}, method=""pearson"", visualization=False)",1,correlation,"{""filters"": {""age_group"": ""20_and_above""}, ""method"": ""pearson"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": false}",correlation,True,False,False,False,False,request_validation,Expected visualization=True but generated False.,"[""Expected visualization=True but generated False.""]",2037,68,2105,1.239380999992136,True
+frontend_real_033,pool_typed_schema_v3,variance_analysis,"Run variance analysis for all athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",cloud,{},gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.variance_analysis(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], group_field=""elite_status"", groups=[""elite"", ""semi_elite""], iterations=1000, filters={}, visualization=True)","result = analysis.variance_analysis(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], group_field=""elite_status"", groups=[""elite"", ""semi_elite""], iterations=1000, filters={}, visualization=True)",1,variance_analysis,"{""filters"": {}, ""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": true}",variance_analysis,True,True,True,True,True,,,[],2048,75,2123,1.4816265999688767,True
+frontend_real_034,pool_typed_schema_v3,variance_analysis,"Run variance analysis for elite athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",collaboration,"{""expertise_group"": ""elite""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.variance_analysis(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], group_field=""elite_status"", groups=[""elite"", ""semi_elite""], iterations=1000, filters={}, visualization=True)","result = analysis.variance_analysis(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], group_field=""elite_status"", groups=[""elite"", ""semi_elite""], iterations=1000, filters={}, visualization=True)",1,variance_analysis,"{""filters"": {}, ""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": true}",variance_analysis,True,False,False,False,False,request_validation,Expected filters={'expertise_group': 'elite'} but generated filters={}.,"[""Expected filters={'expertise_group': 'elite'} but generated filters={}.""]",2048,75,2123,1.226086300041061,True
+frontend_real_035,pool_typed_schema_v3,variance_analysis,"Run variance analysis for 3x3 basketball athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",collaboration,"{""sport"": ""3x3 basketball""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.variance_analysis(variables=['muscular_strength', 'lower_body_dynamics', 'muscle_power_genetics', 'blood_micronutrients', 'basic_cognitive_function', 'mental_health', 'social_support', 'training_conditions'], group_field='elite_status', groups=['elite', 'semi_elite'], iterations=100, filters={'sport': '3x3 basketball'}, visualization=False)","result = analysis.variance_analysis(variables=['muscular_strength', 'lower_body_dynamics', 'muscle_power_genetics', 'blood_micronutrients', 'basic_cognitive_function', 'mental_health', 'social_support', 'training_conditions'], group_field='elite_status', groups=['elite', 'semi_elite'], iterations=100, filters={'sport': '3x3 basketball'}, visualization=False)",1,variance_analysis,"{""filters"": {""sport"": ""3x3 basketball""}, ""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 100, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": false}",variance_analysis,True,False,False,False,False,request_validation,Expected iterations=1000 but generated 100. Expected visualization=True but generated False.,"[""Expected iterations=1000 but generated 100."", ""Expected visualization=True but generated False.""]",2052,82,2134,1.2745392000069842,True
+frontend_real_036,pool_typed_schema_v3,variance_analysis,"Run variance analysis for ice hockey athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",collaboration,"{""sport"": ""ice hockey""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.variance_analysis(variables=['muscular_strength', 'lower_body_dynamics', 'muscle_power_genetics', 'blood_micronutrients', 'basic_cognitive_function', 'mental_health', 'social_support', 'training_conditions'], group_field='elite_status', groups=['elite', 'semi_elite'], iterations=1000, filters={'sport': 'ice hockey'}, visualization=True)","result = analysis.variance_analysis(variables=['muscular_strength', 'lower_body_dynamics', 'muscle_power_genetics', 'blood_micronutrients', 'basic_cognitive_function', 'mental_health', 'social_support', 'training_conditions'], group_field='elite_status', groups=['elite', 'semi_elite'], iterations=1000, filters={'sport': 'ice hockey'}, visualization=True)",1,variance_analysis,"{""filters"": {""sport"": ""ice hockey""}, ""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": true}",variance_analysis,True,True,False,False,False,local_execution,SmallGroupError: Variance output blocked: selected cohort has 8 elite and 47 semi-elite athletes; each group requires at least 10.,[],2049,81,2130,1.2266409999574535,True
+frontend_real_037,pool_typed_schema_v3,variance_analysis,"Run variance analysis for volleyball athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",collaboration,"{""sport"": ""volleyball""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.variance_analysis(variables=['muscular_strength', 'lower_body_dynamics', 'muscle_power_genetics', 'blood_micronutrients', 'basic_cognitive_function', 'mental_health', 'social_support', 'training_conditions'], group_field='elite_status', groups=['elite', 'semi_elite'], iterations=1000, filters={'sport': 'volleyball'}, visualization=True)","result = analysis.variance_analysis(variables=['muscular_strength', 'lower_body_dynamics', 'muscle_power_genetics', 'blood_micronutrients', 'basic_cognitive_function', 'mental_health', 'social_support', 'training_conditions'], group_field='elite_status', groups=['elite', 'semi_elite'], iterations=1000, filters={'sport': 'volleyball'}, visualization=True)",1,variance_analysis,"{""filters"": {""sport"": ""volleyball""}, ""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": true}",variance_analysis,True,True,True,True,True,,,[],2048,81,2129,1.2739812000072561,True
+frontend_real_038,pool_typed_schema_v3,variance_analysis,"Run variance analysis for female athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",collaboration,"{""sex"": ""female""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.variance_analysis(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], group_field=""elite_status"", groups=[""elite"", ""semi_elite""], iterations=1000, filters={""sex"": ""female""}, visualization=True)","result = analysis.variance_analysis(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], group_field=""elite_status"", groups=[""elite"", ""semi_elite""], iterations=1000, filters={""sex"": ""female""}, visualization=True)",1,variance_analysis,"{""filters"": {""sex"": ""female""}, ""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": true}",variance_analysis,True,True,True,True,True,,,[],2048,80,2128,1.3112203999771737,True
+frontend_real_039,pool_typed_schema_v3,variance_analysis,"Run variance analysis for junior national team athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",collaboration,"{""national_team"": ""Junior""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.variance_analysis(variables=['muscular_strength', 'lower_body_dynamics', 'muscle_power_genetics', 'blood_micronutrients', 'basic_cognitive_function', 'mental_health', 'social_support', 'training_conditions'], group_field='elite_status', groups=['elite', 'semi_elite'], iterations=1000, filters={'national_team': 'Junior'}, visualization=True)","result = analysis.variance_analysis(variables=['muscular_strength', 'lower_body_dynamics', 'muscle_power_genetics', 'blood_micronutrients', 'basic_cognitive_function', 'mental_health', 'social_support', 'training_conditions'], group_field='elite_status', groups=['elite', 'semi_elite'], iterations=1000, filters={'national_team': 'Junior'}, visualization=True)",1,variance_analysis,"{""filters"": {""national_team"": ""Junior""}, ""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": true}",variance_analysis,True,True,False,False,False,local_execution,SmallGroupError: Variance output blocked: selected cohort has 2 elite and 196 semi-elite athletes; each group requires at least 10.,[],2050,81,2131,1.521909799950663,True
+frontend_real_040,pool_typed_schema_v3,variance_analysis,"Run variance analysis for athletes aged 20 and above across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",collaboration,"{""age_group"": ""20_and_above""}",gpt4_1,GPT-4.1,openai,gpt-4.1,gpt-4.1-2025-04-14,"result = analysis.variance_analysis(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], group_field=""elite_status"", groups=[""elite"", ""semi_elite""], iterations=1000, filters={""age_group"": ""20_and_above""}, visualization=True)","result = analysis.variance_analysis(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], group_field=""elite_status"", groups=[""elite"", ""semi_elite""], iterations=1000, filters={""age_group"": ""20_and_above""}, visualization=True)",1,variance_analysis,"{""filters"": {""age_group"": ""20_and_above""}, ""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": true}",variance_analysis,True,True,True,True,True,,,[],2052,84,2136,1.2681891999673098,True
+frontend_real_001,pool_typed_schema_v3,table1,"Generate the four logistic regression models corresponding to Table 1 for all athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.",cloud,{},gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"result = analysis.table1(
+    predictors=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    target=""elite_status"",
+    controls=[[], [""sex""], [""age""], [""sex"", ""age""]],
+    filters={}
+)","result = analysis.table1(
+    predictors=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    target=""elite_status"",
+    controls=[[], [""sex""], [""age""], [""sex"", ""age""]],
+    filters={}
+)",1,table1,"{""controls"": [[], [""sex""], [""age""], [""sex"", ""age""]], ""filters"": {}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status""}",table1,True,True,True,True,True,,,[],2437,111,3392,3.986251100024674,True
+frontend_real_002,pool_typed_schema_v3,table1,"Generate the four logistic regression models corresponding to Table 1 for elite athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.",collaboration,"{""expertise_group"": ""elite""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"```python
+result = analysis.table1(
+    predictors=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    target=""elite_status"",
+    controls=[[], [""sex""], [""age""], [""sex"", ""age""]],
+    filters={},
+)
+```","result = analysis.table1(
+    predictors=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    target=""elite_status"",
+    controls=[[], [""sex""], [""age""], [""sex"", ""age""]],
+    filters={},
+)",1,table1,"{""controls"": [[], [""sex""], [""age""], [""sex"", ""age""]], ""filters"": {}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status""}",table1,True,False,False,False,False,request_validation,Expected filters={'expertise_group': 'elite'} but generated filters={}.,"[""Expected filters={'expertise_group': 'elite'} but generated filters={}.""]",2437,115,3568,10.497180800011847,True
+frontend_real_003,pool_typed_schema_v3,table1,"Generate the four logistic regression models corresponding to Table 1 for 3x3 basketball athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.",collaboration,"{""sport"": ""3x3 basketball""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""sex"", ""age""]], filters={""sport"": ""3x3 basketball""})","result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""sex"", ""age""]], filters={""sport"": ""3x3 basketball""})",1,table1,"{""controls"": [[], [""sex""], [""age""], [""sex"", ""age""]], ""filters"": {""sport"": ""3x3 basketball""}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status""}",table1,True,True,True,True,True,,,[],2441,89,3372,9.68891219998477,True
+frontend_real_004,pool_typed_schema_v3,table1,"Generate the four logistic regression models corresponding to Table 1 for ice hockey athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.",collaboration,"{""sport"": ""ice hockey""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"```python
+result = analysis.table1(
+    predictors=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    target=""elite_status"",
+    controls=[[], [""sex""], [""age""], [""sex"", ""age""]],
+    filters={""sport"": ""ice hockey""}
+)
+```","result = analysis.table1(
+    predictors=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    target=""elite_status"",
+    controls=[[], [""sex""], [""age""], [""sex"", ""age""]],
+    filters={""sport"": ""ice hockey""}
+)",1,table1,"{""controls"": [[], [""sex""], [""age""], [""sex"", ""age""]], ""filters"": {""sport"": ""ice hockey""}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status""}",table1,True,True,False,False,False,local_execution,KeyError: 'Muscular strength',[],2438,122,3613,5.06843270000536,True
+frontend_real_005,pool_typed_schema_v3,table1,"Generate the four logistic regression models corresponding to Table 1 for volleyball athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.",collaboration,"{""sport"": ""volleyball""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"result = analysis.table1(
+    predictors=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    target=""elite_status"",
+    controls=[[], [""sex""], [""age""], [""sex"", ""age""]],
+    filters={""sport"": ""volleyball""}
+)","result = analysis.table1(
+    predictors=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    target=""elite_status"",
+    controls=[[], [""sex""], [""age""], [""sex"", ""age""]],
+    filters={""sport"": ""volleyball""}
+)",1,table1,"{""controls"": [[], [""sex""], [""age""], [""sex"", ""age""]], ""filters"": {""sport"": ""volleyball""}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status""}",table1,True,True,True,True,True,,,[],2437,117,3350,3.8407055000425316,True
+frontend_real_006,pool_typed_schema_v3,table1,"Generate the four logistic regression models corresponding to Table 1 for female athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.",collaboration,"{""sex"": ""female""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"```python
+result = analysis.table1(
+    predictors=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    target=""elite_status"",
+    controls=[[], [""sex""], [""age""], [""sex"", ""age""]],
+    filters={""sex"": ""female""},
+)
+```","result = analysis.table1(
+    predictors=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    target=""elite_status"",
+    controls=[[], [""sex""], [""age""], [""sex"", ""age""]],
+    filters={""sex"": ""female""},
+)",1,table1,"{""controls"": [[], [""sex""], [""age""], [""sex"", ""age""]], ""filters"": {""sex"": ""female""}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status""}",table1,True,True,True,True,True,,,[],2437,121,3531,4.6530226999893785,True
+frontend_real_007,pool_typed_schema_v3,table1,"Generate the four logistic regression models corresponding to Table 1 for junior national team athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.",collaboration,"{""national_team"": ""Junior""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"```python
+result = analysis.table1(
+    predictors=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    target=""elite_status"",
+    controls=[[], [""sex""], [""age""], [""sex"", ""age""]],
+    filters={""national_team"": ""Junior""},
+)
+```","result = analysis.table1(
+    predictors=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    target=""elite_status"",
+    controls=[[], [""sex""], [""age""], [""sex"", ""age""]],
+    filters={""national_team"": ""Junior""},
+)",1,table1,"{""controls"": [[], [""sex""], [""age""], [""sex"", ""age""]], ""filters"": {""national_team"": ""Junior""}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status""}",table1,True,True,False,False,False,local_execution,KeyError: 'Muscular strength',[],2439,123,3421,3.8911559999687597,True
+frontend_real_008,pool_typed_schema_v3,table1,"Generate the four logistic regression models corresponding to Table 1 for athletes aged 20 and above using all eight public domains, with models using no controls, sex, age, and both sex and age.",collaboration,"{""age_group"": ""20_and_above""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"result = analysis.table1(
+    predictors=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    target=""elite_status"",
+    controls=[[], [""sex""], [""age""], [""sex"", ""age""]],
+    filters={""age_group"": ""20_and_above""}
+)","result = analysis.table1(
+    predictors=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    target=""elite_status"",
+    controls=[[], [""sex""], [""age""], [""sex"", ""age""]],
+    filters={""age_group"": ""20_and_above""}
+)",1,table1,"{""controls"": [[], [""sex""], [""age""], [""sex"", ""age""]], ""filters"": {""age_group"": ""20_and_above""}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status""}",table1,True,True,True,True,True,,,[],2442,123,3377,8.771105399995577,True
+frontend_real_009,pool_typed_schema_v3,table2,"Generate the four multiple linear regression models corresponding to Table 2 for all athletes, with expertise_value as the continuous target.",cloud,{},gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"```python
+result = analysis.table2(
+    predictors=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    filters={},
+    group=""all"",
+)
+```","result = analysis.table2(
+    predictors=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    filters={},
+    group=""all"",
+)",1,table2,"{""filters"": {}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",table2,True,True,True,True,True,,,[],2426,96,3953,6.357398700027261,True
+frontend_real_010,pool_typed_schema_v3,table2,"Generate the four multiple linear regression models corresponding to Table 2 for elite athletes, with expertise_value as the continuous target.",collaboration,"{""expertise_group"": ""elite""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"```python
+result = analysis.table2(
+    predictors=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    filters={""elite_status"": ""elite""},
+    group=""all"",
+)
+```","result = analysis.table2(
+    predictors=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    filters={""elite_status"": ""elite""},
+    group=""all"",
+)",1,table2,"{""filters"": {""elite_status"": ""elite""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",table2,True,False,False,False,False,request_validation,Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.,"[""Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.""]",2426,103,3880,6.007794900040608,True
+frontend_real_011,pool_typed_schema_v3,table2,"Generate the four multiple linear regression models corresponding to Table 2 for 3x3 basketball athletes, with expertise_value as the continuous target.",collaboration,"{""sport"": ""3x3 basketball""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"```python
+result = analysis.table2(
+    predictors=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    group=""all"",
+    filters={""sport"": ""3x3 basketball""},
+)
+```","result = analysis.table2(
+    predictors=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    group=""all"",
+    filters={""sport"": ""3x3 basketball""},
+)",1,table2,"{""filters"": {""sport"": ""3x3 basketball""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",table2,True,True,True,True,True,,,[],2430,104,4279,7.853115700010676,True
+frontend_real_012,pool_typed_schema_v3,table2,"Generate the four multiple linear regression models corresponding to Table 2 for ice hockey athletes, with expertise_value as the continuous target.",collaboration,"{""sport"": ""ice hockey""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"```python
+result = analysis.table2(
+    predictors=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    filters={""sport"": ""ice hockey""},
+    group=""all"",
+)
+```","result = analysis.table2(
+    predictors=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    filters={""sport"": ""ice hockey""},
+    group=""all"",
+)",1,table2,"{""filters"": {""sport"": ""ice hockey""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",table2,True,True,True,True,True,,,[],2427,102,4348,8.225264200009406,True
+frontend_real_013,pool_typed_schema_v3,table2,"Generate the four multiple linear regression models corresponding to Table 2 for volleyball athletes, with expertise_value as the continuous target.",collaboration,"{""sport"": ""volleyball""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"```python
+result = analysis.table2(
+    predictors=[
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    filters={""sport"": ""volleyball""},
+    group=""all"",
+)
+```","result = analysis.table2(
+    predictors=[
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    filters={""sport"": ""volleyball""},
+    group=""all"",
+)",1,table2,"{""filters"": {""sport"": ""volleyball""}, ""group"": ""all"", ""predictors"": [""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",table2,True,False,False,False,False,request_validation,Expected 8 public domains but generated 4.,"[""Expected 8 public domains but generated 4.""]",2426,67,4460,8.623684099991806,True
+frontend_real_014,pool_typed_schema_v3,table2,"Generate the four multiple linear regression models corresponding to Table 2 for female athletes, with expertise_value as the continuous target.",collaboration,"{""sex"": ""female""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients""], filters={""sex"": ""female""}, group=""all"")","result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients""], filters={""sex"": ""female""}, group=""all"")",1,table2,"{""filters"": {""sex"": ""female""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients""]}",table2,True,False,False,False,False,request_validation,Expected 8 public domains but generated 4.,"[""Expected 8 public domains but generated 4.""]",2426,46,4436,8.952636000001803,True
+frontend_real_015,pool_typed_schema_v3,table2,"Generate the four multiple linear regression models corresponding to Table 2 for junior national team athletes, with expertise_value as the continuous target.",collaboration,"{""national_team"": ""Junior""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"```python
+result = analysis.table2(
+    predictors=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    filters={""national_team"": ""Junior""},
+    group=""all"",
+)
+```","result = analysis.table2(
+    predictors=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    filters={""national_team"": ""Junior""},
+    group=""all"",
+)",1,table2,"{""filters"": {""national_team"": ""Junior""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",table2,True,True,True,True,True,,,[],2428,103,4058,6.886771699995734,True
+frontend_real_016,pool_typed_schema_v3,table2,"Generate the four multiple linear regression models corresponding to Table 2 for athletes aged 20 and above, with expertise_value as the continuous target.",collaboration,"{""age_group"": ""20_and_above""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], group=""all"", filters={""age_group"": ""20_and_above""})","result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], group=""all"", filters={""age_group"": ""20_and_above""})",1,table2,"{""filters"": {""age_group"": ""20_and_above""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",table2,True,True,True,True,True,,,[],2431,75,4468,8.608694900001865,True
+frontend_real_017,pool_typed_schema_v3,figure1,"Generate Figure 1 for all athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",cloud,{},gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"result = analysis.figure1(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""expertise_value"", group_field=""elite_status"", correlation_threshold=0.15, variance_iterations=1000, filters={})","result = analysis.figure1(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""expertise_value"", group_field=""elite_status"", correlation_threshold=0.15, variance_iterations=1000, filters={})",1,figure1,"{""correlation_threshold"": 0.15, ""filters"": {}, ""group_field"": ""elite_status"", ""target"": ""expertise_value"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""variance_iterations"": 1000}",figure1,True,True,True,True,True,,,[],2449,92,2972,2.3927331999875605,True
+frontend_real_018,pool_typed_schema_v3,figure1,"Generate Figure 1 for elite athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",collaboration,"{""expertise_group"": ""elite""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"result = analysis.figure1(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""elite_status"": ""elite""}
+)","result = analysis.figure1(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""elite_status"": ""elite""}
+)",1,figure1,"{""correlation_threshold"": 0.15, ""filters"": {""elite_status"": ""elite""}, ""group_field"": ""elite_status"", ""target"": ""expertise_value"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""variance_iterations"": 1000}",figure1,True,False,False,False,False,request_validation,Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.,"[""Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.""]",2449,132,3268,3.604005499975756,True
+frontend_real_019,pool_typed_schema_v3,figure1,"Generate Figure 1 for 3x3 basketball athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",collaboration,"{""sport"": ""3x3 basketball""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"result = analysis.figure1(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""sport"": ""3x3 basketball""},
+)","result = analysis.figure1(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""sport"": ""3x3 basketball""},
+)",1,figure1,"{""correlation_threshold"": 0.15, ""filters"": {""sport"": ""3x3 basketball""}, ""group_field"": ""elite_status"", ""target"": ""expertise_value"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""variance_iterations"": 1000}",figure1,True,True,True,True,True,,,[],2453,133,3252,3.5473069999716245,True
+frontend_real_020,pool_typed_schema_v3,figure1,"Generate Figure 1 for ice hockey athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",collaboration,"{""sport"": ""ice hockey""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"result = analysis.figure1(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""sport"": ""ice hockey""}
+)","result = analysis.figure1(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""sport"": ""ice hockey""}
+)",1,figure1,"{""correlation_threshold"": 0.15, ""filters"": {""sport"": ""ice hockey""}, ""group_field"": ""elite_status"", ""target"": ""expertise_value"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""variance_iterations"": 1000}",figure1,True,True,True,True,True,,,[],2450,131,3098,3.2008884000242688,True
+frontend_real_021,pool_typed_schema_v3,figure1,"Generate Figure 1 for volleyball athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",collaboration,"{""sport"": ""volleyball""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"result = analysis.figure1(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""sport"": ""volleyball""}
+)","result = analysis.figure1(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""sport"": ""volleyball""}
+)",1,figure1,"{""correlation_threshold"": 0.15, ""filters"": {""sport"": ""volleyball""}, ""group_field"": ""elite_status"", ""target"": ""expertise_value"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""variance_iterations"": 1000}",figure1,True,True,True,True,True,,,[],2449,131,3193,3.1101600999827497,True
+frontend_real_022,pool_typed_schema_v3,figure1,"Generate Figure 1 for female athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",collaboration,"{""sex"": ""female""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"result = analysis.figure1(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""sex"": ""female""}
+)","result = analysis.figure1(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""sex"": ""female""}
+)",1,figure1,"{""correlation_threshold"": 0.15, ""filters"": {""sex"": ""female""}, ""group_field"": ""elite_status"", ""target"": ""expertise_value"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""variance_iterations"": 1000}",figure1,True,True,True,True,True,,,[],2449,130,3435,4.286897599988151,True
+frontend_real_023,pool_typed_schema_v3,figure1,"Generate Figure 1 for junior national team athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",collaboration,"{""national_team"": ""Junior""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"result = analysis.figure1(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""national_team"": ""Junior""},
+)","result = analysis.figure1(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""national_team"": ""Junior""},
+)",1,figure1,"{""correlation_threshold"": 0.15, ""filters"": {""national_team"": ""Junior""}, ""group_field"": ""elite_status"", ""target"": ""expertise_value"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""variance_iterations"": 1000}",figure1,True,True,True,True,True,,,[],2451,132,3290,3.495192300004419,True
+frontend_real_024,pool_typed_schema_v3,figure1,"Generate Figure 1 for athletes aged 20 and above using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",collaboration,"{""age_group"": ""20_and_above""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"result = analysis.figure1(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""expertise_value"", group_field=""elite_status"", correlation_threshold=0.15, variance_iterations=1000, filters={""age_group"": ""20_and_above""})","result = analysis.figure1(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""expertise_value"", group_field=""elite_status"", correlation_threshold=0.15, variance_iterations=1000, filters={""age_group"": ""20_and_above""})",1,figure1,"{""correlation_threshold"": 0.15, ""filters"": {""age_group"": ""20_and_above""}, ""group_field"": ""elite_status"", ""target"": ""expertise_value"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""variance_iterations"": 1000}",figure1,True,True,True,True,True,,,[],2454,103,3268,3.6619572000345215,True
+frontend_real_025,pool_typed_schema_v3,correlation,Calculate pairwise Pearson correlations among all eight public domains for all athletes.,cloud,{},gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"```python
+result = analysis.correlation(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    filters={},
+    method=""pearson"",
+    visualization=False,
+)
+```","result = analysis.correlation(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    filters={},
+    method=""pearson"",
+    visualization=False,
+)",1,correlation,"{""filters"": {}, ""method"": ""pearson"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": false}",correlation,True,False,False,False,False,request_validation,Expected visualization=True but generated False.,"[""Expected visualization=True but generated False.""]",2414,102,3501,5.124027199984994,True
+frontend_real_026,pool_typed_schema_v3,correlation,Calculate pairwise Pearson correlations among all eight public domains for elite athletes.,collaboration,"{""expertise_group"": ""elite""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""elite_status"": ""elite""}, method=""pearson"")","result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""elite_status"": ""elite""}, method=""pearson"")",1,correlation,"{""filters"": {""elite_status"": ""elite""}, ""method"": ""pearson"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": true}",correlation,True,False,False,False,False,request_validation,Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.,"[""Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.""]",2414,70,3753,6.448989900003653,True
+frontend_real_027,pool_typed_schema_v3,correlation,Calculate pairwise Pearson correlations among all eight public domains for 3x3 basketball athletes.,collaboration,"{""sport"": ""3x3 basketball""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"result = analysis.correlation(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    filters={""sport"": ""3x3 basketball""},
+    method=""pearson""
+)","result = analysis.correlation(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    filters={""sport"": ""3x3 basketball""},
+    method=""pearson""
+)",1,correlation,"{""filters"": {""sport"": ""3x3 basketball""}, ""method"": ""pearson"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": true}",correlation,True,True,True,True,True,,,[],2418,99,3364,4.7091436999617144,True
+frontend_real_028,pool_typed_schema_v3,correlation,Calculate pairwise Pearson correlations among all eight public domains for ice hockey athletes.,collaboration,"{""sport"": ""ice hockey""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"result = analysis.correlation(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    filters={""sport"": ""ice hockey""},
+    method=""pearson"",
+)","result = analysis.correlation(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    filters={""sport"": ""ice hockey""},
+    method=""pearson"",
+)",1,correlation,"{""filters"": {""sport"": ""ice hockey""}, ""method"": ""pearson"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": true}",correlation,True,True,True,True,True,,,[],2415,97,3465,4.719010100001469,True
+frontend_real_029,pool_typed_schema_v3,correlation,Calculate pairwise Pearson correlations among all eight public domains for volleyball athletes.,collaboration,"{""sport"": ""volleyball""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"result = analysis.correlation(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    filters={""sport"": ""volleyball""},
+    method=""pearson"",
+    visualization=False
+)","result = analysis.correlation(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    filters={""sport"": ""volleyball""},
+    method=""pearson"",
+    visualization=False
+)",1,correlation,"{""filters"": {""sport"": ""volleyball""}, ""method"": ""pearson"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": false}",correlation,True,False,False,False,False,request_validation,Expected visualization=True but generated False.,"[""Expected visualization=True but generated False.""]",2414,102,3365,4.3026453999918886,True
+frontend_real_030,pool_typed_schema_v3,correlation,Calculate pairwise Pearson correlations among all eight public domains for female athletes.,collaboration,"{""sex"": ""female""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"result = analysis.correlation(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    filters={""sex"": ""female""},
+    method=""pearson"",
+    visualization=True,
+)","result = analysis.correlation(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    filters={""sex"": ""female""},
+    method=""pearson"",
+    visualization=True,
+)",1,correlation,"{""filters"": {""sex"": ""female""}, ""method"": ""pearson"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": true}",correlation,True,True,True,True,True,,,[],2414,102,3284,3.9495626999996603,True
+frontend_real_031,pool_typed_schema_v3,correlation,Calculate pairwise Pearson correlations among all eight public domains for junior national team athletes.,collaboration,"{""national_team"": ""Junior""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"result = analysis.correlation(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    filters={""national_team"": ""Junior""},
+    method=""pearson"",
+)","result = analysis.correlation(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    filters={""national_team"": ""Junior""},
+    method=""pearson"",
+)",1,correlation,"{""filters"": {""national_team"": ""Junior""}, ""method"": ""pearson"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": true}",correlation,True,True,True,True,True,,,[],2416,98,3407,4.3922826000489295,True
+frontend_real_032,pool_typed_schema_v3,correlation,Calculate pairwise Pearson correlations among all eight public domains for athletes aged 20 and above.,collaboration,"{""age_group"": ""20_and_above""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"result = analysis.correlation(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    filters={""age_group"": ""20_and_above""},
+    method=""pearson"",
+    visualization=True
+)","result = analysis.correlation(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    filters={""age_group"": ""20_and_above""},
+    method=""pearson"",
+    visualization=True
+)",1,correlation,"{""filters"": {""age_group"": ""20_and_above""}, ""method"": ""pearson"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": true}",correlation,True,True,True,True,True,,,[],2419,108,3299,4.102253499964718,True
+frontend_real_033,pool_typed_schema_v3,variance_analysis,"Run variance analysis for all athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",cloud,{},gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"```python
+result = analysis.variance_analysis(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    group_field=""elite_status"",
+    groups=[""elite"", ""semi_elite""],
+    filters={},
+)
+```","result = analysis.variance_analysis(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    group_field=""elite_status"",
+    groups=[""elite"", ""semi_elite""],
+    filters={},
+)",1,variance_analysis,"{""filters"": {}, ""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": true}",variance_analysis,True,True,True,True,True,,,[],2430,111,3665,5.170707100012805,True
+frontend_real_034,pool_typed_schema_v3,variance_analysis,"Run variance analysis for elite athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",collaboration,"{""expertise_group"": ""elite""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"result = analysis.variance_analysis(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], group_field=""elite_status"", groups=[""elite"", ""semi_elite""], filters={})","result = analysis.variance_analysis(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], group_field=""elite_status"", groups=[""elite"", ""semi_elite""], filters={})",1,variance_analysis,"{""filters"": {}, ""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": true}",variance_analysis,True,False,False,False,False,request_validation,Expected filters={'expertise_group': 'elite'} but generated filters={}.,"[""Expected filters={'expertise_group': 'elite'} but generated filters={}.""]",2430,78,3834,5.918281099991873,True
+frontend_real_035,pool_typed_schema_v3,variance_analysis,"Run variance analysis for 3x3 basketball athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",collaboration,"{""sport"": ""3x3 basketball""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"```python
+result = analysis.variance_analysis(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    group_field=""elite_status"",
+    groups=[""elite"", ""semi_elite""],
+    filters={""sport"": ""3x3 basketball""},
+)
+```","result = analysis.variance_analysis(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    group_field=""elite_status"",
+    groups=[""elite"", ""semi_elite""],
+    filters={""sport"": ""3x3 basketball""},
+)",1,variance_analysis,"{""filters"": {""sport"": ""3x3 basketball""}, ""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": true}",variance_analysis,True,True,False,False,False,local_execution,SmallGroupError: Variance output blocked: selected cohort has 4 elite and 31 semi-elite athletes; each group requires at least 10.,[],2434,120,3404,4.0677709999727085,True
+frontend_real_036,pool_typed_schema_v3,variance_analysis,"Run variance analysis for ice hockey athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",collaboration,"{""sport"": ""ice hockey""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"result = analysis.variance_analysis(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    group_field=""elite_status"",
+    groups=[""elite"", ""semi_elite""],
+    filters={""sport"": ""ice hockey""}
+)","result = analysis.variance_analysis(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    group_field=""elite_status"",
+    groups=[""elite"", ""semi_elite""],
+    filters={""sport"": ""ice hockey""}
+)",1,variance_analysis,"{""filters"": {""sport"": ""ice hockey""}, ""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": true}",variance_analysis,True,True,False,False,False,local_execution,SmallGroupError: Variance output blocked: selected cohort has 8 elite and 47 semi-elite athletes; each group requires at least 10.,[],2431,113,3882,5.774498799990397,True
+frontend_real_037,pool_typed_schema_v3,variance_analysis,"Run variance analysis for volleyball athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",collaboration,"{""sport"": ""volleyball""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"```python
+result = analysis.variance_analysis(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    group_field=""elite_status"",
+    groups=[""elite"", ""semi_elite""],
+    filters={""sport"": ""volleyball""}
+)
+```","result = analysis.variance_analysis(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    group_field=""elite_status"",
+    groups=[""elite"", ""semi_elite""],
+    filters={""sport"": ""volleyball""}
+)",1,variance_analysis,"{""filters"": {""sport"": ""volleyball""}, ""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": true}",variance_analysis,True,True,True,True,True,,,[],2430,118,3569,4.751472200034186,True
+frontend_real_038,pool_typed_schema_v3,variance_analysis,"Run variance analysis for female athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",collaboration,"{""sex"": ""female""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"```python
+result = analysis.variance_analysis(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    group_field=""elite_status"",
+    groups=[""elite"", ""semi_elite""],
+    filters={""sex"": ""female""}
+)
+```","result = analysis.variance_analysis(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    group_field=""elite_status"",
+    groups=[""elite"", ""semi_elite""],
+    filters={""sex"": ""female""}
+)",1,variance_analysis,"{""filters"": {""sex"": ""female""}, ""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": true}",variance_analysis,True,True,True,True,True,,,[],2430,117,3856,6.105253599991556,True
+frontend_real_039,pool_typed_schema_v3,variance_analysis,"Run variance analysis for junior national team athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",collaboration,"{""national_team"": ""Junior""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"result = analysis.variance_analysis(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    group_field=""elite_status"",
+    groups=[""elite"", ""semi_elite""],
+    filters={""national_team"": ""Junior""}
+)","result = analysis.variance_analysis(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions""
+    ],
+    group_field=""elite_status"",
+    groups=[""elite"", ""semi_elite""],
+    filters={""national_team"": ""Junior""}
+)",1,variance_analysis,"{""filters"": {""national_team"": ""Junior""}, ""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": true}",variance_analysis,True,True,False,False,False,local_execution,SmallGroupError: Variance output blocked: selected cohort has 2 elite and 196 semi-elite athletes; each group requires at least 10.,[],2432,114,3629,5.117930599953979,True
+frontend_real_040,pool_typed_schema_v3,variance_analysis,"Run variance analysis for athletes aged 20 and above across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",collaboration,"{""age_group"": ""20_and_above""}",gemini,Gemini 3.5 Flash,gemini,gemini-3.5-flash,gemini-3.5-flash,"```python
+result = analysis.variance_analysis(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    group_field=""elite_status"",
+    groups=[""elite"", ""semi_elite""],
+    filters={""age_group"": ""20_and_above""},
+)
+```","result = analysis.variance_analysis(
+    variables=[
+        ""muscular_strength"",
+        ""lower_body_dynamics"",
+        ""muscle_power_genetics"",
+        ""blood_micronutrients"",
+        ""basic_cognitive_function"",
+        ""mental_health"",
+        ""social_support"",
+        ""training_conditions"",
+    ],
+    group_field=""elite_status"",
+    groups=[""elite"", ""semi_elite""],
+    filters={""age_group"": ""20_and_above""},
+)",1,variance_analysis,"{""filters"": {""age_group"": ""20_and_above""}, ""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": true}",variance_analysis,True,True,True,True,True,,,[],2435,123,3796,5.795139699999709,True
+frontend_real_001,pool_typed_schema_v3,table1,"Generate the four logistic regression models corresponding to Table 1 for all athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.",cloud,{},claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""age"", ""sex""]], filters={})","result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""age"", ""sex""]], filters={})",1,table1,"{""controls"": [[], [""sex""], [""age""], [""age"", ""sex""]], ""filters"": {}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status""}",table1,True,False,False,False,False,request_validation,Expected all four predefined Table 1 control specifications.,"[""Expected all four predefined Table 1 control specifications.""]",3176,234,3410,4.187370599946007,True
+frontend_real_002,pool_typed_schema_v3,table1,"Generate the four logistic regression models corresponding to Table 1 for elite athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.",collaboration,"{""expertise_group"": ""elite""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""sex"", ""age""]], filters={""elite_status"": ""elite""})","result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""sex"", ""age""]], filters={""elite_status"": ""elite""})",1,table1,"{""controls"": [[], [""sex""], [""age""], [""sex"", ""age""]], ""filters"": {""elite_status"": ""elite""}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status""}",table1,True,False,False,False,False,request_validation,Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.,"[""Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.""]",3177,212,3389,3.6614319000509568,True
+frontend_real_003,pool_typed_schema_v3,table1,"Generate the four logistic regression models corresponding to Table 1 for 3x3 basketball athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.",collaboration,"{""sport"": ""3x3 basketball""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""age"", ""sex""]], filters={""sport"": ""3x3 basketball""})","result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""age"", ""sex""]], filters={""sport"": ""3x3 basketball""})",1,table1,"{""controls"": [[], [""sex""], [""age""], [""age"", ""sex""]], ""filters"": {""sport"": ""3x3 basketball""}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status""}",table1,True,False,False,False,False,request_validation,Expected all four predefined Table 1 control specifications.,"[""Expected all four predefined Table 1 control specifications.""]",3183,266,3449,3.9332326000439934,True
+frontend_real_004,pool_typed_schema_v3,table1,"Generate the four logistic regression models corresponding to Table 1 for ice hockey athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.",collaboration,"{""sport"": ""ice hockey""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""sex"", ""age""]], filters={""sport"": ""ice hockey""})","result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""sex"", ""age""]], filters={""sport"": ""ice hockey""})",1,table1,"{""controls"": [[], [""sex""], [""age""], [""sex"", ""age""]], ""filters"": {""sport"": ""ice hockey""}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status""}",table1,True,True,False,False,False,local_execution,KeyError: 'Muscular strength',[],3180,238,3418,3.7516169999726117,True
+frontend_real_005,pool_typed_schema_v3,table1,"Generate the four logistic regression models corresponding to Table 1 for volleyball athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.",collaboration,"{""sport"": ""volleyball""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""sex"", ""age""]], filters={""sport"": ""volleyball""})","result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""sex"", ""age""]], filters={""sport"": ""volleyball""})",1,table1,"{""controls"": [[], [""sex""], [""age""], [""sex"", ""age""]], ""filters"": {""sport"": ""volleyball""}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status""}",table1,True,True,True,True,True,,,[],3179,133,3312,2.6883169999928214,True
+frontend_real_006,pool_typed_schema_v3,table1,"Generate the four logistic regression models corresponding to Table 1 for female athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.",collaboration,"{""sex"": ""female""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""sex"", ""age""]], filters={""sex"": ""female""})","result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""sex"", ""age""]], filters={""sex"": ""female""})",1,table1,"{""controls"": [[], [""sex""], [""age""], [""sex"", ""age""]], ""filters"": {""sex"": ""female""}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status""}",table1,True,True,True,True,True,,,[],3176,273,3449,4.084494699956849,True
+frontend_real_007,pool_typed_schema_v3,table1,"Generate the four logistic regression models corresponding to Table 1 for junior national team athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.",collaboration,"{""national_team"": ""Junior""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"```python
+result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""sex"", ""age""]], filters={""national_team"": ""Junior""})
+```","result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""sex"", ""age""]], filters={""national_team"": ""Junior""})",1,table1,"{""controls"": [[], [""sex""], [""age""], [""sex"", ""age""]], ""filters"": {""national_team"": ""Junior""}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status""}",table1,True,True,False,False,False,local_execution,KeyError: 'Muscular strength',[],3179,138,3317,2.866868400014937,True
+frontend_real_008,pool_typed_schema_v3,table1,"Generate the four logistic regression models corresponding to Table 1 for athletes aged 20 and above using all eight public domains, with models using no controls, sex, age, and both sex and age.",collaboration,"{""age_group"": ""20_and_above""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""age"", ""sex""]], filters={""age_group"": ""20_and_above""})","result = analysis.table1(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""elite_status"", controls=[[], [""sex""], [""age""], [""age"", ""sex""]], filters={""age_group"": ""20_and_above""})",1,table1,"{""controls"": [[], [""sex""], [""age""], [""age"", ""sex""]], ""filters"": {""age_group"": ""20_and_above""}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status""}",table1,True,False,False,False,False,request_validation,Expected all four predefined Table 1 control specifications.,"[""Expected all four predefined Table 1 control specifications.""]",3182,243,3425,4.0917906000395305,True
+frontend_real_009,pool_typed_schema_v3,table2,"Generate the four multiple linear regression models corresponding to Table 2 for all athletes, with expertise_value as the continuous target.",cloud,{},claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={}, group=""all"")","result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={}, group=""all"")",1,table2,"{""filters"": {}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",table2,True,True,True,True,True,,,[],3165,773,3938,9.27359619998606,True
+frontend_real_010,pool_typed_schema_v3,table2,"Generate the four multiple linear regression models corresponding to Table 2 for elite athletes, with expertise_value as the continuous target.",collaboration,"{""expertise_group"": ""elite""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"```python
+result = analysis.table2(predictors=[""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""elite_status"": ""elite""}, group=""all"")
+```","result = analysis.table2(predictors=[""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""elite_status"": ""elite""}, group=""all"")",1,table2,"{""filters"": {""elite_status"": ""elite""}, ""group"": ""all"", ""predictors"": [""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",table2,True,False,False,False,False,request_validation,Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}. Expected 8 public domains but generated 4.,"[""Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}."", ""Expected 8 public domains but generated 4.""]",3166,691,3857,9.030132099986076,True
+frontend_real_011,pool_typed_schema_v3,table2,"Generate the four multiple linear regression models corresponding to Table 2 for 3x3 basketball athletes, with expertise_value as the continuous target.",collaboration,"{""sport"": ""3x3 basketball""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sport"": ""3x3 basketball""}, group=""all"")","result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sport"": ""3x3 basketball""}, group=""all"")",1,table2,"{""filters"": {""sport"": ""3x3 basketball""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",table2,True,True,True,True,True,,,[],3172,535,3707,7.338091199984774,True
+frontend_real_012,pool_typed_schema_v3,table2,"Generate the four multiple linear regression models corresponding to Table 2 for ice hockey athletes, with expertise_value as the continuous target.",collaboration,"{""sport"": ""ice hockey""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sport"": ""ice hockey""}, group=""all"")","result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sport"": ""ice hockey""}, group=""all"")",1,table2,"{""filters"": {""sport"": ""ice hockey""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",table2,True,True,True,True,True,,,[],3169,525,3694,7.51330589997815,True
+frontend_real_013,pool_typed_schema_v3,table2,"Generate the four multiple linear regression models corresponding to Table 2 for volleyball athletes, with expertise_value as the continuous target.",collaboration,"{""sport"": ""volleyball""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients""], filters={""sport"": ""volleyball""}, group=""all"")","result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients""], filters={""sport"": ""volleyball""}, group=""all"")",1,table2,"{""filters"": {""sport"": ""volleyball""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients""]}",table2,True,False,False,False,False,request_validation,Expected 8 public domains but generated 4.,"[""Expected 8 public domains but generated 4.""]",3168,568,3736,7.170505799993407,True
+frontend_real_014,pool_typed_schema_v3,table2,"Generate the four multiple linear regression models corresponding to Table 2 for female athletes, with expertise_value as the continuous target.",collaboration,"{""sex"": ""female""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sex"": ""female""}, group=""all"")","result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sex"": ""female""}, group=""all"")",1,table2,"{""filters"": {""sex"": ""female""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",table2,True,True,True,True,True,,,[],3165,316,3481,5.271950399968773,True
+frontend_real_015,pool_typed_schema_v3,table2,"Generate the four multiple linear regression models corresponding to Table 2 for junior national team athletes, with expertise_value as the continuous target.",collaboration,"{""national_team"": ""Junior""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""national_team"": ""Junior""}, group=""all"")","result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""national_team"": ""Junior""}, group=""all"")",1,table2,"{""filters"": {""national_team"": ""Junior""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",table2,True,True,True,True,True,,,[],3168,1114,4282,12.591866399976425,True
+frontend_real_016,pool_typed_schema_v3,table2,"Generate the four multiple linear regression models corresponding to Table 2 for athletes aged 20 and above, with expertise_value as the continuous target.",collaboration,"{""age_group"": ""20_and_above""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""age_group"": ""20_and_above""}, group=""all"")","result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""age_group"": ""20_and_above""}, group=""all"")",1,table2,"{""filters"": {""age_group"": ""20_and_above""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",table2,True,True,True,True,True,,,[],3171,630,3801,7.694203199993353,True
+frontend_real_017,pool_typed_schema_v3,figure1,"Generate Figure 1 for all athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",cloud,{},claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"result = analysis.figure1(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""expertise_value"", group_field=""elite_status"", correlation_threshold=0.15, variance_iterations=1000, filters={})","result = analysis.figure1(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""expertise_value"", group_field=""elite_status"", correlation_threshold=0.15, variance_iterations=1000, filters={})",1,figure1,"{""correlation_threshold"": 0.15, ""filters"": {}, ""group_field"": ""elite_status"", ""target"": ""expertise_value"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""variance_iterations"": 1000}",figure1,True,True,True,True,True,,,[],3193,128,3321,2.91879239998525,True
+frontend_real_018,pool_typed_schema_v3,figure1,"Generate Figure 1 for elite athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",collaboration,"{""expertise_group"": ""elite""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"result = analysis.figure1(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""expertise_value"", group_field=""elite_status"", correlation_threshold=0.15, variance_iterations=1000, filters={""elite_status"": ""elite""})","result = analysis.figure1(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""expertise_value"", group_field=""elite_status"", correlation_threshold=0.15, variance_iterations=1000, filters={""elite_status"": ""elite""})",1,figure1,"{""correlation_threshold"": 0.15, ""filters"": {""elite_status"": ""elite""}, ""group_field"": ""elite_status"", ""target"": ""expertise_value"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""variance_iterations"": 1000}",figure1,True,False,False,False,False,request_validation,Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.,"[""Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.""]",3194,138,3332,2.7321553000365384,True
+frontend_real_019,pool_typed_schema_v3,figure1,"Generate Figure 1 for 3x3 basketball athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",collaboration,"{""sport"": ""3x3 basketball""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"```python
+result = analysis.figure1(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""expertise_value"", group_field=""elite_status"", correlation_threshold=0.15, variance_iterations=1000, filters={""sport"": ""3x3 basketball""})
+```","result = analysis.figure1(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""expertise_value"", group_field=""elite_status"", correlation_threshold=0.15, variance_iterations=1000, filters={""sport"": ""3x3 basketball""})",1,figure1,"{""correlation_threshold"": 0.15, ""filters"": {""sport"": ""3x3 basketball""}, ""group_field"": ""elite_status"", ""target"": ""expertise_value"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""variance_iterations"": 1000}",figure1,True,True,True,True,True,,,[],3200,146,3346,3.1480800000135787,True
+frontend_real_020,pool_typed_schema_v3,figure1,"Generate Figure 1 for ice hockey athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",collaboration,"{""sport"": ""ice hockey""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"```python
+result = analysis.figure1(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""expertise_value"", group_field=""elite_status"", correlation_threshold=0.15, variance_iterations=1000, filters={""sport"": ""ice hockey""})
+```","result = analysis.figure1(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""expertise_value"", group_field=""elite_status"", correlation_threshold=0.15, variance_iterations=1000, filters={""sport"": ""ice hockey""})",1,figure1,"{""correlation_threshold"": 0.15, ""filters"": {""sport"": ""ice hockey""}, ""group_field"": ""elite_status"", ""target"": ""expertise_value"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""variance_iterations"": 1000}",figure1,True,True,True,True,True,,,[],3197,144,3341,3.057579700020142,True
+frontend_real_021,pool_typed_schema_v3,figure1,"Generate Figure 1 for volleyball athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",collaboration,"{""sport"": ""volleyball""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"result = analysis.figure1(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""expertise_value"", group_field=""elite_status"", correlation_threshold=0.15, variance_iterations=1000, filters={""sport"": ""volleyball""})","result = analysis.figure1(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""expertise_value"", group_field=""elite_status"", correlation_threshold=0.15, variance_iterations=1000, filters={""sport"": ""volleyball""})",1,figure1,"{""correlation_threshold"": 0.15, ""filters"": {""sport"": ""volleyball""}, ""group_field"": ""elite_status"", ""target"": ""expertise_value"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""variance_iterations"": 1000}",figure1,True,True,True,True,True,,,[],3196,138,3334,2.6417647000052966,True
+frontend_real_022,pool_typed_schema_v3,figure1,"Generate Figure 1 for female athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",collaboration,"{""sex"": ""female""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"```python
+result = analysis.figure1(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""expertise_value"", group_field=""elite_status"", correlation_threshold=0.15, variance_iterations=1000, filters={""sex"": ""female""})
+```","result = analysis.figure1(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""expertise_value"", group_field=""elite_status"", correlation_threshold=0.15, variance_iterations=1000, filters={""sex"": ""female""})",1,figure1,"{""correlation_threshold"": 0.15, ""filters"": {""sex"": ""female""}, ""group_field"": ""elite_status"", ""target"": ""expertise_value"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""variance_iterations"": 1000}",figure1,True,True,True,True,True,,,[],3193,140,3333,2.717008800012991,True
+frontend_real_023,pool_typed_schema_v3,figure1,"Generate Figure 1 for junior national team athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",collaboration,"{""national_team"": ""Junior""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"```python
+result = analysis.figure1(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""expertise_value"", group_field=""elite_status"", correlation_threshold=0.15, variance_iterations=1000, filters={""national_team"": ""Junior""})
+```","result = analysis.figure1(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""expertise_value"", group_field=""elite_status"", correlation_threshold=0.15, variance_iterations=1000, filters={""national_team"": ""Junior""})",1,figure1,"{""correlation_threshold"": 0.15, ""filters"": {""national_team"": ""Junior""}, ""group_field"": ""elite_status"", ""target"": ""expertise_value"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""variance_iterations"": 1000}",figure1,True,True,True,True,True,,,[],3196,143,3339,2.790948699985165,True
+frontend_real_024,pool_typed_schema_v3,figure1,"Generate Figure 1 for athletes aged 20 and above using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",collaboration,"{""age_group"": ""20_and_above""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"result = analysis.figure1(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""expertise_value"", group_field=""elite_status"", correlation_threshold=0.15, variance_iterations=1000, filters={""age_group"": ""20_and_above""})","result = analysis.figure1(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], target=""expertise_value"", group_field=""elite_status"", correlation_threshold=0.15, variance_iterations=1000, filters={""age_group"": ""20_and_above""})",1,figure1,"{""correlation_threshold"": 0.15, ""filters"": {""age_group"": ""20_and_above""}, ""group_field"": ""elite_status"", ""target"": ""expertise_value"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""variance_iterations"": 1000}",figure1,True,True,True,True,True,,,[],3199,140,3339,2.758878899971023,True
+frontend_real_025,pool_typed_schema_v3,correlation,Calculate pairwise Pearson correlations among all eight public domains for all athletes.,cloud,{},claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"```python
+result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={}, method=""pearson"", visualization=True)
+```","result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={}, method=""pearson"", visualization=True)",1,correlation,"{""filters"": {}, ""method"": ""pearson"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": true}",correlation,True,True,True,True,True,,,[],3151,107,3258,2.722558199951891,True
+frontend_real_026,pool_typed_schema_v3,correlation,Calculate pairwise Pearson correlations among all eight public domains for elite athletes.,collaboration,"{""expertise_group"": ""elite""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"```python
+result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""elite_status"": ""elite""}, method=""pearson"", visualization=True)
+```","result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""elite_status"": ""elite""}, method=""pearson"", visualization=True)",1,correlation,"{""filters"": {""elite_status"": ""elite""}, ""method"": ""pearson"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": true}",correlation,True,False,False,False,False,request_validation,Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.,"[""Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.""]",3152,117,3269,2.80326720001176,True
+frontend_real_027,pool_typed_schema_v3,correlation,Calculate pairwise Pearson correlations among all eight public domains for 3x3 basketball athletes.,collaboration,"{""sport"": ""3x3 basketball""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"```python
+result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sport"": ""3x3 basketball""}, method=""pearson"", visualization=True)
+```","result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sport"": ""3x3 basketball""}, method=""pearson"", visualization=True)",1,correlation,"{""filters"": {""sport"": ""3x3 basketball""}, ""method"": ""pearson"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": true}",correlation,True,True,True,True,True,,,[],3158,120,3278,2.830380300001707,True
+frontend_real_028,pool_typed_schema_v3,correlation,Calculate pairwise Pearson correlations among all eight public domains for ice hockey athletes.,collaboration,"{""sport"": ""ice hockey""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"```python
+result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sport"": ""ice hockey""}, method=""pearson"", visualization=False)
+```","result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sport"": ""ice hockey""}, method=""pearson"", visualization=False)",1,correlation,"{""filters"": {""sport"": ""ice hockey""}, ""method"": ""pearson"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": false}",correlation,True,False,False,False,False,request_validation,Expected visualization=True but generated False.,"[""Expected visualization=True but generated False.""]",3155,118,3273,2.737095999997109,True
+frontend_real_029,pool_typed_schema_v3,correlation,Calculate pairwise Pearson correlations among all eight public domains for volleyball athletes.,collaboration,"{""sport"": ""volleyball""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"```python
+result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sport"": ""volleyball""}, method=""pearson"", visualization=True)
+```","result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sport"": ""volleyball""}, method=""pearson"", visualization=True)",1,correlation,"{""filters"": {""sport"": ""volleyball""}, ""method"": ""pearson"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": true}",correlation,True,True,True,True,True,,,[],3154,117,3271,2.583638600015547,True
+frontend_real_030,pool_typed_schema_v3,correlation,Calculate pairwise Pearson correlations among all eight public domains for female athletes.,collaboration,"{""sex"": ""female""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"```python
+result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sex"": ""female""}, method=""pearson"", visualization=True)
+```","result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sex"": ""female""}, method=""pearson"", visualization=True)",1,correlation,"{""filters"": {""sex"": ""female""}, ""method"": ""pearson"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": true}",correlation,True,True,True,True,True,,,[],3151,114,3265,2.5896164000150748,True
+frontend_real_031,pool_typed_schema_v3,correlation,Calculate pairwise Pearson correlations among all eight public domains for junior national team athletes.,collaboration,"{""national_team"": ""Junior""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"```python
+result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""national_team"": ""Junior""}, method=""pearson"", visualization=False)
+```","result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""national_team"": ""Junior""}, method=""pearson"", visualization=False)",1,correlation,"{""filters"": {""national_team"": ""Junior""}, ""method"": ""pearson"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": false}",correlation,True,False,False,False,False,request_validation,Expected visualization=True but generated False.,"[""Expected visualization=True but generated False.""]",3154,117,3271,2.801053899980616,True
+frontend_real_032,pool_typed_schema_v3,correlation,Calculate pairwise Pearson correlations among all eight public domains for athletes aged 20 and above.,collaboration,"{""age_group"": ""20_and_above""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"```python
+result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""age_group"": ""20_and_above""}, method=""pearson"", visualization=True)
+```","result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""age_group"": ""20_and_above""}, method=""pearson"", visualization=True)",1,correlation,"{""filters"": {""age_group"": ""20_and_above""}, ""method"": ""pearson"", ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": true}",correlation,True,True,True,True,True,,,[],3157,119,3276,2.872995899990201,True
+frontend_real_033,pool_typed_schema_v3,variance_analysis,"Run variance analysis for all athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",cloud,{},claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"result = analysis.variance_analysis(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], group_field=""elite_status"", groups=[""elite"", ""semi_elite""], iterations=1000, filters={}, visualization=False)","result = analysis.variance_analysis(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], group_field=""elite_status"", groups=[""elite"", ""semi_elite""], iterations=1000, filters={}, visualization=False)",1,variance_analysis,"{""filters"": {}, ""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": false}",variance_analysis,True,False,False,False,False,request_validation,Expected visualization=True but generated False.,"[""Expected visualization=True but generated False.""]",3171,279,3450,4.2439647000283,True
+frontend_real_034,pool_typed_schema_v3,variance_analysis,"Run variance analysis for elite athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",collaboration,"{""expertise_group"": ""elite""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"result = analysis.variance_analysis(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], group_field=""elite_status"", groups=[""elite"", ""semi_elite""], iterations=1000, filters={}, visualization=False)","result = analysis.variance_analysis(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], group_field=""elite_status"", groups=[""elite"", ""semi_elite""], iterations=1000, filters={}, visualization=False)",1,variance_analysis,"{""filters"": {}, ""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": false}",variance_analysis,True,False,False,False,False,request_validation,Expected filters={'expertise_group': 'elite'} but generated filters={}. Expected visualization=True but generated False.,"[""Expected filters={'expertise_group': 'elite'} but generated filters={}."", ""Expected visualization=True but generated False.""]",3172,552,3724,6.7519223999697715,True
+frontend_real_035,pool_typed_schema_v3,variance_analysis,"Run variance analysis for 3x3 basketball athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",collaboration,"{""sport"": ""3x3 basketball""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"result = analysis.variance_analysis(variables=[""muscular_strength"",""lower_body_dynamics"",""muscle_power_genetics"",""blood_micronutrients"",""basic_cognitive_function"",""mental_health"",""social_support"",""training_conditions""], group_field=""elite_status"", groups=[""elite"",""semi_elite""], iterations=1000, filters={""sport"": ""3x3 basketball""}, visualization=False)","result = analysis.variance_analysis(variables=[""muscular_strength"",""lower_body_dynamics"",""muscle_power_genetics"",""blood_micronutrients"",""basic_cognitive_function"",""mental_health"",""social_support"",""training_conditions""], group_field=""elite_status"", groups=[""elite"",""semi_elite""], iterations=1000, filters={""sport"": ""3x3 basketball""}, visualization=False)",1,variance_analysis,"{""filters"": {""sport"": ""3x3 basketball""}, ""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": false}",variance_analysis,True,False,False,False,False,request_validation,Expected visualization=True but generated False.,"[""Expected visualization=True but generated False.""]",3178,463,3641,6.6507199999759905,True
+frontend_real_036,pool_typed_schema_v3,variance_analysis,"Run variance analysis for ice hockey athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",collaboration,"{""sport"": ""ice hockey""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"result = analysis.variance_analysis(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], group_field=""elite_status"", groups=[""elite"", ""semi_elite""], iterations=1000, filters={""sport"": ""ice hockey""}, visualization=False)","result = analysis.variance_analysis(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], group_field=""elite_status"", groups=[""elite"", ""semi_elite""], iterations=1000, filters={""sport"": ""ice hockey""}, visualization=False)",1,variance_analysis,"{""filters"": {""sport"": ""ice hockey""}, ""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": false}",variance_analysis,True,False,False,False,False,request_validation,Expected visualization=True but generated False.,"[""Expected visualization=True but generated False.""]",3175,327,3502,4.982807299995329,True
+frontend_real_037,pool_typed_schema_v3,variance_analysis,"Run variance analysis for volleyball athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",collaboration,"{""sport"": ""volleyball""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"result = analysis.variance_analysis(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], group_field=""elite_status"", groups=[""elite"", ""semi_elite""], iterations=1000, filters={""sport"": ""volleyball""}, visualization=False)","result = analysis.variance_analysis(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], group_field=""elite_status"", groups=[""elite"", ""semi_elite""], iterations=1000, filters={""sport"": ""volleyball""}, visualization=False)",1,variance_analysis,"{""filters"": {""sport"": ""volleyball""}, ""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": false}",variance_analysis,True,False,False,False,False,request_validation,Expected visualization=True but generated False.,"[""Expected visualization=True but generated False.""]",3174,305,3479,4.597561799979303,True
+frontend_real_038,pool_typed_schema_v3,variance_analysis,"Run variance analysis for female athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",collaboration,"{""sex"": ""female""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"result = analysis.variance_analysis(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], group_field=""elite_status"", groups=[""elite"", ""semi_elite""], iterations=1000, filters={""sex"": ""female""}, visualization=False)","result = analysis.variance_analysis(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], group_field=""elite_status"", groups=[""elite"", ""semi_elite""], iterations=1000, filters={""sex"": ""female""}, visualization=False)",1,variance_analysis,"{""filters"": {""sex"": ""female""}, ""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": false}",variance_analysis,True,False,False,False,False,request_validation,Expected visualization=True but generated False.,"[""Expected visualization=True but generated False.""]",3171,315,3486,4.246844199951738,True
+frontend_real_039,pool_typed_schema_v3,variance_analysis,"Run variance analysis for junior national team athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",collaboration,"{""national_team"": ""Junior""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"result = analysis.variance_analysis(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], group_field=""elite_status"", groups=[""elite"", ""semi_elite""], iterations=1000, filters={""national_team"": ""Junior""}, visualization=False)","result = analysis.variance_analysis(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], group_field=""elite_status"", groups=[""elite"", ""semi_elite""], iterations=1000, filters={""national_team"": ""Junior""}, visualization=False)",1,variance_analysis,"{""filters"": {""national_team"": ""Junior""}, ""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": false}",variance_analysis,True,False,False,False,False,request_validation,Expected visualization=True but generated False.,"[""Expected visualization=True but generated False.""]",3174,304,3478,3.933201400039252,True
+frontend_real_040,pool_typed_schema_v3,variance_analysis,"Run variance analysis for athletes aged 20 and above across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",collaboration,"{""age_group"": ""20_and_above""}",claude,Claude Sonnet 5,anthropic,claude-sonnet-5,claude-sonnet-5,"result = analysis.variance_analysis(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], group_field=""elite_status"", groups=[""elite"", ""semi_elite""], iterations=1000, filters={""age_group"": ""20_and_above""}, visualization=False)","result = analysis.variance_analysis(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], group_field=""elite_status"", groups=[""elite"", ""semi_elite""], iterations=1000, filters={""age_group"": ""20_and_above""}, visualization=False)",1,variance_analysis,"{""filters"": {""age_group"": ""20_and_above""}, ""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""visualization"": false}",variance_analysis,True,False,False,False,False,request_validation,Expected visualization=True but generated False.,"[""Expected visualization=True but generated False.""]",3177,312,3489,4.291341500007547,True

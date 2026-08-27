@@ -1,0 +1,4 @@
+﻿prompt_version,Model,api_error,format_validation,request_validation,local_execution,result_validation,success,wrong_filters,wrong_controls,other_request_mismatch,wrong_numeric_parameter,wrong_variables
+pool_typed_schema_v3,GPT-4.1,0,0,14,4,0,22,5,1,7,1,
+pool_typed_schema_v3,Gemini 3.5 Flash,0,0,9,5,0,26,5,,2,,2
+pool_typed_schema_v3,Claude Sonnet 5,0,0,18,2,0,20,4,3,9,,2

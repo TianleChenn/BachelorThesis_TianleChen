@@ -1,0 +1,181 @@
+{
+  "seed": 2024,
+  "n_athletes": 300,
+  "elite_count": 25,
+  "elite_rate": 0.08333333333333333,
+  "sport_sex_counts": {
+    "female": {
+      "3x3 basketball": 20,
+      "artistic gymnastics": 17,
+      "ice hockey": 20,
+      "modern pentathlon": 13,
+      "rhythmic gymnastics": 26,
+      "table tennis": 6,
+      "trampoline gymnastics": 13,
+      "volleyball": 34
+    },
+    "male": {
+      "3x3 basketball": 15,
+      "artistic gymnastics": 0,
+      "ice hockey": 35,
+      "modern pentathlon": 14,
+      "rhythmic gymnastics": 0,
+      "table tennis": 8,
+      "trampoline gymnastics": 13,
+      "volleyball": 66
+    }
+  },
+  "national_team_counts": [
+    {
+      "sex": "female",
+      "national_team": "junior",
+      "count": 106
+    },
+    {
+      "sex": "female",
+      "national_team": "senior",
+      "count": 43
+    },
+    {
+      "sex": "male",
+      "national_team": "junior",
+      "count": 92
+    },
+    {
+      "sex": "male",
+      "national_team": "senior",
+      "count": 59
+    }
+  ],
+  "age_summary": [
+    {
+      "sex": "female",
+      "national_team": "junior",
+      "mean": 16.518207547169812,
+      "std": 1.6730973826266125,
+      "min": 14.0,
+      "max": 21.32
+    },
+    {
+      "sex": "female",
+      "national_team": "senior",
+      "mean": 22.025581395348837,
+      "std": 5.560567931907666,
+      "min": 14.0,
+      "max": 36.41
+    },
+    {
+      "sex": "male",
+      "national_team": "junior",
+      "mean": 17.413478260869564,
+      "std": 1.6109954841872374,
+      "min": 14.0,
+      "max": 21.94
+    },
+    {
+      "sex": "male",
+      "national_team": "senior",
+      "mean": 24.209322033898303,
+      "std": 4.289755183275284,
+      "min": 14.0,
+      "max": 33.6
+    }
+  ],
+  "domain_summary": {
+    "muscular_strength": {
+      "mean": -2.960594732333751e-17,
+      "std": 1.0016708449412668,
+      "min": -2.297787211563244,
+      "max": 2.3954754189295917
+    },
+    "lower_body_dynamics": {
+      "mean": 5.921189464667502e-18,
+      "std": 1.0016708449412668,
+      "min": -2.5481242750839312,
+      "max": 1.9374778577921055
+    },
+    "muscle_power_genetics": {
+      "mean": 3.552713678800501e-17,
+      "std": 1.0016708449412668,
+      "min": -1.0976763152690119,
+      "max": 1.9760905912092417
+    },
+    "blood_micronutrients": {
+      "mean": -1.1842378929335004e-17,
+      "std": 1.0016708449412668,
+      "min": -3.6875694171401108,
+      "max": 1.3210138319466271
+    },
+    "basic_cognitive_function": {
+      "mean": 5.921189464667502e-18,
+      "std": 1.0016708449412668,
+      "min": -2.540894688761261,
+      "max": 3.6836948389559008
+    },
+    "mental_health": {
+      "mean": 1.805962786723588e-16,
+      "std": 1.0016708449412666,
+      "min": -2.441460655727249,
+      "max": 2.089376826387886
+    },
+    "social_support": {
+      "mean": 4.500103993147302e-16,
+      "std": 1.0016708449412668,
+      "min": -2.312081437630703,
+      "max": 2.452757638938951
+    },
+    "training_conditions": {
+      "mean": -1.9539925233402755e-16,
+      "std": 1.0016708449412668,
+      "min": -2.976473980361099,
+      "max": 2.6020903310195527
+    }
+  },
+  "target_correlations": {
+    "muscular_strength|lower_body_dynamics": {
+      "target": 0.282,
+      "observed": 0.11624010696427568,
+      "absolute_difference": 0.1657598930357243
+    },
+    "muscle_power_genetics|lower_body_dynamics": {
+      "target": 0.186,
+      "observed": 0.03995064813794066,
+      "absolute_difference": 0.14604935186205933
+    },
+    "mental_health|social_support": {
+      "target": 0.277,
+      "observed": 0.2420957939763193,
+      "absolute_difference": 0.03490420602368072
+    },
+    "training_conditions|mental_health": {
+      "target": 0.305,
+      "observed": 0.12463839082502971,
+      "absolute_difference": 0.1803616091749703
+    },
+    "training_conditions|social_support": {
+      "target": 0.386,
+      "observed": 0.2473926024592517,
+      "absolute_difference": 0.1386073975407483
+    },
+    "basic_cognitive_function|lower_body_dynamics": {
+      "target": 0.116,
+      "observed": 0.1499796239853333,
+      "absolute_difference": 0.03397962398533329
+    },
+    "muscle_power_genetics|social_support": {
+      "target": -0.138,
+      "observed": -0.14328340876688125,
+      "absolute_difference": 0.005283408766881242
+    }
+  },
+  "correlation_total_absolute_error": 0.7049454903893975,
+  "group_standardization_fallback_count": 4,
+  "validation_checks": {
+    "row_count": true,
+    "unique_ids": true,
+    "finite_domains": true,
+    "expertise_consistent": true,
+    "reproducible": true
+  },
+  "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions."
+}

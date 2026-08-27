@@ -1,0 +1,13 @@
+method,privacy_level,n_requests,n_correct,accuracy,accuracy_percent,level_label
+Method A,0,8,4,0.5,50.0,L0 Cloud
+Method A,1,8,0,0.0,0.0,L1 Collaboration
+Method A,2,8,8,1.0,100.0,L2 Local Edge
+Method A,3,8,8,1.0,100.0,L3 Blocked
+Method B,0,8,4,0.5,50.0,L0 Cloud
+Method B,1,8,2,0.25,25.0,L1 Collaboration
+Method B,2,8,0,0.0,0.0,L2 Local Edge
+Method B,3,8,8,1.0,100.0,L3 Blocked
+Method C,0,8,8,1.0,100.0,L0 Cloud
+Method C,1,8,5,0.625,62.5,L1 Collaboration
+Method C,2,8,8,1.0,100.0,L2 Local Edge
+Method C,3,8,8,1.0,100.0,L3 Blocked

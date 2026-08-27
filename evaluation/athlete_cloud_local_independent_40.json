@@ -1,0 +1,371 @@
+{
+    "dataset_name":  "athlete_cloud_local_independent_40",
+    "schema_version":  "cloud_local_codegen_v1",
+    "candidate_samples":  40,
+    "used_for_training":  false,
+    "used_for_threshold_calibration":  false,
+    "independent_evaluation":  true,
+    "prompt_version":  "pool_typed_schema_v3",
+    "samples":  [
+                    {
+                        "id":  "cloud_local_eval_001",
+                        "prompt":  "Independent benchmark request: Build the predefined Table 1 logistic-regression series for the complete athlete cohort, covering every public domain and the standard no-control, sex, age, and sex-plus-age specifications.",
+                        "analysis_type":  "table1",
+                        "requested_filters":  {
+
+                                              },
+                        "difficulty":  "easy"
+                    },
+                    {
+                        "id":  "cloud_local_eval_002",
+                        "prompt":  "Independent benchmark request: For female competitors, return the restricted Table 1 analysis with elite status as target, all public predictors, and each standard control set.",
+                        "analysis_type":  "table1",
+                        "requested_filters":  {
+                                                  "sex":  "female"
+                                              },
+                        "difficulty":  "medium"
+                    },
+                    {
+                        "id":  "cloud_local_eval_003",
+                        "prompt":  "Independent benchmark request: I need Table 1 for male competitors: run its four approved logistic models across the eight public athlete domains.",
+                        "analysis_type":  "table1",
+                        "requested_filters":  {
+                                                  "sex":  "male"
+                                              },
+                        "difficulty":  "hard"
+                    },
+                    {
+                        "id":  "cloud_local_eval_004",
+                        "prompt":  "Independent benchmark request: Build the predefined Table 1 logistic-regression series for volleyball competitors, covering every public domain and the standard no-control, sex, age, and sex-plus-age specifications.",
+                        "analysis_type":  "table1",
+                        "requested_filters":  {
+                                                  "sport":  "volleyball"
+                                              },
+                        "difficulty":  "easy"
+                    },
+                    {
+                        "id":  "cloud_local_eval_005",
+                        "prompt":  "Independent benchmark request: For ice hockey competitors, return the restricted Table 1 analysis with elite status as target, all public predictors, and each standard control set.",
+                        "analysis_type":  "table1",
+                        "requested_filters":  {
+                                                  "sport":  "ice hockey"
+                                              },
+                        "difficulty":  "medium"
+                    },
+                    {
+                        "id":  "cloud_local_eval_006",
+                        "prompt":  "Independent benchmark request: I need Table 1 for table tennis competitors: run its four approved logistic models across the eight public athlete domains.",
+                        "analysis_type":  "table1",
+                        "requested_filters":  {
+                                                  "sport":  "table tennis"
+                                              },
+                        "difficulty":  "hard"
+                    },
+                    {
+                        "id":  "cloud_local_eval_007",
+                        "prompt":  "Independent benchmark request: Build the predefined Table 1 logistic-regression series for 3x3 basketball competitors, covering every public domain and the standard no-control, sex, age, and sex-plus-age specifications.",
+                        "analysis_type":  "table1",
+                        "requested_filters":  {
+                                                  "sport":  "3x3 basketball"
+                                              },
+                        "difficulty":  "easy"
+                    },
+                    {
+                        "id":  "cloud_local_eval_008",
+                        "prompt":  "Independent benchmark request: For athletes younger than twenty, return the restricted Table 1 analysis with elite status as target, all public predictors, and each standard control set.",
+                        "analysis_type":  "table1",
+                        "requested_filters":  {
+                                                  "age_group":  "under_20"
+                                              },
+                        "difficulty":  "medium"
+                    },
+                    {
+                        "id":  "cloud_local_eval_009",
+                        "prompt":  "Independent benchmark request: Build the predefined Table 2 multiple-linear-regression analysis for the complete athlete cohort, using all public domains and expertise value as the continuous outcome.",
+                        "analysis_type":  "table2",
+                        "requested_filters":  {
+
+                                              },
+                        "difficulty":  "easy"
+                    },
+                    {
+                        "id":  "cloud_local_eval_010",
+                        "prompt":  "Independent benchmark request: For female competitors, return the restricted Table 2 models for expertise value with the complete public predictor pool.",
+                        "analysis_type":  "table2",
+                        "requested_filters":  {
+                                                  "sex":  "female"
+                                              },
+                        "difficulty":  "medium"
+                    },
+                    {
+                        "id":  "cloud_local_eval_011",
+                        "prompt":  "Independent benchmark request: I need Table 2 for male competitors: estimate the approved expertise-value regressions over all eight public domains.",
+                        "analysis_type":  "table2",
+                        "requested_filters":  {
+                                                  "sex":  "male"
+                                              },
+                        "difficulty":  "hard"
+                    },
+                    {
+                        "id":  "cloud_local_eval_012",
+                        "prompt":  "Independent benchmark request: Build the predefined Table 2 multiple-linear-regression analysis for volleyball competitors, using all public domains and expertise value as the continuous outcome.",
+                        "analysis_type":  "table2",
+                        "requested_filters":  {
+                                                  "sport":  "volleyball"
+                                              },
+                        "difficulty":  "easy"
+                    },
+                    {
+                        "id":  "cloud_local_eval_013",
+                        "prompt":  "Independent benchmark request: For ice hockey competitors, return the restricted Table 2 models for expertise value with the complete public predictor pool.",
+                        "analysis_type":  "table2",
+                        "requested_filters":  {
+                                                  "sport":  "ice hockey"
+                                              },
+                        "difficulty":  "medium"
+                    },
+                    {
+                        "id":  "cloud_local_eval_014",
+                        "prompt":  "Independent benchmark request: I need Table 2 for table tennis competitors: estimate the approved expertise-value regressions over all eight public domains.",
+                        "analysis_type":  "table2",
+                        "requested_filters":  {
+                                                  "sport":  "table tennis"
+                                              },
+                        "difficulty":  "hard"
+                    },
+                    {
+                        "id":  "cloud_local_eval_015",
+                        "prompt":  "Independent benchmark request: Build the predefined Table 2 multiple-linear-regression analysis for 3x3 basketball competitors, using all public domains and expertise value as the continuous outcome.",
+                        "analysis_type":  "table2",
+                        "requested_filters":  {
+                                                  "sport":  "3x3 basketball"
+                                              },
+                        "difficulty":  "easy"
+                    },
+                    {
+                        "id":  "cloud_local_eval_016",
+                        "prompt":  "Independent benchmark request: For athletes younger than twenty, return the restricted Table 2 models for expertise value with the complete public predictor pool.",
+                        "analysis_type":  "table2",
+                        "requested_filters":  {
+                                                  "age_group":  "under_20"
+                                              },
+                        "difficulty":  "medium"
+                    },
+                    {
+                        "id":  "cloud_local_eval_017",
+                        "prompt":  "Independent benchmark request: Create the approved Figure 1 analysis for the complete athlete cohort, relating all public domains to expertise value and grouping by elite status.",
+                        "analysis_type":  "figure1",
+                        "requested_filters":  {
+
+                                              },
+                        "difficulty":  "easy"
+                    },
+                    {
+                        "id":  "cloud_local_eval_018",
+                        "prompt":  "Independent benchmark request: For female competitors, generate Figure 1 with the full domain set, the standard correlation threshold, and approved variance iterations.",
+                        "analysis_type":  "figure1",
+                        "requested_filters":  {
+                                                  "sex":  "female"
+                                              },
+                        "difficulty":  "medium"
+                    },
+                    {
+                        "id":  "cloud_local_eval_019",
+                        "prompt":  "Independent benchmark request: I need the restricted Figure 1 visualization for male competitors, split by elite status and based on every public athlete domain.",
+                        "analysis_type":  "figure1",
+                        "requested_filters":  {
+                                                  "sex":  "male"
+                                              },
+                        "difficulty":  "hard"
+                    },
+                    {
+                        "id":  "cloud_local_eval_020",
+                        "prompt":  "Independent benchmark request: Create the approved Figure 1 analysis for volleyball competitors, relating all public domains to expertise value and grouping by elite status.",
+                        "analysis_type":  "figure1",
+                        "requested_filters":  {
+                                                  "sport":  "volleyball"
+                                              },
+                        "difficulty":  "easy"
+                    },
+                    {
+                        "id":  "cloud_local_eval_021",
+                        "prompt":  "Independent benchmark request: For ice hockey competitors, generate Figure 1 with the full domain set, the standard correlation threshold, and approved variance iterations.",
+                        "analysis_type":  "figure1",
+                        "requested_filters":  {
+                                                  "sport":  "ice hockey"
+                                              },
+                        "difficulty":  "medium"
+                    },
+                    {
+                        "id":  "cloud_local_eval_022",
+                        "prompt":  "Independent benchmark request: I need the restricted Figure 1 visualization for table tennis competitors, split by elite status and based on every public athlete domain.",
+                        "analysis_type":  "figure1",
+                        "requested_filters":  {
+                                                  "sport":  "table tennis"
+                                              },
+                        "difficulty":  "hard"
+                    },
+                    {
+                        "id":  "cloud_local_eval_023",
+                        "prompt":  "Independent benchmark request: Create the approved Figure 1 analysis for 3x3 basketball competitors, relating all public domains to expertise value and grouping by elite status.",
+                        "analysis_type":  "figure1",
+                        "requested_filters":  {
+                                                  "sport":  "3x3 basketball"
+                                              },
+                        "difficulty":  "easy"
+                    },
+                    {
+                        "id":  "cloud_local_eval_024",
+                        "prompt":  "Independent benchmark request: For athletes younger than twenty, generate Figure 1 with the full domain set, the standard correlation threshold, and approved variance iterations.",
+                        "analysis_type":  "figure1",
+                        "requested_filters":  {
+                                                  "age_group":  "under_20"
+                                              },
+                        "difficulty":  "medium"
+                    },
+                    {
+                        "id":  "cloud_local_eval_025",
+                        "prompt":  "Independent benchmark request: Calculate the approved Pearson correlation analysis across all eight public domains for the complete athlete cohort.",
+                        "analysis_type":  "correlation",
+                        "requested_filters":  {
+
+                                              },
+                        "difficulty":  "easy"
+                    },
+                    {
+                        "id":  "cloud_local_eval_026",
+                        "prompt":  "Independent benchmark request: For female competitors, return the restricted pairwise Pearson correlation matrix using the complete public domain set.",
+                        "analysis_type":  "correlation",
+                        "requested_filters":  {
+                                                  "sex":  "female"
+                                              },
+                        "difficulty":  "medium"
+                    },
+                    {
+                        "id":  "cloud_local_eval_027",
+                        "prompt":  "Independent benchmark request: I need correlations for male competitors: use the approved Pearson method over every public athlete domain.",
+                        "analysis_type":  "correlation",
+                        "requested_filters":  {
+                                                  "sex":  "male"
+                                              },
+                        "difficulty":  "hard"
+                    },
+                    {
+                        "id":  "cloud_local_eval_028",
+                        "prompt":  "Independent benchmark request: Calculate the approved Pearson correlation analysis across all eight public domains for volleyball competitors.",
+                        "analysis_type":  "correlation",
+                        "requested_filters":  {
+                                                  "sport":  "volleyball"
+                                              },
+                        "difficulty":  "easy"
+                    },
+                    {
+                        "id":  "cloud_local_eval_029",
+                        "prompt":  "Independent benchmark request: For ice hockey competitors, return the restricted pairwise Pearson correlation matrix using the complete public domain set.",
+                        "analysis_type":  "correlation",
+                        "requested_filters":  {
+                                                  "sport":  "ice hockey"
+                                              },
+                        "difficulty":  "medium"
+                    },
+                    {
+                        "id":  "cloud_local_eval_030",
+                        "prompt":  "Independent benchmark request: I need correlations for table tennis competitors: use the approved Pearson method over every public athlete domain.",
+                        "analysis_type":  "correlation",
+                        "requested_filters":  {
+                                                  "sport":  "table tennis"
+                                              },
+                        "difficulty":  "hard"
+                    },
+                    {
+                        "id":  "cloud_local_eval_031",
+                        "prompt":  "Independent benchmark request: Calculate the approved Pearson correlation analysis across all eight public domains for 3x3 basketball competitors.",
+                        "analysis_type":  "correlation",
+                        "requested_filters":  {
+                                                  "sport":  "3x3 basketball"
+                                              },
+                        "difficulty":  "easy"
+                    },
+                    {
+                        "id":  "cloud_local_eval_032",
+                        "prompt":  "Independent benchmark request: For athletes younger than twenty, return the restricted pairwise Pearson correlation matrix using the complete public domain set.",
+                        "analysis_type":  "correlation",
+                        "requested_filters":  {
+                                                  "age_group":  "under_20"
+                                              },
+                        "difficulty":  "medium"
+                    },
+                    {
+                        "id":  "cloud_local_eval_033",
+                        "prompt":  "Independent benchmark request: Compare elite and semi-elite variance across all public domains for the complete athlete cohort, using the approved iteration count and visualization.",
+                        "analysis_type":  "variance_analysis",
+                        "requested_filters":  {
+
+                                              },
+                        "difficulty":  "easy"
+                    },
+                    {
+                        "id":  "cloud_local_eval_034",
+                        "prompt":  "Independent benchmark request: For female competitors, run the restricted variance analysis by elite status over the complete public domain set.",
+                        "analysis_type":  "variance_analysis",
+                        "requested_filters":  {
+                                                  "sex":  "female"
+                                              },
+                        "difficulty":  "medium"
+                    },
+                    {
+                        "id":  "cloud_local_eval_035",
+                        "prompt":  "Independent benchmark request: I need the approved elite-versus-semi-elite variance visualization for male competitors, covering every public athlete domain.",
+                        "analysis_type":  "variance_analysis",
+                        "requested_filters":  {
+                                                  "sex":  "male"
+                                              },
+                        "difficulty":  "hard"
+                    },
+                    {
+                        "id":  "cloud_local_eval_036",
+                        "prompt":  "Independent benchmark request: Compare elite and semi-elite variance across all public domains for volleyball competitors, using the approved iteration count and visualization.",
+                        "analysis_type":  "variance_analysis",
+                        "requested_filters":  {
+                                                  "sport":  "volleyball"
+                                              },
+                        "difficulty":  "easy"
+                    },
+                    {
+                        "id":  "cloud_local_eval_037",
+                        "prompt":  "Independent benchmark request: For ice hockey competitors, run the restricted variance analysis by elite status over the complete public domain set.",
+                        "analysis_type":  "variance_analysis",
+                        "requested_filters":  {
+                                                  "sport":  "ice hockey"
+                                              },
+                        "difficulty":  "medium"
+                    },
+                    {
+                        "id":  "cloud_local_eval_038",
+                        "prompt":  "Independent benchmark request: I need the approved elite-versus-semi-elite variance visualization for table tennis competitors, covering every public athlete domain.",
+                        "analysis_type":  "variance_analysis",
+                        "requested_filters":  {
+                                                  "sport":  "table tennis"
+                                              },
+                        "difficulty":  "hard"
+                    },
+                    {
+                        "id":  "cloud_local_eval_039",
+                        "prompt":  "Independent benchmark request: Compare elite and semi-elite variance across all public domains for 3x3 basketball competitors, using the approved iteration count and visualization.",
+                        "analysis_type":  "variance_analysis",
+                        "requested_filters":  {
+                                                  "sport":  "3x3 basketball"
+                                              },
+                        "difficulty":  "easy"
+                    },
+                    {
+                        "id":  "cloud_local_eval_040",
+                        "prompt":  "Independent benchmark request: For athletes younger than twenty, run the restricted variance analysis by elite status over the complete public domain set.",
+                        "analysis_type":  "variance_analysis",
+                        "requested_filters":  {
+                                                  "age_group":  "under_20"
+                                              },
+                        "difficulty":  "medium"
+                    }
+                ]
+}

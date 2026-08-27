@@ -1,0 +1,865 @@
+{
+  "synthetic_data_notice": "Synthetic engineering dataset; not reconstructed confidential observations.",
+  "columns": [
+    {
+      "column_name": "athlete_id",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "sex",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "sport",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "national_team",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "age",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "age_group",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "body_weight_kg",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "grip_strength_n",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "relative_grip_strength_n_per_kg",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "tapping_frequency_hz",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "sprint_10m_seconds",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "countermovement_jump_cm",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "drop_jump_rsi",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "sergeant_jump_cm",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "agt_rs699",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "ip6k3_rs6942022",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "vdr_rs1544410",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "actn3_rs1815739",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "hsd17b14_rs7247312",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "mtrr_rs1801394",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "ucp2_rs660339",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "polygenic_score_raw",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "vitamin_b12_pg_ml",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "vitamin_d_ng_ml",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "folic_acid_ng_ml",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "ferritin_ng_ml",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "vitamin_b12_code",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "vitamin_d_code",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "folic_acid_code",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "ferritin_code",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "blood_micronutrient_score_0_100",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "zvt_connected_numbers",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "d2r_concentration_score",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "phq4_item_1",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "phq4_item_2",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "phq4_item_3",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "phq4_item_4",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "pss4_item_1",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "pss4_item_2",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "pss4_item_3",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "pss4_item_4",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "passq_item_01",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "passq_item_02",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "passq_item_03",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "passq_item_04",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "passq_item_05",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "passq_item_06",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "passq_item_07",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "passq_item_08",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "passq_item_09",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "passq_item_10",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "passq_item_11",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "passq_item_12",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "passq_item_13",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "passq_item_14",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "passq_item_15",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "passq_item_16",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "mspss_item_01",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "mspss_item_02",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "mspss_item_03",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "mspss_item_04",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "mspss_item_05",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "mspss_item_06",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "mspss_item_07",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "mspss_item_08",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "mspss_item_09",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "mspss_item_10",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "mspss_item_11",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "mspss_item_12",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "training_satisfaction",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "coach_satisfaction",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "competition_level_score",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "success_score",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "experience_score",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "international_ranking_score",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "expertise_value",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "elite_status",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "expertise_group",
+      "category": "raw_or_derived_measurement",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "simulation_assumption",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": false
+    },
+    {
+      "column_name": "muscular_strength",
+      "category": "protected_domain",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "published_score_formula",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": true
+    },
+    {
+      "column_name": "lower_body_dynamics",
+      "category": "protected_domain",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "published_score_formula",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": true
+    },
+    {
+      "column_name": "muscle_power_genetics",
+      "category": "protected_domain",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "published_score_formula",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": true
+    },
+    {
+      "column_name": "blood_micronutrients",
+      "category": "protected_domain",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "published_score_formula",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": true
+    },
+    {
+      "column_name": "basic_cognitive_function",
+      "category": "protected_domain",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "published_score_formula",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": true
+    },
+    {
+      "column_name": "mental_health",
+      "category": "protected_domain",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "published_score_formula",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": true
+    },
+    {
+      "column_name": "social_support",
+      "category": "protected_domain",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "published_score_formula",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": true
+    },
+    {
+      "column_name": "training_conditions",
+      "category": "protected_domain",
+      "generation_basis": "Published formula or sample structure with synthetic raw distributions",
+      "source_type": "published_score_formula",
+      "source_reference": "Zentgraf et al. (2024), Methods",
+      "formula_or_method": "Generated from raw measurements and then transformed; see generator source.",
+      "simulation_assumptions": "Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions.",
+      "public_exposure_allowed": true
+    }
+  ]
+}

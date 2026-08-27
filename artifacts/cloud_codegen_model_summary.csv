@@ -1,0 +1,4 @@
+﻿prompt_version,Model,model_key,Samples,Structure Valid,Structure Valid Rate,Request Match,Request Match Rate,Execution Success,Execution Success Rate,Result Valid,Result Valid Rate,Fully Correct,Fully Correct Accuracy,API Calls,Completed Model Responses,Input Tokens,Output Tokens,Average Latency Seconds,total_estimated_cost_usd,average_cost_per_request_usd,cost_per_fully_correct_request_usd,cost_is_pricing_snapshot_estimate
+pool_typed_schema_v3,GPT-4.1,gpt4_1,40,40,1.0,26,0.65,22,0.55,22,0.55,22,0.55,40,40,81975,2928,1.3088851549924585,0.187374,0.00468435,0.008517,True
+pool_typed_schema_v3,Gemini 3.5 Flash,gemini,40,40,1.0,31,0.775,26,0.65,26,0.65,26,0.65,40,40,97308,4273,5.491505927499384,0.08900475000000001,0.0022251187500000004,0.0034232596153846158,True
+pool_typed_schema_v3,Claude Sonnet 5,claude,40,40,1.0,22,0.55,20,0.5,20,0.5,20,0.5,40,40,126968,11792,4.488823807495646,0.37185599999999996,0.0092964,0.0185928,True

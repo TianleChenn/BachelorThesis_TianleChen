@@ -1,0 +1,102 @@
+{
+  "model_name": "LLM-based 4D Soft Gating",
+  "training_dataset": "privacy_gating_train_4d_hard_llm_generated_90.json",
+  "features_source": "GPT-4.1 Privacy Assessor",
+  "group_split": true,
+  "independent_evaluation": false,
+  "approved_only": true,
+  "sample_count": 90,
+  "route_distribution": {
+    "cloud": 30,
+    "collaboration": 30,
+    "local_edge": 30
+  },
+  "split_seed": 2100,
+  "training_families": [
+    "anonymous_individual",
+    "broad_sensitive_aggregate",
+    "filtered_cohort",
+    "individual_vs_group",
+    "low_sensitive_individual",
+    "metadata",
+    "method_explanation",
+    "sensitive_explanation",
+    "small_nonsensitive_cohort",
+    "small_sensitive_cohort",
+    "standardization",
+    "very_small_cohort"
+  ],
+  "validation_families": [
+    "broad_aggregate",
+    "identifiable_individual",
+    "sensitive_cohort"
+  ],
+  "best_epoch": 152,
+  "training_metrics": {
+    "accuracy": 0.7288135886192322,
+    "macro_precision": 0.6702508960573477,
+    "macro_recall": 0.6773088023088022,
+    "macro_f1": 0.6271139063591894,
+    "per_class_recall": {
+      "cloud": 0.9545454545454546,
+      "collaboration": 0.125,
+      "local_edge": 0.9523809523809523
+    },
+    "confusion_matrix": [
+      [
+        21,
+        1,
+        0
+      ],
+      [
+        10,
+        2,
+        4
+      ],
+      [
+        0,
+        1,
+        20
+      ]
+    ],
+    "logits_range": [
+      -3.5125417709350586,
+      2.605604887008667
+    ],
+    "probability_entropy": 0.8246766328811646
+  },
+  "validation_metrics": {
+    "accuracy": 0.8709677457809448,
+    "macro_precision": 0.8727272727272727,
+    "macro_recall": 0.9047619047619048,
+    "macro_f1": 0.8740740740740741,
+    "per_class_recall": {
+      "cloud": 1.0,
+      "collaboration": 0.7142857142857143,
+      "local_edge": 1.0
+    },
+    "confusion_matrix": [
+      [
+        8,
+        0,
+        0
+      ],
+      [
+        2,
+        10,
+        2
+      ],
+      [
+        0,
+        0,
+        9
+      ]
+    ],
+    "logits_range": [
+      -3.635373115539551,
+      2.6594998836517334
+    ],
+    "probability_entropy": 0.7962889075279236
+  },
+  "training_timestamp": "2026-08-05T16:00:51.192365+00:00"
+}

@@ -1,0 +1,35 @@
+{
+  "status": "trained",
+  "router_type": "project_specific_preference_router",
+  "inspiration": "RouteLLM preference-based routing",
+  "strong_model": "gpt-4.1",
+  "weak_model": "ministral-3-8b",
+  "training_samples": 94,
+  "strong_samples": 26,
+  "weak_samples": 68,
+  "uses_official_mf_score": false,
+  "threshold": 0.49109090909090913,
+  "cv_accuracy": 0.7340425531914894,
+  "cv_balanced_accuracy": 0.6617647058823529,
+  "strong_precision": 0.52,
+  "strong_recall": 0.5,
+  "weak_recall": 0.8235294117647058,
+  "strong_usage_rate": 0.26595744680851063,
+  "confusion_matrix_cv": [
+    [
+      56,
+      12
+    ],
+    [
+      13,
+      13
+    ]
+  ],
+  "random_state": 2026,
+  "threshold_source": "stratified 5-fold out-of-fold probabilities",
+  "threshold_candidates": "numpy.linspace(0.01, 0.99, 991)",
+  "created_at": "2026-08-11T06:31:00.640651+00:00",
+  "training_dataset": "artifacts/athlete_router_preferences_v2_valid.json",
+  "training_dataset_sha256": "c3f84d632a6844733465dfdd6a053736739b05f1dd442021e0c1f5dd28415da9",
+  "model_sha256": "ab256f68892f25820422707bf6cbd2670bb5df776beba7df6732b27bc82d9c32"
+}

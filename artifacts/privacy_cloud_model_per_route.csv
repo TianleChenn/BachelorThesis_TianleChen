@@ -1,0 +1,13 @@
+﻿model_key,Model,Ground Truth Route,correct,total,accuracy
+gpt4_1,GPT-4.1,cloud,5,5,1.0
+gpt4_1,GPT-4.1,collaboration,5,35,0.14285714285714285
+gpt4_1,GPT-4.1,local_edge,5,10,0.5
+gpt4_1,GPT-4.1,blocked,10,10,1.0
+gemini,Gemini 3.5 Flash,cloud,0,5,0.0
+gemini,Gemini 3.5 Flash,collaboration,0,35,0.0
+gemini,Gemini 3.5 Flash,local_edge,0,10,0.0
+gemini,Gemini 3.5 Flash,blocked,0,10,0.0
+claude,Claude Sonnet 5,cloud,1,5,0.2
+claude,Claude Sonnet 5,collaboration,12,35,0.34285714285714286
+claude,Claude Sonnet 5,local_edge,10,10,1.0
+claude,Claude Sonnet 5,blocked,10,10,1.0

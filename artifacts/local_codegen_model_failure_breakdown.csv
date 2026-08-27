@@ -1,0 +1,4 @@
+﻿prompt_version,Model,api_error,format_validation,request_validation,local_execution,result_validation,success,wrong_method,wrong_variables,wrong_filters,wrong_target,wrong_controls,wrong_numeric_parameter,other_request_mismatch
+pool_typed_schema_v3,Ministral-3-8B,0,0,15,3,0,22,0,0,9,0,0,0,6
+pool_typed_schema_v3,Qwen2.5-Coder-7B-Instruct,0,32,1,0,0,7,0,0,1,0,0,0,0
+pool_typed_schema_v3,Llama-3.1-8B-Instruct,0,24,15,0,0,1,5,2,0,8,0,0,0

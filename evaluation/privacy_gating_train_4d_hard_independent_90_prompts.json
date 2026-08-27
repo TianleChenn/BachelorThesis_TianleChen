@@ -1,0 +1,819 @@
+{
+  "schema_version": "llm-4d-hard-prompts-v1",
+  "dataset_name": "privacy_gating_train_4d_hard_independent_90",
+  "rules_version": "athlete-privacy-rubric-v8-continuous-no-level",
+  "feature_source": "to_be_generated_by_active_llm_privacy_assessor",
+  "route_annotation": "manual_project_specific",
+  "samples": [
+    {
+      "id": "hard4d_001",
+      "prompt": "Explain how Table 1 logistic regression is interpreted for athlete expertise without requesting any results.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "method_explanation",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Sensitive context is mentioned only as methodology; no athlete data are requested."
+    },
+    {
+      "id": "hard4d_002",
+      "prompt": "Describe the difference between Table 1 and Table 2 in the Athlete Data Analysis System.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "method_explanation",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "A public explanation of supported aggregate methods has minimal disclosure."
+    },
+    {
+      "id": "hard4d_003",
+      "prompt": "Explain how Figure 1 represents conditional relationships among standardized athlete domains.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "method_explanation",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "The request concerns network methodology rather than observed data."
+    },
+    {
+      "id": "hard4d_004",
+      "prompt": "Explain why Figure 2 uses standardized z-scores and an elite reference profile.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "method_explanation",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "The request asks about visualization design without generating profiles."
+    },
+    {
+      "id": "hard4d_005",
+      "prompt": "Describe how blood micronutrients could be used in an aggregate regression, without calculating any athlete result.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "sensitive_explanation",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "A highly sensitive domain name appears, but only in a methodological explanation."
+    },
+    {
+      "id": "hard4d_006",
+      "prompt": "Explain privacy considerations for mental-health analysis in athlete research without accessing the dataset.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "sensitive_explanation",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "This is a privacy and method explanation, not a data request."
+    },
+    {
+      "id": "hard4d_007",
+      "prompt": "Describe how muscle-power genetics is represented as a derived standardized domain.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "sensitive_explanation",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Genetics is discussed at the domain-definition level only."
+    },
+    {
+      "id": "hard4d_008",
+      "prompt": "Run Table 1 for the complete athlete cohort using only protected aggregate outputs.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "broad_aggregate",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "A full-cohort protected regression has broad scope and derived output."
+    },
+    {
+      "id": "hard4d_009",
+      "prompt": "Run Table 2 for all athletes and return only aggregate coefficients and confidence intervals.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "broad_aggregate",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "The full cohort and aggregate coefficients avoid individual disclosure."
+    },
+    {
+      "id": "hard4d_010",
+      "prompt": "Generate Figure 1 for the complete cohort using standardized domain correlations.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "broad_aggregate",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "The network is based on broad aggregate derived values."
+    },
+    {
+      "id": "hard4d_011",
+      "prompt": "Generate Figure 2 as an aggregate variance comparison across all eight domains, with no individual traces.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "broad_aggregate",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Explicitly excludes individual profiles while using the full cohort."
+    },
+    {
+      "id": "hard4d_012",
+      "prompt": "Calculate correlations among all standardized domains for the full athlete sample.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "broad_aggregate",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Broad-scope correlation returns only aggregate coefficients."
+    },
+    {
+      "id": "hard4d_013",
+      "prompt": "Compare variance across standardized athlete domains for all sports combined.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "broad_aggregate",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "The complete population makes the aggregate output low exposure."
+    },
+    {
+      "id": "hard4d_014",
+      "prompt": "Provide descriptive statistics for all athletes using derived z-scores only.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "broad_aggregate",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Only broad derived summaries are requested."
+    },
+    {
+      "id": "hard4d_015",
+      "prompt": "Summarize the full-cohort distribution of expertise scores without subgroup breakdowns.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "broad_aggregate",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "No small group or individual can be isolated."
+    },
+    {
+      "id": "hard4d_016",
+      "prompt": "List dataset metadata, column definitions, and available aggregate analyses.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "metadata",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Only public structural information is requested."
+    },
+    {
+      "id": "hard4d_017",
+      "prompt": "Report the total number of athlete records and the names of the eight derived domains.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "metadata",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Counts and schema names do not reveal athlete values."
+    },
+    {
+      "id": "hard4d_018",
+      "prompt": "Explain how the athlete variables are standardized into z-scores.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "standardization",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "This is a public statistical explanation."
+    },
+    {
+      "id": "hard4d_019",
+      "prompt": "Explain why the overall standardized mean equals zero in the athlete dataset.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "standardization",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "No observed athlete output is requested."
+    },
+    {
+      "id": "hard4d_020",
+      "prompt": "Describe how missing values are handled before aggregate athlete regression.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "method_explanation",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Preprocessing methodology alone is low disclosure."
+    },
+    {
+      "id": "hard4d_021",
+      "prompt": "Explain odds ratios using a hypothetical full-cohort athlete example.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "method_explanation",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "The example is hypothetical and contains no dataset result."
+    },
+    {
+      "id": "hard4d_022",
+      "prompt": "Explain standardized beta coefficients in an athlete Table 2 analysis.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "method_explanation",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "The request is educational and non-personal."
+    },
+    {
+      "id": "hard4d_023",
+      "prompt": "Describe network centrality for athlete-domain Figure 1 without computing it.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "method_explanation",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "No data access or result generation occurs."
+    },
+    {
+      "id": "hard4d_024",
+      "prompt": "Explain variance inflation factors for the full-cohort athlete regression.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "method_explanation",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "A broad methodological explanation remains cloud-suitable."
+    },
+    {
+      "id": "hard4d_025",
+      "prompt": "Run a full-cohort correlation between mental-health and blood-domain z-scores using aggregate results only.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "broad_sensitive_aggregate",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Although domains are sensitive, the cohort is maximally broad and output aggregate."
+    },
+    {
+      "id": "hard4d_026",
+      "prompt": "Compare aggregate genetic-domain and training-condition means across the entire athlete sample.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "broad_sensitive_aggregate",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Sensitive genetics appears only in a broad protected summary."
+    },
+    {
+      "id": "hard4d_027",
+      "prompt": "Generate full-sample descriptive statistics for psychological derived scores without subgroup filters.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "broad_sensitive_aggregate",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Large scope and derived statistics reduce disclosure despite sensitivity."
+    },
+    {
+      "id": "hard4d_028",
+      "prompt": "Explain what an anonymous individual profile means, but do not generate one.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "sensitive_explanation",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "The request names an individual analysis type but asks only for explanation."
+    },
+    {
+      "id": "hard4d_029",
+      "prompt": "Describe how the system protects athlete identifiers before analysis.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "metadata",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "This is a public privacy-control explanation."
+    },
+    {
+      "id": "hard4d_030",
+      "prompt": "Give a public overview of the Athlete Data Analysis System and its supported figures and tables.",
+      "ground_truth_route": "cloud",
+      "prompt_family": "metadata",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "A product overview contains no protected athlete results."
+    },
+    {
+      "id": "hard4d_031",
+      "prompt": "Run an aggregate correlation of blood micronutrients for all elite athletes.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "sensitive_cohort",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Sensitive derived data are requested for a filtered but non-identifiable group."
+    },
+    {
+      "id": "hard4d_032",
+      "prompt": "Compare mental-health z-score means between female and male athlete cohorts.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "sensitive_cohort",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Sensitive psychological results require protected collaboration despite aggregate output."
+    },
+    {
+      "id": "hard4d_033",
+      "prompt": "Run Table 2 using muscle-power genetics predictors for senior national-team athletes.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "sensitive_cohort",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Genetic predictors and a filtered team cohort create moderate privacy risk."
+    },
+    {
+      "id": "hard4d_034",
+      "prompt": "Generate Figure 1 linking blood, mental-health, and social-support domains for elite athletes.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "sensitive_cohort",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Multiple sensitive domains are aggregated within a filtered expertise group."
+    },
+    {
+      "id": "hard4d_035",
+      "prompt": "Analyze variance in basic cognitive function for female athletes.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "filtered_cohort",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "A demographic filter and cognitive domain warrant prompt protection."
+    },
+    {
+      "id": "hard4d_036",
+      "prompt": "Calculate aggregate biometric correlations for national-team athletes.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "sensitive_cohort",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Biometric information in a defined cohort is sensitive but not individual."
+    },
+    {
+      "id": "hard4d_037",
+      "prompt": "Run logistic regression on mental-health derived scores for under-20 athletes.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "sensitive_cohort",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Age filtering plus psychological features creates a protected aggregate request."
+    },
+    {
+      "id": "hard4d_038",
+      "prompt": "Compare blood-micronutrient means across elite and semi-elite groups.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "sensitive_cohort",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Sensitive group comparison remains aggregate but benefits from collaboration."
+    },
+    {
+      "id": "hard4d_039",
+      "prompt": "Generate Table 2 for female national-team athletes using social-support and training-condition scores.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "filtered_cohort",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Intersecting cohort descriptors narrow the group without naming an individual."
+    },
+    {
+      "id": "hard4d_040",
+      "prompt": "Create an aggregate genetics network for athletes in one sport discipline.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "sensitive_cohort",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Genetic-domain aggregation within one sport is sensitive and filtered."
+    },
+    {
+      "id": "hard4d_041",
+      "prompt": "Summarize mental-health and cognitive z-scores for a protected cohort of twelve athletes.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "small_sensitive_cohort",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "The cohort is small and sensitive, but no identity or individual output is requested."
+    },
+    {
+      "id": "hard4d_042",
+      "prompt": "Calculate training-condition statistics for a five-athlete group without identifiers.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "small_nonsensitive_cohort",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Low-sensitivity data are requested for a small aggregate group, creating a boundary case."
+    },
+    {
+      "id": "hard4d_043",
+      "prompt": "Compare public sport categories for a six-athlete cohort using counts only.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "small_nonsensitive_cohort",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "The variables are low sensitivity but the group is small."
+    },
+    {
+      "id": "hard4d_044",
+      "prompt": "Run aggregate blood-domain variance for the complete national-team cohort.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "broad_sensitive_aggregate",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "The cohort is large, while the data domain is highly sensitive."
+    },
+    {
+      "id": "hard4d_045",
+      "prompt": "Analyze full-cohort genetic correlations by returning only a protected summary.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "broad_sensitive_aggregate",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Highly sensitive data remain group-level and protected."
+    },
+    {
+      "id": "hard4d_046",
+      "prompt": "Generate aggregate mental-health descriptive statistics for all athletes, using local perturbation before cloud analysis.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "broad_sensitive_aggregate",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Broad scope lowers subject risk, but psychological data justify collaboration."
+    },
+    {
+      "id": "hard4d_047",
+      "prompt": "Create Figure 2 profiles representing group means for a filtered elite cohort, with no individual lines.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "filtered_cohort",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Group profiles are derived but the cohort is filtered."
+    },
+    {
+      "id": "hard4d_048",
+      "prompt": "Compare standardized blood and genetic domains for female elite athletes as aggregate means.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "sensitive_cohort",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Two filters and highly sensitive domains require protected collaboration."
+    },
+    {
+      "id": "hard4d_049",
+      "prompt": "Run Table 1 for junior national-team athletes using cognitive and mental-health predictors.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "sensitive_cohort",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "A defined youth cohort and sensitive predictors warrant collaboration."
+    },
+    {
+      "id": "hard4d_050",
+      "prompt": "Correlate social support with mental health in semi-elite athletes.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "sensitive_cohort",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Psychological data in an expertise subgroup are protected aggregate content."
+    },
+    {
+      "id": "hard4d_051",
+      "prompt": "Analyze training-condition variance for a small anonymous team subgroup.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "small_nonsensitive_cohort",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "A small group is a privacy boundary even with less-sensitive derived data."
+    },
+    {
+      "id": "hard4d_052",
+      "prompt": "Generate a network of standardized domains for a ten-athlete protected cohort.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "small_sensitive_cohort",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Multiple domains and a small cohort need local protection before cloud work."
+    },
+    {
+      "id": "hard4d_053",
+      "prompt": "Compare cognitive-function means between two national-team levels.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "filtered_cohort",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "The group analysis is non-identifiable but concerns a sensitive cognitive domain."
+    },
+    {
+      "id": "hard4d_054",
+      "prompt": "Run aggregate regression for blood micronutrients across all female athletes.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "sensitive_cohort",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "A large demographic cohort still uses sensitive blood information."
+    },
+    {
+      "id": "hard4d_055",
+      "prompt": "Summarize genetic-domain variance in elite athletes without showing any athlete profile.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "sensitive_cohort",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "The output is aggregate, yet the genetic domain and filtered group remain sensitive."
+    },
+    {
+      "id": "hard4d_056",
+      "prompt": "Calculate correlations for an anonymous cohort selected by sport and age group.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "filtered_cohort",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Combined filters narrow the cohort even without identity."
+    },
+    {
+      "id": "hard4d_057",
+      "prompt": "Compare mental-health domain distributions across sport disciplines using protected aggregates.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "broad_sensitive_aggregate",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "The analysis is broad but sensitive and benefits from collaboration safeguards."
+    },
+    {
+      "id": "hard4d_058",
+      "prompt": "Create Table 2 for a seven-athlete cohort using only standardized training scores.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "small_nonsensitive_cohort",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Derived training values are less sensitive, while seven subjects form a small group."
+    },
+    {
+      "id": "hard4d_059",
+      "prompt": "Generate aggregate blood-micronutrient statistics for a large cohort and suppress all individual values.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "broad_sensitive_aggregate",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "This explicit large-cohort sensitive request is a boundary between cloud and collaboration."
+    },
+    {
+      "id": "hard4d_060",
+      "prompt": "Analyze standardized psychological and biometric outcomes for a filtered cohort with no athlete IDs.",
+      "ground_truth_route": "collaboration",
+      "prompt_family": "sensitive_cohort",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "No identity is present, but sensitive data and filtering require protected collaboration."
+    },
+    {
+      "id": "hard4d_061",
+      "prompt": "Generate an anonymous standardized individual profile for one randomly selected athlete.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "anonymous_individual",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "One person's derived profile remains individual even without a public identifier."
+    },
+    {
+      "id": "hard4d_062",
+      "prompt": "Compare one anonymous athlete's derived profile with the elite mean.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "individual_vs_group",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "An individual-to-group comparison can disclose a unique protected pattern."
+    },
+    {
+      "id": "hard4d_063",
+      "prompt": "Show Athlete_23's protected eight-domain z-score profile without raw measurements.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "identifiable_individual",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "A direct athlete ID makes the derived request identifiable."
+    },
+    {
+      "id": "hard4d_064",
+      "prompt": "Interpret Athlete_91's exact derived expertise score locally.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "identifiable_individual",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "The value is derived rather than raw, but it is exact and tied to an ID."
+    },
+    {
+      "id": "hard4d_065",
+      "prompt": "Analyze Athlete_265's standardized blood-domain profile on the local edge.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "identifiable_individual",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Identifiable sensitive blood results must remain local."
+    },
+    {
+      "id": "hard4d_066",
+      "prompt": "Summarize one identifiable athlete's public sport category and competition level.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "low_sensitive_individual",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "The attributes are comparatively low sensitivity, but the subject is identifiable."
+    },
+    {
+      "id": "hard4d_067",
+      "prompt": "Return one athlete's derived training-condition scores without raw questionnaire answers.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "anonymous_individual",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "No raw values are requested, yet the output remains a detailed individual result."
+    },
+    {
+      "id": "hard4d_068",
+      "prompt": "Create a protected mental-health profile for one anonymous athlete.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "anonymous_individual",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "An anonymous subject still has a sensitive individual psychological profile."
+    },
+    {
+      "id": "hard4d_069",
+      "prompt": "Generate Athlete_23's standardized muscle-power genetics profile locally.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "identifiable_individual",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Genetic-domain output associated with an athlete ID is high risk."
+    },
+    {
+      "id": "hard4d_070",
+      "prompt": "Compare Athlete_91's mental-health z-scores with national-team averages.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "individual_vs_group",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "The comparison exposes identifiable sensitive deviation from a group."
+    },
+    {
+      "id": "hard4d_071",
+      "prompt": "Interpret one athlete's blood micronutrient z-scores against the full-cohort mean.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "individual_vs_group",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "An individual sensitive profile is compared to a public reference."
+    },
+    {
+      "id": "hard4d_072",
+      "prompt": "Generate Figure 2 for one anonymous athlete and the elite reference line.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "anonymous_individual",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Figure 2 is derived but represents one unique subject."
+    },
+    {
+      "id": "hard4d_073",
+      "prompt": "Create an individual network of standardized domains for Athlete_265.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "identifiable_individual",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "A detailed derived network is linked to an athlete ID."
+    },
+    {
+      "id": "hard4d_074",
+      "prompt": "Run a local-only correlation analysis of one athlete's repeated protected scores.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "anonymous_individual",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "The analysis targets one subject and must not leave the edge."
+    },
+    {
+      "id": "hard4d_075",
+      "prompt": "Analyze variance for a uniquely selected athlete's derived measurements locally.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "anonymous_individual",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Unique selection creates individual scope despite anonymized display."
+    },
+    {
+      "id": "hard4d_076",
+      "prompt": "Compare one female national-team athlete's protected profile with all female athletes.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "individual_vs_group",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "A narrowly described individual is contrasted with her cohort."
+    },
+    {
+      "id": "hard4d_077",
+      "prompt": "Provide the precise standardized result for Athlete_23's cognitive domain.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "identifiable_individual",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "An exact derived cognitive result is tied to a direct identifier."
+    },
+    {
+      "id": "hard4d_078",
+      "prompt": "Interpret one anonymous athlete's social-support and training-condition profile.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "anonymous_individual",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Detailed multidomain information is about one person."
+    },
+    {
+      "id": "hard4d_079",
+      "prompt": "Generate a local profile for one semi-elite athlete selected from a small team.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "anonymous_individual",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Selection context may make an ostensibly anonymous athlete identifiable."
+    },
+    {
+      "id": "hard4d_080",
+      "prompt": "Analyze one national-team athlete's public team level and derived expertise profile.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "low_sensitive_individual",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Some fields are public-like, but the combined individual profile remains local."
+    },
+    {
+      "id": "hard4d_081",
+      "prompt": "Compare two athletes' standardized training-condition profiles without displaying their IDs.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "very_small_cohort",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "A two-person cohort is too small for remote aggregate processing."
+    },
+    {
+      "id": "hard4d_082",
+      "prompt": "Run descriptive statistics for a uniquely filtered three-athlete cohort locally.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "very_small_cohort",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Three subjects create strong singling-out risk."
+    },
+    {
+      "id": "hard4d_083",
+      "prompt": "Calculate protected correlations for four athletes from one national-team subgroup.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "very_small_cohort",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "The very small filtered cohort requires local processing."
+    },
+    {
+      "id": "hard4d_084",
+      "prompt": "Generate a detailed derived profile for one athlete but omit all raw data.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "anonymous_individual",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Absence of raw data does not eliminate individual-profile risk."
+    },
+    {
+      "id": "hard4d_085",
+      "prompt": "Return Athlete_91's exact standardized blood and mental-health results.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "identifiable_individual",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Exact derived sensitive values are linked to an ID."
+    },
+    {
+      "id": "hard4d_086",
+      "prompt": "Analyze an identifiable athlete's genetic and biometric profile locally only.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "identifiable_individual",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Multiple highly sensitive domains and identity require local edge."
+    },
+    {
+      "id": "hard4d_087",
+      "prompt": "Compare one anonymous athlete with a five-athlete reference group.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "individual_vs_group",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "The target remains an individual and the reference group is also small."
+    },
+    {
+      "id": "hard4d_088",
+      "prompt": "Create a protected local Table 2 interpretation for Athlete_265's derived outcome.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "identifiable_individual",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "A regression-style interpretation is still a person-specific result."
+    },
+    {
+      "id": "hard4d_089",
+      "prompt": "Show one athlete's exact derived profile score for each of the eight domains.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "anonymous_individual",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "Eight exact derived scores form a detailed individual fingerprint."
+    },
+    {
+      "id": "hard4d_090",
+      "prompt": "Perform local-only analysis of one athlete's protected cognitive, genetic, and mental-health profile.",
+      "ground_truth_route": "local_edge",
+      "prompt_family": "anonymous_individual",
+      "difficulty": "hard",
+      "review_status": "pending",
+      "rationale": "The request combines sensitive individual domains and explicitly requires local execution."
+    }
+  ]
+}

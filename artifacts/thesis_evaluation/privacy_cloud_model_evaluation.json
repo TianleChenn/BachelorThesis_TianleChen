@@ -1,0 +1,48 @@
+{
+  "evaluation": "Privacy Assessor Model Comparison",
+  "snapshot": "Bachelor Thesis Section 5.2.2",
+  "created_for": "Bachelor Thesis August 2026",
+  "read_only_snapshot": true,
+  "benchmark": {
+    "name": "Independent Benchmark",
+    "total_samples": 60,
+    "ground_truth_counts": {
+      "Cloud": 5,
+      "Collaboration": 35,
+      "Local Edge": 10,
+      "Blocked": 10
+    }
+  },
+  "models": {
+    "GPT-4.1": {
+      "correct_total": 28,
+      "correct_nonblocked": 18,
+      "route_correct": {
+        "Cloud": 5,
+        "Collaboration": 8,
+        "Local Edge": 5,
+        "Blocked": 10
+      }
+    },
+    "Gemini 3.5 Flash": {
+      "correct_total": 35,
+      "correct_nonblocked": 25,
+      "route_correct": {
+        "Cloud": 0,
+        "Collaboration": 16,
+        "Local Edge": 9,
+        "Blocked": 10
+      }
+    },
+    "Claude Sonnet 5": {
+      "correct_total": 34,
+      "correct_nonblocked": 24,
+      "route_correct": {
+        "Cloud": 1,
+        "Collaboration": 13,
+        "Local Edge": 10,
+        "Blocked": 10
+      }
+    }
+  }
+}

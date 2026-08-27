@@ -1,0 +1,25 @@
+benchmark,method,ground_truth_route,predicted_cloud,predicted_collaboration,predicted_local_edge,predicted_blocked
+independent,Method A,cloud,4,0,1,0
+independent,Method A,collaboration,0,0,35,0
+independent,Method A,local_edge,0,0,10,0
+independent,Method A,blocked,0,0,2,8
+independent,Method B,cloud,0,0,2,3
+independent,Method B,collaboration,22,3,10,0
+independent,Method B,local_edge,6,4,0,0
+independent,Method B,blocked,0,0,0,10
+independent,Method C,cloud,5,0,0,0
+independent,Method C,collaboration,28,6,1,0
+independent,Method C,local_edge,4,1,5,0
+independent,Method C,blocked,0,0,0,10
+controlled,Method A,cloud,4,1,3,0
+controlled,Method A,collaboration,0,0,8,0
+controlled,Method A,local_edge,0,0,8,0
+controlled,Method A,blocked,0,0,0,8
+controlled,Method B,cloud,4,0,4,0
+controlled,Method B,collaboration,6,2,0,0
+controlled,Method B,local_edge,2,6,0,0
+controlled,Method B,blocked,0,0,0,8
+controlled,Method C,cloud,8,0,0,0
+controlled,Method C,collaboration,3,5,0,0
+controlled,Method C,local_edge,0,0,8,0
+controlled,Method C,blocked,0,0,0,8

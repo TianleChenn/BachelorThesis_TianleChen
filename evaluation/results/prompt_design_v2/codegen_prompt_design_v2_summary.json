@@ -1,0 +1,164 @@
+{
+  "evaluation_type": "restricted_codegen_prompt_design_v2_first_pass",
+  "created_at": "2026-08-25T21:05:02.047210+00:00",
+  "dataset": "evaluation/frontend_realistic_benchmark_60.json",
+  "dataset_sha256": "0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8",
+  "benchmark_samples_per_prompt": 40,
+  "total_expected_generations": 120,
+  "sample_ids": [
+    "frontend_real_001",
+    "frontend_real_002",
+    "frontend_real_003",
+    "frontend_real_004",
+    "frontend_real_005",
+    "frontend_real_006",
+    "frontend_real_007",
+    "frontend_real_008",
+    "frontend_real_009",
+    "frontend_real_010",
+    "frontend_real_011",
+    "frontend_real_012",
+    "frontend_real_013",
+    "frontend_real_014",
+    "frontend_real_015",
+    "frontend_real_016",
+    "frontend_real_017",
+    "frontend_real_018",
+    "frontend_real_019",
+    "frontend_real_020",
+    "frontend_real_021",
+    "frontend_real_022",
+    "frontend_real_023",
+    "frontend_real_024",
+    "frontend_real_025",
+    "frontend_real_026",
+    "frontend_real_027",
+    "frontend_real_028",
+    "frontend_real_029",
+    "frontend_real_030",
+    "frontend_real_031",
+    "frontend_real_032",
+    "frontend_real_033",
+    "frontend_real_034",
+    "frontend_real_035",
+    "frontend_real_036",
+    "frontend_real_037",
+    "frontend_real_038",
+    "frontend_real_039",
+    "frontend_real_040"
+  ],
+  "model_key": "gemini",
+  "model_display_name": "Gemini 3.5 Flash",
+  "model": "gemini-3.5-flash",
+  "provider": "openai_compatible",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+  "temperature": 0.0,
+  "max_tokens": 2048,
+  "model_calls_per_sample": 1,
+  "auto_correction_used": false,
+  "known_statsmodels_warning_suppressed": "divide by zero encountered in scalar divide",
+  "known_warning_affects_scoring": false,
+  "prompt_metadata": {
+    "basic_interface": {
+      "display_name": "Basic Interface",
+      "sha256": "7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a",
+      "system_prompt": "Translate the user request into exactly one Restricted Analysis Call.\n\nRequired output format:\n\nresult = analysis.<method>(...)\n\nSyntax and safety requirements:\n- Return exactly one assignment containing exactly one supported analysis.<method>(...) call.\n- Use keyword arguments and literal values only.\n- Infer the appropriate method and parameter contents from the user request.\n- Return code only, with no explanatory prose.\n- No imports or arbitrary Python statements.\n- No dataframe, file, or network access.\n- No exec or eval.\n- No loops or function/class definitions.\n\nSupported Restricted Analysis Call interfaces:\n\nresult = analysis.table1(\n    predictors=...,\n    target=...,\n    controls=...,\n    filters=...\n)\n\nresult = analysis.table2(\n    predictors=...,\n    filters=...,\n    group=...\n)\n\nresult = analysis.figure1(\n    variables=...,\n    target=...,\n    group_field=...,\n    correlation_threshold=...,\n    variance_iterations=...,\n    filters=...\n)\n\nresult = analysis.figure2(\n    variables=...,\n    filters=...,\n    max_athletes=...,\n    reference_group=...\n)\n\nresult = analysis.correlation(\n    variables=...,\n    filters=...,\n    method=...,\n    visualization=...\n)\n\nresult = analysis.variance_analysis(\n    variables=...,\n    group_field=...,\n    groups=...,\n    iterations=...,\n    filters=...,\n    visualization=...\n)\n\nresult = analysis.individual_profile(\n    subject_token=...,\n    variables=...,\n    reference_group=...,\n    output_mode=...\n)"
+    },
+    "defined": {
+      "display_name": "Defined",
+      "sha256": "ae82952d8bab5baf2e23ffd6c25c9126b52d7f816e4972c0929c684b179c6de4",
+      "system_prompt": "Translate the user request into exactly one Restricted Analysis Call.\n\nRequired output format:\n\nresult = analysis.<method>(...)\n\nSyntax and safety requirements:\n- Return exactly one assignment containing exactly one supported analysis.<method>(...) call.\n- Use keyword arguments and literal values only.\n- Infer the appropriate method and parameter contents from the user request.\n- Return code only, with no explanatory prose.\n- No imports or arbitrary Python statements.\n- No dataframe, file, or network access.\n- No exec or eval.\n- No loops or function/class definitions.\n\nSupported Restricted Analysis Call interfaces:\n\nresult = analysis.table1(\n    predictors=...,\n    target=...,\n    controls=...,\n    filters=...\n)\n\nresult = analysis.table2(\n    predictors=...,\n    filters=...,\n    group=...\n)\n\nresult = analysis.figure1(\n    variables=...,\n    target=...,\n    group_field=...,\n    correlation_threshold=...,\n    variance_iterations=...,\n    filters=...\n)\n\nresult = analysis.figure2(\n    variables=...,\n    filters=...,\n    max_athletes=...,\n    reference_group=...\n)\n\nresult = analysis.correlation(\n    variables=...,\n    filters=...,\n    method=...,\n    visualization=...\n)\n\nresult = analysis.variance_analysis(\n    variables=...,\n    group_field=...,\n    groups=...,\n    iterations=...,\n    filters=...,\n    visualization=...\n)\n\nresult = analysis.individual_profile(\n    subject_token=...,\n    variables=...,\n    reference_group=...,\n    output_mode=...\n)\n\nConcise method definitions:\n- table1: Run the predefined Table 1-style logistic regression analysis.\n- table2: Run the predefined Table 2-style multiple linear regression analysis. The predefined analysis uses expertise_value as its continuous outcome.\n- figure1: Generate Figure 1-style group-level statistics and visualization.\n- figure2: Generate anonymous standardized athlete profile lines.\n- correlation: Calculate pairwise correlations for selected public domains.\n- variance_analysis: Compare variance between allowed athlete groups.\n- individual_profile: Generate one protected standardized anonymous athlete profile.\n\nConcise parameter definitions:\n- predictors: Athlete-domain predictors included in a regression.\n- target: The outcome analyzed by a method.\n- controls: Adjustment-variable specifications used by a regression.\n- filters: Cohort conditions restricting which athletes are included.\n- group: The population grouping option used by a predefined analysis.\n- variables: Athlete domains included in an analysis.\n- group_field: The field defining comparison groups.\n- correlation_threshold: The threshold used by the network-style analysis.\n- variance_iterations: The iteration count used by Figure 1 variance calculations.\n- max_athletes: The maximum number of anonymous profiles displayed.\n- reference_group: The comparison population used as a reference.\n- method: The supported calculation option for an analysis.\n- visualization: Whether the analysis should return its supported visualization.\n- groups: The groups compared by an analysis.\n- iterations: The iteration count used by variance analysis.\n- subject_token: The protected token representing the current anonymous subject.\n- output_mode: The supported protected output representation.\n\nAllowed values:\n{\n  \"public_domains\": [\n    \"muscular_strength\",\n    \"lower_body_dynamics\",\n    \"muscle_power_genetics\",\n    \"blood_micronutrients\",\n    \"basic_cognitive_function\",\n    \"mental_health\",\n    \"social_support\",\n    \"training_conditions\"\n  ],\n  \"targets\": [\n    \"elite_status\",\n    \"expertise_value\"\n  ],\n  \"controls\": [\n    \"age\",\n    \"sex\"\n  ],\n  \"group_fields\": [\n    \"elite_status\"\n  ],\n  \"variance_groups\": [\n    \"elite\",\n    \"semi_elite\"\n  ],\n  \"table2_group_values\": [\n    \"all\"\n  ],\n  \"correlation_methods\": [\n    \"pearson\",\n    \"spearman\"\n  ],\n  \"filter_fields\": [\n    \"sport\",\n    \"sex\",\n    \"expertise_group\",\n    \"elite_status\",\n    \"national_team\",\n    \"age_group\"\n  ],\n  \"sports\": [\n    \"3x3 basketball\",\n    \"ice hockey\",\n    \"volleyball\",\n    \"artistic gymnastics\",\n    \"trampoline gymnastics\",\n    \"rhythmic gymnastics\",\n    \"table tennis\",\n    \"modern pentathlon\"\n  ],\n  \"sex_values\": [\n    \"female\",\n    \"male\"\n  ],\n  \"expertise_group_values\": [\n    \"elite\",\n    \"semi_elite\"\n  ],\n  \"elite_status_values\": [\n    \"elite\",\n    \"semi_elite\"\n  ],\n  \"national_team_values\": [\n    \"Junior\",\n    \"Senior\"\n  ],\n  \"age_group_values\": [\n    \"under_20\",\n    \"20_and_above\"\n  ],\n  \"figure2_max_athletes\": [\n    20,\n    50,\n    80,\n    null\n  ],\n  \"reference_groups\": [\n    \"selected_cohort\",\n    \"all\"\n  ],\n  \"output_modes\": [\n    \"standardized_profile\"\n  ],\n  \"subject_tokens\": [\n    \"CURRENT_SUBJECT\"\n  ],\n  \"correlation_threshold\": {\n    \"type\": \"number\",\n    \"minimum\": 0,\n    \"maximum\": 1\n  },\n  \"variance_iterations\": {\n    \"type\": \"integer\",\n    \"minimum\": 100,\n    \"maximum\": 2000\n  }\n}\n\nBoolean parameters use the Python literals true or false as True or False."
+    },
+    "full": {
+      "display_name": "Full",
+      "sha256": "a33db064ad41514bcf86b56ac01d2379cf86698d2505d057bb7748474f5eb9c2",
+      "system_prompt": "You translate a user's sports-analysis request into one restricted Python API call.\n\nReturn exactly one Python assignment:\n\nresult = analysis.<method>(...)\n\nChoose the appropriate analysis method and arguments from the supplied method and value pools based only on the user request.\n\nRules:\n- Return code only.\n- Return exactly one assignment.\n- Use exactly one analysis.<method>(...) call.\n- Use keyword arguments only.\n- Use literal values only.\n- No imports or arbitrary Python.\n- No dataframe or raw athlete measurement access.\n- No file or network access.\n- No exec or eval.\n- No loops or function/class definitions.\n- Do not invent method names, variable names, filter fields, or values outside the pools.\n- Never use a real athlete identifier.\n- For an individual request, only CURRENT_SUBJECT may be used as the subject token.\n\nInfer the analysis method and arguments yourself from the user request.\n\nBefore returning the code, make sure that every explicit requirement in the user request is represented in the selected method and arguments. Do not omit any stated variables, filters, controls, groups, analysis types, or numeric settings.\n\nWhen the user explicitly specifies a value or condition, use the corresponding allowed value from the supplied pools exactly rather than replacing it with a default.\n\nArgument construction rules:\n\n- Represent every explicit requirement in the user request in the generated arguments.\n- Do not replace explicitly requested information with None or omit it.\n- For list arguments, preserve every explicitly requested item or specification.\n- When a request asks for multiple model specifications, represent each specification separately in the corresponding list.\n- When a request asks for all items from a named pool, include every item from that pool exactly once.\n- Use an empty filter dictionary only when the request has no cohort restriction.\n- When the request explicitly gives a value, prefer that value over an API default.\n- Before returning the code, silently check that the selected method and all explicit user constraints are represented. Return code only.\n\nPredefined regression contracts:\n- Table 1 must include exactly four control specifications, each exactly once: no controls, sex only, age only, and sex plus age. Encode them as controls=[[], [\"sex\"], [\"age\"], [\"sex\", \"age\"]].\n- The order of the four Table 1 control specifications is not semantically important, and the order of \"sex\" and \"age\" inside the combined specification is not semantically important.\n- Table 2 must use all eight public-domain predictors, group=\"all\", and the requested cohort filters. Its predefined backend models do not take a controls argument.\n\n\nANALYSIS METHOD POOL:\n{\n  \"table1\": {\n    \"call\": \"analysis.table1\",\n    \"arguments\": {\n      \"predictors\": {\n        \"type\": \"list[string]\",\n        \"values_from\": \"public_domains\"\n      },\n      \"target\": {\n        \"type\": \"string\",\n        \"values_from\": \"targets\"\n      },\n      \"controls\": {\n        \"type\": \"list[list[string]]\",\n        \"values_from\": \"controls\",\n        \"semantics\": \"Each inner list represents one model specification. An empty inner list represents a model without controls.\"\n      },\n      \"filters\": {\n        \"type\": \"dictionary\",\n        \"semantics\": \"Use {} when no cohort restriction is requested. Otherwise use only allowed filter fields and values.\"\n      }\n    },\n    \"description\": \"Run the predefined Table 1-style logistic regression analysis.\"\n  },\n  \"table2\": {\n    \"call\": \"analysis.table2\",\n    \"arguments\": {\n      \"predictors\": {\n        \"type\": \"list[string]\",\n        \"values_from\": \"public_domains\"\n      },\n      \"filters\": {\n        \"type\": \"dictionary\",\n        \"semantics\": \"Use {} when no cohort restriction is requested. Otherwise use only allowed filter fields and values.\"\n      },\n      \"group\": {\n        \"type\": \"string\",\n        \"values_from\": \"table2_group_values\"\n      }\n    },\n    \"description\": \"Run the predefined Table 2-style multiple linear regression analysis. The predefined analysis uses expertise_value as its continuous outcome.\"\n  },\n  \"figure1\": {\n    \"call\": \"analysis.figure1\",\n    \"arguments\": {\n      \"variables\": {\n        \"type\": \"list[string]\",\n        \"values_from\": \"public_domains\"\n      },\n      \"target\": {\n        \"type\": \"string\",\n        \"values_from\": \"targets\"\n      },\n      \"group_field\": {\n        \"type\": \"string\",\n        \"values_from\": \"group_fields\"\n      },\n      \"correlation_threshold\": {\n        \"type\": \"number\",\n        \"values_from\": \"correlation_threshold\"\n      },\n      \"variance_iterations\": {\n        \"type\": \"integer\",\n        \"values_from\": \"variance_iterations\"\n      },\n      \"filters\": {\n        \"type\": \"dictionary\",\n        \"semantics\": \"Use {} when no cohort restriction is requested. Otherwise use only allowed filter fields and values.\"\n      }\n    },\n    \"description\": \"Generate Figure 1-style group-level statistics and visualization.\"\n  },\n  \"figure2\": {\n    \"call\": \"analysis.figure2\",\n    \"arguments\": {\n      \"variables\": {\n        \"type\": \"list[string]\",\n        \"values_from\": \"public_domains\"\n      },\n      \"filters\": {\n        \"type\": \"dictionary\",\n        \"semantics\": \"Use {} when no cohort restriction is requested. Otherwise use only allowed filter fields and values.\"\n      },\n      \"max_athletes\": {\n        \"type\": \"integer or null\",\n        \"values_from\": \"figure2_max_athletes\"\n      },\n      \"reference_group\": {\n        \"type\": \"string\",\n        \"values_from\": \"reference_groups\"\n      }\n    },\n    \"description\": \"Generate anonymous standardized athlete profile lines.\"\n  },\n  \"correlation\": {\n    \"call\": \"analysis.correlation\",\n    \"arguments\": {\n      \"variables\": {\n        \"type\": \"list[string]\",\n        \"values_from\": \"public_domains\"\n      },\n      \"filters\": {\n        \"type\": \"dictionary\",\n        \"semantics\": \"Use {} when no cohort restriction is requested. Otherwise use only allowed filter fields and values.\"\n      },\n      \"method\": {\n        \"type\": \"string\",\n        \"values_from\": \"correlation_methods\"\n      },\n      \"visualization\": {\n        \"type\": \"boolean\"\n      }\n    },\n    \"description\": \"Calculate pairwise correlations for selected public domains.\"\n  },\n  \"variance_analysis\": {\n    \"call\": \"analysis.variance_analysis\",\n    \"arguments\": {\n      \"variables\": {\n        \"type\": \"list[string]\",\n        \"values_from\": \"public_domains\"\n      },\n      \"group_field\": {\n        \"type\": \"string\",\n        \"values_from\": \"group_fields\"\n      },\n      \"groups\": {\n        \"type\": \"list[string]\",\n        \"values_from\": \"variance_groups\"\n      },\n      \"iterations\": {\n        \"type\": \"integer\",\n        \"values_from\": \"variance_iterations\"\n      },\n      \"filters\": {\n        \"type\": \"dictionary\",\n        \"semantics\": \"Use {} when no cohort restriction is requested. Otherwise use only allowed filter fields and values.\"\n      },\n      \"visualization\": {\n        \"type\": \"boolean\"\n      }\n    },\n    \"description\": \"Compare variance between allowed athlete groups.\"\n  },\n  \"individual_profile\": {\n    \"call\": \"analysis.individual_profile\",\n    \"arguments\": {\n      \"subject_token\": {\n        \"type\": \"string\",\n        \"values_from\": \"subject_tokens\"\n      },\n      \"variables\": {\n        \"type\": \"list[string]\",\n        \"values_from\": \"public_domains\"\n      },\n      \"reference_group\": {\n        \"type\": \"string\",\n        \"values_from\": \"reference_groups\"\n      },\n      \"output_mode\": {\n        \"type\": \"string\",\n        \"values_from\": \"output_modes\"\n      }\n    },\n    \"description\": \"Generate one protected standardized anonymous athlete profile.\"\n  }\n}\n\nALLOWED VALUE POOL:\n{\n  \"public_domains\": [\n    \"muscular_strength\",\n    \"lower_body_dynamics\",\n    \"muscle_power_genetics\",\n    \"blood_micronutrients\",\n    \"basic_cognitive_function\",\n    \"mental_health\",\n    \"social_support\",\n    \"training_conditions\"\n  ],\n  \"targets\": [\n    \"elite_status\",\n    \"expertise_value\"\n  ],\n  \"controls\": [\n    \"age\",\n    \"sex\"\n  ],\n  \"group_fields\": [\n    \"elite_status\"\n  ],\n  \"variance_groups\": [\n    \"elite\",\n    \"semi_elite\"\n  ],\n  \"table2_group_values\": [\n    \"all\"\n  ],\n  \"correlation_methods\": [\n    \"pearson\",\n    \"spearman\"\n  ],\n  \"filter_fields\": [\n    \"sport\",\n    \"sex\",\n    \"expertise_group\",\n    \"elite_status\",\n    \"national_team\",\n    \"age_group\"\n  ],\n  \"sports\": [\n    \"3x3 basketball\",\n    \"ice hockey\",\n    \"volleyball\",\n    \"artistic gymnastics\",\n    \"trampoline gymnastics\",\n    \"rhythmic gymnastics\",\n    \"table tennis\",\n    \"modern pentathlon\"\n  ],\n  \"sex_values\": [\n    \"female\",\n    \"male\"\n  ],\n  \"expertise_group_values\": [\n    \"elite\",\n    \"semi_elite\"\n  ],\n  \"elite_status_values\": [\n    \"elite\",\n    \"semi_elite\"\n  ],\n  \"national_team_values\": [\n    \"Junior\",\n    \"Senior\"\n  ],\n  \"age_group_values\": [\n    \"under_20\",\n    \"20_and_above\"\n  ],\n  \"figure2_max_athletes\": [\n    20,\n    50,\n    80,\n    null\n  ],\n  \"reference_groups\": [\n    \"selected_cohort\",\n    \"all\"\n  ],\n  \"output_modes\": [\n    \"standardized_profile\"\n  ],\n  \"subject_tokens\": [\n    \"CURRENT_SUBJECT\"\n  ],\n  \"correlation_threshold\": {\n    \"type\": \"number\",\n    \"minimum\": 0,\n    \"maximum\": 1\n  },\n  \"variance_iterations\": {\n    \"type\": \"integer\",\n    \"minimum\": 100,\n    \"maximum\": 2000\n  }\n}"
+    }
+  },
+  "prompts": {
+    "basic_interface": {
+      "expected_samples": 40,
+      "attempted_samples": 40,
+      "completed_model_calls": 40,
+      "api_failures": 0,
+      "empty_outputs": 0,
+      "scored_samples": 40,
+      "complete": true,
+      "missing_sample_ids": [],
+      "unscored_sample_ids": [],
+      "structure_validation": 0.675,
+      "request_match": 0.0,
+      "execution": 0.0,
+      "result_valid": 0.0,
+      "fully_correct": 0.0,
+      "fully_correct_by_task": {
+        "table1": 0.0,
+        "table2": 0.0,
+        "figure1": 0.0,
+        "correlation": 0.0,
+        "variance_analysis": 0.0
+      },
+      "error_stage_counts": {
+        "STRUCTURE_FAIL": 13,
+        "REQUEST_MATCH_FAIL": 27
+      }
+    },
+    "defined": {
+      "expected_samples": 40,
+      "attempted_samples": 40,
+      "completed_model_calls": 40,
+      "api_failures": 0,
+      "empty_outputs": 0,
+      "scored_samples": 40,
+      "complete": true,
+      "missing_sample_ids": [],
+      "unscored_sample_ids": [],
+      "structure_validation": 0.975,
+      "request_match": 0.25,
+      "execution": 0.25,
+      "result_valid": 0.25,
+      "fully_correct": 0.25,
+      "fully_correct_by_task": {
+        "table1": 0.125,
+        "table2": 0.125,
+        "figure1": 0.5,
+        "correlation": 0.375,
+        "variance_analysis": 0.125
+      },
+      "error_stage_counts": {
+        "SUCCESS": 10,
+        "REQUEST_MATCH_FAIL": 29,
+        "STRUCTURE_FAIL": 1
+      }
+    },
+    "full": {
+      "expected_samples": 40,
+      "attempted_samples": 40,
+      "completed_model_calls": 40,
+      "api_failures": 0,
+      "empty_outputs": 0,
+      "scored_samples": 40,
+      "complete": true,
+      "missing_sample_ids": [],
+      "unscored_sample_ids": [],
+      "structure_validation": 1.0,
+      "request_match": 0.8,
+      "execution": 0.675,
+      "result_valid": 0.675,
+      "fully_correct": 0.675,
+      "fully_correct_by_task": {
+        "table1": 0.625,
+        "table2": 0.875,
+        "figure1": 0.875,
+        "correlation": 0.5,
+        "variance_analysis": 0.5
+      },
+      "error_stage_counts": {
+        "SUCCESS": 27,
+        "REQUEST_MATCH_FAIL": 8,
+        "EXECUTION_FAIL": 5
+      }
+    }
+  },
+  "evaluation_complete": true
+}

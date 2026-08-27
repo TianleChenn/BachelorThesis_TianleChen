@@ -1,0 +1,7 @@
+benchmark,method,sample_count,failed_prediction_count,exact_route_accuracy,safety_aware_accuracy,under_protection_rate,over_protection_rate,mean_route_distance,monotonicity_violation_rate
+independent,Method A,60,0,0.36666666666666664,0.9666666666666667,0.03333333333333333,0.6,0.65,
+independent,Method B,60,0,0.21666666666666667,0.4666666666666667,0.5333333333333333,0.25,1.0166666666666666,
+independent,Method C,60,0,0.43333333333333335,0.45,0.55,0.016666666666666666,0.6333333333333333,
+controlled,Method A,32,0,0.625,1.0,0.0,0.375,0.46875,0.0
+controlled,Method B,32,0,0.4375,0.5625,0.4375,0.125,0.75,0.16666666666666666
+controlled,Method C,32,0,0.90625,0.90625,0.09375,0.0,0.09375,0.0

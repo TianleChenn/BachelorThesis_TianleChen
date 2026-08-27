@@ -1,0 +1,1449 @@
+{
+  "schema_version": "llm-generated-4d-hard-training-v1",
+  "rules_version": "athlete-privacy-rubric-v8-continuous-no-level",
+  "model": "gpt-4.1-2025-04-14",
+  "route_source": "manual_project_specific",
+  "feature_source": "active_llm_privacy_assessor",
+  "samples": [
+    {
+      "id": "hard4d_001",
+      "prompt": "Explain how Table 1 logistic regression is interpreted for athlete expertise without requesting any results.",
+      "features": [
+        0.02,
+        0.0,
+        0.01,
+        0.0
+      ],
+      "route": "cloud",
+      "prompt_family": "method_explanation",
+      "assessment_explanation": "This request seeks only a general explanation of logistic regression interpretation and does not request any athlete data or results. There is negligible privacy risk as no sensitive or individual information is involved.",
+      "assessment_confidence": 0.99,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_002",
+      "prompt": "Describe the difference between Table 1 and Table 2 in the Athlete Data Analysis System.",
+      "features": [
+        0.01,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "route": "cloud",
+      "prompt_family": "method_explanation",
+      "assessment_explanation": "The request seeks only a general explanation of analysis types without referencing any athlete data or results. There is no exposure of sensitive or individual information.",
+      "assessment_confidence": 0.99,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_003",
+      "prompt": "Explain how Figure 1 represents conditional relationships among standardized athlete domains.",
+      "features": [
+        0.07,
+        0.03,
+        0.1,
+        0.02
+      ],
+      "route": "cloud",
+      "prompt_family": "method_explanation",
+      "assessment_explanation": "The request seeks a general explanation of a network analysis figure, without requesting any athlete data or results. No sensitive or individual-level information is disclosed.",
+      "assessment_confidence": 0.98,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_004",
+      "prompt": "Explain why Figure 2 uses standardized z-scores and an elite reference profile.",
+      "features": [
+        0.03,
+        0.01,
+        0.04,
+        0.02
+      ],
+      "route": "cloud",
+      "prompt_family": "method_explanation",
+      "assessment_explanation": "The request seeks a methodological explanation without referencing any athlete data or results. No sensitive or individual-level information is disclosed.",
+      "assessment_confidence": 0.99,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_005",
+      "prompt": "Describe how blood micronutrients could be used in an aggregate regression, without calculating any athlete result.",
+      "features": [
+        0.07,
+        0.03,
+        0.22,
+        0.01
+      ],
+      "route": "cloud",
+      "prompt_family": "sensitive_explanation",
+      "assessment_explanation": "The request seeks only a general explanation of aggregate regression using blood micronutrients, without accessing or revealing any athlete data or results.",
+      "assessment_confidence": 0.98,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_006",
+      "prompt": "Explain privacy considerations for mental-health analysis in athlete research without accessing the dataset.",
+      "features": [
+        0.03,
+        0.01,
+        0.82,
+        0.0
+      ],
+      "route": "cloud",
+      "prompt_family": "sensitive_explanation",
+      "assessment_explanation": "The request seeks a general explanation about privacy in mental health analysis without accessing any athlete data, resulting in minimal privacy risk but high data sensitivity for the domain discussed.",
+      "assessment_confidence": 0.98,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_007",
+      "prompt": "Describe how muscle-power genetics is represented as a derived standardized domain.",
+      "features": [
+        0.07,
+        0.03,
+        0.18,
+        0.04
+      ],
+      "route": "cloud",
+      "prompt_family": "sensitive_explanation",
+      "assessment_explanation": "The request seeks a general explanation of how muscle-power genetics is represented, without referencing any athlete data or results. Privacy risk is minimal as no individual or aggregate data is disclosed.",
+      "assessment_confidence": 0.98,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_008",
+      "prompt": "Run Table 1 for the complete athlete cohort using only protected aggregate outputs.",
+      "features": [
+        0.13,
+        0.05,
+        0.32,
+        0.14
+      ],
+      "route": "cloud",
+      "prompt_family": "broad_aggregate",
+      "assessment_explanation": "The request targets the full cohort and asks for protected aggregate logistic regression outputs, minimizing individual exposure. Data sensitivity is moderate due to the potential inclusion of sensitive domains, but no raw or identifiable data are requested.",
+      "assessment_confidence": 0.97,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_009",
+      "prompt": "Run Table 2 for all athletes and return only aggregate coefficients and confidence intervals.",
+      "features": [
+        0.13,
+        0.08,
+        0.22,
+        0.14
+      ],
+      "route": "cloud",
+      "prompt_family": "broad_aggregate",
+      "assessment_explanation": "The request targets all athletes in aggregate and returns only derived regression coefficients, not individual data. Privacy risk is low as no identifiable or raw data are disclosed.",
+      "assessment_confidence": 0.97,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_010",
+      "prompt": "Generate Figure 1 for the complete cohort using standardized domain correlations.",
+      "features": [
+        0.13,
+        0.08,
+        0.22,
+        0.18
+      ],
+      "route": "cloud",
+      "prompt_family": "broad_aggregate",
+      "assessment_explanation": "The request targets the full cohort and asks for a network analysis of standardized domain correlations, yielding aggregate, non-identifiable results. No individual-level or raw data is disclosed, so privacy risk remains low.",
+      "assessment_confidence": 0.97,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_011",
+      "prompt": "Generate Figure 2 as an aggregate variance comparison across all eight domains, with no individual traces.",
+      "features": [
+        0.09,
+        0.05,
+        0.18,
+        0.13
+      ],
+      "route": "cloud",
+      "prompt_family": "broad_aggregate",
+      "assessment_explanation": "The request is for aggregate variance across all domains without individual-level data, resulting in low privacy risk and minimal disclosure.",
+      "assessment_confidence": 0.97,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_012",
+      "prompt": "Calculate correlations among all standardized domains for the full athlete sample.",
+      "features": [
+        0.13,
+        0.04,
+        0.21,
+        0.11
+      ],
+      "route": "cloud",
+      "prompt_family": "broad_aggregate",
+      "assessment_explanation": "The request seeks aggregate correlation analysis across all domains for the entire athlete group, without targeting individuals or exposing raw data. Sensitivity is moderate due to inclusion of potentially sensitive domains, but disclosure is limited to summary statistics.",
+      "assessment_confidence": 0.97,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_013",
+      "prompt": "Compare variance across standardized athlete domains for all sports combined.",
+      "features": [
+        0.09,
+        0.04,
+        0.18,
+        0.13
+      ],
+      "route": "cloud",
+      "prompt_family": "broad_aggregate",
+      "assessment_explanation": "The request seeks aggregate variance across all athlete domains and sports, without targeting individuals or exposing raw data. Sensitivity is moderate due to inclusion of potentially sensitive domains, but risk is low given the aggregate nature.",
+      "assessment_confidence": 0.97,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_014",
+      "prompt": "Provide descriptive statistics for all athletes using derived z-scores only.",
+      "features": [
+        0.09,
+        0.03,
+        0.18,
+        0.11
+      ],
+      "route": "cloud",
+      "prompt_family": "broad_aggregate",
+      "assessment_explanation": "The request targets all athletes in aggregate and only asks for derived z-scores, which are anonymized and do not expose original measurements. Privacy risk is low due to the use of summary statistics and lack of individual-level detail.",
+      "assessment_confidence": 0.97,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_015",
+      "prompt": "Summarize the full-cohort distribution of expertise scores without subgroup breakdowns.",
+      "features": [
+        0.07,
+        0.04,
+        0.1,
+        0.08
+      ],
+      "route": "cloud",
+      "prompt_family": "broad_aggregate",
+      "assessment_explanation": "The request asks for an aggregate summary of expertise scores across the entire cohort, without subgroup or individual detail. This results in low privacy risk and minimal sensitivity.",
+      "assessment_confidence": 0.98,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_016",
+      "prompt": "List dataset metadata, column definitions, and available aggregate analyses.",
+      "features": [
+        0.13,
+        0.05,
+        0.1,
+        0.12
+      ],
+      "route": "cloud",
+      "prompt_family": "metadata",
+      "assessment_explanation": "The request targets only dataset-level metadata and aggregate analysis options, not individual athlete data or sensitive results. No identifiable or sensitive information is disclosed.",
+      "assessment_confidence": 0.98,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_017",
+      "prompt": "Report the total number of athlete records and the names of the eight derived domains.",
+      "features": [
+        0.09,
+        0.02,
+        0.04,
+        0.08
+      ],
+      "route": "cloud",
+      "prompt_family": "metadata",
+      "assessment_explanation": "The request asks for aggregate metadata (record count and domain names) without accessing individual athlete data or sensitive results.",
+      "assessment_confidence": 0.98,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_018",
+      "prompt": "Explain how the athlete variables are standardized into z-scores.",
+      "features": [
+        0.02,
+        0.01,
+        0.01,
+        0.01
+      ],
+      "route": "cloud",
+      "prompt_family": "standardization",
+      "assessment_explanation": "The request seeks a general explanation of the standardization process without referencing any athlete data or results. No sensitive or individual information is disclosed.",
+      "assessment_confidence": 0.99,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_019",
+      "prompt": "Explain why the overall standardized mean equals zero in the athlete dataset.",
+      "features": [
+        0.02,
+        0.01,
+        0.01,
+        0.0
+      ],
+      "route": "cloud",
+      "prompt_family": "standardization",
+      "assessment_explanation": "This request seeks a general explanation of a statistical property and does not involve any athlete data or results. There is negligible privacy risk as no sensitive or individual information is disclosed.",
+      "assessment_confidence": 0.99,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_020",
+      "prompt": "Describe how missing values are handled before aggregate athlete regression.",
+      "features": [
+        0.04,
+        0.02,
+        0.05,
+        0.01
+      ],
+      "route": "cloud",
+      "prompt_family": "method_explanation",
+      "assessment_explanation": "The request seeks a general explanation of missing value handling, not athlete data or results. No sensitive or individual-level information is disclosed.",
+      "assessment_confidence": 0.98,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_021",
+      "prompt": "Explain odds ratios using a hypothetical full-cohort athlete example.",
+      "features": [
+        0.07,
+        0.05,
+        0.1,
+        0.06
+      ],
+      "route": "cloud",
+      "prompt_family": "method_explanation",
+      "assessment_explanation": "The request seeks a conceptual explanation using a hypothetical, non-identifiable full-cohort example, without referencing real athlete data or sensitive details.",
+      "assessment_confidence": 0.98,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_022",
+      "prompt": "Explain standardized beta coefficients in an athlete Table 2 analysis.",
+      "features": [
+        0.04,
+        0.02,
+        0.06,
+        0.03
+      ],
+      "route": "cloud",
+      "prompt_family": "method_explanation",
+      "assessment_explanation": "The request seeks a general explanation of standardized beta coefficients in the context of Table 2 multiple linear regression, without referencing any specific athlete data or results. No sensitive or individual-level information is disclosed.",
+      "assessment_confidence": 0.98,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_023",
+      "prompt": "Describe network centrality for athlete-domain Figure 1 without computing it.",
+      "features": [
+        0.03,
+        0.01,
+        0.02,
+        0.01
+      ],
+      "route": "cloud",
+      "prompt_family": "method_explanation",
+      "assessment_explanation": "The request seeks a conceptual explanation of network centrality in the context of Figure 1, without referencing or revealing any athlete data or results.",
+      "assessment_confidence": 0.99,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_024",
+      "prompt": "Explain variance inflation factors for the full-cohort athlete regression.",
+      "features": [
+        0.04,
+        0.02,
+        0.06,
+        0.01
+      ],
+      "route": "cloud",
+      "prompt_family": "method_explanation",
+      "assessment_explanation": "The request seeks a general explanation of variance inflation factors in the context of a full-cohort regression, without asking for any athlete-specific or sensitive data. No individual or sensitive results are disclosed.",
+      "assessment_confidence": 0.98,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_025",
+      "prompt": "Run a full-cohort correlation between mental-health and blood-domain z-scores using aggregate results only.",
+      "features": [
+        0.13,
+        0.08,
+        0.41,
+        0.14
+      ],
+      "route": "cloud",
+      "prompt_family": "broad_sensitive_aggregate",
+      "assessment_explanation": "The request targets the full cohort and asks for aggregate correlation results, not individual data, but involves moderately sensitive domains.",
+      "assessment_confidence": 0.97,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_026",
+      "prompt": "Compare aggregate genetic-domain and training-condition means across the entire athlete sample.",
+      "features": [
+        0.11,
+        0.04,
+        0.23,
+        0.1
+      ],
+      "route": "cloud",
+      "prompt_family": "broad_sensitive_aggregate",
+      "assessment_explanation": "The request seeks aggregate means for broad domains across the full sample, minimizing identification risk and limiting sensitivity to summary statistics.",
+      "assessment_confidence": 0.97,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_027",
+      "prompt": "Generate full-sample descriptive statistics for psychological derived scores without subgroup filters.",
+      "features": [
+        0.13,
+        0.07,
+        0.32,
+        0.18
+      ],
+      "route": "cloud",
+      "prompt_family": "broad_sensitive_aggregate",
+      "assessment_explanation": "The request targets aggregate descriptive statistics for psychological domains across the full sample, without individual or subgroup focus. While the domains are moderately sensitive, the aggregate nature and lack of identifiers keep overall privacy risk low.",
+      "assessment_confidence": 0.97,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_028",
+      "prompt": "Explain what an anonymous individual profile means, but do not generate one.",
+      "features": [
+        0.03,
+        0.08,
+        0.02,
+        0.01
+      ],
+      "route": "cloud",
+      "prompt_family": "sensitive_explanation",
+      "assessment_explanation": "The request only asks for a conceptual explanation of anonymous individual profiles, without accessing or revealing any athlete data. No sensitive or identifiable information is involved.",
+      "assessment_confidence": 0.99,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_029",
+      "prompt": "Describe how the system protects athlete identifiers before analysis.",
+      "features": [
+        0.03,
+        0.0,
+        0.02,
+        0.01
+      ],
+      "route": "cloud",
+      "prompt_family": "metadata",
+      "assessment_explanation": "The request seeks a general explanation of privacy protections, not athlete data or results. No individual or sensitive information is disclosed.",
+      "assessment_confidence": 0.99,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_030",
+      "prompt": "Give a public overview of the Athlete Data Analysis System and its supported figures and tables.",
+      "features": [
+        0.01,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "route": "cloud",
+      "prompt_family": "metadata",
+      "assessment_explanation": "This request seeks only a general system overview without referencing any athlete data or results. No sensitive or individual information is involved.",
+      "assessment_confidence": 0.99,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_031",
+      "prompt": "Run an aggregate correlation of blood micronutrients for all elite athletes.",
+      "features": [
+        0.19,
+        0.07,
+        0.41,
+        0.18
+      ],
+      "route": "collaboration",
+      "prompt_family": "sensitive_cohort",
+      "assessment_explanation": "The request targets a broad group and asks for aggregate correlation results, not individual data, but involves moderately sensitive blood micronutrient information.",
+      "assessment_confidence": 0.97,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_032",
+      "prompt": "Compare mental-health z-score means between female and male athlete cohorts.",
+      "features": [
+        0.19,
+        0.13,
+        0.41,
+        0.18
+      ],
+      "route": "collaboration",
+      "prompt_family": "sensitive_cohort",
+      "assessment_explanation": "The request compares aggregate mental health scores by gender, targeting broad cohorts and not individuals, with moderate sensitivity due to the mental health domain but low disclosure risk.",
+      "assessment_confidence": 0.97,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_033",
+      "prompt": "Run Table 2 using muscle-power genetics predictors for senior national-team athletes.",
+      "features": [
+        0.41,
+        0.32,
+        0.58,
+        0.36
+      ],
+      "route": "collaboration",
+      "prompt_family": "sensitive_cohort",
+      "assessment_explanation": "The request targets a filtered group (senior national-team athletes) and uses sensitive genetic predictors, but only for aggregate regression analysis, not individual data.",
+      "assessment_confidence": 0.93,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_034",
+      "prompt": "Generate Figure 1 linking blood, mental-health, and social-support domains for elite athletes.",
+      "features": [
+        0.23,
+        0.11,
+        0.37,
+        0.19
+      ],
+      "route": "collaboration",
+      "prompt_family": "sensitive_cohort",
+      "assessment_explanation": "The request is for a network analysis linking three sensitive domains at the aggregate level for elite athletes, without targeting individuals or requesting raw data. Privacy risk is moderate due to the sensitivity of the domains, but the aggregate nature and lack of individual identification keep risk relatively low.",
+      "assessment_confidence": 0.92,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_035",
+      "prompt": "Analyze variance in basic cognitive function for female athletes.",
+      "features": [
+        0.19,
+        0.13,
+        0.27,
+        0.18
+      ],
+      "route": "collaboration",
+      "prompt_family": "filtered_cohort",
+      "assessment_explanation": "The request targets a broad group (female athletes) and asks for aggregate variance analysis, not individual data. Basic cognitive function is moderately sensitive, but the aggregate nature and lack of individual identification keep overall risk low.",
+      "assessment_confidence": 0.93,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_036",
+      "prompt": "Calculate aggregate biometric correlations for national-team athletes.",
+      "features": [
+        0.19,
+        0.13,
+        0.27,
+        0.18
+      ],
+      "route": "collaboration",
+      "prompt_family": "sensitive_cohort",
+      "assessment_explanation": "The request targets a broad group and seeks aggregate correlations, not individual data, but involves moderately sensitive biometric domains.",
+      "assessment_confidence": 0.95,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_037",
+      "prompt": "Run logistic regression on mental-health derived scores for under-20 athletes.",
+      "features": [
+        0.27,
+        0.18,
+        0.41,
+        0.22
+      ],
+      "route": "collaboration",
+      "prompt_family": "sensitive_cohort",
+      "assessment_explanation": "The request targets a filtered cohort (under-20 athletes) and analyzes derived mental health scores using logistic regression, exposing moderate sensitivity but not individual-level data.",
+      "assessment_confidence": 0.93,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_038",
+      "prompt": "Compare blood-micronutrient means across elite and semi-elite groups.",
+      "features": [
+        0.19,
+        0.13,
+        0.41,
+        0.18
+      ],
+      "route": "collaboration",
+      "prompt_family": "sensitive_cohort",
+      "assessment_explanation": "The request compares aggregate blood micronutrient means between broad athlete groups, not individuals, using summary statistics. Sensitivity is moderate due to the health-related domain, but privacy risk is limited by the aggregate nature.",
+      "assessment_confidence": 0.97,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_039",
+      "prompt": "Generate Table 2 for female national-team athletes using social-support and training-condition scores.",
+      "features": [
+        0.36,
+        0.22,
+        0.31,
+        0.29
+      ],
+      "route": "collaboration",
+      "prompt_family": "filtered_cohort",
+      "assessment_explanation": "The request targets a filtered group (female national-team athletes) and analyzes moderately sensitive domains using aggregate regression, with no individual-level or raw data exposure.",
+      "assessment_confidence": 0.93,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_040",
+      "prompt": "Create an aggregate genetics network for athletes in one sport discipline.",
+      "features": [
+        0.23,
+        0.18,
+        0.41,
+        0.22
+      ],
+      "route": "collaboration",
+      "prompt_family": "sensitive_cohort",
+      "assessment_explanation": "The request targets a group of athletes within one discipline and asks for an aggregate network analysis of genetic data, which is sensitive but not individually identifying. No raw or individual-level data is requested.",
+      "assessment_confidence": 0.93,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_041",
+      "prompt": "Summarize mental-health and cognitive z-scores for a protected cohort of twelve athletes.",
+      "features": [
+        0.38,
+        0.32,
+        0.61,
+        0.29
+      ],
+      "route": "collaboration",
+      "prompt_family": "small_sensitive_cohort",
+      "assessment_explanation": "The request targets a small, protected cohort and involves sensitive mental health and cognitive data, but only asks for summary statistics rather than individual results.",
+      "assessment_confidence": 0.93,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_042",
+      "prompt": "Calculate training-condition statistics for a five-athlete group without identifiers.",
+      "features": [
+        0.19,
+        0.22,
+        0.13,
+        0.18
+      ],
+      "route": "collaboration",
+      "prompt_family": "small_nonsensitive_cohort",
+      "assessment_explanation": "The request targets a small group but does not use identifiers and asks for aggregate statistics on a less sensitive domain. Privacy risk is low but not negligible due to the small cohort size.",
+      "assessment_confidence": 0.93,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_043",
+      "prompt": "Compare public sport categories for a six-athlete cohort using counts only.",
+      "features": [
+        0.13,
+        0.22,
+        0.08,
+        0.11
+      ],
+      "route": "collaboration",
+      "prompt_family": "small_nonsensitive_cohort",
+      "assessment_explanation": "The request targets a small cohort but only asks for aggregate counts of public sport categories, which are minimally sensitive and do not reveal individual data.",
+      "assessment_confidence": 0.93,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_044",
+      "prompt": "Run aggregate blood-domain variance for the complete national-team cohort.",
+      "features": [
+        0.13,
+        0.08,
+        0.41,
+        0.12
+      ],
+      "route": "collaboration",
+      "prompt_family": "broad_sensitive_aggregate",
+      "assessment_explanation": "The request targets a broad cohort and asks for aggregate variance, not individual data, but involves moderately sensitive blood micronutrient information.",
+      "assessment_confidence": 0.97,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_045",
+      "prompt": "Analyze full-cohort genetic correlations by returning only a protected summary.",
+      "features": [
+        0.19,
+        0.07,
+        0.62,
+        0.13
+      ],
+      "route": "collaboration",
+      "prompt_family": "broad_sensitive_aggregate",
+      "assessment_explanation": "The request targets the full cohort and asks for a protected summary of genetic correlations, which limits identification risk but involves sensitive genetic data. Only aggregate results are requested, not individual-level or raw data.",
+      "assessment_confidence": 0.93,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_046",
+      "prompt": "Generate aggregate mental-health descriptive statistics for all athletes, using local perturbation before cloud analysis.",
+      "features": [
+        0.13,
+        0.05,
+        0.41,
+        0.12
+      ],
+      "route": "collaboration",
+      "prompt_family": "broad_sensitive_aggregate",
+      "assessment_explanation": "The request targets all athletes in aggregate and uses local perturbation, reducing re-identification risk, but mental health data remain moderately sensitive. Only summary statistics are requested, not individual-level data.",
+      "assessment_confidence": 0.97,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_047",
+      "prompt": "Create Figure 2 profiles representing group means for a filtered elite cohort, with no individual lines.",
+      "features": [
+        0.19,
+        0.22,
+        0.31,
+        0.18
+      ],
+      "route": "collaboration",
+      "prompt_family": "filtered_cohort",
+      "assessment_explanation": "The request is for group-level variance profiles of an elite cohort, not individual data, and only aggregate means are visualized. Privacy risk is low as no individual or raw data are exposed.",
+      "assessment_confidence": 0.93,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_048",
+      "prompt": "Compare standardized blood and genetic domains for female elite athletes as aggregate means.",
+      "features": [
+        0.13,
+        0.1,
+        0.41,
+        0.14
+      ],
+      "route": "collaboration",
+      "prompt_family": "sensitive_cohort",
+      "assessment_explanation": "The request targets aggregate means for a broad group (female elite athletes) in sensitive domains, but only asks for summary statistics, not individual data.",
+      "assessment_confidence": 0.97,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_049",
+      "prompt": "Run Table 1 for junior national-team athletes using cognitive and mental-health predictors.",
+      "features": [
+        0.38,
+        0.27,
+        0.44,
+        0.32
+      ],
+      "route": "collaboration",
+      "prompt_family": "sensitive_cohort",
+      "assessment_explanation": "The request targets a filtered group (junior national-team athletes) and uses sensitive domains, but asks for aggregate logistic regression rather than individual data. Privacy risk is moderate due to the cohort size and sensitive predictors.",
+      "assessment_confidence": 0.92,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_050",
+      "prompt": "Correlate social support with mental health in semi-elite athletes.",
+      "features": [
+        0.19,
+        0.22,
+        0.36,
+        0.21
+      ],
+      "route": "collaboration",
+      "prompt_family": "sensitive_cohort",
+      "assessment_explanation": "The request seeks a correlation analysis between two moderately sensitive domains in a filtered group, but only aggregate results are requested, not individual data.",
+      "assessment_confidence": 0.93,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_051",
+      "prompt": "Analyze training-condition variance for a small anonymous team subgroup.",
+      "features": [
+        0.23,
+        0.32,
+        0.18,
+        0.21
+      ],
+      "route": "collaboration",
+      "prompt_family": "small_nonsensitive_cohort",
+      "assessment_explanation": "The request targets a small anonymous subgroup, increasing subject specificity, but only asks for variance in training conditions, which is not highly sensitive and does not require individual-level data.",
+      "assessment_confidence": 0.93,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_052",
+      "prompt": "Generate a network of standardized domains for a ten-athlete protected cohort.",
+      "features": [
+        0.41,
+        0.32,
+        0.38,
+        0.36
+      ],
+      "route": "collaboration",
+      "prompt_family": "small_sensitive_cohort",
+      "assessment_explanation": "The request targets a small, protected cohort with a network analysis of standardized domains, exposing moderate privacy risk due to cohort size and potential for indirect identification. No raw data or direct identifiers are requested, but the analysis involves sensitive athlete domains.",
+      "assessment_confidence": 0.92,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_053",
+      "prompt": "Compare cognitive-function means between two national-team levels.",
+      "features": [
+        0.19,
+        0.13,
+        0.27,
+        0.18
+      ],
+      "route": "collaboration",
+      "prompt_family": "filtered_cohort",
+      "assessment_explanation": "The request compares aggregate cognitive-function means between two broad groups, not individuals, and does not require raw data. Sensitivity is moderate due to the cognitive domain, but risk is limited by the aggregate nature.",
+      "assessment_confidence": 0.97,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_054",
+      "prompt": "Run aggregate regression for blood micronutrients across all female athletes.",
+      "features": [
+        0.19,
+        0.13,
+        0.41,
+        0.22
+      ],
+      "route": "collaboration",
+      "prompt_family": "sensitive_cohort",
+      "assessment_explanation": "The request targets a broad group (all female athletes) and asks for aggregate regression, not individual data, but involves moderately sensitive blood micronutrient information. Disclosure is limited to derived statistical results.",
+      "assessment_confidence": 0.97,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_055",
+      "prompt": "Summarize genetic-domain variance in elite athletes without showing any athlete profile.",
+      "features": [
+        0.09,
+        0.08,
+        0.22,
+        0.1
+      ],
+      "route": "collaboration",
+      "prompt_family": "sensitive_cohort",
+      "assessment_explanation": "The request seeks aggregate variance in muscle-power genetics for elite athletes, without individual profiles or raw data. This is a low-risk, summary-level analysis of a moderately sensitive domain.",
+      "assessment_confidence": 0.97,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_056",
+      "prompt": "Calculate correlations for an anonymous cohort selected by sport and age group.",
+      "features": [
+        0.18,
+        0.14,
+        0.22,
+        0.19
+      ],
+      "route": "collaboration",
+      "prompt_family": "filtered_cohort",
+      "assessment_explanation": "The request targets an anonymous group filtered by sport and age, seeking only correlation analysis, which limits exposure and sensitivity. No individual-level or raw data is requested, keeping privacy risk low.",
+      "assessment_confidence": 0.97,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_057",
+      "prompt": "Compare mental-health domain distributions across sport disciplines using protected aggregates.",
+      "features": [
+        0.19,
+        0.08,
+        0.41,
+        0.13
+      ],
+      "route": "collaboration",
+      "prompt_family": "broad_sensitive_aggregate",
+      "assessment_explanation": "The request targets aggregate mental health data by sport, not individuals, and asks for protected summaries, reducing re-identification risk. Mental health is sensitive, but aggregate analysis limits exposure.",
+      "assessment_confidence": 0.95,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_058",
+      "prompt": "Create Table 2 for a seven-athlete cohort using only standardized training scores.",
+      "features": [
+        0.32,
+        0.28,
+        0.21,
+        0.34
+      ],
+      "route": "collaboration",
+      "prompt_family": "small_nonsensitive_cohort",
+      "assessment_explanation": "The request targets a small cohort but uses only standardized training scores for regression, limiting sensitivity and disclosure. No direct identifiers or raw data are requested, keeping overall risk moderate.",
+      "assessment_confidence": 0.93,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_059",
+      "prompt": "Generate aggregate blood-micronutrient statistics for a large cohort and suppress all individual values.",
+      "features": [
+        0.13,
+        0.08,
+        0.41,
+        0.12
+      ],
+      "route": "collaboration",
+      "prompt_family": "broad_sensitive_aggregate",
+      "assessment_explanation": "The request targets a large cohort and only asks for aggregate statistics, not individual data, though the domain is moderately sensitive. Suppressing individual values further reduces privacy risk.",
+      "assessment_confidence": 0.97,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_060",
+      "prompt": "Analyze standardized psychological and biometric outcomes for a filtered cohort with no athlete IDs.",
+      "features": [
+        0.19,
+        0.23,
+        0.41,
+        0.22
+      ],
+      "route": "collaboration",
+      "prompt_family": "sensitive_cohort",
+      "assessment_explanation": "The request targets a filtered but non-identifiable cohort and asks for aggregate standardized outcomes, not individual-level or raw data. Sensitivity is moderate due to psychological and biometric domains, but privacy risk remains low given the lack of direct identifiers.",
+      "assessment_confidence": 0.93,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_061",
+      "prompt": "Generate an anonymous standardized individual profile for one randomly selected athlete.",
+      "features": [
+        0.32,
+        0.18,
+        0.41,
+        0.36
+      ],
+      "route": "local_edge",
+      "prompt_family": "anonymous_individual",
+      "assessment_explanation": "The request targets a single anonymous athlete with a standardized profile, exposing moderate sensitivity and detail but without direct identifiers or raw data. Overall privacy risk is limited by anonymization and lack of direct re-identification.",
+      "assessment_confidence": 0.93,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_062",
+      "prompt": "Compare one anonymous athlete's derived profile with the elite mean.",
+      "features": [
+        0.32,
+        0.41,
+        0.38,
+        0.36
+      ],
+      "route": "local_edge",
+      "prompt_family": "individual_vs_group",
+      "assessment_explanation": "The request compares an anonymous athlete's derived profile to an elite mean, exposing some individual-level information but not direct identifiers or raw data. The privacy risk is moderate due to the focus on a single anonymous profile, but the absence of direct identifiers reduces overall risk.",
+      "assessment_confidence": 0.93,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_063",
+      "prompt": "Show Athlete_23's protected eight-domain z-score profile without raw measurements.",
+      "features": [
+        0.67,
+        0.98,
+        0.81,
+        0.62
+      ],
+      "route": "local_edge",
+      "prompt_family": "identifiable_individual",
+      "assessment_explanation": "The request targets a single identifiable athlete and summarizes sensitive multi-domain data, but does not include raw measurements. The profile still poses a significant privacy risk due to individual focus and sensitive domains.",
+      "assessment_confidence": 0.93,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_064",
+      "prompt": "Interpret Athlete_91's exact derived expertise score locally.",
+      "features": [
+        0.81,
+        0.97,
+        0.74,
+        0.85
+      ],
+      "route": "local_edge",
+      "prompt_family": "identifiable_individual",
+      "assessment_explanation": "The request targets a single identifiable athlete and asks for their exact derived expertise score, which is highly detailed and sensitive. This level of disclosure poses a significant privacy risk and is blocked.",
+      "assessment_confidence": 0.95,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_066",
+      "prompt": "Summarize one identifiable athlete's public sport category and competition level.",
+      "features": [
+        0.41,
+        1.0,
+        0.18,
+        0.22
+      ],
+      "route": "local_edge",
+      "prompt_family": "low_sensitive_individual",
+      "assessment_explanation": "The request targets a single identifiable athlete but only asks for public sport category and competition level, which are not highly sensitive. Disclosure is limited to summary information that is typically public.",
+      "assessment_confidence": 0.97,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_067",
+      "prompt": "Return one athlete's derived training-condition scores without raw questionnaire answers.",
+      "features": [
+        0.41,
+        0.98,
+        0.36,
+        0.42
+      ],
+      "route": "local_edge",
+      "prompt_family": "anonymous_individual",
+      "assessment_explanation": "The request targets a single athlete but only asks for derived training-condition scores, not raw data, which limits sensitivity and disclosure. The overall privacy risk is moderate due to the focus on an individual, but not at the level of raw or exportable data.",
+      "assessment_confidence": 0.93,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_068",
+      "prompt": "Create a protected mental-health profile for one anonymous athlete.",
+      "features": [
+        0.41,
+        0.22,
+        0.73,
+        0.48
+      ],
+      "route": "local_edge",
+      "prompt_family": "anonymous_individual",
+      "assessment_explanation": "The request targets a single anonymous athlete and involves sensitive mental health data, but does not seek identifiable or raw records. Disclosure is moderate due to the individual profile context.",
+      "assessment_confidence": 0.92,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_069",
+      "prompt": "Generate Athlete_23's standardized muscle-power genetics profile locally.",
+      "features": [
+        0.93,
+        1.0,
+        0.89,
+        0.96
+      ],
+      "route": "local_edge",
+      "prompt_family": "identifiable_individual",
+      "assessment_explanation": "This request targets a single identifiable athlete and asks for a detailed genetic profile, which is highly sensitive and disclosive. Providing such information would pose a severe privacy risk.",
+      "assessment_confidence": 0.98,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_070",
+      "prompt": "Compare Athlete_91's mental-health z-scores with national-team averages.",
+      "features": [
+        0.81,
+        0.97,
+        0.89,
+        0.85
+      ],
+      "route": "local_edge",
+      "prompt_family": "individual_vs_group",
+      "assessment_explanation": "This request targets a specific, identifiable athlete and seeks sensitive mental health data at the individual level, comparing it directly to group averages. The disclosure of such information poses a high privacy risk and is blocked.",
+      "assessment_confidence": 0.98,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_071",
+      "prompt": "Interpret one athlete's blood micronutrient z-scores against the full-cohort mean.",
+      "features": [
+        0.81,
+        0.97,
+        0.89,
+        0.85
+      ],
+      "route": "local_edge",
+      "prompt_family": "individual_vs_group",
+      "assessment_explanation": "This request targets an identifiable athlete's original blood micronutrient profile, comparing individual-level sensitive health data to the cohort, which poses a high privacy risk.",
+      "assessment_confidence": 0.97,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_072",
+      "prompt": "Generate Figure 2 for one anonymous athlete and the elite reference line.",
+      "features": [
+        0.41,
+        0.52,
+        0.47,
+        0.44
+      ],
+      "route": "local_edge",
+      "prompt_family": "anonymous_individual",
+      "assessment_explanation": "The request targets a single anonymous athlete and compares to an elite reference, using derived variance analysis rather than raw data. Risk is moderate due to the focus on an individual, but anonymity and derived results reduce exposure.",
+      "assessment_confidence": 0.92,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_073",
+      "prompt": "Create an individual network of standardized domains for Athlete_265.",
+      "features": [
+        0.87,
+        1.0,
+        0.81,
+        0.89
+      ],
+      "route": "local_edge",
+      "prompt_family": "identifiable_individual",
+      "assessment_explanation": "This request targets a single identifiable athlete and seeks a detailed network analysis across all sensitive domains, exposing individualized patterns and relationships.",
+      "assessment_confidence": 0.97,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_074",
+      "prompt": "Run a local-only correlation analysis of one athlete's repeated protected scores.",
+      "features": [
+        0.81,
+        0.97,
+        0.89,
+        0.85
+      ],
+      "route": "local_edge",
+      "prompt_family": "anonymous_individual",
+      "assessment_explanation": "The request targets a single identifiable athlete and involves repeated protected scores, posing high privacy risk even though the analysis is local-only. Correlation analysis on individual-level protected data is blocked due to re-identification and sensitive data exposure.",
+      "assessment_confidence": 0.97,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_075",
+      "prompt": "Analyze variance for a uniquely selected athlete's derived measurements locally.",
+      "features": [
+        0.81,
+        0.97,
+        0.62,
+        0.74
+      ],
+      "route": "local_edge",
+      "prompt_family": "anonymous_individual",
+      "assessment_explanation": "The request targets a single identifiable athlete and asks for derived measurement variance, which poses a high privacy risk due to the narrow subject scope and moderate detail level, though it does not request raw data. Sensitivity depends on the nature of the derived measurements but is elevated by the individual focus.",
+      "assessment_confidence": 0.93,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_076",
+      "prompt": "Compare one female national-team athlete's protected profile with all female athletes.",
+      "features": [
+        0.81,
+        0.93,
+        0.77,
+        0.89
+      ],
+      "route": "local_edge",
+      "prompt_family": "individual_vs_group",
+      "assessment_explanation": "This request targets a single identifiable athlete's protected profile and seeks a detailed comparison with a group, exposing sensitive individual data. The risk is high due to identification and disclosure of protected information.",
+      "assessment_confidence": 0.97,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_077",
+      "prompt": "Provide the precise standardized result for Athlete_23's cognitive domain.",
+      "features": [
+        0.91,
+        1.0,
+        0.82,
+        0.95
+      ],
+      "route": "local_edge",
+      "prompt_family": "identifiable_individual",
+      "assessment_explanation": "The request targets a single identifiable athlete and asks for their precise standardized cognitive result, which is highly sensitive and detailed individual data.",
+      "assessment_confidence": 0.97,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_078",
+      "prompt": "Interpret one anonymous athlete's social-support and training-condition profile.",
+      "features": [
+        0.36,
+        0.41,
+        0.44,
+        0.39
+      ],
+      "route": "local_edge",
+      "prompt_family": "anonymous_individual",
+      "assessment_explanation": "The request targets an anonymous individual profile in moderately sensitive domains, but does not seek direct identifiers or raw data. Disclosure is limited to interpreted, non-identifiable information.",
+      "assessment_confidence": 0.92,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_079",
+      "prompt": "Generate a local profile for one semi-elite athlete selected from a small team.",
+      "features": [
+        0.71,
+        0.82,
+        0.64,
+        0.77
+      ],
+      "route": "local_edge",
+      "prompt_family": "anonymous_individual",
+      "assessment_explanation": "The request targets a single semi-elite athlete from a small team, increasing re-identification risk and requiring a detailed individual profile, which raises both sensitivity and disclosure. However, it does not explicitly request raw data or full dataset export.",
+      "assessment_confidence": 0.93,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_080",
+      "prompt": "Analyze one national-team athlete's public team level and derived expertise profile.",
+      "features": [
+        0.41,
+        0.92,
+        0.36,
+        0.33
+      ],
+      "route": "local_edge",
+      "prompt_family": "low_sensitive_individual",
+      "assessment_explanation": "The request targets a single identifiable athlete but only asks for public team level and derived expertise, not raw or sensitive data. The overall privacy risk is moderate due to the focus on one individual, but the information requested is not highly sensitive.",
+      "assessment_confidence": 0.93,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_081",
+      "prompt": "Compare two athletes' standardized training-condition profiles without displaying their IDs.",
+      "features": [
+        0.29,
+        0.52,
+        0.34,
+        0.41
+      ],
+      "route": "local_edge",
+      "prompt_family": "very_small_cohort",
+      "assessment_explanation": "The request compares two anonymous athletes' training-condition profiles, revealing individual-level but non-identifiable, standardized data. No direct identifiers are disclosed, but the focus on two individuals increases subject specificity and moderate privacy risk.",
+      "assessment_confidence": 0.93,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_082",
+      "prompt": "Run descriptive statistics for a uniquely filtered three-athlete cohort locally.",
+      "features": [
+        0.61,
+        0.78,
+        0.47,
+        0.42
+      ],
+      "route": "local_edge",
+      "prompt_family": "very_small_cohort",
+      "assessment_explanation": "The request targets a very small, uniquely filtered cohort, increasing re-identification risk, but asks for aggregate descriptive statistics rather than raw data. Sensitivity depends on the domains analyzed, but the main risk is the small cohort size.",
+      "assessment_confidence": 0.92,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_084",
+      "prompt": "Generate a detailed derived profile for one athlete but omit all raw data.",
+      "features": [
+        0.68,
+        0.97,
+        0.61,
+        0.59
+      ],
+      "route": "local_edge",
+      "prompt_family": "anonymous_individual",
+      "assessment_explanation": "The request targets a single athlete and asks for a detailed derived profile, which increases privacy risk despite omitting raw data. Sensitive domains are involved, but the absence of raw measurements reduces the disclosure level.",
+      "assessment_confidence": 0.93,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_085",
+      "prompt": "Return Athlete_91's exact standardized blood and mental-health results.",
+      "features": [
+        0.97,
+        1.0,
+        0.93,
+        0.99
+      ],
+      "route": "local_edge",
+      "prompt_family": "identifiable_individual",
+      "assessment_explanation": "This request targets a single identifiable athlete and asks for their original standardized results in highly sensitive domains, posing a severe privacy risk.",
+      "assessment_confidence": 0.98,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_086",
+      "prompt": "Analyze an identifiable athlete's genetic and biometric profile locally only.",
+      "features": [
+        0.93,
+        1.0,
+        0.97,
+        0.95
+      ],
+      "route": "local_edge",
+      "prompt_family": "identifiable_individual",
+      "assessment_explanation": "The request targets a single identifiable athlete and seeks highly sensitive genetic and biometric data at an individual level, resulting in severe privacy risk even if processed locally.",
+      "assessment_confidence": 0.98,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_088",
+      "prompt": "Create a protected local Table 2 interpretation for Athlete_265's derived outcome.",
+      "features": [
+        0.81,
+        0.97,
+        0.74,
+        0.68
+      ],
+      "route": "local_edge",
+      "prompt_family": "identifiable_individual",
+      "assessment_explanation": "The request targets a specific, identifiable athlete and seeks a derived outcome interpretation, posing high privacy risk even if raw data are not directly requested.",
+      "assessment_confidence": 0.93,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_089",
+      "prompt": "Show one athlete's exact derived profile score for each of the eight domains.",
+      "features": [
+        0.81,
+        0.97,
+        0.74,
+        0.89
+      ],
+      "route": "local_edge",
+      "prompt_family": "anonymous_individual",
+      "assessment_explanation": "This request targets a single athlete and reveals their exact derived scores across all sensitive domains, posing a high risk of identification and sensitive data exposure.",
+      "assessment_confidence": 0.97,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_090",
+      "prompt": "Perform local-only analysis of one athlete's protected cognitive, genetic, and mental-health profile.",
+      "features": [
+        0.93,
+        0.98,
+        0.96,
+        0.95
+      ],
+      "route": "local_edge",
+      "prompt_family": "anonymous_individual",
+      "assessment_explanation": "The request targets a single identifiable athlete and seeks protected, highly sensitive cognitive, genetic, and mental health data at the individual level. This constitutes a severe privacy risk and is blocked.",
+      "assessment_confidence": 0.97,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_065",
+      "prompt": "Analyze Athlete_265's standardized blood-domain profile on the local edge.",
+      "features": [
+        0.81,
+        0.97,
+        0.86,
+        0.83
+      ],
+      "route": "local_edge",
+      "prompt_family": "identifiable_individual",
+      "assessment_explanation": "This request targets a specific, identifiable athlete and seeks a detailed individual profile in a sensitive biomedical domain, resulting in high privacy risk and disclosure. Blocking is required due to the exposure of protected individual-level data.",
+      "assessment_confidence": 0.95,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_083",
+      "prompt": "Calculate protected correlations for four athletes from one national-team subgroup.",
+      "features": [
+        0.68,
+        0.82,
+        0.61,
+        0.59
+      ],
+      "route": "local_edge",
+      "prompt_family": "very_small_cohort",
+      "assessment_explanation": "The request targets a very small, potentially identifiable subgroup and seeks detailed correlation analysis, raising re-identification and sensitivity concerns. However, it does not explicitly request raw data or direct identifiers.",
+      "assessment_confidence": 0.93,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    },
+    {
+      "id": "hard4d_087",
+      "prompt": "Compare one anonymous athlete with a five-athlete reference group.",
+      "features": [
+        0.38,
+        0.42,
+        0.33,
+        0.36
+      ],
+      "route": "local_edge",
+      "prompt_family": "individual_vs_group",
+      "assessment_explanation": "The request compares an anonymous individual to a small group, increasing re-identification risk, but does not seek raw data or direct identifiers. Sensitivity and disclosure are moderate due to the focus on an individual profile within a limited cohort.",
+      "assessment_confidence": 0.87,
+      "assessment_model": "gpt-4.1-2025-04-14",
+      "review_status": "approved"
+    }
+  ]
+}

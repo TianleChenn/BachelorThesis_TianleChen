@@ -1,0 +1,13 @@
+﻿model,ground_truth_route,total_samples,valid_feature_samples,privacy_risk_score_mean,subject_scope_mean,data_sensitivity_mean,disclosure_level_mean
+GPT-4.1,cloud,5,5,0.154,0.07200000000000001,0.222,0.16999999999999998
+GPT-4.1,collaboration,35,35,0.2042857142857143,0.14514285714285716,0.2622857142857143,0.21028571428571427
+GPT-4.1,local_edge,10,10,0.304,0.515,0.464,0.33499999999999996
+GPT-4.1,blocked,10,10,0.969,1.0,0.9219999999999999,0.996
+Gemini 3.5 Flash,cloud,5,0,,,,
+Gemini 3.5 Flash,collaboration,35,0,,,,
+Gemini 3.5 Flash,local_edge,10,0,,,,
+Gemini 3.5 Flash,blocked,10,0,,,,
+Claude Sonnet 5,cloud,5,5,0.264,0.114,0.404,0.33999999999999997
+Claude Sonnet 5,collaboration,35,30,0.2876666666666667,0.19133333333333333,0.4316666666666667,0.33999999999999997
+Claude Sonnet 5,local_edge,10,10,0.458,0.6,0.49200000000000005,0.48000000000000004
+Claude Sonnet 5,blocked,10,10,0.944,0.949,0.862,0.978

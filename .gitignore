@@ -1,0 +1,12 @@
+.env
+__pycache__/
+.pytest_cache/
+*.pyc
+.streamlit/secrets.toml
+venv/
+.venv/
+env/
+**pycache**/
+artifacts/local_model_server.pid
+artifacts/local_model_server_stdout.log
+artifacts/local_model_server_stderr.log

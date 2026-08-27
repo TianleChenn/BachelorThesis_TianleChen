@@ -1,0 +1,6 @@
+task,n_requests,n_correct,accuracy,accuracy_percent,task_label
+table1_logistic_regression,8,0,0.0,0.0,Logistic Regression
+table2_multiple_linear_regression,8,4,0.5,50.0,Multiple Linear Regression
+figure1_group_analysis,8,7,0.875,87.5,Group Analysis
+correlation_analysis,8,8,1.0,100.0,Correlation Analysis
+variance_analysis,8,8,1.0,100.0,Variance Analysis

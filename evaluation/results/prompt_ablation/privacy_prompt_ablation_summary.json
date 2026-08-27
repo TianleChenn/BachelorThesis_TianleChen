@@ -1,0 +1,160 @@
+{
+  "evaluation_type": "privacy_prompt_design_ablation",
+  "created_at": "2026-08-26T14:49:49.661364+00:00",
+  "model": "gpt-4.1",
+  "provider": "openai_privacy_assessor",
+  "temperature": 0.0,
+  "max_tokens": 500,
+  "gating_model_path": "C:\\Users\\Administrator\\Desktop\\Bachelor2026\\TianleChenNEW\\Tianle\\artifacts\\prism_soft_gater_4d_llm_hard.pt",
+  "gating_model_sha256": "4ee9bf96a7ee9ed16d2af966070ae9a4551d78bdc38efebcb950c91a7d0441bd",
+  "prompts": {
+    "minimal": {
+      "sha256": "e3525e13a5fd242336c7dcaae51d595ff790b54695a9ee2a82a1addef43aa5c6",
+      "system_prompt": "Return JSON only with exactly these five fields. The four numeric values must be between 0 and 1, and blocked_request must be a JSON boolean:\n\n{\n  \"privacy_risk_score\": 0.0,\n  \"subject_scope\": 0.0,\n  \"data_sensitivity\": 0.0,\n  \"disclosure_level\": 0.0,\n  \"blocked_request\": false\n}\n\nEvaluate the privacy characteristics of the supplied user query.\nSet blocked_request to true only for an explicit request for raw or exact athlete values, complete records or datasets, reconstruction of original records, or export/download of raw records. Do not block a request only because it is sensitive or individual-level.\nDo not answer the user query.\nReturn JSON only. Do not return explanations or any additional keys."
+    },
+    "defined": {
+      "sha256": "9df1b1d58a59d78ea7b27f1f40a5d7492a4cc4627a56625685dba86d4c437d2f",
+      "system_prompt": "Return JSON only with exactly these five fields. The four numeric values must be between 0 and 1, and blocked_request must be a JSON boolean:\n\n{\n  \"privacy_risk_score\": 0.0,\n  \"subject_scope\": 0.0,\n  \"data_sensitivity\": 0.0,\n  \"disclosure_level\": 0.0,\n  \"blocked_request\": false\n}\n\nEvaluate the privacy characteristics of the supplied user query.\nSet blocked_request to true only for an explicit request for raw or exact athlete values, complete records or datasets, reconstruction of original records, or export/download of raw records. Do not block a request only because it is sensitive or individual-level.\nDo not answer the user query.\nReturn JSON only. Do not return explanations or any additional keys.\n\nDefinitions of the four privacy dimensions:\n\nPrivacy Risk Score:\nRepresents the overall privacy risk of the request. Low values indicate low privacy risk and high\nvalues indicate high privacy risk.\n\nSubject Scope:\nRepresents how specifically the request targets athletes. Requests about all athletes should generally\nhave low values. Requests about a subgroup should have intermediate values. Requests about one specific\nathlete should have high values.\n\nData Sensitivity:\nRepresents the sensitivity of the requested athlete information. General performance information should\ngenerally have lower values. Medical, genetic, mental-health, blood-related, or similarly sensitive\ninformation should generally have higher values.\n\nDisclosure Level:\nRepresents how much detailed information the request asks to reveal. Aggregate or derived statistical\nresults should generally have lower values. Exact measurements, raw records, or direct private values\nshould generally have higher values.\n"
+    },
+    "full": {
+      "sha256": "b455041fc8a678f9e23030e918f5799cb9e26e1e444918fa425280955c4d4e54",
+      "system_prompt": "You are the privacy risk assessor for an athlete data analysis system.\nYour only task is to assess the privacy characteristics of the user request. Do not answer the request,\ngenerate analysis code, invent athlete data, use fixed category weights, or sum predefined values.\nReturn four independent continuous estimates between\n0.00 and 1.00 based on the complete semantic meaning of the request.\n\nThe system supports descriptive statistics, Table 1 logistic regression, Table 2 multiple linear\nregression, correlation, Figure 2 variance, Figure 1 network analysis, anonymous individual profiles,\nand metadata analysis. The eight derived domains are muscular strength, lower-body dynamics,\nmuscle-power genetics, blood micronutrients, basic cognitive function, mental health, social support,\nand training conditions.\n\nprivacy_risk_score is overall privacy risk: near 0 means almost no exposure and near 1 means severe or\nunacceptable exposure. Consider target scope, sensitivity, disclosure, identification/re-identification,\nraw access, export and reconstruction together, without fixed-weight arithmetic.\nReturn privacy_risk_score as one continuous number between 0.00 and 1.00.\nDo not convert the score into a category. Do not use predefined thresholds.\nDo not use fixed category weights. Do not quantize the score into fixed steps.\nDo not round the score to predefined values such as 0.25, 0.50, 0.75 or 1.00.\nThe score must reflect the complete semantic meaning and context of the request.\nsubject_scope asks only who is targeted: near 0 is general or broad aggregate; near 1 is one identifiable\nathlete. Estimate broad groups, filtered/small cohorts and anonymous people continuously. Do not raise it\nmerely for sensitive or raw data.\nDimension 3\n\nData Sensitivity\n\nDefinition\n\nEstimate how sensitive the requested athlete data are.\n\nThe athlete dataset contains the following analytical domains:\n- Muscular Strength\n- Lower-body Dynamics\n- Muscle-power Genetics\n- Blood Micronutrients\n- Basic Cognitive Function\n- Mental Health\n- Social Support\n- Training Conditions\n\nThese domains may have different privacy implications depending on the context of the request.\nEvaluate the sensitivity based on the type of athlete data requested; whether the request involves\nderived results or original data; the intended analysis; and the surrounding context of the request.\nDo not determine the sensitivity solely from the domain name.\nA request involving blood micronutrients, for example, may have different privacy implications depending\non whether it asks for an aggregate statistical analysis or an individual's original measurement.\nA value near 0 indicates that the requested data are minimally sensitive.\nA value near 1 indicates that the requested data are highly privacy-sensitive.\ndisclosure_level asks only how much detail is requested: near 0 is explanation without athlete results;\nnear 1 is original measurements, questionnaires, rows, full datasets, export or reconstruction. Estimate\nsummaries, visualizations, statistical analyses, derived results and anonymous profiles continuously.\nDo not raise it merely because content is sensitive or individual.\n\nReturn exactly one analysis_type from: general_explanation, descriptive_statistics, logistic_regression,\nmultiple_linear_regression, correlation_analysis, variance_analysis, network_analysis, individual_profile,\nmetadata_analysis, raw_data_lookup, dataset_export, dataset_reconstruction, unknown. It is categorical.\nSet blocked_request=true for identifiable protected raw data, original rows/records, questionnaire answers,\ncomplete private datasets, bulk export/download, reconstruction, or differencing attacks. Do not block\nlegitimate aggregate statistics merely because their domain is sensitive. The four dimensions are\nindependent; do not copy the same score into every field.\n\nGeneral Assessment Principle\n\nEvaluate the user request holistically.\nDo not assign scores to each dimension using fixed rules, predefined keyword weights, or simple keyword matching.\nInstead, consider the interaction between who the request targets; what athlete information is requested;\nhow much information the user asks the system to reveal; whether the request concerns derived analysis\nresults or original data; the intended analysis; and the complete semantic meaning and surrounding context.\nThe same athlete domain may produce different privacy scores under different request contexts.\nFor example, an aggregate statistical analysis of blood micronutrients should not receive the same privacy\nassessment as a request for one identifiable athlete's original blood measurement.\nThe four scores must therefore reflect semantic understanding rather than keyword detection.\nAssess each dimension according to its own definition: privacy_risk_score describes the overall privacy risk;\nsubject_scope describes who is targeted; data_sensitivity describes the sensitivity of the requested information;\nand disclosure_level describes how much information is requested. Do not copy the same value into all four fields.\nReturn continuous values between 0.00 and 1.00.\n\nReturn JSON only with exactly: privacy_risk_score,\nsubject_scope, data_sensitivity, disclosure_level, analysis_type, blocked_request,\nsensitive_categories, explanation, confidence. Explanation is at most two concise sentences."
+    }
+  },
+  "datasets": {
+    "controlled": "privacy_controlled_benchmark",
+    "independent": "frontend_realistic_benchmark_60"
+  },
+  "benchmarks": {
+    "controlled": {
+      "minimal": {
+        "expected_samples": 32,
+        "completed_samples": 32,
+        "api_failures": 0,
+        "model_or_parse_failures": 0,
+        "complete": true,
+        "exact_route_accuracy": 0.46875,
+        "recall": {
+          "cloud": 0.5,
+          "collaboration": 0.375,
+          "local_edge": 0.0,
+          "blocked": 1.0
+        },
+        "under_protection_rate": 0.40625,
+        "exact_route_accuracy_by_level": {
+          "L0": 0.5,
+          "L1": 0.375,
+          "L2": 0.0,
+          "L3": 1.0
+        }
+      },
+      "defined": {
+        "expected_samples": 32,
+        "completed_samples": 32,
+        "api_failures": 0,
+        "model_or_parse_failures": 0,
+        "complete": true,
+        "exact_route_accuracy": 0.71875,
+        "recall": {
+          "cloud": 0.75,
+          "collaboration": 0.125,
+          "local_edge": 1.0,
+          "blocked": 1.0
+        },
+        "under_protection_rate": 0.1875,
+        "exact_route_accuracy_by_level": {
+          "L0": 0.75,
+          "L1": 0.125,
+          "L2": 1.0,
+          "L3": 1.0
+        }
+      },
+      "full": {
+        "expected_samples": 32,
+        "completed_samples": 32,
+        "api_failures": 0,
+        "model_or_parse_failures": 0,
+        "complete": true,
+        "exact_route_accuracy": 0.90625,
+        "recall": {
+          "cloud": 1.0,
+          "collaboration": 0.625,
+          "local_edge": 1.0,
+          "blocked": 1.0
+        },
+        "under_protection_rate": 0.09375,
+        "exact_route_accuracy_by_level": {
+          "L0": 1.0,
+          "L1": 0.625,
+          "L2": 1.0,
+          "L3": 1.0
+        }
+      }
+    },
+    "independent": {
+      "minimal": {
+        "expected_samples": 60,
+        "completed_samples": 60,
+        "api_failures": 0,
+        "model_or_parse_failures": 0,
+        "complete": true,
+        "exact_route_accuracy": 0.25,
+        "recall": {
+          "cloud": 0.0,
+          "collaboration": 0.14285714285714285,
+          "local_edge": 0.0,
+          "blocked": 1.0
+        },
+        "under_protection_rate": 0.5333333333333333,
+        "exact_route_accuracy_by_level": {
+          "L0": null,
+          "L1": null,
+          "L2": null,
+          "L3": null
+        }
+      },
+      "defined": {
+        "expected_samples": 60,
+        "completed_samples": 60,
+        "api_failures": 0,
+        "model_or_parse_failures": 0,
+        "complete": true,
+        "exact_route_accuracy": 0.3333333333333333,
+        "recall": {
+          "cloud": 1.0,
+          "collaboration": 0.0,
+          "local_edge": 0.5,
+          "blocked": 1.0
+        },
+        "under_protection_rate": 0.6,
+        "exact_route_accuracy_by_level": {
+          "L0": null,
+          "L1": null,
+          "L2": null,
+          "L3": null
+        }
+      },
+      "full": {
+        "expected_samples": 60,
+        "completed_samples": 60,
+        "api_failures": 0,
+        "model_or_parse_failures": 0,
+        "complete": true,
+        "exact_route_accuracy": 0.4166666666666667,
+        "recall": {
+          "cloud": 1.0,
+          "collaboration": 0.14285714285714285,
+          "local_edge": 0.5,
+          "blocked": 1.0
+        },
+        "under_protection_rate": 0.5666666666666667,
+        "exact_route_accuracy_by_level": {
+          "L0": null,
+          "L1": null,
+          "L2": null,
+          "L3": null
+        }
+      }
+    }
+  }
+}

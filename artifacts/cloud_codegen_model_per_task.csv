@@ -1,0 +1,16 @@
+﻿prompt_version,Task,Model,model_key,Correct,Total,Accuracy
+pool_typed_schema_v3,Table 1,GPT-4.1,gpt4_1,4,8,0.5
+pool_typed_schema_v3,Table 2,GPT-4.1,gpt4_1,7,8,0.875
+pool_typed_schema_v3,Figure 1,GPT-4.1,gpt4_1,7,8,0.875
+pool_typed_schema_v3,Correlation,GPT-4.1,gpt4_1,0,8,0.0
+pool_typed_schema_v3,Variance Analysis,GPT-4.1,gpt4_1,4,8,0.5
+pool_typed_schema_v3,Table 1,Gemini 3.5 Flash,gemini,5,8,0.625
+pool_typed_schema_v3,Table 2,Gemini 3.5 Flash,gemini,5,8,0.625
+pool_typed_schema_v3,Figure 1,Gemini 3.5 Flash,gemini,7,8,0.875
+pool_typed_schema_v3,Correlation,Gemini 3.5 Flash,gemini,5,8,0.625
+pool_typed_schema_v3,Variance Analysis,Gemini 3.5 Flash,gemini,4,8,0.5
+pool_typed_schema_v3,Table 1,Claude Sonnet 5,claude,2,8,0.25
+pool_typed_schema_v3,Table 2,Claude Sonnet 5,claude,6,8,0.75
+pool_typed_schema_v3,Figure 1,Claude Sonnet 5,claude,7,8,0.875
+pool_typed_schema_v3,Correlation,Claude Sonnet 5,claude,5,8,0.625
+pool_typed_schema_v3,Variance Analysis,Claude Sonnet 5,claude,0,8,0.0

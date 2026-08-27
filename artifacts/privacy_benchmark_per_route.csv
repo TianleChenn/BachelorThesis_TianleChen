@@ -1,0 +1,25 @@
+benchmark,method,route,precision,recall,f1,support
+independent,Method A,cloud,1.0,0.8,0.888888888888889,5
+independent,Method A,collaboration,0.0,0.0,0.0,35
+independent,Method A,local_edge,0.20833333333333334,1.0,0.3448275862068966,10
+independent,Method A,blocked,1.0,0.8,0.888888888888889,10
+independent,Method B,cloud,0.0,0.0,0.0,5
+independent,Method B,collaboration,0.42857142857142855,0.08571428571428572,0.14285714285714285,35
+independent,Method B,local_edge,0.0,0.0,0.0,10
+independent,Method B,blocked,0.7692307692307693,1.0,0.8695652173913044,10
+independent,Method C,cloud,0.13513513513513514,1.0,0.2380952380952381,5
+independent,Method C,collaboration,0.8571428571428571,0.17142857142857143,0.2857142857142857,35
+independent,Method C,local_edge,0.8333333333333334,0.5,0.625,10
+independent,Method C,blocked,1.0,1.0,1.0,10
+controlled,Method A,cloud,1.0,0.5,0.6666666666666666,8
+controlled,Method A,collaboration,0.0,0.0,0.0,8
+controlled,Method A,local_edge,0.42105263157894735,1.0,0.5925925925925926,8
+controlled,Method A,blocked,1.0,1.0,1.0,8
+controlled,Method B,cloud,0.3333333333333333,0.5,0.4,8
+controlled,Method B,collaboration,0.25,0.25,0.25,8
+controlled,Method B,local_edge,0.0,0.0,0.0,8
+controlled,Method B,blocked,1.0,1.0,1.0,8
+controlled,Method C,cloud,0.7272727272727273,1.0,0.8421052631578948,8
+controlled,Method C,collaboration,1.0,0.625,0.7692307692307693,8
+controlled,Method C,local_edge,1.0,1.0,1.0,8
+controlled,Method C,blocked,1.0,1.0,1.0,8

@@ -1,0 +1,9 @@
+RANDOM_SEED=2024
+N_ATHLETES=300
+SPORT_SEX_COUNTS={"3x3 basketball":{"female":20,"male":15},"ice hockey":{"female":20,"male":34},"volleyball":{"female":33,"male":65},"artistic gymnastics":{"female":17,"male":0},"trampoline gymnastics":{"female":13,"male":13},"rhythmic gymnastics":{"female":25,"male":0},"table tennis":{"female":6,"male":8},"modern pentathlon":{"female":13,"male":14}}
+TEAM_PROPORTIONS={"female":91/(91+43),"male":106/(106+56)}
+AGE_PARAMETERS={("female","junior"):(16.55,1.70),("male","junior"):(17.27,1.56),("female","senior"):(22.86,5.69),("male","senior"):(24.38,4.36)}
+ALLELE_FREQUENCIES={"agt_rs699":.42,"ip6k3_rs6942022":.31,"vdr_rs1544410":.38,"actn3_rs1815739":.44,"hsd17b14_rs7247312":.27,"mtrr_rs1801394":.36,"ucp2_rs660339":.33}
+TARGET_CORRELATIONS={"muscular_strength|lower_body_dynamics":.282,"muscle_power_genetics|lower_body_dynamics":.186,"mental_health|social_support":.277,"training_conditions|mental_health":.305,"training_conditions|social_support":.386,"basic_cognitive_function|lower_body_dynamics":.116,"muscle_power_genetics|social_support":-.138}
+BODY_WEIGHT={"female":(62,8),"male":(76,10)}
+SIMULATION_ASSUMPTIONS="Unpublished raw distribution parameters, allele frequencies, truncation limits, sport effects, and noise levels are engineering simulation assumptions."

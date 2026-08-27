@@ -1,0 +1,768 @@
+{
+  "status": "evaluated",
+  "evaluation_type": "independent_40_sample_test",
+  "independent_evaluation": true,
+  "training_samples": 94,
+  "evaluation_samples": 40,
+  "total_samples": 40,
+  "valid_samples": 40,
+  "ground_truth_strong": 4,
+  "ground_truth_weak": 36,
+  "threshold": 0.49109090909090913,
+  "accuracy": 0.675,
+  "balanced_accuracy": 0.7083333333333333,
+  "strong_recall": 0.75,
+  "weak_recall": 0.6666666666666666,
+  "strong_usage_rate": 0.375,
+  "confusion_matrix": {
+    "true_weak": {
+      "pred_weak": 24,
+      "pred_strong": 12
+    },
+    "true_strong": {
+      "pred_weak": 1,
+      "pred_strong": 3
+    }
+  },
+  "dataset_name": "Frontend-Realistic LLM Evaluation",
+  "dataset_path": "evaluation/frontend_realistic_benchmark_60.json",
+  "shared_benchmark_samples": 60,
+  "eligible_llm_samples": 40,
+  "router": "RouteLLM-inspired project-specific preference router",
+  "uses_official_mf_score": false,
+  "per_sample_results": [
+    {
+      "sample_id": "frontend_real_001",
+      "prompt": "Generate the four logistic regression models corresponding to Table 1 for all athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.",
+      "privacy_route": "cloud",
+      "ground_truth": "weak",
+      "judge_label": "tie",
+      "strong_model_probability": 0.6180469177666186,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "strong",
+      "prediction": "strong",
+      "selected_model": "GPT-4.1",
+      "correct": false,
+      "ground_truth_construction": {
+        "strong_model_score": 8.0,
+        "weak_model_score": 8.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_002",
+      "prompt": "Generate the four logistic regression models corresponding to Table 1 for elite athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "tie",
+      "strong_model_probability": 0.652360657661711,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "strong",
+      "prediction": "strong",
+      "selected_model": "GPT-4.1",
+      "correct": false,
+      "ground_truth_construction": {
+        "strong_model_score": 8.0,
+        "weak_model_score": 8.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_003",
+      "prompt": "Generate the four logistic regression models corresponding to Table 1 for 3x3 basketball athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "weak_win",
+      "strong_model_probability": 0.6355019318704336,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "strong",
+      "prediction": "strong",
+      "selected_model": "GPT-4.1",
+      "correct": false,
+      "ground_truth_construction": {
+        "strong_model_score": 8.0,
+        "weak_model_score": 10.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_004",
+      "prompt": "Generate the four logistic regression models corresponding to Table 1 for ice hockey athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "weak_win",
+      "strong_model_probability": 0.6671424027490604,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "strong",
+      "prediction": "strong",
+      "selected_model": "GPT-4.1",
+      "correct": false,
+      "ground_truth_construction": {
+        "strong_model_score": 7.0,
+        "weak_model_score": 9.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_005",
+      "prompt": "Generate the four logistic regression models corresponding to Table 1 for volleyball athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "weak_win",
+      "strong_model_probability": 0.6700251358260918,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "strong",
+      "prediction": "strong",
+      "selected_model": "GPT-4.1",
+      "correct": false,
+      "ground_truth_construction": {
+        "strong_model_score": 7.0,
+        "weak_model_score": 9.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_006",
+      "prompt": "Generate the four logistic regression models corresponding to Table 1 for female athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "weak_win",
+      "strong_model_probability": 0.6308302956040363,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "strong",
+      "prediction": "strong",
+      "selected_model": "GPT-4.1",
+      "correct": false,
+      "ground_truth_construction": {
+        "strong_model_score": 5.0,
+        "weak_model_score": 8.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_007",
+      "prompt": "Generate the four logistic regression models corresponding to Table 1 for junior national team athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "weak_win",
+      "strong_model_probability": 0.572472670525089,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "strong",
+      "prediction": "strong",
+      "selected_model": "GPT-4.1",
+      "correct": false,
+      "ground_truth_construction": {
+        "strong_model_score": 6.0,
+        "weak_model_score": 8.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_008",
+      "prompt": "Generate the four logistic regression models corresponding to Table 1 for athletes aged 20 and above using all eight public domains, with models using no controls, sex, age, and both sex and age.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "weak_win",
+      "strong_model_probability": 0.6281866628490352,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "strong",
+      "prediction": "strong",
+      "selected_model": "GPT-4.1",
+      "correct": false,
+      "ground_truth_construction": {
+        "strong_model_score": 6.0,
+        "weak_model_score": 9.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_009",
+      "prompt": "Generate the four multiple linear regression models corresponding to Table 2 for all athletes, with expertise_value as the continuous target.",
+      "privacy_route": "cloud",
+      "ground_truth": "strong",
+      "judge_label": "strong_win",
+      "strong_model_probability": 0.5286069650598079,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "strong",
+      "prediction": "strong",
+      "selected_model": "GPT-4.1",
+      "correct": true,
+      "ground_truth_construction": {
+        "strong_model_score": 8.0,
+        "weak_model_score": 6.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_010",
+      "prompt": "Generate the four multiple linear regression models corresponding to Table 2 for elite athletes, with expertise_value as the continuous target.",
+      "privacy_route": "collaboration",
+      "ground_truth": "strong",
+      "judge_label": "strong_win",
+      "strong_model_probability": 0.5827781557438331,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "strong",
+      "prediction": "strong",
+      "selected_model": "GPT-4.1",
+      "correct": true,
+      "ground_truth_construction": {
+        "strong_model_score": 8.0,
+        "weak_model_score": 6.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_011",
+      "prompt": "Generate the four multiple linear regression models corresponding to Table 2 for 3x3 basketball athletes, with expertise_value as the continuous target.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "weak_win",
+      "strong_model_probability": 0.5564445046197358,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "strong",
+      "prediction": "strong",
+      "selected_model": "GPT-4.1",
+      "correct": false,
+      "ground_truth_construction": {
+        "strong_model_score": 5.0,
+        "weak_model_score": 8.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_012",
+      "prompt": "Generate the four multiple linear regression models corresponding to Table 2 for ice hockey athletes, with expertise_value as the continuous target.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "weak_win",
+      "strong_model_probability": 0.6026471263121246,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "strong",
+      "prediction": "strong",
+      "selected_model": "GPT-4.1",
+      "correct": false,
+      "ground_truth_construction": {
+        "strong_model_score": 5.0,
+        "weak_model_score": 9.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_013",
+      "prompt": "Generate the four multiple linear regression models corresponding to Table 2 for volleyball athletes, with expertise_value as the continuous target.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "weak_win",
+      "strong_model_probability": 0.6058370729249036,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "strong",
+      "prediction": "strong",
+      "selected_model": "GPT-4.1",
+      "correct": false,
+      "ground_truth_construction": {
+        "strong_model_score": 7.0,
+        "weak_model_score": 9.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_014",
+      "prompt": "Generate the four multiple linear regression models corresponding to Table 2 for female athletes, with expertise_value as the continuous target.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "weak_win",
+      "strong_model_probability": 0.5468450622628128,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "strong",
+      "prediction": "strong",
+      "selected_model": "GPT-4.1",
+      "correct": false,
+      "ground_truth_construction": {
+        "strong_model_score": 7.0,
+        "weak_model_score": 9.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_015",
+      "prompt": "Generate the four multiple linear regression models corresponding to Table 2 for junior national team athletes, with expertise_value as the continuous target.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "weak_win",
+      "strong_model_probability": 0.4726278475821783,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "weak",
+      "prediction": "weak",
+      "selected_model": "Ministral-3-8B",
+      "correct": true,
+      "ground_truth_construction": {
+        "strong_model_score": 5.0,
+        "weak_model_score": 9.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_016",
+      "prompt": "Generate the four multiple linear regression models corresponding to Table 2 for athletes aged 20 and above, with expertise_value as the continuous target.",
+      "privacy_route": "collaboration",
+      "ground_truth": "strong",
+      "judge_label": "strong_win",
+      "strong_model_probability": 0.5288914546551191,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "strong",
+      "prediction": "strong",
+      "selected_model": "GPT-4.1",
+      "correct": true,
+      "ground_truth_construction": {
+        "strong_model_score": 8.0,
+        "weak_model_score": 6.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_017",
+      "prompt": "Generate Figure 1 for all athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",
+      "privacy_route": "cloud",
+      "ground_truth": "weak",
+      "judge_label": "weak_win",
+      "strong_model_probability": 0.36028289931763124,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "weak",
+      "prediction": "weak",
+      "selected_model": "Ministral-3-8B",
+      "correct": true,
+      "ground_truth_construction": {
+        "strong_model_score": 7.0,
+        "weak_model_score": 9.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_018",
+      "prompt": "Generate Figure 1 for elite athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "tie",
+      "strong_model_probability": 0.4028878665846816,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "weak",
+      "prediction": "weak",
+      "selected_model": "Ministral-3-8B",
+      "correct": true,
+      "ground_truth_construction": {
+        "strong_model_score": 8.0,
+        "weak_model_score": 8.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_019",
+      "prompt": "Generate Figure 1 for 3x3 basketball athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "tie",
+      "strong_model_probability": 0.3781727884543319,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "weak",
+      "prediction": "weak",
+      "selected_model": "Ministral-3-8B",
+      "correct": true,
+      "ground_truth_construction": {
+        "strong_model_score": 8.0,
+        "weak_model_score": 8.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_020",
+      "prompt": "Generate Figure 1 for ice hockey athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "weak_win",
+      "strong_model_probability": 0.4291146374046319,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "weak",
+      "prediction": "weak",
+      "selected_model": "Ministral-3-8B",
+      "correct": true,
+      "ground_truth_construction": {
+        "strong_model_score": 7.0,
+        "weak_model_score": 9.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_021",
+      "prompt": "Generate Figure 1 for volleyball athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "weak_win",
+      "strong_model_probability": 0.42770263458372626,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "weak",
+      "prediction": "weak",
+      "selected_model": "Ministral-3-8B",
+      "correct": true,
+      "ground_truth_construction": {
+        "strong_model_score": 7.0,
+        "weak_model_score": 9.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_022",
+      "prompt": "Generate Figure 1 for female athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",
+      "privacy_route": "collaboration",
+      "ground_truth": "strong",
+      "judge_label": "strong_win",
+      "strong_model_probability": 0.3753407065719107,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "weak",
+      "prediction": "weak",
+      "selected_model": "Ministral-3-8B",
+      "correct": false,
+      "ground_truth_construction": {
+        "strong_model_score": 9.0,
+        "weak_model_score": 6.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_023",
+      "prompt": "Generate Figure 1 for junior national team athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "tie",
+      "strong_model_probability": 0.3287348445019608,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "weak",
+      "prediction": "weak",
+      "selected_model": "Ministral-3-8B",
+      "correct": true,
+      "ground_truth_construction": {
+        "strong_model_score": 8.0,
+        "weak_model_score": 8.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_024",
+      "prompt": "Generate Figure 1 for athletes aged 20 and above using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "tie",
+      "strong_model_probability": 0.38625477743264547,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "weak",
+      "prediction": "weak",
+      "selected_model": "Ministral-3-8B",
+      "correct": true,
+      "ground_truth_construction": {
+        "strong_model_score": 8.0,
+        "weak_model_score": 8.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_025",
+      "prompt": "Calculate pairwise Pearson correlations among all eight public domains for all athletes.",
+      "privacy_route": "cloud",
+      "ground_truth": "weak",
+      "judge_label": "tie",
+      "strong_model_probability": 0.28208620560938097,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "weak",
+      "prediction": "weak",
+      "selected_model": "Ministral-3-8B",
+      "correct": true,
+      "ground_truth_construction": {
+        "strong_model_score": 8.0,
+        "weak_model_score": 8.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_026",
+      "prompt": "Calculate pairwise Pearson correlations among all eight public domains for elite athletes.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "weak_win",
+      "strong_model_probability": 0.32858339167806283,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "weak",
+      "prediction": "weak",
+      "selected_model": "Ministral-3-8B",
+      "correct": true,
+      "ground_truth_construction": {
+        "strong_model_score": 5.0,
+        "weak_model_score": 8.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_027",
+      "prompt": "Calculate pairwise Pearson correlations among all eight public domains for 3x3 basketball athletes.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "weak_win",
+      "strong_model_probability": 0.2984297529760444,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "weak",
+      "prediction": "weak",
+      "selected_model": "Ministral-3-8B",
+      "correct": true,
+      "ground_truth_construction": {
+        "strong_model_score": 4.0,
+        "weak_model_score": 9.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_028",
+      "prompt": "Calculate pairwise Pearson correlations among all eight public domains for ice hockey athletes.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "weak_win",
+      "strong_model_probability": 0.36381632597253943,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "weak",
+      "prediction": "weak",
+      "selected_model": "Ministral-3-8B",
+      "correct": true,
+      "ground_truth_construction": {
+        "strong_model_score": 4.0,
+        "weak_model_score": 9.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_029",
+      "prompt": "Calculate pairwise Pearson correlations among all eight public domains for volleyball athletes.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "tie",
+      "strong_model_probability": 0.36275505117666945,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "weak",
+      "prediction": "weak",
+      "selected_model": "Ministral-3-8B",
+      "correct": true,
+      "ground_truth_construction": {
+        "strong_model_score": 8.0,
+        "weak_model_score": 8.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_030",
+      "prompt": "Calculate pairwise Pearson correlations among all eight public domains for female athletes.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "weak_win",
+      "strong_model_probability": 0.29914564622076345,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "weak",
+      "prediction": "weak",
+      "selected_model": "Ministral-3-8B",
+      "correct": true,
+      "ground_truth_construction": {
+        "strong_model_score": 7.0,
+        "weak_model_score": 9.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_031",
+      "prompt": "Calculate pairwise Pearson correlations among all eight public domains for junior national team athletes.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "weak_win",
+      "strong_model_probability": 0.25405212947153744,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "weak",
+      "prediction": "weak",
+      "selected_model": "Ministral-3-8B",
+      "correct": true,
+      "ground_truth_construction": {
+        "strong_model_score": 5.0,
+        "weak_model_score": 9.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_032",
+      "prompt": "Calculate pairwise Pearson correlations among all eight public domains for athletes aged 20 and above.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "weak_win",
+      "strong_model_probability": 0.3186290222305368,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "weak",
+      "prediction": "weak",
+      "selected_model": "Ministral-3-8B",
+      "correct": true,
+      "ground_truth_construction": {
+        "strong_model_score": 4.0,
+        "weak_model_score": 9.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_033",
+      "prompt": "Run variance analysis for all athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",
+      "privacy_route": "cloud",
+      "ground_truth": "weak",
+      "judge_label": "weak_win",
+      "strong_model_probability": 0.2892200624303007,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "weak",
+      "prediction": "weak",
+      "selected_model": "Ministral-3-8B",
+      "correct": true,
+      "ground_truth_construction": {
+        "strong_model_score": 6.0,
+        "weak_model_score": 8.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_034",
+      "prompt": "Run variance analysis for elite athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "weak_win",
+      "strong_model_probability": 0.32371865768799407,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "weak",
+      "prediction": "weak",
+      "selected_model": "Ministral-3-8B",
+      "correct": true,
+      "ground_truth_construction": {
+        "strong_model_score": 7.0,
+        "weak_model_score": 9.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_035",
+      "prompt": "Run variance analysis for 3x3 basketball athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "tie",
+      "strong_model_probability": 0.3016806617948367,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "weak",
+      "prediction": "weak",
+      "selected_model": "Ministral-3-8B",
+      "correct": true,
+      "ground_truth_construction": {
+        "strong_model_score": 8.0,
+        "weak_model_score": 8.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_036",
+      "prompt": "Run variance analysis for ice hockey athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "weak_win",
+      "strong_model_probability": 0.3491292447554249,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "weak",
+      "prediction": "weak",
+      "selected_model": "Ministral-3-8B",
+      "correct": true,
+      "ground_truth_construction": {
+        "strong_model_score": 7.0,
+        "weak_model_score": 9.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_037",
+      "prompt": "Run variance analysis for volleyball athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "weak_win",
+      "strong_model_probability": 0.3474445031524588,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "weak",
+      "prediction": "weak",
+      "selected_model": "Ministral-3-8B",
+      "correct": true,
+      "ground_truth_construction": {
+        "strong_model_score": 6.0,
+        "weak_model_score": 9.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_038",
+      "prompt": "Run variance analysis for female athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "weak_win",
+      "strong_model_probability": 0.30161956277140095,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "weak",
+      "prediction": "weak",
+      "selected_model": "Ministral-3-8B",
+      "correct": true,
+      "ground_truth_construction": {
+        "strong_model_score": 6.0,
+        "weak_model_score": 8.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_039",
+      "prompt": "Run variance analysis for junior national team athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "tie",
+      "strong_model_probability": 0.2638893641075003,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "weak",
+      "prediction": "weak",
+      "selected_model": "Ministral-3-8B",
+      "correct": true,
+      "ground_truth_construction": {
+        "strong_model_score": 8.0,
+        "weak_model_score": 8.0
+      }
+    },
+    {
+      "sample_id": "frontend_real_040",
+      "prompt": "Run variance analysis for athletes aged 20 and above across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "weak_win",
+      "strong_model_probability": 0.30080933359058104,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "weak",
+      "prediction": "weak",
+      "selected_model": "Ministral-3-8B",
+      "correct": true,
+      "ground_truth_construction": {
+        "strong_model_score": 6.0,
+        "weak_model_score": 8.0
+      }
+    }
+  ],
+  "representative_examples": {
+    "correct_strong": {
+      "sample_id": "frontend_real_010",
+      "prompt": "Generate the four multiple linear regression models corresponding to Table 2 for elite athletes, with expertise_value as the continuous target.",
+      "privacy_route": "collaboration",
+      "ground_truth": "strong",
+      "judge_label": "strong_win",
+      "strong_model_probability": 0.5827781557438331,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "strong",
+      "prediction": "strong",
+      "selected_model": "GPT-4.1",
+      "correct": true,
+      "ground_truth_construction": {
+        "strong_model_score": 8.0,
+        "weak_model_score": 6.0
+      }
+    },
+    "weak_example": {
+      "sample_id": "frontend_real_031",
+      "prompt": "Calculate pairwise Pearson correlations among all eight public domains for junior national team athletes.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "weak_win",
+      "strong_model_probability": 0.25405212947153744,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "weak",
+      "prediction": "weak",
+      "selected_model": "Ministral-3-8B",
+      "correct": true,
+      "ground_truth_construction": {
+        "strong_model_score": 5.0,
+        "weak_model_score": 9.0
+      }
+    },
+    "incorrect": {
+      "sample_id": "frontend_real_005",
+      "prompt": "Generate the four logistic regression models corresponding to Table 1 for volleyball athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.",
+      "privacy_route": "collaboration",
+      "ground_truth": "weak",
+      "judge_label": "weak_win",
+      "strong_model_probability": 0.6700251358260918,
+      "threshold": 0.49109090909090913,
+      "predicted_route": "strong",
+      "prediction": "strong",
+      "selected_model": "GPT-4.1",
+      "correct": false,
+      "ground_truth_construction": {
+        "strong_model_score": 7.0,
+        "weak_model_score": 9.0
+      }
+    }
+  }
+}

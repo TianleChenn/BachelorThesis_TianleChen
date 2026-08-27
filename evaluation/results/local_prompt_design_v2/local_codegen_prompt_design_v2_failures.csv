@@ -1,0 +1,1627 @@
+﻿sample_id,task,prompt_version,prompt_sha256,dataset_sha256,user_request,raw_model_output,generated_call,generated_method,generated_arguments,expected_method,expected_arguments,structure_valid,request_match,execute_valid,result_valid,fully_correct,request_mismatches,error_stage,error_reason,validator_failure_stage,latency,api_call_success,evaluation_scored,api_error,model_key,model_display_name,model_hf_spec,model_alias,requested_model,actual_model,provider,quantization,generation_attempts,auto_correction_used
+frontend_real_001,table1,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate the four logistic regression models corresponding to Table 1 for all athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.","```python
+result = analysis.table1(
+    predictors=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    target=""performance_metric"",
+    controls=[],
+    filters={""athlete_status"": ""public""}
+)
+
+result = analysis.table1(
+    predictors=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    target=""performance_metric"",
+    controls=[""sex""],
+    filters={""athlete_status"": ""public""}
+)
+
+result = analysis.table1(
+    predictors=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    target=""performance_metric"",
+    controls=[""age""],
+    filters={""athlete_status"": ""public""}
+)
+
+result = analysis.table1(
+    predictors=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    target=""performance_metric"",
+    controls=[""sex"", ""age""],
+    filters={""athlete_status"": ""public""}
+)
+```","result = analysis.table1(
+    predictors=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    target=""performance_metric"",
+    controls=[],
+    filters={""athlete_status"": ""public""}
+)
+
+result = analysis.table1(
+    predictors=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    target=""performance_metric"",
+    controls=[""sex""],
+    filters={""athlete_status"": ""public""}
+)
+
+result = analysis.table1(
+    predictors=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    target=""performance_metric"",
+    controls=[""age""],
+    filters={""athlete_status"": ""public""}
+)
+
+result = analysis.table1(
+    predictors=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    target=""performance_metric"",
+    controls=[""sex"", ""age""],
+    filters={""athlete_status"": ""public""}
+)",,{},,{},False,False,False,False,False,[],STRUCTURE_FAIL,ValueError: Exactly one restricted analysis assignment is required.,format_validation,4.067997899954207,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_002,table1,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate the four logistic regression models corresponding to Table 1 for elite athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.","```python
+result = analysis.table1(
+    predictors=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    target=""elite_status"",
+    controls=[],
+    filters={""athlete_level"": ""elite""}
+)
+
+result = analysis.table1(
+    predictors=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    target=""elite_status"",
+    controls=[""sex""],
+    filters={""athlete_level"": ""elite""}
+)
+
+result = analysis.table1(
+    predictors=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    target=""elite_status"",
+    controls=[""age""],
+    filters={""athlete_level"": ""elite""}
+)
+
+result = analysis.table1(
+    predictors=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    target=""elite_status"",
+    controls=[""sex"", ""age""],
+    filters={""athlete_level"": ""elite""}
+)
+```","result = analysis.table1(
+    predictors=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    target=""elite_status"",
+    controls=[],
+    filters={""athlete_level"": ""elite""}
+)
+
+result = analysis.table1(
+    predictors=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    target=""elite_status"",
+    controls=[""sex""],
+    filters={""athlete_level"": ""elite""}
+)
+
+result = analysis.table1(
+    predictors=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    target=""elite_status"",
+    controls=[""age""],
+    filters={""athlete_level"": ""elite""}
+)
+
+result = analysis.table1(
+    predictors=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    target=""elite_status"",
+    controls=[""sex"", ""age""],
+    filters={""athlete_level"": ""elite""}
+)",,{},,{},False,False,False,False,False,[],STRUCTURE_FAIL,ValueError: Exactly one restricted analysis assignment is required.,format_validation,3.9068064999300987,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_003,table1,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate the four logistic regression models corresponding to Table 1 for 3x3 basketball athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.","```python
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""performance_metric"",
+    controls=[],
+    filters={""athlete_position"": ""3x3"", ""athlete_type"": ""basketball""}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""performance_metric"",
+    controls=[""sex""],
+    filters={""athlete_position"": ""3x3"", ""athlete_type"": ""basketball""}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""performance_metric"",
+    controls=[""age""],
+    filters={""athlete_position"": ""3x3"", ""athlete_type"": ""basketball""}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""performance_metric"",
+    controls=[""sex"", ""age""],
+    filters={""athlete_position"": ""3x3"", ""athlete_type"": ""basketball""}
+)
+```","result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""performance_metric"",
+    controls=[],
+    filters={""athlete_position"": ""3x3"", ""athlete_type"": ""basketball""}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""performance_metric"",
+    controls=[""sex""],
+    filters={""athlete_position"": ""3x3"", ""athlete_type"": ""basketball""}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""performance_metric"",
+    controls=[""age""],
+    filters={""athlete_position"": ""3x3"", ""athlete_type"": ""basketball""}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""performance_metric"",
+    controls=[""sex"", ""age""],
+    filters={""athlete_position"": ""3x3"", ""athlete_type"": ""basketball""}
+)",,{},,{},False,False,False,False,False,[],STRUCTURE_FAIL,ValueError: Exactly one restricted analysis assignment is required.,format_validation,5.519697799929418,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_004,table1,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate the four logistic regression models corresponding to Table 1 for ice hockey athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.","```python
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""athlete_performance"",
+    controls=[],
+    filters={""sport"": ""ice_hockey"", ""athlete_type"": ""public""}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""athlete_performance"",
+    controls=[""sex""],
+    filters={""sport"": ""ice_hockey"", ""athlete_type"": ""public""}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""athlete_performance"",
+    controls=[""age""],
+    filters={""sport"": ""ice_hockey"", ""athlete_type"": ""public""}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""athlete_performance"",
+    controls=[""sex"", ""age""],
+    filters={""sport"": ""ice_hockey"", ""athlete_type"": ""public""}
+)
+```","result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""athlete_performance"",
+    controls=[],
+    filters={""sport"": ""ice_hockey"", ""athlete_type"": ""public""}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""athlete_performance"",
+    controls=[""sex""],
+    filters={""sport"": ""ice_hockey"", ""athlete_type"": ""public""}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""athlete_performance"",
+    controls=[""age""],
+    filters={""sport"": ""ice_hockey"", ""athlete_type"": ""public""}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""athlete_performance"",
+    controls=[""sex"", ""age""],
+    filters={""sport"": ""ice_hockey"", ""athlete_type"": ""public""}
+)",,{},,{},False,False,False,False,False,[],STRUCTURE_FAIL,ValueError: Exactly one restricted analysis assignment is required.,format_validation,5.417618200066499,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_005,table1,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate the four logistic regression models corresponding to Table 1 for volleyball athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.","```python
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""volleyball_performance"",
+    controls=[],
+    filters={""sport"": ""volleyball"", ""athlete_type"": ""public""}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""volleyball_performance"",
+    controls=[""sex""],
+    filters={""sport"": ""volleyball"", ""athlete_type"": ""public""}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""volleyball_performance"",
+    controls=[""age""],
+    filters={""sport"": ""volleyball"", ""athlete_type"": ""public""}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""volleyball_performance"",
+    controls=[""sex"", ""age""],
+    filters={""sport"": ""volleyball"", ""athlete_type"": ""public""}
+)
+```","result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""volleyball_performance"",
+    controls=[],
+    filters={""sport"": ""volleyball"", ""athlete_type"": ""public""}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""volleyball_performance"",
+    controls=[""sex""],
+    filters={""sport"": ""volleyball"", ""athlete_type"": ""public""}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""volleyball_performance"",
+    controls=[""age""],
+    filters={""sport"": ""volleyball"", ""athlete_type"": ""public""}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""volleyball_performance"",
+    controls=[""sex"", ""age""],
+    filters={""sport"": ""volleyball"", ""athlete_type"": ""public""}
+)",,{},,{},False,False,False,False,False,[],STRUCTURE_FAIL,ValueError: Exactly one restricted analysis assignment is required.,format_validation,5.367621999932453,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_006,table1,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate the four logistic regression models corresponding to Table 1 for female athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.","```python
+result = analysis.table1(
+    predictors=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    target=""performance_metric"",
+    controls=[],
+    filters={""sex"": ""female""}
+)
+
+result = analysis.table1(
+    predictors=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    target=""performance_metric"",
+    controls=[""sex""],
+    filters={""sex"": ""female""}
+)
+
+result = analysis.table1(
+    predictors=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    target=""performance_metric"",
+    controls=[""age""],
+    filters={""sex"": ""female""}
+)
+
+result = analysis.table1(
+    predictors=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    target=""performance_metric"",
+    controls=[""sex"", ""age""],
+    filters={""sex"": ""female""}
+)
+```","result = analysis.table1(
+    predictors=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    target=""performance_metric"",
+    controls=[],
+    filters={""sex"": ""female""}
+)
+
+result = analysis.table1(
+    predictors=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    target=""performance_metric"",
+    controls=[""sex""],
+    filters={""sex"": ""female""}
+)
+
+result = analysis.table1(
+    predictors=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    target=""performance_metric"",
+    controls=[""age""],
+    filters={""sex"": ""female""}
+)
+
+result = analysis.table1(
+    predictors=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    target=""performance_metric"",
+    controls=[""sex"", ""age""],
+    filters={""sex"": ""female""}
+)",,{},,{},False,False,False,False,False,[],STRUCTURE_FAIL,ValueError: Exactly one restricted analysis assignment is required.,format_validation,3.7679477999918163,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_007,table1,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate the four logistic regression models corresponding to Table 1 for junior national team athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.","```python
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""junior_national_team_status"",
+    controls=[],
+    filters={""team_level"": ""junior"", ""team_status"": ""national""}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""junior_national_team_status"",
+    controls=[""sex""],
+    filters={""team_level"": ""junior"", ""team_status"": ""national""}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""junior_national_team_status"",
+    controls=[""age""],
+    filters={""team_level"": ""junior"", ""team_status"": ""national""}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""junior_national_team_status"",
+    controls=[""sex"", ""age""],
+    filters={""team_level"": ""junior"", ""team_status"": ""national""}
+)
+```","result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""junior_national_team_status"",
+    controls=[],
+    filters={""team_level"": ""junior"", ""team_status"": ""national""}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""junior_national_team_status"",
+    controls=[""sex""],
+    filters={""team_level"": ""junior"", ""team_status"": ""national""}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""junior_national_team_status"",
+    controls=[""age""],
+    filters={""team_level"": ""junior"", ""team_status"": ""national""}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""junior_national_team_status"",
+    controls=[""sex"", ""age""],
+    filters={""team_level"": ""junior"", ""team_status"": ""national""}
+)",,{},,{},False,False,False,False,False,[],STRUCTURE_FAIL,ValueError: Exactly one restricted analysis assignment is required.,format_validation,5.379580199951306,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_008,table1,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate the four logistic regression models corresponding to Table 1 for athletes aged 20 and above using all eight public domains, with models using no controls, sex, age, and both sex and age.","```python
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""target_variable"",
+    controls=[],
+    filters={""age"": {""$gte"": 20}}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""target_variable"",
+    controls=[""sex""],
+    filters={""age"": {""$gte"": 20}}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""target_variable"",
+    controls=[""age""],
+    filters={""age"": {""$gte"": 20}}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""target_variable"",
+    controls=[""sex"", ""age""],
+    filters={""age"": {""$gte"": 20}}
+)
+```","result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""target_variable"",
+    controls=[],
+    filters={""age"": {""$gte"": 20}}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""target_variable"",
+    controls=[""sex""],
+    filters={""age"": {""$gte"": 20}}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""target_variable"",
+    controls=[""age""],
+    filters={""age"": {""$gte"": 20}}
+)
+
+result = analysis.table1(
+    predictors=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""target_variable"",
+    controls=[""sex"", ""age""],
+    filters={""age"": {""$gte"": 20}}
+)",,{},,{},False,False,False,False,False,[],STRUCTURE_FAIL,ValueError: Exactly one restricted analysis assignment is required.,format_validation,4.956665299949236,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_009,table2,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate the four multiple linear regression models corresponding to Table 2 for all athletes, with expertise_value as the continuous target.","```python
+result = analysis.table2(
+    predictors=[""expertise_value""],
+    filters={""athlete"": True},
+    group=""expertise_value""
+)
+```","result = analysis.table2(
+    predictors=[""expertise_value""],
+    filters={""athlete"": True},
+    group=""expertise_value""
+)",table2,"{""filters"": {""athlete"": true}, ""group"": ""expertise_value"", ""predictors"": [""expertise_value""]}",table2,"{""filters"": {}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={} but generated filters={'athlete': True}."", ""Expected group='all' but generated 'expertise_value'."", ""Expected 8 public domains but generated 1.""]",REQUEST_MATCH_FAIL,Expected filters={} but generated filters={'athlete': True}. Expected group='all' but generated 'expertise_value'. Expected 8 public domains but generated 1.,request_validation,0.6034622000297531,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_010,table2,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate the four multiple linear regression models corresponding to Table 2 for elite athletes, with expertise_value as the continuous target.","```python
+result = analysis.table2(
+    predictors=[""expertise_value""],
+    filters={""athlete_level"": ""elite""},
+    group=""expertise_value""
+)
+```","result = analysis.table2(
+    predictors=[""expertise_value""],
+    filters={""athlete_level"": ""elite""},
+    group=""expertise_value""
+)",table2,"{""filters"": {""athlete_level"": ""elite""}, ""group"": ""expertise_value"", ""predictors"": [""expertise_value""]}",table2,"{""filters"": {""expertise_group"": ""elite""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'expertise_group': 'elite'} but generated filters={'athlete_level': 'elite'}."", ""Expected group='all' but generated 'expertise_value'."", ""Expected 8 public domains but generated 1.""]",REQUEST_MATCH_FAIL,Expected filters={'expertise_group': 'elite'} but generated filters={'athlete_level': 'elite'}. Expected group='all' but generated 'expertise_value'. Expected 8 public domains but generated 1.,request_validation,0.5961432000622153,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_011,table2,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate the four multiple linear regression models corresponding to Table 2 for 3x3 basketball athletes, with expertise_value as the continuous target.","```python
+result = analysis.table2(
+    predictors=[""athlete_height"", ""athlete_weight"", ""athlete_age""],
+    filters={""athlete_position"": ""3x3"", ""athlete_expertise"": ""athlete""},
+    group=""athlete_position""
+)
+```","result = analysis.table2(
+    predictors=[""athlete_height"", ""athlete_weight"", ""athlete_age""],
+    filters={""athlete_position"": ""3x3"", ""athlete_expertise"": ""athlete""},
+    group=""athlete_position""
+)",table2,"{""filters"": {""athlete_position"": ""3x3"", ""athlete_expertise"": ""athlete""}, ""group"": ""athlete_position"", ""predictors"": [""athlete_height"", ""athlete_weight"", ""athlete_age""]}",table2,"{""filters"": {""sport"": ""3x3 basketball""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'sport': '3x3 basketball'} but generated filters={'athlete_position': '3x3', 'athlete_expertise': 'athlete'}."", ""Expected group='all' but generated 'athlete_position'."", ""Expected 8 public domains but generated 3.""]",REQUEST_MATCH_FAIL,"Expected filters={'sport': '3x3 basketball'} but generated filters={'athlete_position': '3x3', 'athlete_expertise': 'athlete'}. Expected group='all' but generated 'athlete_position'. Expected 8 public domains but generated 3.",request_validation,0.8980210999725387,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_012,table2,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate the four multiple linear regression models corresponding to Table 2 for ice hockey athletes, with expertise_value as the continuous target.","```python
+result = analysis.table2(
+    predictors=[""skill_1"", ""skill_2"", ""skill_3"", ""skill_4""],
+    filters={""sport"": ""ice_hockey"", ""athlete_type"": ""athlete""},
+    group=""expertise_level""
+)
+```","result = analysis.table2(
+    predictors=[""skill_1"", ""skill_2"", ""skill_3"", ""skill_4""],
+    filters={""sport"": ""ice_hockey"", ""athlete_type"": ""athlete""},
+    group=""expertise_level""
+)",table2,"{""filters"": {""sport"": ""ice_hockey"", ""athlete_type"": ""athlete""}, ""group"": ""expertise_level"", ""predictors"": [""skill_1"", ""skill_2"", ""skill_3"", ""skill_4""]}",table2,"{""filters"": {""sport"": ""ice hockey""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'sport': 'ice hockey'} but generated filters={'sport': 'ice_hockey', 'athlete_type': 'athlete'}."", ""Expected group='all' but generated 'expertise_level'."", ""Expected 8 public domains but generated 4.""]",REQUEST_MATCH_FAIL,"Expected filters={'sport': 'ice hockey'} but generated filters={'sport': 'ice_hockey', 'athlete_type': 'athlete'}. Expected group='all' but generated 'expertise_level'. Expected 8 public domains but generated 4.",request_validation,0.9278894999297336,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_013,table2,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate the four multiple linear regression models corresponding to Table 2 for volleyball athletes, with expertise_value as the continuous target.","```python
+result = analysis.table2(
+    predictors=[""skill_athlete"", ""speed_athlete"", ""strength_athlete"", ""agility_athlete""],
+    filters={""sport"": ""volleyball"", ""athlete_type"": ""athlete""},
+    group=""expertise_value""
+)
+```","result = analysis.table2(
+    predictors=[""skill_athlete"", ""speed_athlete"", ""strength_athlete"", ""agility_athlete""],
+    filters={""sport"": ""volleyball"", ""athlete_type"": ""athlete""},
+    group=""expertise_value""
+)",table2,"{""filters"": {""sport"": ""volleyball"", ""athlete_type"": ""athlete""}, ""group"": ""expertise_value"", ""predictors"": [""skill_athlete"", ""speed_athlete"", ""strength_athlete"", ""agility_athlete""]}",table2,"{""filters"": {""sport"": ""volleyball""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'sport': 'volleyball'} but generated filters={'sport': 'volleyball', 'athlete_type': 'athlete'}."", ""Expected group='all' but generated 'expertise_value'."", ""Expected 8 public domains but generated 4.""]",REQUEST_MATCH_FAIL,"Expected filters={'sport': 'volleyball'} but generated filters={'sport': 'volleyball', 'athlete_type': 'athlete'}. Expected group='all' but generated 'expertise_value'. Expected 8 public domains but generated 4.",request_validation,1.0638255999656394,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_014,table2,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate the four multiple linear regression models corresponding to Table 2 for female athletes, with expertise_value as the continuous target.","```python
+result = analysis.table2(
+    predictors=[""expertise_value""],
+    filters={""gender"": ""female""},
+    group=""expertise_value""
+)
+```","result = analysis.table2(
+    predictors=[""expertise_value""],
+    filters={""gender"": ""female""},
+    group=""expertise_value""
+)",table2,"{""filters"": {""gender"": ""female""}, ""group"": ""expertise_value"", ""predictors"": [""expertise_value""]}",table2,"{""filters"": {""sex"": ""female""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'sex': 'female'} but generated filters={'gender': 'female'}."", ""Expected group='all' but generated 'expertise_value'."", ""Expected 8 public domains but generated 1.""]",REQUEST_MATCH_FAIL,Expected filters={'sex': 'female'} but generated filters={'gender': 'female'}. Expected group='all' but generated 'expertise_value'. Expected 8 public domains but generated 1.,request_validation,0.5542872999794781,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_015,table2,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate the four multiple linear regression models corresponding to Table 2 for junior national team athletes, with expertise_value as the continuous target.","```python
+result = analysis.table2(
+    predictors=[""variable1"", ""variable2"", ""variable3"", ""variable4""],
+    filters={""team_level"": ""junior_national"", ""athlete_status"": ""active""},
+    group=""expertise_value""
+)
+```","result = analysis.table2(
+    predictors=[""variable1"", ""variable2"", ""variable3"", ""variable4""],
+    filters={""team_level"": ""junior_national"", ""athlete_status"": ""active""},
+    group=""expertise_value""
+)",table2,"{""filters"": {""team_level"": ""junior_national"", ""athlete_status"": ""active""}, ""group"": ""expertise_value"", ""predictors"": [""variable1"", ""variable2"", ""variable3"", ""variable4""]}",table2,"{""filters"": {""national_team"": ""Junior""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'national_team': 'Junior'} but generated filters={'team_level': 'junior_national', 'athlete_status': 'active'}."", ""Expected group='all' but generated 'expertise_value'."", ""Expected 8 public domains but generated 4.""]",REQUEST_MATCH_FAIL,"Expected filters={'national_team': 'Junior'} but generated filters={'team_level': 'junior_national', 'athlete_status': 'active'}. Expected group='all' but generated 'expertise_value'. Expected 8 public domains but generated 4.",request_validation,0.8725034999661148,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_016,table2,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate the four multiple linear regression models corresponding to Table 2 for athletes aged 20 and above, with expertise_value as the continuous target.","```python
+result = analysis.table2(
+    predictors=[""height"", ""weight"", ""age"", ""experience_years""],
+    filters={""age"": {""$gte"": 20}},
+    group=""expertise_value""
+)
+```","result = analysis.table2(
+    predictors=[""height"", ""weight"", ""age"", ""experience_years""],
+    filters={""age"": {""$gte"": 20}},
+    group=""expertise_value""
+)",table2,"{""filters"": {""age"": {""$gte"": 20}}, ""group"": ""expertise_value"", ""predictors"": [""height"", ""weight"", ""age"", ""experience_years""]}",table2,"{""filters"": {""age_group"": ""20_and_above""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'age_group': '20_and_above'} but generated filters={'age': {'$gte': 20}}."", ""Expected group='all' but generated 'expertise_value'."", ""Expected 8 public domains but generated 4.""]",REQUEST_MATCH_FAIL,Expected filters={'age_group': '20_and_above'} but generated filters={'age': {'$gte': 20}}. Expected group='all' but generated 'expertise_value'. Expected 8 public domains but generated 4.,request_validation,0.771633299998939,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_017,figure1,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate Figure 1 for all athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.","result = analysis.figure1(
+    variables=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""athlete_status"": ""active""}
+)","result = analysis.figure1(
+    variables=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""athlete_status"": ""active""}
+)",figure1,"{""target"": ""expertise_value"", ""group_field"": ""elite_status"", ""correlation_threshold"": 0.15, ""variance_iterations"": 1000, ""filters"": {""athlete_status"": ""active""}, ""variables"": [""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""]}",figure1,"{""target"": ""expertise_value"", ""group_field"": ""elite_status"", ""correlation_threshold"": 0.15, ""variance_iterations"": 1000, ""filters"": {}, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={} but generated filters={'athlete_status': 'active'}."", ""Expected exactly the eight approved public domains in variables.""]",REQUEST_MATCH_FAIL,Expected filters={} but generated filters={'athlete_status': 'active'}. Expected exactly the eight approved public domains in variables.,request_validation,1.538538800086826,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_018,figure1,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate Figure 1 for elite athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.","result = analysis.figure1(
+    variables=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""elite_status"": ""elite""}
+)","result = analysis.figure1(
+    variables=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""elite_status"": ""elite""}
+)",figure1,"{""target"": ""expertise_value"", ""group_field"": ""elite_status"", ""correlation_threshold"": 0.15, ""variance_iterations"": 1000, ""filters"": {""elite_status"": ""elite""}, ""variables"": [""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""]}",figure1,"{""target"": ""expertise_value"", ""group_field"": ""elite_status"", ""correlation_threshold"": 0.15, ""variance_iterations"": 1000, ""filters"": {""expertise_group"": ""elite""}, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}."", ""Expected exactly the eight approved public domains in variables.""]",REQUEST_MATCH_FAIL,Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}. Expected exactly the eight approved public domains in variables.,request_validation,1.5810799000319093,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_019,figure1,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate Figure 1 for 3x3 basketball athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.","result = analysis.figure1(
+    variables=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""athlete_count"": 3}
+)","result = analysis.figure1(
+    variables=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""athlete_count"": 3}
+)",figure1,"{""target"": ""expertise_value"", ""group_field"": ""elite_status"", ""correlation_threshold"": 0.15, ""variance_iterations"": 1000, ""filters"": {""athlete_count"": 3}, ""variables"": [""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""]}",figure1,"{""target"": ""expertise_value"", ""group_field"": ""elite_status"", ""correlation_threshold"": 0.15, ""variance_iterations"": 1000, ""filters"": {""sport"": ""3x3 basketball""}, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'sport': '3x3 basketball'} but generated filters={'athlete_count': 3}."", ""Expected exactly the eight approved public domains in variables.""]",REQUEST_MATCH_FAIL,Expected filters={'sport': '3x3 basketball'} but generated filters={'athlete_count': 3}. Expected exactly the eight approved public domains in variables.,request_validation,1.5523514999076724,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_020,figure1,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate Figure 1 for ice hockey athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.","result = analysis.figure1(
+    variables=[""physical"", ""technical"", ""tactical"", ""mental"", ""biomechanical"", ""psychological"", ""strength"", ""endurance""],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""sport"": ""ice_hockey"", ""public_domain"": True}
+)","result = analysis.figure1(
+    variables=[""physical"", ""technical"", ""tactical"", ""mental"", ""biomechanical"", ""psychological"", ""strength"", ""endurance""],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""sport"": ""ice_hockey"", ""public_domain"": True}
+)",figure1,"{""target"": ""expertise_value"", ""group_field"": ""elite_status"", ""correlation_threshold"": 0.15, ""variance_iterations"": 1000, ""filters"": {""sport"": ""ice_hockey"", ""public_domain"": true}, ""variables"": [""physical"", ""technical"", ""tactical"", ""mental"", ""biomechanical"", ""psychological"", ""strength"", ""endurance""]}",figure1,"{""target"": ""expertise_value"", ""group_field"": ""elite_status"", ""correlation_threshold"": 0.15, ""variance_iterations"": 1000, ""filters"": {""sport"": ""ice hockey""}, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'sport': 'ice hockey'} but generated filters={'sport': 'ice_hockey', 'public_domain': True}."", ""Expected exactly the eight approved public domains in variables.""]",REQUEST_MATCH_FAIL,"Expected filters={'sport': 'ice hockey'} but generated filters={'sport': 'ice_hockey', 'public_domain': True}. Expected exactly the eight approved public domains in variables.",request_validation,1.4189846999943256,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_021,figure1,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate Figure 1 for volleyball athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.","result = analysis.figure1(
+    variables=[""physical"", ""technical"", ""tactical"", ""mental"", ""biomechanical"", ""strength"", ""endurance"", ""agility""],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""sport"": ""volleyball""}
+)","result = analysis.figure1(
+    variables=[""physical"", ""technical"", ""tactical"", ""mental"", ""biomechanical"", ""strength"", ""endurance"", ""agility""],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""sport"": ""volleyball""}
+)",figure1,"{""target"": ""expertise_value"", ""group_field"": ""elite_status"", ""correlation_threshold"": 0.15, ""variance_iterations"": 1000, ""filters"": {""sport"": ""volleyball""}, ""variables"": [""physical"", ""technical"", ""tactical"", ""mental"", ""biomechanical"", ""strength"", ""endurance"", ""agility""]}",figure1,"{""target"": ""expertise_value"", ""group_field"": ""elite_status"", ""correlation_threshold"": 0.15, ""variance_iterations"": 1000, ""filters"": {""sport"": ""volleyball""}, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected exactly the eight approved public domains in variables.""]",REQUEST_MATCH_FAIL,Expected exactly the eight approved public domains in variables.,request_validation,1.3447415999835357,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_022,figure1,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate Figure 1 for female athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.","result = analysis.figure1(
+    variables=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""gender"": ""female""}
+)","result = analysis.figure1(
+    variables=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""gender"": ""female""}
+)",figure1,"{""target"": ""expertise_value"", ""group_field"": ""elite_status"", ""correlation_threshold"": 0.15, ""variance_iterations"": 1000, ""filters"": {""gender"": ""female""}, ""variables"": [""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""]}",figure1,"{""target"": ""expertise_value"", ""group_field"": ""elite_status"", ""correlation_threshold"": 0.15, ""variance_iterations"": 1000, ""filters"": {""sex"": ""female""}, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'sex': 'female'} but generated filters={'gender': 'female'}."", ""Expected exactly the eight approved public domains in variables.""]",REQUEST_MATCH_FAIL,Expected filters={'sex': 'female'} but generated filters={'gender': 'female'}. Expected exactly the eight approved public domains in variables.,request_validation,1.5133734000846744,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_023,figure1,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate Figure 1 for junior national team athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.","result = analysis.figure1(
+    variables=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""team_level"": ""junior_national""}
+)","result = analysis.figure1(
+    variables=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""team_level"": ""junior_national""}
+)",figure1,"{""target"": ""expertise_value"", ""group_field"": ""elite_status"", ""correlation_threshold"": 0.15, ""variance_iterations"": 1000, ""filters"": {""team_level"": ""junior_national""}, ""variables"": [""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""]}",figure1,"{""target"": ""expertise_value"", ""group_field"": ""elite_status"", ""correlation_threshold"": 0.15, ""variance_iterations"": 1000, ""filters"": {""national_team"": ""Junior""}, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'national_team': 'Junior'} but generated filters={'team_level': 'junior_national'}."", ""Expected exactly the eight approved public domains in variables.""]",REQUEST_MATCH_FAIL,Expected filters={'national_team': 'Junior'} but generated filters={'team_level': 'junior_national'}. Expected exactly the eight approved public domains in variables.,request_validation,1.5687202999833971,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_024,figure1,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate Figure 1 for athletes aged 20 and above using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.","result = analysis.figure1(
+    variables=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""age"": {""$gte"": 20}}
+)","result = analysis.figure1(
+    variables=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""age"": {""$gte"": 20}}
+)",figure1,"{""target"": ""expertise_value"", ""group_field"": ""elite_status"", ""correlation_threshold"": 0.15, ""variance_iterations"": 1000, ""filters"": {""age"": {""$gte"": 20}}, ""variables"": [""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""]}",figure1,"{""target"": ""expertise_value"", ""group_field"": ""elite_status"", ""correlation_threshold"": 0.15, ""variance_iterations"": 1000, ""filters"": {""age_group"": ""20_and_above""}, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'age_group': '20_and_above'} but generated filters={'age': {'$gte': 20}}."", ""Expected exactly the eight approved public domains in variables.""]",REQUEST_MATCH_FAIL,Expected filters={'age_group': '20_and_above'} but generated filters={'age': {'$gte': 20}}. Expected exactly the eight approved public domains in variables.,request_validation,1.5773165000136942,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_025,correlation,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,Calculate pairwise Pearson correlations among all eight public domains for all athletes.,"```python
+result = analysis.correlation(
+    variables=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    method=""pearson""
+)
+```","result = analysis.correlation(
+    variables=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    method=""pearson""
+)",correlation,"{""filters"": {}, ""method"": ""pearson"", ""visualization"": true, ""variables"": [""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""]}",correlation,"{""filters"": {}, ""method"": ""pearson"", ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected exactly the eight approved public domains in variables.""]",REQUEST_MATCH_FAIL,Expected exactly the eight approved public domains in variables.,request_validation,1.0654719000449404,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_026,correlation,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,Calculate pairwise Pearson correlations among all eight public domains for elite athletes.,"```python
+result = analysis.correlation(
+    variables=[""Athleticism"", ""Strength"", ""Speed"", ""Endurance"", ""Agility"", ""Power"", ""Flexibility"", ""Coordination""],
+    filters={""athlete_level"": ""elite""},
+    method=""pearson""
+)
+```","result = analysis.correlation(
+    variables=[""Athleticism"", ""Strength"", ""Speed"", ""Endurance"", ""Agility"", ""Power"", ""Flexibility"", ""Coordination""],
+    filters={""athlete_level"": ""elite""},
+    method=""pearson""
+)",correlation,"{""filters"": {""athlete_level"": ""elite""}, ""method"": ""pearson"", ""visualization"": true, ""variables"": [""Athleticism"", ""Strength"", ""Speed"", ""Endurance"", ""Agility"", ""Power"", ""Flexibility"", ""Coordination""]}",correlation,"{""filters"": {""expertise_group"": ""elite""}, ""method"": ""pearson"", ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'expertise_group': 'elite'} but generated filters={'athlete_level': 'elite'}."", ""Expected exactly the eight approved public domains in variables.""]",REQUEST_MATCH_FAIL,Expected filters={'expertise_group': 'elite'} but generated filters={'athlete_level': 'elite'}. Expected exactly the eight approved public domains in variables.,request_validation,0.9097637999802828,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_027,correlation,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,Calculate pairwise Pearson correlations among all eight public domains for 3x3 basketball athletes.,"result = analysis.correlation(
+    variables=[""Athleticism"", ""Shooting"", ""BallHandling"", ""Defense"", ""Footwork"", ""Passing"", ""Mental"", ""Teamwork""],
+    filters={""Sport"": ""Basketball"", ""Position"": ""3x3""},
+    method=""pearson""
+)","result = analysis.correlation(
+    variables=[""Athleticism"", ""Shooting"", ""BallHandling"", ""Defense"", ""Footwork"", ""Passing"", ""Mental"", ""Teamwork""],
+    filters={""Sport"": ""Basketball"", ""Position"": ""3x3""},
+    method=""pearson""
+)",correlation,"{""filters"": {""Sport"": ""Basketball"", ""Position"": ""3x3""}, ""method"": ""pearson"", ""visualization"": true, ""variables"": [""Athleticism"", ""Shooting"", ""BallHandling"", ""Defense"", ""Footwork"", ""Passing"", ""Mental"", ""Teamwork""]}",correlation,"{""filters"": {""sport"": ""3x3 basketball""}, ""method"": ""pearson"", ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'sport': '3x3 basketball'} but generated filters={'Sport': 'Basketball', 'Position': '3x3'}."", ""Expected exactly the eight approved public domains in variables.""]",REQUEST_MATCH_FAIL,"Expected filters={'sport': '3x3 basketball'} but generated filters={'Sport': 'Basketball', 'Position': '3x3'}. Expected exactly the eight approved public domains in variables.",request_validation,0.9964439000468701,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_028,correlation,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,Calculate pairwise Pearson correlations among all eight public domains for ice hockey athletes.,"```python
+result = analysis.correlation(
+    variables=[""Athleticism"", ""Agility"", ""Strength"", ""Speed"", ""Power"", ""Endurance"", ""Coordination"", ""Technique""],
+    filters={""sport"": ""ice_hockey"", ""public_domain"": True},
+    method=""pearson""
+)
+```","result = analysis.correlation(
+    variables=[""Athleticism"", ""Agility"", ""Strength"", ""Speed"", ""Power"", ""Endurance"", ""Coordination"", ""Technique""],
+    filters={""sport"": ""ice_hockey"", ""public_domain"": True},
+    method=""pearson""
+)",correlation,"{""filters"": {""sport"": ""ice_hockey"", ""public_domain"": true}, ""method"": ""pearson"", ""visualization"": true, ""variables"": [""Athleticism"", ""Agility"", ""Strength"", ""Speed"", ""Power"", ""Endurance"", ""Coordination"", ""Technique""]}",correlation,"{""filters"": {""sport"": ""ice hockey""}, ""method"": ""pearson"", ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'sport': 'ice hockey'} but generated filters={'sport': 'ice_hockey', 'public_domain': True}."", ""Expected exactly the eight approved public domains in variables.""]",REQUEST_MATCH_FAIL,"Expected filters={'sport': 'ice hockey'} but generated filters={'sport': 'ice_hockey', 'public_domain': True}. Expected exactly the eight approved public domains in variables.",request_validation,1.0007107999408618,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_029,correlation,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,Calculate pairwise Pearson correlations among all eight public domains for volleyball athletes.,"```python
+result = analysis.correlation(
+    variables=[""Athleticism"", ""Strength"", ""Power"", ""Speed"", ""Agility"", ""Coordination"", ""Flexibility"", ""Technique""],
+    filters={""sport"": ""volleyball"", ""athlete_type"": ""public""},
+    method=""pearson""
+)
+```","result = analysis.correlation(
+    variables=[""Athleticism"", ""Strength"", ""Power"", ""Speed"", ""Agility"", ""Coordination"", ""Flexibility"", ""Technique""],
+    filters={""sport"": ""volleyball"", ""athlete_type"": ""public""},
+    method=""pearson""
+)",correlation,"{""filters"": {""sport"": ""volleyball"", ""athlete_type"": ""public""}, ""method"": ""pearson"", ""visualization"": true, ""variables"": [""Athleticism"", ""Strength"", ""Power"", ""Speed"", ""Agility"", ""Coordination"", ""Flexibility"", ""Technique""]}",correlation,"{""filters"": {""sport"": ""volleyball""}, ""method"": ""pearson"", ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'sport': 'volleyball'} but generated filters={'sport': 'volleyball', 'athlete_type': 'public'}."", ""Expected exactly the eight approved public domains in variables.""]",REQUEST_MATCH_FAIL,"Expected filters={'sport': 'volleyball'} but generated filters={'sport': 'volleyball', 'athlete_type': 'public'}. Expected exactly the eight approved public domains in variables.",request_validation,1.0109626000048593,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_030,correlation,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,Calculate pairwise Pearson correlations among all eight public domains for female athletes.,"```python
+result = analysis.correlation(
+    variables=[""Athleticism"", ""Agility"", ""Strength"", ""Endurance"", ""Flexibility"", ""Power"", ""Speed"", ""Coordination""],
+    filters={""gender"": ""female""},
+    method=""pearson""
+)
+```","result = analysis.correlation(
+    variables=[""Athleticism"", ""Agility"", ""Strength"", ""Endurance"", ""Flexibility"", ""Power"", ""Speed"", ""Coordination""],
+    filters={""gender"": ""female""},
+    method=""pearson""
+)",correlation,"{""filters"": {""gender"": ""female""}, ""method"": ""pearson"", ""visualization"": true, ""variables"": [""Athleticism"", ""Agility"", ""Strength"", ""Endurance"", ""Flexibility"", ""Power"", ""Speed"", ""Coordination""]}",correlation,"{""filters"": {""sex"": ""female""}, ""method"": ""pearson"", ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'sex': 'female'} but generated filters={'gender': 'female'}."", ""Expected exactly the eight approved public domains in variables.""]",REQUEST_MATCH_FAIL,Expected filters={'sex': 'female'} but generated filters={'gender': 'female'}. Expected exactly the eight approved public domains in variables.,request_validation,0.9255296000046656,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_031,correlation,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,Calculate pairwise Pearson correlations among all eight public domains for junior national team athletes.,"```python
+result = analysis.correlation(
+    variables=[""Physical"", ""Technical"", ""Tactical"", ""Mental"", ""Biological"", ""Psychological"", ""Social"", ""Medical""],
+    filters={""athlete_level"": ""junior"", ""team_type"": ""national""},
+    method=""pearson""
+)
+```","result = analysis.correlation(
+    variables=[""Physical"", ""Technical"", ""Tactical"", ""Mental"", ""Biological"", ""Psychological"", ""Social"", ""Medical""],
+    filters={""athlete_level"": ""junior"", ""team_type"": ""national""},
+    method=""pearson""
+)",correlation,"{""filters"": {""athlete_level"": ""junior"", ""team_type"": ""national""}, ""method"": ""pearson"", ""visualization"": true, ""variables"": [""Physical"", ""Technical"", ""Tactical"", ""Mental"", ""Biological"", ""Psychological"", ""Social"", ""Medical""]}",correlation,"{""filters"": {""national_team"": ""Junior""}, ""method"": ""pearson"", ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'national_team': 'Junior'} but generated filters={'athlete_level': 'junior', 'team_type': 'national'}."", ""Expected exactly the eight approved public domains in variables.""]",REQUEST_MATCH_FAIL,"Expected filters={'national_team': 'Junior'} but generated filters={'athlete_level': 'junior', 'team_type': 'national'}. Expected exactly the eight approved public domains in variables.",request_validation,1.0188752000685781,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_032,correlation,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,Calculate pairwise Pearson correlations among all eight public domains for athletes aged 20 and above.,"```python
+result = analysis.correlation(
+    variables=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    filters={""age"": {""$gte"": 20}},
+    method=""pearson""
+)
+```","result = analysis.correlation(
+    variables=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    filters={""age"": {""$gte"": 20}},
+    method=""pearson""
+)",correlation,"{""filters"": {""age"": {""$gte"": 20}}, ""method"": ""pearson"", ""visualization"": true, ""variables"": [""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""]}",correlation,"{""filters"": {""age_group"": ""20_and_above""}, ""method"": ""pearson"", ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'age_group': '20_and_above'} but generated filters={'age': {'$gte': 20}}."", ""Expected exactly the eight approved public domains in variables.""]",REQUEST_MATCH_FAIL,Expected filters={'age_group': '20_and_above'} but generated filters={'age': {'$gte': 20}}. Expected exactly the eight approved public domains in variables.,request_validation,1.001424100017175,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_033,variance_analysis,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Run variance analysis for all athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.","```python
+result = analysis.variance_analysis(
+    variables=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    group_field=""expertise_level"",
+    groups=[""higher_expertise"", ""comparison""],
+    iterations=100,
+    filters={""group"": ""all_athletes""},
+    visualization=False
+)
+```","result = analysis.variance_analysis(
+    variables=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    group_field=""expertise_level"",
+    groups=[""higher_expertise"", ""comparison""],
+    iterations=100,
+    filters={""group"": ""all_athletes""},
+    visualization=False
+)",variance_analysis,"{""group_field"": ""expertise_level"", ""groups"": [""higher_expertise"", ""comparison""], ""iterations"": 100, ""filters"": {""group"": ""all_athletes""}, ""visualization"": false, ""variables"": [""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""]}",variance_analysis,"{""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={} but generated filters={'group': 'all_athletes'}."", ""Expected group_field='elite_status' but generated 'expertise_level'."", ""Expected groups=['elite', 'semi_elite'] but generated ['higher_expertise', 'comparison']."", ""Expected iterations=1000 but generated 100."", ""Expected exactly the eight approved public domains in variables."", ""Expected visualization=True but generated False.""]",REQUEST_MATCH_FAIL,"Expected filters={} but generated filters={'group': 'all_athletes'}. Expected group_field='elite_status' but generated 'expertise_level'. Expected groups=['elite', 'semi_elite'] but generated ['higher_expertise', 'comparison']. Expected iterations=1000 but generated 100. Expected exactly the eight approved public domains in variables. Expected visualization=True but generated False.",request_validation,1.3788942999672145,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_034,variance_analysis,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Run variance analysis for elite athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.","result = analysis.variance_analysis(
+    variables=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    group_field=""athlete_expertise"",
+    groups=[""elite"", ""comparison""],
+    iterations=100,
+    filters={""elite"": True, ""athlete_type"": ""elite""},
+    visualization=False
+)","result = analysis.variance_analysis(
+    variables=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    group_field=""athlete_expertise"",
+    groups=[""elite"", ""comparison""],
+    iterations=100,
+    filters={""elite"": True, ""athlete_type"": ""elite""},
+    visualization=False
+)",variance_analysis,"{""group_field"": ""athlete_expertise"", ""groups"": [""elite"", ""comparison""], ""iterations"": 100, ""filters"": {""elite"": true, ""athlete_type"": ""elite""}, ""visualization"": false, ""variables"": [""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""]}",variance_analysis,"{""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""expertise_group"": ""elite""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'expertise_group': 'elite'} but generated filters={'elite': True, 'athlete_type': 'elite'}."", ""Expected group_field='elite_status' but generated 'athlete_expertise'."", ""Expected groups=['elite', 'semi_elite'] but generated ['elite', 'comparison']."", ""Expected iterations=1000 but generated 100."", ""Expected exactly the eight approved public domains in variables."", ""Expected visualization=True but generated False.""]",REQUEST_MATCH_FAIL,"Expected filters={'expertise_group': 'elite'} but generated filters={'elite': True, 'athlete_type': 'elite'}. Expected group_field='elite_status' but generated 'athlete_expertise'. Expected groups=['elite', 'semi_elite'] but generated ['elite', 'comparison']. Expected iterations=1000 but generated 100. Expected exactly the eight approved public domains in variables. Expected visualization=True but generated False.",request_validation,1.4180984999984503,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_035,variance_analysis,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Run variance analysis for 3x3 basketball athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.","```python
+result = analysis.variance_analysis(
+    variables=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    group_field=""expertise_level"",
+    groups=[""higher_expertise"", ""comparison""],
+    iterations=100,
+    filters={""athlete_type"": ""basketball"", ""athlete_size_category"": ""3x3""},
+    visualization=False
+)
+```","result = analysis.variance_analysis(
+    variables=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    group_field=""expertise_level"",
+    groups=[""higher_expertise"", ""comparison""],
+    iterations=100,
+    filters={""athlete_type"": ""basketball"", ""athlete_size_category"": ""3x3""},
+    visualization=False
+)",variance_analysis,"{""group_field"": ""expertise_level"", ""groups"": [""higher_expertise"", ""comparison""], ""iterations"": 100, ""filters"": {""athlete_type"": ""basketball"", ""athlete_size_category"": ""3x3""}, ""visualization"": false, ""variables"": [""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""]}",variance_analysis,"{""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""sport"": ""3x3 basketball""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'sport': '3x3 basketball'} but generated filters={'athlete_type': 'basketball', 'athlete_size_category': '3x3'}."", ""Expected group_field='elite_status' but generated 'expertise_level'."", ""Expected groups=['elite', 'semi_elite'] but generated ['higher_expertise', 'comparison']."", ""Expected iterations=1000 but generated 100."", ""Expected exactly the eight approved public domains in variables."", ""Expected visualization=True but generated False.""]",REQUEST_MATCH_FAIL,"Expected filters={'sport': '3x3 basketball'} but generated filters={'athlete_type': 'basketball', 'athlete_size_category': '3x3'}. Expected group_field='elite_status' but generated 'expertise_level'. Expected groups=['elite', 'semi_elite'] but generated ['higher_expertise', 'comparison']. Expected iterations=1000 but generated 100. Expected exactly the eight approved public domains in variables. Expected visualization=True but generated False.",request_validation,1.7889037999557331,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_036,variance_analysis,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Run variance analysis for ice hockey athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.","result = analysis.variance_analysis(
+    variables=[""physical"", ""technical"", ""tactical"", ""mental"", ""biomechanical"", ""strength"", ""endurance"", ""psychological""],
+    group_field=""expertise_level"",
+    groups=[""higher_expertise"", ""comparison""],
+    iterations=100,
+    filters={""athlete_sport"": ""ice_hockey"", ""group"": ""public""},
+    visualization=""boxplot""
+)","result = analysis.variance_analysis(
+    variables=[""physical"", ""technical"", ""tactical"", ""mental"", ""biomechanical"", ""strength"", ""endurance"", ""psychological""],
+    group_field=""expertise_level"",
+    groups=[""higher_expertise"", ""comparison""],
+    iterations=100,
+    filters={""athlete_sport"": ""ice_hockey"", ""group"": ""public""},
+    visualization=""boxplot""
+)",variance_analysis,"{""group_field"": ""expertise_level"", ""groups"": [""higher_expertise"", ""comparison""], ""iterations"": 100, ""filters"": {""athlete_sport"": ""ice_hockey"", ""group"": ""public""}, ""visualization"": ""boxplot"", ""variables"": [""physical"", ""technical"", ""tactical"", ""mental"", ""biomechanical"", ""strength"", ""endurance"", ""psychological""]}",variance_analysis,"{""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""sport"": ""ice hockey""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'sport': 'ice hockey'} but generated filters={'athlete_sport': 'ice_hockey', 'group': 'public'}."", ""Expected group_field='elite_status' but generated 'expertise_level'."", ""Expected groups=['elite', 'semi_elite'] but generated ['higher_expertise', 'comparison']."", ""Expected iterations=1000 but generated 100."", ""Expected exactly the eight approved public domains in variables."", ""Expected visualization=True but generated 'boxplot'.""]",REQUEST_MATCH_FAIL,"Expected filters={'sport': 'ice hockey'} but generated filters={'athlete_sport': 'ice_hockey', 'group': 'public'}. Expected group_field='elite_status' but generated 'expertise_level'. Expected groups=['elite', 'semi_elite'] but generated ['higher_expertise', 'comparison']. Expected iterations=1000 but generated 100. Expected exactly the eight approved public domains in variables. Expected visualization=True but generated 'boxplot'.",request_validation,1.4648017999716103,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_037,variance_analysis,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Run variance analysis for volleyball athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.","result = analysis.variance_analysis(
+    variables=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    group_field=""expertise_level"",
+    groups=[""higher_expertise"", ""comparison""],
+    iterations=100,
+    filters={""athlete_type"": ""volleyball"", ""public_domain"": True},
+    visualization=False
+)","result = analysis.variance_analysis(
+    variables=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    group_field=""expertise_level"",
+    groups=[""higher_expertise"", ""comparison""],
+    iterations=100,
+    filters={""athlete_type"": ""volleyball"", ""public_domain"": True},
+    visualization=False
+)",variance_analysis,"{""group_field"": ""expertise_level"", ""groups"": [""higher_expertise"", ""comparison""], ""iterations"": 100, ""filters"": {""athlete_type"": ""volleyball"", ""public_domain"": true}, ""visualization"": false, ""variables"": [""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""]}",variance_analysis,"{""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""sport"": ""volleyball""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'sport': 'volleyball'} but generated filters={'athlete_type': 'volleyball', 'public_domain': True}."", ""Expected group_field='elite_status' but generated 'expertise_level'."", ""Expected groups=['elite', 'semi_elite'] but generated ['higher_expertise', 'comparison']."", ""Expected iterations=1000 but generated 100."", ""Expected exactly the eight approved public domains in variables."", ""Expected visualization=True but generated False.""]",REQUEST_MATCH_FAIL,"Expected filters={'sport': 'volleyball'} but generated filters={'athlete_type': 'volleyball', 'public_domain': True}. Expected group_field='elite_status' but generated 'expertise_level'. Expected groups=['elite', 'semi_elite'] but generated ['higher_expertise', 'comparison']. Expected iterations=1000 but generated 100. Expected exactly the eight approved public domains in variables. Expected visualization=True but generated False.",request_validation,1.4523920000065118,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_038,variance_analysis,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Run variance analysis for female athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.","result = analysis.variance_analysis(
+    variables=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    group_field=""expertise_level"",
+    groups=[""higher_expertise"", ""comparison""],
+    iterations=100,
+    filters={""gender"": ""female"", ""group"": ""public""},
+    visualization=False
+)","result = analysis.variance_analysis(
+    variables=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    group_field=""expertise_level"",
+    groups=[""higher_expertise"", ""comparison""],
+    iterations=100,
+    filters={""gender"": ""female"", ""group"": ""public""},
+    visualization=False
+)",variance_analysis,"{""group_field"": ""expertise_level"", ""groups"": [""higher_expertise"", ""comparison""], ""iterations"": 100, ""filters"": {""gender"": ""female"", ""group"": ""public""}, ""visualization"": false, ""variables"": [""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""]}",variance_analysis,"{""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""sex"": ""female""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'sex': 'female'} but generated filters={'gender': 'female', 'group': 'public'}."", ""Expected group_field='elite_status' but generated 'expertise_level'."", ""Expected groups=['elite', 'semi_elite'] but generated ['higher_expertise', 'comparison']."", ""Expected iterations=1000 but generated 100."", ""Expected exactly the eight approved public domains in variables."", ""Expected visualization=True but generated False.""]",REQUEST_MATCH_FAIL,"Expected filters={'sex': 'female'} but generated filters={'gender': 'female', 'group': 'public'}. Expected group_field='elite_status' but generated 'expertise_level'. Expected groups=['elite', 'semi_elite'] but generated ['higher_expertise', 'comparison']. Expected iterations=1000 but generated 100. Expected exactly the eight approved public domains in variables. Expected visualization=True but generated False.",request_validation,1.3631959999911487,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_039,variance_analysis,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Run variance analysis for junior national team athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.","result = analysis.variance_analysis(
+    variables=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    group_field=""expertise_level"",
+    groups=[""higher_expertise"", ""comparison""],
+    iterations=100,
+    filters={""team_level"": ""junior_national"", ""public_domain"": True},
+    visualization=False
+)","result = analysis.variance_analysis(
+    variables=[""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""],
+    group_field=""expertise_level"",
+    groups=[""higher_expertise"", ""comparison""],
+    iterations=100,
+    filters={""team_level"": ""junior_national"", ""public_domain"": True},
+    visualization=False
+)",variance_analysis,"{""group_field"": ""expertise_level"", ""groups"": [""higher_expertise"", ""comparison""], ""iterations"": 100, ""filters"": {""team_level"": ""junior_national"", ""public_domain"": true}, ""visualization"": false, ""variables"": [""domain1"", ""domain2"", ""domain3"", ""domain4"", ""domain5"", ""domain6"", ""domain7"", ""domain8""]}",variance_analysis,"{""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""national_team"": ""Junior""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'national_team': 'Junior'} but generated filters={'team_level': 'junior_national', 'public_domain': True}."", ""Expected group_field='elite_status' but generated 'expertise_level'."", ""Expected groups=['elite', 'semi_elite'] but generated ['higher_expertise', 'comparison']."", ""Expected iterations=1000 but generated 100."", ""Expected exactly the eight approved public domains in variables."", ""Expected visualization=True but generated False.""]",REQUEST_MATCH_FAIL,"Expected filters={'national_team': 'Junior'} but generated filters={'team_level': 'junior_national', 'public_domain': True}. Expected group_field='elite_status' but generated 'expertise_level'. Expected groups=['elite', 'semi_elite'] but generated ['higher_expertise', 'comparison']. Expected iterations=1000 but generated 100. Expected exactly the eight approved public domains in variables. Expected visualization=True but generated False.",request_validation,1.4254738999297842,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_040,variance_analysis,basic_interface,7d15561a1ba8dd3c5df5d19be4c9a32b4a20c0e3bad2035cf47c2fe66c0e688a,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Run variance analysis for athletes aged 20 and above across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.","```python
+result = analysis.variance_analysis(
+    variables=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    group_field=""expertise_level"",
+    groups=[""higher_expertise"", ""comparison""],
+    iterations=100,
+    filters={""age"": {""$gte"": 20}},
+    visualization=True
+)
+```","result = analysis.variance_analysis(
+    variables=[""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""],
+    group_field=""expertise_level"",
+    groups=[""higher_expertise"", ""comparison""],
+    iterations=100,
+    filters={""age"": {""$gte"": 20}},
+    visualization=True
+)",variance_analysis,"{""group_field"": ""expertise_level"", ""groups"": [""higher_expertise"", ""comparison""], ""iterations"": 100, ""filters"": {""age"": {""$gte"": 20}}, ""visualization"": true, ""variables"": [""public_domain_1"", ""public_domain_2"", ""public_domain_3"", ""public_domain_4"", ""public_domain_5"", ""public_domain_6"", ""public_domain_7"", ""public_domain_8""]}",variance_analysis,"{""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""age_group"": ""20_and_above""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'age_group': '20_and_above'} but generated filters={'age': {'$gte': 20}}."", ""Expected group_field='elite_status' but generated 'expertise_level'."", ""Expected groups=['elite', 'semi_elite'] but generated ['higher_expertise', 'comparison']."", ""Expected iterations=1000 but generated 100."", ""Expected exactly the eight approved public domains in variables.""]",REQUEST_MATCH_FAIL,"Expected filters={'age_group': '20_and_above'} but generated filters={'age': {'$gte': 20}}. Expected group_field='elite_status' but generated 'expertise_level'. Expected groups=['elite', 'semi_elite'] but generated ['higher_expertise', 'comparison']. Expected iterations=1000 but generated 100. Expected exactly the eight approved public domains in variables.",request_validation,1.6594889999832958,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_001,table1,defined,ae82952d8bab5baf2e23ffd6c25c9126b52d7f816e4972c0929c684b179c6de4,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate the four logistic regression models corresponding to Table 1 for all athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.","```python
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[],
+    filters={}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""sex""],
+    filters={}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""age""],
+    filters={}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""age"", ""sex""],
+    filters={}
+)
+```","result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[],
+    filters={}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""sex""],
+    filters={}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""age""],
+    filters={}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""age"", ""sex""],
+    filters={}
+)",,{},,{},False,False,False,False,False,[],STRUCTURE_FAIL,ValueError: Exactly one restricted analysis assignment is required.,format_validation,5.039715400082059,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_002,table1,defined,ae82952d8bab5baf2e23ffd6c25c9126b52d7f816e4972c0929c684b179c6de4,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate the four logistic regression models corresponding to Table 1 for elite athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.","```python
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[],
+    filters={""elite_status"": ""elite""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""sex""],
+    filters={""elite_status"": ""elite""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""age""],
+    filters={""elite_status"": ""elite""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""sex"", ""age""],
+    filters={""elite_status"": ""elite""}
+)
+```","result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[],
+    filters={""elite_status"": ""elite""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""sex""],
+    filters={""elite_status"": ""elite""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""age""],
+    filters={""elite_status"": ""elite""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""sex"", ""age""],
+    filters={""elite_status"": ""elite""}
+)",,{},,{},False,False,False,False,False,[],STRUCTURE_FAIL,ValueError: Exactly one restricted analysis assignment is required.,format_validation,5.197458500042558,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_003,table1,defined,ae82952d8bab5baf2e23ffd6c25c9126b52d7f816e4972c0929c684b179c6de4,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate the four logistic regression models corresponding to Table 1 for 3x3 basketball athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.","```python
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[],
+    filters={""sport"": ""3x3 basketball""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""sex""],
+    filters={""sport"": ""3x3 basketball""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""age""],
+    filters={""sport"": ""3x3 basketball""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""sex"", ""age""],
+    filters={""sport"": ""3x3 basketball""}
+)
+```","result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[],
+    filters={""sport"": ""3x3 basketball""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""sex""],
+    filters={""sport"": ""3x3 basketball""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""age""],
+    filters={""sport"": ""3x3 basketball""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""sex"", ""age""],
+    filters={""sport"": ""3x3 basketball""}
+)",,{},,{},False,False,False,False,False,[],STRUCTURE_FAIL,ValueError: Exactly one restricted analysis assignment is required.,format_validation,5.243917300016619,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_004,table1,defined,ae82952d8bab5baf2e23ffd6c25c9126b52d7f816e4972c0929c684b179c6de4,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate the four logistic regression models corresponding to Table 1 for ice hockey athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.","```python
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[],
+    filters={""sport"": ""ice hockey""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""sex""],
+    filters={""sport"": ""ice hockey""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""age""],
+    filters={""sport"": ""ice hockey""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""sex"", ""age""],
+    filters={""sport"": ""ice hockey""}
+)
+```","result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[],
+    filters={""sport"": ""ice hockey""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""sex""],
+    filters={""sport"": ""ice hockey""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""age""],
+    filters={""sport"": ""ice hockey""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""sex"", ""age""],
+    filters={""sport"": ""ice hockey""}
+)",,{},,{},False,False,False,False,False,[],STRUCTURE_FAIL,ValueError: Exactly one restricted analysis assignment is required.,format_validation,5.12427030003164,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_005,table1,defined,ae82952d8bab5baf2e23ffd6c25c9126b52d7f816e4972c0929c684b179c6de4,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate the four logistic regression models corresponding to Table 1 for volleyball athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.","```python
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[],
+    filters={""sport"": ""volleyball""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""sex""],
+    filters={""sport"": ""volleyball""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""age""],
+    filters={""sport"": ""volleyball""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""sex"", ""age""],
+    filters={""sport"": ""volleyball""}
+)
+```","result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[],
+    filters={""sport"": ""volleyball""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""sex""],
+    filters={""sport"": ""volleyball""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""age""],
+    filters={""sport"": ""volleyball""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""sex"", ""age""],
+    filters={""sport"": ""volleyball""}
+)",,{},,{},False,False,False,False,False,[],STRUCTURE_FAIL,ValueError: Exactly one restricted analysis assignment is required.,format_validation,5.112857299973257,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_006,table1,defined,ae82952d8bab5baf2e23ffd6c25c9126b52d7f816e4972c0929c684b179c6de4,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate the four logistic regression models corresponding to Table 1 for female athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.","```python
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[],
+    filters={""sex"": ""female""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""sex""],
+    filters={""sex"": ""female""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""age""],
+    filters={""sex"": ""female""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""age"", ""sex""],
+    filters={""sex"": ""female""}
+)
+```","result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[],
+    filters={""sex"": ""female""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""sex""],
+    filters={""sex"": ""female""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""age""],
+    filters={""sex"": ""female""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""age"", ""sex""],
+    filters={""sex"": ""female""}
+)",,{},,{},False,False,False,False,False,[],STRUCTURE_FAIL,ValueError: Exactly one restricted analysis assignment is required.,format_validation,5.0126246000872925,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_007,table1,defined,ae82952d8bab5baf2e23ffd6c25c9126b52d7f816e4972c0929c684b179c6de4,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate the four logistic regression models corresponding to Table 1 for junior national team athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.","```python
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[],
+    filters={""national_team"": ""Junior""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""sex""],
+    filters={""national_team"": ""Junior""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""age""],
+    filters={""national_team"": ""Junior""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""sex"", ""age""],
+    filters={""national_team"": ""Junior""}
+)
+```","result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[],
+    filters={""national_team"": ""Junior""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""sex""],
+    filters={""national_team"": ""Junior""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""age""],
+    filters={""national_team"": ""Junior""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""sex"", ""age""],
+    filters={""national_team"": ""Junior""}
+)",,{},,{},False,False,False,False,False,[],STRUCTURE_FAIL,ValueError: Exactly one restricted analysis assignment is required.,format_validation,5.057002799934708,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_008,table1,defined,ae82952d8bab5baf2e23ffd6c25c9126b52d7f816e4972c0929c684b179c6de4,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate the four logistic regression models corresponding to Table 1 for athletes aged 20 and above using all eight public domains, with models using no controls, sex, age, and both sex and age.","```python
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[],
+    filters={""age_group"": ""20_and_above""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""sex""],
+    filters={""age_group"": ""20_and_above""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""age""],
+    filters={""age_group"": ""20_and_above""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""sex"", ""age""],
+    filters={""age_group"": ""20_and_above""}
+)
+```","result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[],
+    filters={""age_group"": ""20_and_above""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""sex""],
+    filters={""age_group"": ""20_and_above""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""age""],
+    filters={""age_group"": ""20_and_above""}
+)
+
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[""sex"", ""age""],
+    filters={""age_group"": ""20_and_above""}
+)",,{},,{},False,False,False,False,False,[],STRUCTURE_FAIL,ValueError: Exactly one restricted analysis assignment is required.,format_validation,5.348149999976158,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_010,table2,defined,ae82952d8bab5baf2e23ffd6c25c9126b52d7f816e4972c0929c684b179c6de4,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate the four multiple linear regression models corresponding to Table 2 for elite athletes, with expertise_value as the continuous target.","result = analysis.table2(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    filters={""elite_status"": ""elite""},
+    group=""all""
+)","result = analysis.table2(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    filters={""elite_status"": ""elite""},
+    group=""all""
+)",table2,"{""filters"": {""elite_status"": ""elite""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",table2,"{""filters"": {""expertise_group"": ""elite""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.""]",REQUEST_MATCH_FAIL,Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.,request_validation,1.1782819000072777,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_018,figure1,defined,ae82952d8bab5baf2e23ffd6c25c9126b52d7f816e4972c0929c684b179c6de4,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate Figure 1 for elite athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.","result = analysis.figure1(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""elite_status"": ""elite""}
+)","result = analysis.figure1(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""elite_status"": ""elite""}
+)",figure1,"{""target"": ""expertise_value"", ""group_field"": ""elite_status"", ""correlation_threshold"": 0.15, ""variance_iterations"": 1000, ""filters"": {""elite_status"": ""elite""}, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",figure1,"{""target"": ""expertise_value"", ""group_field"": ""elite_status"", ""correlation_threshold"": 0.15, ""variance_iterations"": 1000, ""filters"": {""expertise_group"": ""elite""}, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.""]",REQUEST_MATCH_FAIL,Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.,request_validation,1.6861903000390157,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_026,correlation,defined,ae82952d8bab5baf2e23ffd6c25c9126b52d7f816e4972c0929c684b179c6de4,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,Calculate pairwise Pearson correlations among all eight public domains for elite athletes.,"result = analysis.correlation(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    filters={""elite_status"": ""elite""},
+    method=""pearson""
+)","result = analysis.correlation(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    filters={""elite_status"": ""elite""},
+    method=""pearson""
+)",correlation,"{""filters"": {""elite_status"": ""elite""}, ""method"": ""pearson"", ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",correlation,"{""filters"": {""expertise_group"": ""elite""}, ""method"": ""pearson"", ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.""]",REQUEST_MATCH_FAIL,Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.,request_validation,1.2097319999011233,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_032,correlation,defined,ae82952d8bab5baf2e23ffd6c25c9126b52d7f816e4972c0929c684b179c6de4,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,Calculate pairwise Pearson correlations among all eight public domains for athletes aged 20 and above.,"result = analysis.correlation(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    filters={""age_group"": ""under_20"": false},
+    method=""pearson""
+)","result = analysis.correlation(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    filters={""age_group"": ""under_20"": false},
+    method=""pearson""
+)",,{},,{},False,False,False,False,False,[],STRUCTURE_FAIL,"SyntaxError: invalid syntax (<unknown>, line 3)",format_validation,1.293069600011222,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_033,variance_analysis,defined,ae82952d8bab5baf2e23ffd6c25c9126b52d7f816e4972c0929c684b179c6de4,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Run variance analysis for all athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.","result = analysis.variance_analysis(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    group_field=""expertise_group"",
+    groups=[""elite"", ""semi_elite""],
+    iterations=1000,
+    filters={},
+    visualization=True
+)","result = analysis.variance_analysis(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    group_field=""expertise_group"",
+    groups=[""elite"", ""semi_elite""],
+    iterations=1000,
+    filters={},
+    visualization=True
+)",variance_analysis,"{""group_field"": ""expertise_group"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",variance_analysis,"{""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected group_field='elite_status' but generated 'expertise_group'.""]",REQUEST_MATCH_FAIL,Expected group_field='elite_status' but generated 'expertise_group'.,request_validation,1.586795200011693,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_034,variance_analysis,defined,ae82952d8bab5baf2e23ffd6c25c9126b52d7f816e4972c0929c684b179c6de4,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Run variance analysis for elite athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.","result = analysis.variance_analysis(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    group_field=""elite_status"",
+    groups=[""elite"", ""semi_elite""],
+    iterations=1000,
+    filters={""elite_status"": ""elite""},
+    visualization=True
+)","result = analysis.variance_analysis(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    group_field=""elite_status"",
+    groups=[""elite"", ""semi_elite""],
+    iterations=1000,
+    filters={""elite_status"": ""elite""},
+    visualization=True
+)",variance_analysis,"{""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""elite_status"": ""elite""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",variance_analysis,"{""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""expertise_group"": ""elite""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.""]",REQUEST_MATCH_FAIL,Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.,request_validation,1.681052300031297,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_035,variance_analysis,defined,ae82952d8bab5baf2e23ffd6c25c9126b52d7f816e4972c0929c684b179c6de4,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Run variance analysis for 3x3 basketball athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.","result = analysis.variance_analysis(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    group_field=""expertise_group"",
+    groups=[""elite"", ""semi_elite""],
+    iterations=1000,
+    filters={""sport"": ""3x3 basketball""},
+    visualization=True
+)","result = analysis.variance_analysis(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    group_field=""expertise_group"",
+    groups=[""elite"", ""semi_elite""],
+    iterations=1000,
+    filters={""sport"": ""3x3 basketball""},
+    visualization=True
+)",variance_analysis,"{""group_field"": ""expertise_group"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""sport"": ""3x3 basketball""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",variance_analysis,"{""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""sport"": ""3x3 basketball""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected group_field='elite_status' but generated 'expertise_group'.""]",REQUEST_MATCH_FAIL,Expected group_field='elite_status' but generated 'expertise_group'.,request_validation,1.7526319000171497,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_036,variance_analysis,defined,ae82952d8bab5baf2e23ffd6c25c9126b52d7f816e4972c0929c684b179c6de4,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Run variance analysis for ice hockey athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.","result = analysis.variance_analysis(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    group_field=""expertise_group"",
+    groups=[""elite"", ""semi_elite""],
+    iterations=1000,
+    filters={""sport"": ""ice hockey""},
+    visualization=True
+)","result = analysis.variance_analysis(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    group_field=""expertise_group"",
+    groups=[""elite"", ""semi_elite""],
+    iterations=1000,
+    filters={""sport"": ""ice hockey""},
+    visualization=True
+)",variance_analysis,"{""group_field"": ""expertise_group"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""sport"": ""ice hockey""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",variance_analysis,"{""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""sport"": ""ice hockey""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected group_field='elite_status' but generated 'expertise_group'.""]",REQUEST_MATCH_FAIL,Expected group_field='elite_status' but generated 'expertise_group'.,request_validation,1.6807073999661952,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_037,variance_analysis,defined,ae82952d8bab5baf2e23ffd6c25c9126b52d7f816e4972c0929c684b179c6de4,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Run variance analysis for volleyball athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.","result = analysis.variance_analysis(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    group_field=""expertise_group"",
+    groups=[""elite"", ""semi_elite""],
+    iterations=1000,
+    filters={""sport"": ""volleyball""},
+    visualization=True
+)","result = analysis.variance_analysis(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    group_field=""expertise_group"",
+    groups=[""elite"", ""semi_elite""],
+    iterations=1000,
+    filters={""sport"": ""volleyball""},
+    visualization=True
+)",variance_analysis,"{""group_field"": ""expertise_group"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""sport"": ""volleyball""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",variance_analysis,"{""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""sport"": ""volleyball""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected group_field='elite_status' but generated 'expertise_group'.""]",REQUEST_MATCH_FAIL,Expected group_field='elite_status' but generated 'expertise_group'.,request_validation,1.6766667000483721,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_038,variance_analysis,defined,ae82952d8bab5baf2e23ffd6c25c9126b52d7f816e4972c0929c684b179c6de4,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Run variance analysis for female athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.","result = analysis.variance_analysis(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    group_field=""expertise_group"",
+    groups=[""elite"", ""semi_elite""],
+    iterations=1000,
+    filters={""sex"": ""female""},
+    visualization=True
+)","result = analysis.variance_analysis(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    group_field=""expertise_group"",
+    groups=[""elite"", ""semi_elite""],
+    iterations=1000,
+    filters={""sex"": ""female""},
+    visualization=True
+)",variance_analysis,"{""group_field"": ""expertise_group"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""sex"": ""female""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",variance_analysis,"{""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""sex"": ""female""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected group_field='elite_status' but generated 'expertise_group'.""]",REQUEST_MATCH_FAIL,Expected group_field='elite_status' but generated 'expertise_group'.,request_validation,1.6841277000494301,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_039,variance_analysis,defined,ae82952d8bab5baf2e23ffd6c25c9126b52d7f816e4972c0929c684b179c6de4,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Run variance analysis for junior national team athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.","result = analysis.variance_analysis(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    group_field=""elite_status"",
+    groups=[""elite"", ""semi_elite""],
+    iterations=1000,
+    filters={""national_team"": ""Junior""},
+    visualization=True
+)","result = analysis.variance_analysis(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    group_field=""elite_status"",
+    groups=[""elite"", ""semi_elite""],
+    iterations=1000,
+    filters={""national_team"": ""Junior""},
+    visualization=True
+)",variance_analysis,"{""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""national_team"": ""Junior""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",variance_analysis,"{""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""national_team"": ""Junior""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,True,False,False,False,[],EXECUTION_FAIL,SmallGroupError: Variance output blocked: selected cohort has 2 elite and 196 semi-elite athletes; each group requires at least 10.,local_execution,1.627242699963972,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_040,variance_analysis,defined,ae82952d8bab5baf2e23ffd6c25c9126b52d7f816e4972c0929c684b179c6de4,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Run variance analysis for athletes aged 20 and above across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.","result = analysis.variance_analysis(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    group_field=""expertise_group"",
+    groups=[""elite"", ""semi_elite""],
+    iterations=1000,
+    filters={""age_group"": ""20_and_above""},
+    visualization=True
+)","result = analysis.variance_analysis(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    group_field=""expertise_group"",
+    groups=[""elite"", ""semi_elite""],
+    iterations=1000,
+    filters={""age_group"": ""20_and_above""},
+    visualization=True
+)",variance_analysis,"{""group_field"": ""expertise_group"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""age_group"": ""20_and_above""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",variance_analysis,"{""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""age_group"": ""20_and_above""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected group_field='elite_status' but generated 'expertise_group'.""]",REQUEST_MATCH_FAIL,Expected group_field='elite_status' but generated 'expertise_group'.,request_validation,1.7494431999512017,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_002,table1,full,a33db064ad41514bcf86b56ac01d2379cf86698d2505d057bb7748474f5eb9c2,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate the four logistic regression models corresponding to Table 1 for elite athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.","```python
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[[], [""sex""], [""age""], [""sex"", ""age""]],
+    filters={""elite_status"": ""elite""}
+)
+```","result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[[], [""sex""], [""age""], [""sex"", ""age""]],
+    filters={""elite_status"": ""elite""}
+)",table1,"{""filters"": {""elite_status"": ""elite""}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status"", ""controls"": [[], [""sex""], [""age""], [""sex"", ""age""]]}",table1,"{""filters"": {""expertise_group"": ""elite""}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status"", ""controls"": [[], [""sex""], [""age""], [""sex"", ""age""]]}",True,False,False,False,False,"[""Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.""]",REQUEST_MATCH_FAIL,Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.,request_validation,1.7027874001068994,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_004,table1,full,a33db064ad41514bcf86b56ac01d2379cf86698d2505d057bb7748474f5eb9c2,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate the four logistic regression models corresponding to Table 1 for ice hockey athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.","```python
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[[], [""sex""], [""age""], [""sex"", ""age""]],
+    filters={""sport"": ""ice hockey""}
+)
+```","result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[[], [""sex""], [""age""], [""sex"", ""age""]],
+    filters={""sport"": ""ice hockey""}
+)",table1,"{""filters"": {""sport"": ""ice hockey""}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status"", ""controls"": [[], [""sex""], [""age""], [""sex"", ""age""]]}",table1,"{""filters"": {""sport"": ""ice hockey""}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status"", ""controls"": [[], [""sex""], [""age""], [""sex"", ""age""]]}",True,True,False,False,False,[],EXECUTION_FAIL,KeyError: 'Muscular strength',local_execution,1.7845101999118924,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_007,table1,full,a33db064ad41514bcf86b56ac01d2379cf86698d2505d057bb7748474f5eb9c2,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate the four logistic regression models corresponding to Table 1 for junior national team athletes using all eight public domains, with models using no controls, sex, age, and both sex and age.","```python
+result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[[], [""sex""], [""age""], [""sex"", ""age""]],
+    filters={""national_team"": ""Junior""}
+)
+```","result = analysis.table1(
+    predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""elite_status"",
+    controls=[[], [""sex""], [""age""], [""sex"", ""age""]],
+    filters={""national_team"": ""Junior""}
+)",table1,"{""filters"": {""national_team"": ""Junior""}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status"", ""controls"": [[], [""sex""], [""age""], [""sex"", ""age""]]}",table1,"{""filters"": {""national_team"": ""Junior""}, ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], ""target"": ""elite_status"", ""controls"": [[], [""sex""], [""age""], [""sex"", ""age""]]}",True,True,False,False,False,[],EXECUTION_FAIL,KeyError: 'Muscular strength',local_execution,1.6565132999094203,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_010,table2,full,a33db064ad41514bcf86b56ac01d2379cf86698d2505d057bb7748474f5eb9c2,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate the four multiple linear regression models corresponding to Table 2 for elite athletes, with expertise_value as the continuous target.","```python
+result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""elite_status"": ""elite""}, group=""all"")
+```","result = analysis.table2(predictors=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""elite_status"": ""elite""}, group=""all"")",table2,"{""filters"": {""elite_status"": ""elite""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",table2,"{""filters"": {""expertise_group"": ""elite""}, ""group"": ""all"", ""predictors"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.""]",REQUEST_MATCH_FAIL,Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.,request_validation,1.3292658999562263,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_018,figure1,full,a33db064ad41514bcf86b56ac01d2379cf86698d2505d057bb7748474f5eb9c2,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Generate Figure 1 for elite athletes using all eight public domains, expertise_value as target, elite_status as the analysis grouping field, correlation threshold 0.15, and 1000 comparison-group variance samples.","```python
+result = analysis.figure1(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""elite_status"": ""elite""}
+)
+```","result = analysis.figure1(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    target=""expertise_value"",
+    group_field=""elite_status"",
+    correlation_threshold=0.15,
+    variance_iterations=1000,
+    filters={""elite_status"": ""elite""}
+)",figure1,"{""target"": ""expertise_value"", ""group_field"": ""elite_status"", ""correlation_threshold"": 0.15, ""variance_iterations"": 1000, ""filters"": {""elite_status"": ""elite""}, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",figure1,"{""target"": ""expertise_value"", ""group_field"": ""elite_status"", ""correlation_threshold"": 0.15, ""variance_iterations"": 1000, ""filters"": {""expertise_group"": ""elite""}, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.""]",REQUEST_MATCH_FAIL,Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.,request_validation,1.8800234999507666,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_025,correlation,full,a33db064ad41514bcf86b56ac01d2379cf86698d2505d057bb7748474f5eb9c2,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,Calculate pairwise Pearson correlations among all eight public domains for all athletes.,"```python
+result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={}, method=""pearson"", visualization=False)
+```","result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={}, method=""pearson"", visualization=False)",correlation,"{""filters"": {}, ""method"": ""pearson"", ""visualization"": false, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",correlation,"{""filters"": {}, ""method"": ""pearson"", ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected visualization=True but generated False.""]",REQUEST_MATCH_FAIL,Expected visualization=True but generated False.,request_validation,1.3259070999920368,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_026,correlation,full,a33db064ad41514bcf86b56ac01d2379cf86698d2505d057bb7748474f5eb9c2,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,Calculate pairwise Pearson correlations among all eight public domains for elite athletes.,"```python
+result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""elite_status"": ""elite""}, method=""pearson"", visualization=False)
+```","result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""elite_status"": ""elite""}, method=""pearson"", visualization=False)",correlation,"{""filters"": {""elite_status"": ""elite""}, ""method"": ""pearson"", ""visualization"": false, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",correlation,"{""filters"": {""expertise_group"": ""elite""}, ""method"": ""pearson"", ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}."", ""Expected visualization=True but generated False.""]",REQUEST_MATCH_FAIL,Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}. Expected visualization=True but generated False.,request_validation,1.3665341000305489,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_027,correlation,full,a33db064ad41514bcf86b56ac01d2379cf86698d2505d057bb7748474f5eb9c2,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,Calculate pairwise Pearson correlations among all eight public domains for 3x3 basketball athletes.,"```python
+result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sport"": ""3x3 basketball""}, method=""pearson"", visualization=False)
+```","result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sport"": ""3x3 basketball""}, method=""pearson"", visualization=False)",correlation,"{""filters"": {""sport"": ""3x3 basketball""}, ""method"": ""pearson"", ""visualization"": false, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",correlation,"{""filters"": {""sport"": ""3x3 basketball""}, ""method"": ""pearson"", ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected visualization=True but generated False.""]",REQUEST_MATCH_FAIL,Expected visualization=True but generated False.,request_validation,1.3939817999489605,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_028,correlation,full,a33db064ad41514bcf86b56ac01d2379cf86698d2505d057bb7748474f5eb9c2,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,Calculate pairwise Pearson correlations among all eight public domains for ice hockey athletes.,"```python
+result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sport"": ""ice hockey""}, method=""pearson"", visualization=False)
+```","result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sport"": ""ice hockey""}, method=""pearson"", visualization=False)",correlation,"{""filters"": {""sport"": ""ice hockey""}, ""method"": ""pearson"", ""visualization"": false, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",correlation,"{""filters"": {""sport"": ""ice hockey""}, ""method"": ""pearson"", ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected visualization=True but generated False.""]",REQUEST_MATCH_FAIL,Expected visualization=True but generated False.,request_validation,1.3904990999726579,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_029,correlation,full,a33db064ad41514bcf86b56ac01d2379cf86698d2505d057bb7748474f5eb9c2,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,Calculate pairwise Pearson correlations among all eight public domains for volleyball athletes.,"```python
+result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sport"": ""volleyball""}, method=""pearson"", visualization=False)
+```","result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sport"": ""volleyball""}, method=""pearson"", visualization=False)",correlation,"{""filters"": {""sport"": ""volleyball""}, ""method"": ""pearson"", ""visualization"": false, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",correlation,"{""filters"": {""sport"": ""volleyball""}, ""method"": ""pearson"", ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected visualization=True but generated False.""]",REQUEST_MATCH_FAIL,Expected visualization=True but generated False.,request_validation,1.3529276000335813,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_030,correlation,full,a33db064ad41514bcf86b56ac01d2379cf86698d2505d057bb7748474f5eb9c2,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,Calculate pairwise Pearson correlations among all eight public domains for female athletes.,"```python
+result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sex"": ""female""}, method=""pearson"", visualization=False)
+```","result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""sex"": ""female""}, method=""pearson"", visualization=False)",correlation,"{""filters"": {""sex"": ""female""}, ""method"": ""pearson"", ""visualization"": false, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",correlation,"{""filters"": {""sex"": ""female""}, ""method"": ""pearson"", ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected visualization=True but generated False.""]",REQUEST_MATCH_FAIL,Expected visualization=True but generated False.,request_validation,1.301291499985382,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_031,correlation,full,a33db064ad41514bcf86b56ac01d2379cf86698d2505d057bb7748474f5eb9c2,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,Calculate pairwise Pearson correlations among all eight public domains for junior national team athletes.,"```python
+result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""national_team"": ""Junior""}, method=""pearson"", visualization=False)
+```","result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""national_team"": ""Junior""}, method=""pearson"", visualization=False)",correlation,"{""filters"": {""national_team"": ""Junior""}, ""method"": ""pearson"", ""visualization"": false, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",correlation,"{""filters"": {""national_team"": ""Junior""}, ""method"": ""pearson"", ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected visualization=True but generated False.""]",REQUEST_MATCH_FAIL,Expected visualization=True but generated False.,request_validation,1.3309103000210598,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_032,correlation,full,a33db064ad41514bcf86b56ac01d2379cf86698d2505d057bb7748474f5eb9c2,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,Calculate pairwise Pearson correlations among all eight public domains for athletes aged 20 and above.,"```python
+result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""age_group"": ""under_20""}, method=""pearson"", visualization=False)
+```","result = analysis.correlation(variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""], filters={""age_group"": ""under_20""}, method=""pearson"", visualization=False)",correlation,"{""filters"": {""age_group"": ""under_20""}, ""method"": ""pearson"", ""visualization"": false, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",correlation,"{""filters"": {""age_group"": ""20_and_above""}, ""method"": ""pearson"", ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'age_group': '20_and_above'} but generated filters={'age_group': 'under_20'}."", ""Expected visualization=True but generated False.""]",REQUEST_MATCH_FAIL,Expected filters={'age_group': '20_and_above'} but generated filters={'age_group': 'under_20'}. Expected visualization=True but generated False.,request_validation,1.4480342000024393,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_034,variance_analysis,full,a33db064ad41514bcf86b56ac01d2379cf86698d2505d057bb7748474f5eb9c2,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Run variance analysis for elite athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.","```python
+result = analysis.variance_analysis(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    group_field=""elite_status"",
+    groups=[""elite"", ""semi_elite""],
+    iterations=1000,
+    filters={""elite_status"": ""elite""}
+)
+```","result = analysis.variance_analysis(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    group_field=""elite_status"",
+    groups=[""elite"", ""semi_elite""],
+    iterations=1000,
+    filters={""elite_status"": ""elite""}
+)",variance_analysis,"{""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""elite_status"": ""elite""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",variance_analysis,"{""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""expertise_group"": ""elite""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.""]",REQUEST_MATCH_FAIL,Expected filters={'expertise_group': 'elite'} but generated filters={'elite_status': 'elite'}.,request_validation,1.8583413999294862,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_035,variance_analysis,full,a33db064ad41514bcf86b56ac01d2379cf86698d2505d057bb7748474f5eb9c2,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Run variance analysis for 3x3 basketball athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.","```python
+result = analysis.variance_analysis(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    group_field=""elite_status"",
+    groups=[""elite"", ""semi_elite""],
+    iterations=1000,
+    filters={""sport"": ""3x3 basketball"", ""expertise_group"": ""elite""},
+    visualization=True
+)
+```","result = analysis.variance_analysis(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    group_field=""elite_status"",
+    groups=[""elite"", ""semi_elite""],
+    iterations=1000,
+    filters={""sport"": ""3x3 basketball"", ""expertise_group"": ""elite""},
+    visualization=True
+)",variance_analysis,"{""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""sport"": ""3x3 basketball"", ""expertise_group"": ""elite""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",variance_analysis,"{""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""sport"": ""3x3 basketball""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'sport': '3x3 basketball'} but generated filters={'sport': '3x3 basketball', 'expertise_group': 'elite'}.""]",REQUEST_MATCH_FAIL,"Expected filters={'sport': '3x3 basketball'} but generated filters={'sport': '3x3 basketball', 'expertise_group': 'elite'}.",request_validation,2.028370999963954,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_036,variance_analysis,full,a33db064ad41514bcf86b56ac01d2379cf86698d2505d057bb7748474f5eb9c2,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Run variance analysis for ice hockey athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.","```python
+result = analysis.variance_analysis(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    group_field=""elite_status"",
+    groups=[""elite"", ""semi_elite""],
+    iterations=1000,
+    filters={""sport"": ""ice hockey"", ""expertise_group"": ""elite""},
+    visualization=True
+)
+```","result = analysis.variance_analysis(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    group_field=""elite_status"",
+    groups=[""elite"", ""semi_elite""],
+    iterations=1000,
+    filters={""sport"": ""ice hockey"", ""expertise_group"": ""elite""},
+    visualization=True
+)",variance_analysis,"{""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""sport"": ""ice hockey"", ""expertise_group"": ""elite""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",variance_analysis,"{""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""sport"": ""ice hockey""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'sport': 'ice hockey'} but generated filters={'sport': 'ice hockey', 'expertise_group': 'elite'}.""]",REQUEST_MATCH_FAIL,"Expected filters={'sport': 'ice hockey'} but generated filters={'sport': 'ice hockey', 'expertise_group': 'elite'}.",request_validation,2.0577549999579787,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_037,variance_analysis,full,a33db064ad41514bcf86b56ac01d2379cf86698d2505d057bb7748474f5eb9c2,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Run variance analysis for volleyball athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.","```python
+result = analysis.variance_analysis(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    group_field=""elite_status"",
+    groups=[""elite"", ""semi_elite""],
+    iterations=1000,
+    filters={""sport"": ""volleyball"", ""expertise_group"": ""elite""},
+    visualization=True
+)
+```","result = analysis.variance_analysis(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    group_field=""elite_status"",
+    groups=[""elite"", ""semi_elite""],
+    iterations=1000,
+    filters={""sport"": ""volleyball"", ""expertise_group"": ""elite""},
+    visualization=True
+)",variance_analysis,"{""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""sport"": ""volleyball"", ""expertise_group"": ""elite""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",variance_analysis,"{""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""sport"": ""volleyball""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,False,False,False,False,"[""Expected filters={'sport': 'volleyball'} but generated filters={'sport': 'volleyball', 'expertise_group': 'elite'}.""]",REQUEST_MATCH_FAIL,"Expected filters={'sport': 'volleyball'} but generated filters={'sport': 'volleyball', 'expertise_group': 'elite'}.",request_validation,2.032854299992323,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False
+frontend_real_039,variance_analysis,full,a33db064ad41514bcf86b56ac01d2379cf86698d2505d057bb7748474f5eb9c2,0bc7039317e46844def4a19078e22c9f0e5c654aa1c5a612bb0f009e095161e8,"Run variance analysis for junior national team athletes across all eight public domains, comparing the higher-expertise group with repeated size-matched samples from the comparison group.","```python
+result = analysis.variance_analysis(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    group_field=""elite_status"",
+    groups=[""elite"", ""semi_elite""],
+    iterations=1000,
+    filters={""national_team"": ""Junior""},
+    visualization=True
+)
+```","result = analysis.variance_analysis(
+    variables=[""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""],
+    group_field=""elite_status"",
+    groups=[""elite"", ""semi_elite""],
+    iterations=1000,
+    filters={""national_team"": ""Junior""},
+    visualization=True
+)",variance_analysis,"{""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""national_team"": ""Junior""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",variance_analysis,"{""group_field"": ""elite_status"", ""groups"": [""elite"", ""semi_elite""], ""iterations"": 1000, ""filters"": {""national_team"": ""Junior""}, ""visualization"": true, ""variables"": [""muscular_strength"", ""lower_body_dynamics"", ""muscle_power_genetics"", ""blood_micronutrients"", ""basic_cognitive_function"", ""mental_health"", ""social_support"", ""training_conditions""]}",True,True,False,False,False,[],EXECUTION_FAIL,SmallGroupError: Variance output blocked: selected cohort has 2 elite and 196 semi-elite athletes; each group requires at least 10.,local_execution,1.9054825999774039,True,True,,ministral,Ministral-3-8B,mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M,ministral-3-8b-local-eval,ministral-3-8b-local-eval,ministral-3-8b-local-eval,Local / llama.cpp,Q4_K_M,1,False

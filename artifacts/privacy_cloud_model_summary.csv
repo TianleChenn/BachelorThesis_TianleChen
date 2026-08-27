@@ -1,0 +1,4 @@
+﻿model_key,Model,Samples,Completed Responses,API Failures,Parse Failures,Valid Privacy Assessments,Invalid Privacy Assessments,Exact Route Correct,Exact Route Accuracy,Balanced Accuracy,Macro Precision,Macro Recall,Macro F1,Non-Blocked Samples,Non-Blocked Route Correct,Non-Blocked Route Accuracy,Blocked Ground Truth Samples,Blocked Classification Accuracy,Blocked Precision,Blocked Recall,Blocked F1,False Block Count,Missed Block Count
+gpt4_1,GPT-4.1,60,60,0,0,60,0,25,0.4166666666666667,0.6607142857142857,0.6706885456885457,0.6607142857142857,0.5175582428093188,50,15,0.3,10,1.0,1.0,1.0,1.0,0,0
+gemini,Gemini 3.5 Flash,60,60,0,60,0,60,0,0.0,0.0,0.0,0.0,0.0,50,0,0.0,10,0.0,0.0,0.0,0.0,0,10
+claude,Claude Sonnet 5,60,60,0,5,55,5,33,0.55,0.6357142857142857,0.5944099378881987,0.6357142857142857,0.5631818181818182,50,23,0.46,10,0.9166666666666666,1.0,1.0,1.0,0,0
