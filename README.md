@@ -177,7 +177,9 @@ python -m pip install -r requirements.txt
 Copy-Item .env.example .env
 ```
 
-Configure only the providers you use. The main settings in `.env.example` are:
+Fill in your own API credentials in `.env`, configuring only the providers you use. `.env.example` contains the complete non-secret configuration template, while `.env` contains local credentials and is intentionally excluded from Git. The application can load non-secret defaults from `.env.example`, but cloud LLM calls require user-provided credentials in `.env` or the operating-system environment.
+
+Configuration priority is: operating-system environment, `.env`, `.env.example`, then hard-coded Python defaults. The main settings in `.env.example` are:
 
 | Variable | Purpose |
 |---|---|
